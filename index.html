@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>EasyPeasyTax – Your Expert Legal &amp; Tax Partner</title>
+<style>
+    body { margin:0; font-family:sans-serif; scroll-behavior:smooth; background:#fff; color:#333; }
+    header { background:#fff; position:fixed; top:0; width:100%; z-index:100; padding:10px 20px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+    nav ul { list-style:none; margin:0; padding:0; display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
+    nav a { text-decoration:none; color:#333; font-weight:500; padding:10px; }
+    nav a:hover, nav a.active { color:#ff6f61; }
+    section { padding:80px 20px; max-width:1000px; margin:0 auto; }
+    .hero { text-align:center; padding-top:120px; background:#f9f9f9; }
+    .hero h1 { font-size:2.5rem; margin-bottom:10px; }
+    .btn { display:inline-block; padding:12px 24px; background:#ff6f61; color:#fff; text-decoration:none; border-radius:4px; }
+    .services .card { display:flex; align-items:flex-start; gap:15px; margin-bottom:30px; }
+    .services .icon { font-size:30px; color:#ff6f61; width:40px; }
+    form input, form textarea, form select { width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px; }
+    footer { text-align:center; padding:20px; font-size:0.9em; color:#777; background:#f5f5f5; }
+  
+.fade-in-modal { animation: fadeIn 0.4s ease-out; }
+.fade-out-modal { animation: fadeOut 0.4s ease-out; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+</style>
+</head>
+<body>
+<header>
+<nav>
+<ul>
+<li><a class="active" href="#hero">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li></li>
+<li><a href="#blog">Blog</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+<section class="hero" id="hero">
+<h1>EasyPeasyTax</h1>
+<h2>Legal Tax Support for Individuals &amp; Businesses</h2>
+<p>Get expert help on GST filings, income tax notices, and business registrations—simple, secure, and compliant.</p>
+<a class="btn" href="#requirements">Get Started</a>
+<a class="btn" href="#services">Explore Services</a></section>
+<section id="about">
+<h2>About EasyPeasyTax</h2>
+<p>We are a legal-tech initiative led by a practicing advocate helping startups, professionals, and businesses navigate India's tax and regulatory landscape. Our core expertise includes GST compliance, TDS filing, Income Tax responses, and business registrations including Trademark and MSME.</p>
+<p>
+  We are driven by the mission to simplify compliance for small businesses and professionals, making legal processes accessible and affordable. Our platform blends traditional legal expertise with modern digital tools to deliver prompt and reliable services.
+  </p>
+  <p>
+  What sets us apart is our personalized, compliance-first approach — ensuring that every filing, response, or registration is executed with precision and legal backing. We are not just service providers; we are legal custodians of your tax responsibilities.
+  </p>
+  <p>
+  Whether you're launching a startup, responding to a tax notice, or filing regular returns, we aim to be your dependable partner throughout the journey. Our support is proactive, ethical, and always rooted in current laws and updates.
+  </p>
+  <p>
+  Our goal is to ensure that entrepreneurs and professionals can focus on growth, while we handle the complexities of compliance in the background — securely, confidentially, and competently.
+  </p>
+</section>
+<section class="services" id="services">
+<h2>Our Services</h2>
+<div class="card"><div class="icon">🧾</div><div><h3>GST &amp; Returns</h3><p>End-to-end filing, notices, audits, LUT, and refund assistance.</p></div></div>
+<div class="card"><div class="icon">📑</div><div><h3>Income Tax Notices</h3><p>Responses under Sec 143(1), 148, 139(9), etc. expertly handled.</p></div></div>
+<div class="card"><div class="icon">📄</div><div><h3>Business Registrations</h3><p>Startups, MSMEs, and Trademark processes simplified for you.</p></div></div>
+<div class="card"><div class="icon">📊</div><div><h3>Accounting &amp; TDS</h3><p>Monthly compliance, Form 16/16A, challans, and reports.</p></div></div>
+<div class="card"><div class="icon">📥</div><div><h3>TDS Filing &amp; Compliance</h3>
+<p>Monthly TDS deduction checks, challan generation, Form 26Q/27Q submissions, and Form 16 issuance.</p></div></div>
+<div class="card"><div class="icon">📞</div><div><h3>Legal Drafting &amp; Notices</h3>
+<p>Reply to GST/IT notices, prepare representations, and support during audits or scrutiny proceedings.</p></div></div>
+<div class="card"><div class="icon">🔐</div><div><h3>ROC &amp; MCA Filings</h3>
+<p>Private Limited, LLP, and Section 8 Company filings including AOC-4, MGT-7, and board resolutions.</p></div></div>
+</section>
+<section id="how-it-works">
+<h2>How It Works</h2>
+<ol>
+<li>Submit your requirement using the form below</li>
+<li>We review it and call/email within 1 working day</li>
+<li>You get expert guidance from a practicing advocate</li>
+</ol>
+</section>
+<section id="requirements">
+<h2>Requirement Form</h2>
+<form id="requirementForm">
+<input name="name" placeholder="Your Name" required="" type="text"/>
+<input name="email" placeholder="Your Email" required="" type="email"/>
+<input name="phone" placeholder="Your Phone Number" required="" type="text"/>
+<select name="service" required="">
+<option value="">Select Service</option>
+<option value="GST">GST</option>
+<option value="Income Tax Return">Income Tax Return</option>
+<option value="Trademark Registration">Trademark Registration</option>
+<option value="Business Registration">MSME</option>
+<option value="Other">Other</option>
+</select>
+<textarea name="message" placeholder="Tell us more about your requirement..." required=""></textarea>
+<input id="submittedAtIST" name="submitted_at_IST" type="hidden"/><button class="btn" style="background:#ff6f61; color:white; padding:12px 24px; border:none; border-radius:4px;" type="submit">Send</button>
+</form>
+</section>
+<section id="blog">
+<h2>Latest Blog &amp; Tax Updates</h2>
+<article><h3>💸 July 2025: GST Amnesty Scheme Extended</h3><p>The GST amnesty scheme has been extended until July 31, 2025, allowing businesses to file pending returns with reduced late fees.</p></article>
+<article><h3>🧾 July 2025: New GST Invoice Format Advisory</h3><p>CBIC issued a clarification on QR codes and dynamic invoices for B2B transactions exceeding ₹50,000.</p></article>
+<article><h3>🔍 TDS: Section 194Q Updates</h3><p>Clarification issued on applicability of TDS under Section 194Q for digital transactions exceeding ₹50 lakh annually.</p></article>
+<article><h3>📰 June 2025: GST Late Fee Changes</h3><p>Late fees revised. NIL filers: ₹500, others: up to ₹5,000.</p></article>
+<article><h3>🗂️ ITR Filing AY 2025–26</h3><p>Latest utilities launched with schedule updates for capital gains, etc.</p></article>
+<article>
+<h3>🧮 <a style="color: inherit; text-decoration: none;">Advance Tax: Who Needs to Pay and When?</a></h3>
+<p>Learn who must pay advance tax in India, the due dates, calculation method, and how to avoid interest under Sections 234B and 234C.</p>
+<p><a href="advance-tax.html" style="color: #ff6f61; text-decoration: underline;">Read more →</a></p>
+</article>
+<article>
+<h3>✅ <a style="color: inherit; text-decoration: none;">Checklist for Starting a Small Business Legally in India</a></h3>
+<p>Starting your own business is exciting — but before launching, it’s crucial to comply with legal and regulatory requirements. This step-by-step checklist will help ensure you’re on the right side of the law from day one.</p>
+<p><a href="Checklist-for-Starting-a-Small-Business-Legally-in-India.html" style="color: #ff6f61; text-decoration: underline;">Read more →</a></p>
+</article>
+</section>
+<section id="contact">
+<h2>Contact</h2>
+<p><strong>Email:</strong> easypeasytax@gmail.com<br/><strong>Phone:</strong> +91-9149166360</p>
+</section>
+<section id="testimonials">
+<h2>What Our Clients Say</h2>
+<div style="display: flex; flex-direction: column; gap: 20px; margin-top: 20px;">
+<div style="background: #fff8f4; border-left: 6px solid #ff6f61; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+<p style="font-style: italic;">"I felt supported throughout the tax filing process. Communication was clear and timely."</p>
+<p><strong>– Ravi K., Hyderabad</strong></p>
+</div>
+<div style="background: #f4f9ff; border-left: 6px solid #3a8dde; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+<p style="font-style: italic;">"The trademark process was smooth and stress-free. Really appreciate the transparency."</p>
+<p><strong>– Neha P., Pune</strong></p>
+</div>
+<div style="background: #f9fff4; border-left: 6px solid #68a034; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+<p style="font-style: italic;">"Their monthly GST support helps us stay compliant without hassle. Very reliable."</p>
+<p><strong>– Ajay M., Jaipur</strong></p>
+</div>
+</div>
+</section>
+<section style="font-size: 0.85em; color: #666; padding: 40px 20px; background: #fdfdfd;">
+<h2>Legal Disclaimer</h2>
+<p>This website is intended solely for informational purposes and is not an advertisement or solicitation of legal services. 
+  The content herein is meant to help visitors understand the nature of tax and legal compliance services. It does not constitute legal advice, nor does it create an advocate-client relationship.</p>
+<p>All legal services are rendered in compliance with the rules laid down by the Bar Council of India. Visitors are encouraged to contact us directly for any specific tax or legal queries.</p>
+</section>
+<footer>
+  © 2025 EasyPeasyTax. All rights reserved.<br/>
+  Disclaimer: For informational purposes only. No solicitation of legal services.
+</footer>
+<a href="#requirements" style="
+  position:fixed; bottom:20px; right:20px;
+  background:#ff6f61; color:white; padding:12px;
+  border-radius:50%; font-weight:bold; text-decoration:none;
+  box-shadow:0 0 10px rgba(0,0,0,0.3); z-index:999; font-size:18px;">
+  📞
+</a>
+<a href="https://wa.me/919149166360" style="
+  position:fixed; bottom:20px; right:70px;
+  background:#25D366; color:white; padding:10px;
+  border-radius:50%; font-weight:bold; text-decoration:none;
+  box-shadow:0 0 10px rgba(0,0,0,0.3); z-index:999;" target="_blank">
+<img alt="WhatsApp" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width:24px; height:24px;"/>
+</a>
+<script>
+  if (window.location.search.includes("success=true")) {
+    const popup = document.createElement("div");
+    popup.innerText = "✅ Form submitted successfully!";
+    popup.style.position = "fixed";
+    popup.style.bottom = "30px";
+    popup.style.left = "50%";
+    popup.style.transform = "translateX(-50%)";
+    popup.style.background = "#4CAF50";
+    popup.style.color = "#fff";
+    popup.style.padding = "12px 20px";
+    popup.style.borderRadius = "6px";
+    popup.style.boxShadow = "0 2px 8px rgba(0,0,0,0.2)";
+    popup.style.zIndex = "9999";
+    document.body.appendChild(popup);
+    setTimeout(() => popup.remove(), 5000);
+  }
+</script>
+<div class="fade-in-modal" id="successModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+  background:rgba(0,0,0,0.5); z-index:1000; justify-content:center; align-items:center;">
+<div id="modalContent" style="background:white; padding:30px; border-radius:8px; max-width:400px; text-align:center;
+  box-shadow:0 2px 10px rgba(0,0,0,0.2);">
+<h3>✅ Form Submitted</h3>
+<p>Thank you! We will contact you shortly.</p>
+<button onclick="document.getElementById('successModal').style.display='none'" style="margin-top:15px; padding:10px 20px;
+    background:#ff6f61; color:white; border:none; border-radius:4px;">Close</button>
+</div>
+</div>
+<script>
+document.getElementById("requirementForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+  document.getElementById("submittedAtIST").value = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  const response = await fetch("https://formspree.io/f/xyzjjaeo", {
+    method: "POST",
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  });
+
+  const modal = document.getElementById("successModal");
+  if (response.ok) {
+    form.reset();
+    modal.classList.remove("fade-out-modal");
+    modal.style.display = "flex";
+    modal.classList.add("fade-in-modal");
+
+    setTimeout(() => {
+      modal.classList.remove("fade-in-modal");
+      modal.classList.add("fade-out-modal");
+      setTimeout(() => {
+        modal.style.display = "none";
+        modal.classList.remove("fade-out-modal");
+      }, 400);
+    }, 3000);
+  } else {
+    alert("❌ Error submitting form. Please try again.");
+  }
+});
+
+window.addEventListener('click', function(event) {
+  const modal = document.getElementById('successModal');
+  const content = document.getElementById('modalContent');
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+</script></body>
+</html>
