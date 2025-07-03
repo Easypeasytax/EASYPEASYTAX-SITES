@@ -1,4 +1,66 @@
 <!DOCTYPE html>
+<!-- BCI Disclaimer Modal (Styled for EasyPeasyTax) -->
+<div id="bci-disclaimer-overlay" style="
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+">
+  <div style="
+    background: #ffffff;
+    color: #333333;
+    padding: 35px 30px;
+    max-width: 640px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    text-align: justify;
+  ">
+    <h2 style="text-align:center; color: #ff6f61; margin-bottom: 20px;">DISCLAIMER</h2>
+    <p style="font-size: 15px; line-height: 1.6; margin-bottom: 20px;">
+      As per the rules of the Bar Council of India, we are not permitted to solicit work or advertise.
+      By clicking on “I Agree”, the user acknowledges and confirms that:
+    </p>
+    <ul style="padding-left: 20px; font-size: 15px; line-height: 1.6; color: #555;">
+      <li>There has been no advertisement, personal communication, solicitation, invitation or inducement of any sort from us or any of our members to solicit any work through this website.</li>
+      <li>The user wishes to gain more information about us for his/her own information and use.</li>
+      <li>Any information obtained from this website is at the user's discretion and will not create any lawyer-client relationship.</li>
+    </ul>
+    <div style="text-align: center; margin-top: 30px;">
+      <button onclick="acceptDisclaimer()" style="
+        padding: 12px 30px;
+        font-size: 16px;
+        background-color: #ff6f61;
+        color: #ffffff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s;
+      " onmouseover="this.style.backgroundColor='#e75b4f'" onmouseout="this.style.backgroundColor='#ff6f61'">
+        I Agree
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function acceptDisclaimer() {
+    localStorage.setItem('bciDisclaimerAccepted', 'true');
+    document.getElementById('bci-disclaimer-overlay').style.display = 'none';
+  }
+
+  window.onload = function() {
+    if (localStorage.getItem('bciDisclaimerAccepted') === 'true') {
+      document.getElementById('bci-disclaimer-overlay').style.display = 'none';
+    }
+  };
+</script>
 
 <html lang="en">
 <head>
