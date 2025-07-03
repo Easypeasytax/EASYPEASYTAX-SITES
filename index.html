@@ -51,15 +51,12 @@
 
 <script>
   function acceptDisclaimer() {
-    localStorage.setItem('bciDisclaimerAccepted', 'true');
-    document.getElementById('bci-disclaimer-overlay').style.display = 'none';
+       document.getElementById('bci-disclaimer-overlay').style.display = 'none';
   }
 
-  window.onload = function() {
-    if (localStorage.getItem('bciDisclaimerAccepted') === 'true') {
-      document.getElementById('bci-disclaimer-overlay').style.display = 'none';
-    }
-  };
+ window.onload = function() {
+  document.getElementById('bci-disclaimer-overlay').style.display = 'flex';
+};
 </script>
 
 <html lang="en">
