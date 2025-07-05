@@ -5,14 +5,121 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Blog – EasyPeasyTax</title>
   <style>
-    body { font-family: sans-serif; margin: 0; padding: 20px; background: #fff; color: #333; }
-    h1 { text-align: center; color: #ff6f61; }
-    article { margin-bottom: 30px; padding: 20px; border-radius: 8px; background: #f9f9f9; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-    article h3 { color: #333; }
-    a.read-more { color: #ff6f61; text-decoration: underline; display: inline-block; margin-top: 10px; }
+    :root {
+      --primary: #FF6F61;
+      --text: #2c2c2c;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Roboto', system-ui, sans-serif;
+      margin: 0;
+      padding-top: 100px;
+      background: #fff;
+      color: var(--text);
+    }
+
+    header {
+      background: #ffffff;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      padding: 10px;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #f9f9f9;
+      padding: 10px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      min-width: 180px;
+      z-index: 100;
+    }
+
+    .dropdown li a {
+      display: block;
+      padding: 8px 20px;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .dropdown-wrapper:hover .dropdown,
+    .dropdown-wrapper.active .dropdown {
+      display: block;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary);
+    }
+
+    article {
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 8px;
+      background: #f9f9f9;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      max-width: 800px;
+    }
+
+    article h3 {
+      color: var(--text);
+    }
+
+    a.read-more {
+      color: var(--primary);
+      text-decoration: underline;
+      display: inline-block;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li><a class="active" href="https://easypeasytax.com">Home</a></li>
+        <li><a href="https://easypeasytax.com/#about">About Us</a></li>
+        <li><a href="https://easypeasytax.com/#services">Services</a></li>
+        <li><a href="hsn-sac-tabbed-themed.html">HSN & SAC Codes</a></li>
+        <li><a href="latestnews.html">Latest News</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="dropdown-wrapper" style="position:relative;">
+          <a href="#" class="dropdown-toggle">Tools ▼</a>
+          <ul class="dropdown" id="toolsDropdown">
+            <li><a href="incometaxcalculator_final_fixed.html">Income Tax Calculator</a></li>
+            <li><a href="hracalculator.html">HRA Calculator</a></li>
+            <li><a href="capital_gain_calculator.html">Capital Gain Tax Calculator</a></li>
+            <li><a href="ssy-calculator.html">SSY Calculator</a></li>
+            <li><a href="fdcalculator_centered.html">FD Interest Calculator</a></li>
+          </ul>
+        </li>
+        <li><a href="https://easypeasytax.com/#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <h1>EasyPeasyTax Blog</h1>
 <article>
     <h3>✅ GST Return Filing Mistakes to Avoid in 2025 </h3>
@@ -38,5 +145,27 @@
     <p>Starting your own business is exciting — but before launching, it’s crucial to comply with legal and regulatory requirements.</p>
     <a href="Checklist-for-Starting-a-Small-Business-Legally-in-India.html" class="read-more">Read more →</a>
   </article>
+
+  <script>
+    const toggle = document.querySelector('.dropdown-toggle');
+    const wrapper = document.querySelector('.dropdown-wrapper');
+    const dropdown = document.getElementById('toolsDropdown');
+
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      wrapper.classList.toggle('active');
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", !expanded);
+    });
+
+    dropdown.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+
+    document.addEventListener('click', () => {
+      wrapper.classList.remove('active');
+      toggle.setAttribute("aria-expanded", false);
+    });
+  </script>
 </body>
 </html>
