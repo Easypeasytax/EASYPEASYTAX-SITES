@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capital Gain Tax Calculator FY 2024-25</title>
+  <style>
+    :root {
+      --primary: #FF6F61;
+      --bg: #fffdfc;
+      --text: #2c2c2c;
+      --border: #e0e0e0;
+      --radius: 12px;
+      --shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Roboto', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background: #ffffff;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      padding: 10px;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #f9f9f9;
+      padding: 10px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      min-width: 180px;
+      z-index: 100;
+    }
+
+    .dropdown li a {
+      display: block;
+      padding: 8px 20px;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .dropdown-wrapper:hover .dropdown,
+    .dropdown-wrapper.active .dropdown {
+      display: block;
+    }
+
+    .calculator-container {
+      width: 100%;
+      max-width: 600px;
+      background: #ffffff;
+      padding: 130px 30px 30px; /* pushes content below header */
+      margin: auto;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border-top: 5px solid var(--primary);
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--primary);
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 5px;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 4px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-sizing: border-box;
+      background: #ffffff;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e85c51;
+    }
+
+    #result {
+      margin-top: 20px;
+      padding: 15px;
+      background: #fff0ed;
+      border: 1px solid #ffccc5;
+      color: #cc2f1f;
+      font-weight: bold;
+      border-radius: var(--radius);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a class="active" href="#hero">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="hsn-sac-tabbed-themed.html">HSN & SAC Codes</a></li>
+        <li><a href="latestnews.html">Latest News</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="dropdown-wrapper" style="position:relative;">
+          <a href="#" class="dropdown-toggle">Tools ▼</a>
+          <ul class="dropdown" id="toolsDropdown">
+            <li><a href="incometaxcalculator_final_fixed.html">Income Tax Calculator</a></li>
+            <li><a href="hracalculator.html">HRA Calculator</a></li>
+            <li><a href="capital_gain_calculator.html">Capital Gain Tax Calculator</a></li>
+            <li><a href="ssy-calculator.html">SSY Calculator</a></li>
+            <li><a href="fdcalculator_centered.html">FD Interest Calculator</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="calculator-container">
+    <h2>Capital Gains Tax Calculator (FY 2024-25)</h2>
+
+    <form id="cg-form">
+      <label for="assetType">Asset Type:</label>
+      <select id="assetType">
+        <option value="equity">Equity/Mutual Funds</option>
+        <option value="other">Property/Other Assets</option>
+      </select>
+
+      <label for="purchaseCost">Purchase Cost (₹):</label>
+      <input type="number" id="purchaseCost" required>
+
+      <label for="saleValue">Sale Value (₹):</label>
+      <input type="number" id="saleValue" required>
+
+      <label for="expenses">Expenses (₹):</label>
+      <input type="number" id="expenses" value="0">
+
+      <label for="holdingMonths">Holding Period (in months):</label>
+      <input type="number" id="holdingMonths" required>
+
+      <button type="button" onclick="calcCG()">Calculate Tax</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const toggle = document.querySelector('.dropdown-toggle');
+    const wrapper = document.querySelector('.dropdown-wrapper');
+    const dropdown = document.getElementById('toolsDropdown');
+
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      wrapper.classList.toggle('active');
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", !expanded);
+    });
+
+    dropdown.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+
+    document.addEventListener('click', () => {
+      wrapper.classList.remove('active');
+      toggle.setAttribute("aria-expanded", false);
+    });
+
+    function calcCG() {
+      const assetType = document.getElementById('assetType').value;
+      const purchaseCost = parseFloat(document.getElementById('purchaseCost').value);
+      const saleValue = parseFloat(document.getElementById('saleValue').value);
+      const expenses = parseFloat(document.getElementById('expenses').value) || 0;
+      const holdingMonths = parseInt(document.getElementById('holdingMonths').value);
+
+      if (isNaN(purchaseCost) || isNaN(saleValue) || isNaN(holdingMonths)) {
+        document.getElementById('result').innerText = 'Please enter valid numbers in all required fields.';
+        return;
+      }
+
+      const gain = saleValue - purchaseCost - expenses;
+      let tax = 0;
+      let message = '';
+
+      if (gain <= 0) {
+        message = 'No capital gain.';
+      } else if (assetType === 'equity') {
+        if (holdingMonths > 12) {
+          const taxableGain = Math.max(0, gain - 125000);
+          tax = taxableGain * 0.125;
+          message = `LTCG (Equity): Gain ₹${gain.toLocaleString()} → Tax ₹${tax.toLocaleString(undefined, { maximumFractionDigits: 0 })}`;
+        } else {
+          tax = gain * 0.20;
+          message = `STCG (Equity): Gain ₹${gain.toLocaleString()} → Tax ₹${tax.toLocaleString(undefined, { maximumFractionDigits: 0 })}`;
+        }
+      } else {
+        if (holdingMonths > 24) {
+          tax = gain * 0.125;
+          message = `LTCG (Other Assets): Gain ₹${gain.toLocaleString()} → Tax ₹${tax.toLocaleString(undefined, { maximumFractionDigits: 0 })}`;
+        } else {
+          message = `STCG (Other Assets): Gain ₹${gain.toLocaleString()} — Taxed as per your income slab.`;
+        }
+      }
+
+      document.getElementById('result').innerText = message;
+    }
+  </script>
+</body>
+</html>

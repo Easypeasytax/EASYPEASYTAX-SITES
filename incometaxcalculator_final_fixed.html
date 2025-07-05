@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>EasyPeasyTax – Income Tax Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      scroll-behavior: smooth;
+      background: #fff;
+      color: #333;
+    }
+    header {
+      background: #fff;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      padding: 10px;
+    }
+    nav a:hover, nav a.active {
+      color: #ff6f61;
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #f9f9f9;
+      padding: 10px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      min-width: 180px;
+      z-index: 100;
+    }
+    .dropdown li a {
+      display: block;
+      padding: 8px 20px;
+      color: #000;
+      text-decoration: none;
+    }
+    .dropdown-wrapper:hover .dropdown,
+    .dropdown-wrapper.active .dropdown {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a class="active" href="#hero">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="hsn-sac-tabbed-themed.html">HSN & SAC Codes</a></li>
+      <li><a href="latestnews.html">Latest News</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li class="dropdown-wrapper" style="position:relative;">
+        <a href="#" class="dropdown-toggle" style="color:#333; font-weight:500; padding:10px; text-decoration:none;">
+          Tools ▼
+        </a>
+        <ul class="dropdown" id="toolsDropdown">
+      <li><a href="incometaxcalculator_final_fixed.html">Income Tax Calculator</a></li>
+      <li><a href="hracalculator.html">HRA Calculator</a></li>
+      <li><a href="capital_gain_calculator.html">Capital Gain Tax Calculator</a></li>
+      <li><a href="ssy-calculator.html">SSY Calculator</a></li>
+      <li><a href="fdcalculator_centered.html">FD Interest Calculator</a></li>
+      
+    </ul>
+      </li>
+
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f9f9f9;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    min-width: 180px;
+    z-index: 100;
+  }
+  .dropdown li a {
+    display: block;
+    padding: 8px 20px;
+    color: #000;
+    text-decoration: none;
+  }
+  .dropdown-wrapper:hover .dropdown,
+  .dropdown-wrapper.active .dropdown {
+    display: block;
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById('dropdownToggle');
+  const wrapper = document.querySelector('.dropdown-wrapper');
+  const dropdown = document.getElementById('toolsDropdown');
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    wrapper.classList.toggle('active');
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", !expanded);
+  });
+
+  dropdown.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  document.addEventListener('click', () => {
+    wrapper.classList.remove('active');
+    toggle.setAttribute("aria-expanded", false);
+  });
+</script>
+
+
+<main style="padding-top:140px; padding-bottom:40px; display:flex; justify-content:center;">
+  <div style="background:#fff; padding:24px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); width:100%; max-width:900px; border:1px solid #eee;">
+    <h1 style="font-size:28px; font-weight:600; margin-bottom:20px; color:#ff6f61; text-align:center;">Income Tax Calculator FY 2024-25</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div>
+        <label class="block mb-1 font-semibold">Income from Salary (₹)</label>
+        <input id="salary" type="number" class="w-full border px-3 py-2 rounded" value="0" />
+      </div>
+      <div>
+        <label class="block mb-1 font-semibold">Income from Business & Profession (₹)</label>
+        <input id="business" type="number" class="w-full border px-3 py-2 rounded" value="0" />
+      </div>
+      <div>
+        <label class="block mb-1 font-semibold">Rental Income (₹)</label>
+        <input id="rental" type="number" class="w-full border px-3 py-2 rounded" value="0" />
+      </div>
+      <div>
+        <label class="block mb-1 font-semibold">Interest on Home Loan (₹)</label>
+        <input id="homeLoanInterest" type="number" class="w-full border px-3 py-2 rounded" value="0" />
+      </div>
+    </div>
+
+    <div class="mb-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div>
+        <label class="block mb-1 font-semibold">80C (LIC, PPF, etc.)</label>
+        <input id="ded80c" type="number" class="w-full border px-3 py-2 rounded" value="0" />
+      </div>
+      <div>
+        <label class="block mb-1 font-semibold">80D (Health Premium)</label>
+        <input id="ded80d" type="number" class="w-full border px-3 py-2 rounded" value="0" />
+      </div>
+      <div>
+        <label class="block mb-1 font-semibold">Other Deductions</label>
+        <input id="dedOther" type="number" class="w-full border px-3 py-2 rounded" value="0" />
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label class="block mb-1 font-semibold">Age Category</label>
+      <select id="age" class="w-full border px-3 py-2 rounded">
+        <option value="normal">Below 60</option>
+        <option value="senior">60 - 80</option>
+        <option value="super_senior">Above 80</option>
+      </select>
+    </div>
+
+    <button onclick="calculateTax()" style="width:100%; background:#ff6f61; color:#fff; padding:12px; border-radius:4px; font-weight:600;">Calculate</button>
+
+    <div id="result" class="mt-6 hidden">
+      <h2 class="text-lg font-semibold text-center mb-4">Comparison: Old vs New Regime</h2>
+      <p class="text-center font-semibold mb-2 text-gray-600" id="grossIncomeDisplay"></p>
+
+      <table class="min-w-full text-sm border text-center">
+        <thead style="background:#f5f5f5;">
+          <tr>
+            <th class="p-2 border">Component</th>
+            <th class="p-2 border">Old Regime</th>
+            <th class="p-2 border">New Regime</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="p-2 border">Taxable Income</td><td class="p-2 border" id="oldTaxableIncome"></td><td class="p-2 border" id="newTaxableIncome"></td></tr>
+          <tr><td class="p-2 border">Income Tax</td><td class="p-2 border" id="oldTax"></td><td class="p-2 border" id="newTax"></td></tr>
+          <tr><td class="p-2 border">87A Rebate</td><td class="p-2 border" id="oldRebate"></td><td class="p-2 border" id="newRebate"></td></tr>
+          <tr><td class="p-2 border">Cess (4%)</td><td class="p-2 border" id="oldCess"></td><td class="p-2 border" id="newCess"></td></tr>
+          <tr class="font-bold bg-gray-50"><td class="p-2 border">Total Tax Payable</td><td class="p-2 border" id="oldTotal"></td><td class="p-2 border" id="newTotal"></td></tr>
+        </tbody>
+      </table>
+      <p id="savings" style="margin-top:16px; font-weight:600; color:#28a745; text-align:center;"></p>
+    </div>
+  </div>
+</main>
+
+<script>
+function calculateTax() {
+  const salary = parseFloat(document.getElementById('salary').value || 0);
+  const business = parseFloat(document.getElementById('business').value || 0);
+  const rental = parseFloat(document.getElementById('rental').value || 0);
+  const interestRaw = parseFloat(document.getElementById('homeLoanInterest').value || 0);
+  const interestCapped = Math.min(interestRaw, 200000);
+  const rentalDeduction = rental * 0.3;
+  const netRentalIncomeOld = rental - rentalDeduction - interestCapped;
+  const netRentalIncomeNew = rental * 0.7;
+  const grossIncomeOld = salary + business + netRentalIncomeOld;
+  const grossIncomeNew = salary + business + rental - interestCapped;
+  const age = document.getElementById('age').value;
+  const ded80c = Math.min(parseFloat(document.getElementById('ded80c').value || 0), 150000);
+  const ded80d = Math.min(parseFloat(document.getElementById('ded80d').value || 0), 75000);
+  const dedOther = parseFloat(document.getElementById('dedOther').value || 0);
+  const deductions = ded80c + ded80d + dedOther;
+
+  const results = {
+    old: computeTax('old', grossIncomeOld, deductions, age),
+    new: computeTax('new', grossIncomeNew, 0, age),
+  };
+
+  document.getElementById('result').classList.remove('hidden');
+  document.getElementById('grossIncomeDisplay').textContent = 
+    `Old Regime Gross: ₹${grossIncomeOld.toFixed(0)} | New Regime Gross: ₹${grossIncomeNew.toFixed(0)}`;
+  document.getElementById('oldTaxableIncome').textContent = `₹ ${results.old.taxableIncome.toFixed(0)}`;
+  document.getElementById('oldTax').textContent = `₹ ${results.old.tax.toFixed(0)}`;
+  document.getElementById('oldRebate').textContent = `₹ ${results.old.rebate.toFixed(0)}`;
+  document.getElementById('oldCess').textContent = `₹ ${results.old.cess.toFixed(0)}`;
+  document.getElementById('oldTotal').textContent = `₹ ${results.old.total.toFixed(0)}`;
+  document.getElementById('newTaxableIncome').textContent = `₹ ${results.new.taxableIncome.toFixed(0)}`;
+  document.getElementById('newTax').textContent = `₹ ${results.new.tax.toFixed(0)}`;
+  document.getElementById('newRebate').textContent = `₹ ${results.new.rebate.toFixed(0)}`;
+  document.getElementById('newCess').textContent = `₹ ${results.new.cess.toFixed(0)}`;
+  document.getElementById('newTotal').textContent = `₹ ${results.new.total.toFixed(0)}`;
+  const savings = results.old.total - results.new.total;
+  document.getElementById('savings').textContent =
+    savings > 0
+      ? `You save ₹ ${savings.toFixed(0)} under the New Regime.`
+      : savings < 0
+      ? `You save ₹ ${Math.abs(savings).toFixed(0)} under the Old Regime.`
+      : `Both regimes result in the same tax.`;
+}
+
+function computeTax(regime, income, deductions, age) {
+  const standardDeduction = regime === "old" ? 50000 : 75000;
+  let taxableIncome = income - deductions - standardDeduction;
+  taxableIncome = Math.max(taxableIncome, 0);
+  let tax = 0;
+  let rebate = 0;
+
+  if (regime === "new") {
+    const slabs = [
+      [0, 300000, 0],
+      [300000, 700000, 0.05],
+      [700000, 1000000, 0.10],
+      [1000000, 1200000, 0.15],
+      [1200000, 1500000, 0.20],
+      [1500000, Infinity, 0.30],
+    ];
+    for (const [start, end, rate] of slabs) {
+      if (taxableIncome > start) {
+        const slabIncome = Math.min(taxableIncome, end) - start;
+        tax += slabIncome * rate;
+      }
+    }
+    if (income <= 700000) {
+      rebate = Math.min(tax, 25000);
+      tax = Math.max(tax - rebate, 0);
+    }
+  } else {
+    let slabLimit = 250000;
+    if (age === "senior") slabLimit = 300000;
+    else if (age === "super_senior") slabLimit = 500000;
+
+    if (taxableIncome <= slabLimit) tax = 0;
+    else if (taxableIncome <= 500000) tax = (taxableIncome - slabLimit) * 0.05;
+    else if (taxableIncome <= 1000000) tax = 250000 * 0.05 + (taxableIncome - 500000) * 0.20;
+    else tax = 250000 * 0.05 + 500000 * 0.20 + (taxableIncome - 1000000) * 0.30;
+
+    if (taxableIncome <= 500000) {
+      rebate = Math.min(tax, 12500);
+      tax = Math.max(tax - rebate, 0);
+    }
+  }
+
+  const cess = tax * 0.04;
+  const total = tax + cess;
+  return { taxableIncome, tax, rebate, cess, total };
+}
+</script>
+</body>
+</html>

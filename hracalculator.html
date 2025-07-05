@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>EasyPeasyTax – HRA Calculator</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      scroll-behavior: smooth;
+      background: #fff;
+      color: #333;
+    }
+    header {
+      background: #fff;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      padding: 10px;
+    }
+    nav a:hover, nav a.active {
+      color: #ff6f61;
+    }
+    section {
+      padding: 120px 20px 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .calculator-container {
+      max-width: 500px;
+      width: 100%;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: #fff;
+    }
+    h3 {
+      text-align: center;
+      color: #ff6f61;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background: #ff6f61;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #e65b4f;
+    }
+    #result {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+    <ul>
+      <li><a class="active" href="#hero">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="hsn-sac-tabbed-themed.html">HSN & SAC Codes</a></li>
+      <li><a href="latestnews.html">Latest News</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li class="dropdown-wrapper" style="position:relative;">
+        <a href="#" class="dropdown-toggle" style="color:#333; font-weight:500; padding:10px; text-decoration:none;">
+          Tools ▼
+        </a>
+        <ul class="dropdown" id="toolsDropdown">
+      <li><a href="incometaxcalculator_final_fixed.html">Income Tax Calculator</a></li>
+      <li><a href="hracalculator.html">HRA Calculator</a></li>
+      <li><a href="capital_gain_calculator.html">Capital Gain Tax Calculator</a></li>
+      <li><a href="ssy-calculator.html">SSY Calculator</a></li>
+      <li><a href="fdcalculator_centered.html">FD Interest Calculator</a></li>
+      
+    </ul>
+      </li>
+
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f9f9f9;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    min-width: 180px;
+    z-index: 100;
+  }
+  .dropdown li a {
+    display: block;
+    padding: 8px 20px;
+    color: #000;
+    text-decoration: none;
+  }
+  .dropdown-wrapper:hover .dropdown,
+  .dropdown-wrapper.active .dropdown {
+    display: block;
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById('dropdownToggle');
+  const wrapper = document.querySelector('.dropdown-wrapper');
+  const dropdown = document.getElementById('toolsDropdown');
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    wrapper.classList.toggle('active');
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", !expanded);
+  });
+
+  dropdown.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  document.addEventListener('click', () => {
+    wrapper.classList.remove('active');
+    toggle.setAttribute("aria-expanded", false);
+  });
+</script>
+
+
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <div class="calculator-container">
+      <h3>HRA Calculator – FY 2024-25</h3>
+      <label>Basic Salary (₹):</label><br>
+      <input type="number" id="basic" placeholder="Enter Basic Salary" /><br>
+
+      <label>HRA Received (₹):</label><br>
+      <input type="number" id="hra" placeholder="Enter HRA Received" /><br>
+
+      <label>Rent Paid (₹):</label><br>
+      <input type="number" id="rent" placeholder="Enter Rent Paid" /><br>
+
+      <label>Select City Type:</label><br>
+      <select id="city">
+        <option value="metro">Metro (Delhi, Mumbai, Kolkata, Chennai)</option>
+        <option value="nonmetro">Non-Metro</option>
+      </select><br>
+
+      <button onclick="calculateHRA()">Calculate Exempt HRA</button><br><br>
+      <div id="result"></div>
+    </div>
+  </section>
+
+  <script>
+    function calculateHRA() {
+      const basic = parseFloat(document.getElementById('basic').value);
+      const hraReceived = parseFloat(document.getElementById('hra').value);
+      const rentPaid = parseFloat(document.getElementById('rent').value);
+      const cityType = document.getElementById('city').value;
+
+      if (isNaN(basic) || isNaN(hraReceived) || isNaN(rentPaid)) {
+        document.getElementById('result').innerText = "Please enter all values.";
+        return;
+      }
+
+      const tenPercentBasic = 0.10 * basic;
+      const rentMinusTenPercent = Math.max(0, rentPaid - tenPercentBasic);
+      const fiftyOrFortyPercent = cityType === "metro" ? 0.50 * basic : 0.40 * basic;
+
+      const hraExempt = Math.min(hraReceived, rentMinusTenPercent, fiftyOrFortyPercent);
+      const hraTaxable = hraReceived - hraExempt;
+
+      document.getElementById('result').innerHTML = `
+        <p>HRA Exempted: ₹${hraExempt.toFixed(2)}</p>
+        <p>Taxable HRA: ₹${hraTaxable.toFixed(2)}</p>
+      `;
+    }
+  </script>
+</body>
+</html>

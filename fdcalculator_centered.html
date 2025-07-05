@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>EasyPeasyTax – FD Interest Calculator</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      scroll-behavior: smooth;
+      background: #fff;
+      color: #333;
+    }
+    header {
+      background: #fff;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      padding: 10px;
+    }
+    nav a:hover, nav a.active {
+      color: #ff6f61;
+    }
+    section {
+      padding: 120px 20px 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .calculator-container {
+      max-width: 500px;
+      width: 100%;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: #fff;
+    }
+    h3 {
+      text-align: center;
+      color: #ff6f61;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background: #ff6f61;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+     background: #ff6f61;
+    }
+    #result {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+    <ul>
+      <li><a class="active" href="#hero">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="hsn-sac-tabbed-themed.html">HSN & SAC Codes</a></li>
+      <li><a href="latestnews.html">Latest News</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li class="dropdown-wrapper" style="position:relative;">
+        <a href="#" class="dropdown-toggle" style="color:#333; font-weight:500; padding:10px; text-decoration:none;">
+          Tools ▼
+        </a>
+        <ul class="dropdown" id="toolsDropdown">
+      <li><a href="incometaxcalculator_final_fixed.html">Income Tax Calculator</a></li>
+      <li><a href="hracalculator.html">HRA Calculator</a></li>
+      <li><a href="capital_gain_calculator.html">Capital Gain Tax Calculator</a></li>
+      <li><a href="ssy-calculator.html">SSY Calculator</a></li>
+      <li><a href="fdcalculator_centered.html">FD Interest Calculator</a></li>
+      
+    </ul>
+      </li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f9f9f9;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    min-width: 180px;
+    z-index: 100;
+  }
+  .dropdown li a {
+    display: block;
+    padding: 8px 20px;
+    color: #000;
+    text-decoration: none;
+  }
+  .dropdown-wrapper:hover .dropdown,
+  .dropdown-wrapper.active .dropdown {
+    display: block;
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector('.dropdown-toggle');
+  const wrapper = document.querySelector('.dropdown-wrapper');
+  const dropdown = document.getElementById('toolsDropdown');
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    wrapper.classList.toggle('active');
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", !expanded);
+  });
+
+  dropdown.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  document.addEventListener('click', () => {
+    wrapper.classList.remove('active');
+    toggle.setAttribute("aria-expanded", false);
+  });
+</script>
+
+
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+      
+<section class="calculator-section">
+  <div class="calculator-container">
+    <h3>Fixed Deposit Calculator</h3>
+    <label>Deposit Amount (₹): <input type="number" id="fdAmount" /></label><br><br>
+    <label>Annual Interest Rate (%): <input type="number" id="fdRate" step="0.01" /></label><br><br>
+    <label>Time Period (in years): <input type="number" id="fdTime" step="0.1" /></label><br><br>
+    <label>Compounding Frequency:
+      <select id="fdFrequency">
+        <option value="1">Annually</option>
+        <option value="2">Half-Yearly</option>
+        <option value="4">Quarterly</option>
+        <option value="12">Monthly</option>
+      </select>
+    </label><br><br>
+    <button onclick="calculateFD()">Calculate</button>
+    <div id="fdResult" style="margin-top:20px;"></div>
+  </div>
+</section>
+<script>
+  function calculateFD() {
+    const P = parseFloat(document.getElementById("fdAmount").value);
+    const r = parseFloat(document.getElementById("fdRate").value);
+    const t = parseFloat(document.getElementById("fdTime").value);
+    const n = parseInt(document.getElementById("fdFrequency").value);
+
+    if (isNaN(P) || isNaN(r) || isNaN(t)) {
+      document.getElementById("fdResult").innerHTML = "Please fill all values correctly.";
+      return;
+    }
+
+    const A = P * Math.pow((1 + (r / (n * 100))), n * t);
+    const interest = A - P;
+
+    document.getElementById("fdResult").innerHTML =
+      `<strong>Maturity Amount:</strong> ₹${A.toFixed(2)}<br>` +
+      `<strong>Total Interest Earned:</strong> ₹${interest.toFixed(2)}`;
+  }
+</script>
+ 
+</body>
+</html>
