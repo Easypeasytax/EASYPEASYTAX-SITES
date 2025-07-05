@@ -294,7 +294,6 @@ function computeTax(regime, income, deductions, age) {
       tax = Math.max(tax - rebate, 0);
     }
   }
-
   const cess = tax * 0.04;
   const total = tax + cess;
   return { taxableIncome, tax, rebate, cess, total };
