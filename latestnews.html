@@ -5,21 +5,178 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Latest News – EasyPeasyTax</title>
   <style>
-    body { font-family: sans-serif; margin: 0; padding: 20px; background: #fff; color: #333; }
-    h1 { text-align: center; color: #ff6f61; }
-    article { margin-bottom: 30px; padding: 20px; border-radius: 8px; background: #f9f9f9; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-    article h3 { color: #333; }
-    a.read-more { color: #ff6f61; text-decoration: underline; display: inline-block; margin-top: 10px; }
+    :root {
+      --primary: #FF6F61;
+      --text: #2c2c2c;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Roboto', system-ui, sans-serif;
+      margin: 0;
+      padding-top: 100px;
+      background: #fff;
+      color: var(--text);
+    }
+
+    header {
+      background: #ffffff;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      padding: 10px;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #f9f9f9;
+      padding: 10px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      min-width: 180px;
+      z-index: 100;
+    }
+
+    .dropdown li a {
+      display: block;
+      padding: 8px 20px;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .dropdown-wrapper:hover .dropdown,
+    .dropdown-wrapper.active .dropdown {
+      display: block;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary);
+    }
+
+    article {
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 8px;
+      background: #f9f9f9;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      max-width: 800px;
+    }
+
+    article h3 {
+      color: var(--text);
+    }
+
+    a.read-more {
+      color: var(--primary);
+      text-decoration: underline;
+      display: inline-block;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li><a class="active" href="https://easypeasytax.com">Home</a></li>
+        <li><a href="https://easypeasytax.com/about">About Us</a></li>
+        <li><a href="https://easypeasytax.com/services">Services</a></li>
+        <li><a href="hsn-sac-tabbed-themed.html">HSN & SAC Codes</a></li>
+        <li><a href="latestnews.html">Latest News</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="dropdown-wrapper" style="position:relative;">
+          <a href="#" class="dropdown-toggle">Tools ▼</a>
+          <ul class="dropdown" id="toolsDropdown">
+            <li><a href="incometaxcalculator_final_fixed.html">Income Tax Calculator</a></li>
+            <li><a href="hracalculator.html">HRA Calculator</a></li>
+            <li><a href="capital_gain_calculator.html">Capital Gain Tax Calculator</a></li>
+            <li><a href="ssy-calculator.html">SSY Calculator</a></li>
+            <li><a href="fdcalculator_centered.html">FD Interest Calculator</a></li>
+          </ul>
+        </li>
+        <li><a href="https://easypeasytax.com/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <h1>EasyPeasyTax Latest News</h1>
-<article><h3><p>📰 Aadhaar Mandatory: Required for all new PAN applications.</h3>Starting July 1, 2025, Aadhaar is mandatory to apply for a new PAN. Other documents will no longer be accepted.</p></article>
-<article><h3><p>🗂️ ITR Deadline Extended: Now 15 Sept 2025 for non-audit taxpayers.</h3>The deadline for filing tax returns for FY 2024‑25 (Assessment Year 2025‑26) has been extended from July 31 to September 15, 2025, for non‑audit taxpayers.</p></article>
-<article><h3>💸 July 2025: GST Amnesty Scheme Extended</h3><p>The GST amnesty scheme has been extended until July 31, 2025, allowing businesses to file pending returns with reduced late fees.</p></article>
-<article><h3>🧾 July 2025: New GST Invoice Format Advisory</h3><p>CBIC issued a clarification on QR codes and dynamic invoices for B2B transactions exceeding ₹50,000.</p></article>
-<article><h3>🔍 TDS: Section 194Q Updates</h3><p>Clarification issued on applicability of TDS under Section 194Q for digital transactions exceeding ₹50 lakh annually.</p></article>
-<article><h3>📰 June 2025: GST Late Fee Changes</h3><p>Late fees revised. NIL filers: ₹500, others: up to ₹5,000.</p></article>
-<article><h3>🗂️ ITR Filing AY 2025–26</h3><p>Latest utilities launched with schedule updates for capital gains, etc.</p></article>
+
+  <article>
+    <h3>📰 Aadhaar Mandatory: Required for all new PAN applications.</h3>
+    <p>Starting July 1, 2025, Aadhaar is mandatory to apply for a new PAN. Other documents will no longer be accepted.</p>
+  </article>
+
+  <article>
+    <h3>🗂️ ITR Deadline Extended: Now 15 Sept 2025 for non-audit taxpayers.</h3>
+    <p>The deadline for filing tax returns for FY 2024‑25 (Assessment Year 2025‑26) has been extended from July 31 to September 15, 2025, for non‑audit taxpayers.</p>
+  </article>
+
+  <article>
+    <h3>💸 July 2025: GST Amnesty Scheme Extended</h3>
+    <p>The GST amnesty scheme has been extended until July 31, 2025, allowing businesses to file pending returns with reduced late fees.</p>
+  </article>
+
+  <article>
+    <h3>🧾 July 2025: New GST Invoice Format Advisory</h3>
+    <p>CBIC issued a clarification on QR codes and dynamic invoices for B2B transactions exceeding ₹50,000.</p>
+  </article>
+
+  <article>
+    <h3>🔍 TDS: Section 194Q Updates</h3>
+    <p>Clarification issued on applicability of TDS under Section 194Q for digital transactions exceeding ₹50 lakh annually.</p>
+  </article>
+
+  <article>
+    <h3>📰 June 2025: GST Late Fee Changes</h3>
+    <p>Late fees revised. NIL filers: ₹500, others: up to ₹5,000.</p>
+  </article>
+
+  <article>
+    <h3>🗂️ ITR Filing AY 2025–26</h3>
+    <p>Latest utilities launched with schedule updates for capital gains, etc.</p>
+  </article>
+
+  <script>
+    const toggle = document.querySelector('.dropdown-toggle');
+    const wrapper = document.querySelector('.dropdown-wrapper');
+    const dropdown = document.getElementById('toolsDropdown');
+
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      wrapper.classList.toggle('active');
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", !expanded);
+    });
+
+    dropdown.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+
+    document.addEventListener('click', () => {
+      wrapper.classList.remove('active');
+      toggle.setAttribute("aria-expanded", false);
+    });
+  </script>
 </body>
 </html>
