@@ -83,6 +83,7 @@
           <li><a href="fdcalculator_centered.html">FD Interest Calculator</a></li>
         </ul>
       </li>
+      <li><a href="#" onclick="openRefundStatus()">Income Tax Refund Status</a></li>
       <li><a href="https://easypeasytax.com/#contact">Contact</a></li>
     </ul>
   </nav>
@@ -298,6 +299,12 @@ function computeTax(regime, income, deductions, age) {
   const total = tax + cess;
   return { taxableIncome, tax, rebate, cess, total };
 }
+</script>
+  <script>
+  function openRefundStatus() {
+    alert("You will be redirected to the official NSDL Refund Status page.");
+    window.open("https://tin.tin.nsdl.com/oltas/refund-status-pan.html", "_blank");
+  }
 </script>
 </body>
 </html>
