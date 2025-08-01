@@ -5,9 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Latest News – EasyPeasyTax</title>
   <style>
-    :root {
+   :root {
       --primary: #FF6F61;
       --text: #2c2c2c;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -16,8 +20,10 @@
       padding-top: 100px;
       background: #fff;
       color: var(--text);
+      line-height: 1.6;
     }
 
+    /* Header styles for desktop (default) */
     header {
       background: #ffffff;
       position: fixed;
@@ -26,6 +32,44 @@
       z-index: 100;
       padding: 10px 20px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Desktop: Hide hamburger, show full navigation */
+    .hamburger {
+      font-size: 26px;
+      cursor: pointer;
+      display: none; /* Hidden on desktop */
+      padding: 8px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      min-width: 44px;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hamburger:hover {
+      background-color: #f9f9f9;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    /* Desktop navigation - visible by default */
+    nav {
+      display: block;
     }
 
     nav ul {
@@ -42,7 +86,23 @@
       text-decoration: none;
       color: var(--text);
       font-weight: 500;
-      padding: 10px;
+      padding: 10px 15px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #f9f9f9;
+    }
+
+    nav a.active {
+      color: var(--primary);
+      background-color: #f9f9f9;
+    }
+
+    /* Dropdown styles */
+    .dropdown-wrapper {
+      position: relative;
     }
 
     .dropdown {
@@ -55,49 +115,183 @@
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       min-width: 180px;
       z-index: 100;
+      border-radius: 4px;
     }
 
-    .dropdown li a {
-      display: block;
-      padding: 8px 20px;
-      color: #000;
-      text-decoration: none;
-    }
-
-    .dropdown-wrapper:hover .dropdown,
     .dropdown-wrapper.active .dropdown {
       display: block;
     }
 
-    h1 {
+    .dropdown li {
+      padding: 0;
+    }
+
+    .dropdown a {
+      padding: 8px 15px;
+      display: block;
+      margin: 0;
+    }
+
+    .dropdown a:hover {
+      background-color: #e9e9e9;
+    }
+
+    /* Content styles */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .news-title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 30px;
       text-align: center;
       color: var(--primary);
     }
 
-    article {
-      margin: 30px auto;
+    .news-item {
+      background: #f9f9f9;
+      margin-bottom: 20px;
       padding: 20px;
       border-radius: 8px;
-      background: #f9f9f9;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      max-width: 800px;
+      border-left: 4px solid var(--primary);
     }
 
-    article h3 {
+    .news-item h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .news-item p {
+      margin-bottom: 10px;
       color: var(--text);
     }
 
-    a.read-more {
-      color: var(--primary);
-      text-decoration: underline;
-      display: inline-block;
-      margin-top: 10px;
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      body {
+        padding-top: 80px;
+      }
+
+      header {
+        padding: 15px 20px;
+      }
+
+      .header-container {
+        justify-content: center;
+        position: relative;
+      }
+
+      /* Show hamburger on mobile */
+      .hamburger {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      /* Center logo on mobile */
+      .logo {
+        text-align: center;
+        font-size: 22px;
+        flex-grow: 0;
+      }
+
+      /* Hide desktop navigation by default on mobile */
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        border-radius: 0 0 8px 8px;
+      }
+
+      /* Show navigation when active */
+      nav.active {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+      }
+
+      nav li {
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      nav li:last-child {
+        border-bottom: none;
+      }
+
+      nav a {
+        padding: 15px 20px;
+        display: block;
+        border-radius: 0;
+      }
+
+      /* Mobile dropdown adjustments */
+      .dropdown {
+        position: static;
+        box-shadow: none;
+        background: #f0f0f0;
+        margin-left: 20px;
+        border-radius: 0;
+      }
+
+      .dropdown a {
+        padding: 12px 25px;
+        font-size: 14px;
+      }
+
+      /* Mobile content adjustments */
+      .container {
+        padding: 15px;
+      }
+
+      .news-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .news-item {
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+
+      .news-item h3 {
+        font-size: 16px;
+      }
+    }
+
+    /* Tablet styles */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      nav ul {
+        gap: 15px;
+      }
+
+      nav a {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <nav>
+    <div class="header-container">
+      <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</div>
+      <a href="https://easypeasytax.com" class="logo">EasyPeasyTax</a>
+    </div>
+    <nav id="mobileMenu">
       <ul>
        <li>
   <a href="https://easypeasytax.com/#hero" style="padding: 0;">
@@ -124,93 +318,114 @@
       </ul>
     </nav>
   </header>
-
-  <h1>EasyPeasyTax Latest News</h1>
-<article>
+ <div class="container">
+  <h1 class="news-title">📰 EasyPeasyTax Latest News </h1>
+<div class="news-item">
     <h3>📈 UPI Continues Explosive Growth</h3>
     <p>In June 2025, UPI handled a staggering ₹24 lakh crore across 18.39 billion transactions, marking a ~32% jump year‑over‑year. </p>
-  </article>
+    </div>
 
 
   
-<article>
+<div class="news-item">
     <h3>🧾 GSTN Update – Rapid Growth in GST Taxpayers</h3>
     <p>According to SBI, five states—Uttar Pradesh, Maharashtra, Gujarat, Tamil Nadu, and Karnataka—together account for nearly half of active GST taxpayers. UP leads with 13.2% of registrations, while the average collection continues to rise, reflecting growing formalisation.</p>
-  </article>
+  </div>
 
   
-<article>
+<div class="news-item">
     <h3>🧾 GSTN Update – GSTR-1 Auto-population Improved</h3>
     <p>GSTN has enhanced auto-population of B2B invoices in GSTR-2B from GSTR-1 uploads, improving reconciliation and reducing mismatch errors. Businesses are advised to file timely and accurate returns.</p>
-  </article>
+  </div>
   
-<article>
-    <h3>🔍 TDS Compliance Alert</h3>
+<div class="news-item">
+  <h3>🔍 TDS Compliance Alert</h3>
     <p>TDS returns for Q1 (April–June 2025) are due by 31st July 2025. Delayed filing attracts penalties. Ensure all PANs are validated and challans correctly linked.</p>
-  </article>
+ </div>
 
   
-  <article>
-    <h3>📰 Aadhaar Mandatory: Required for all new PAN applications.</h3>
+<div class="news-item">
+  <h3>📰 Aadhaar Mandatory: Required for all new PAN applications.</h3>
     <p>Starting July 1, 2025, Aadhaar is mandatory to apply for a new PAN. Other documents will no longer be accepted.</p>
-  </article>
+ </div>
 
-  <article>
+  <div class="news-item">
     <h3>🗂️ ITR Deadline Extended: Now 15 Sept 2025 for non-audit taxpayers.</h3>
     <p>The deadline for filing tax returns for FY 2024‑25 (Assessment Year 2025‑26) has been extended from July 31 to September 15, 2025, for non‑audit taxpayers.</p>
-  </article>
+  </div>
 
-  <article>
+  <div class="news-item">
     <h3>💸 July 2025: GST Amnesty Scheme Extended</h3>
     <p>The GST amnesty scheme has been extended until July 31, 2025, allowing businesses to file pending returns with reduced late fees.</p>
-  </article>
+  </div>
 
-  <article>
+  <div class="news-item">
     <h3>🧾 July 2025: New GST Invoice Format Advisory</h3>
     <p>CBIC issued a clarification on QR codes and dynamic invoices for B2B transactions exceeding ₹50,000.</p>
-  </article>
+  </div>
 
-  <article>
+  <div class="news-item">
     <h3>🔍 TDS: Section 194Q Updates</h3>
     <p>Clarification issued on applicability of TDS under Section 194Q for digital transactions exceeding ₹50 lakh annually.</p>
-  </article>
+  </div>
 
-  <article>
+  <div class="news-item">
     <h3>📰 June 2025: GST Late Fee Changes</h3>
     <p>Late fees revised. NIL filers: ₹500, others: up to ₹5,000.</p>
-  </article>
+  </div>
 
-  <article>
+  <div class="news-item">
     <h3>🗂️ ITR Filing AY 2025–26</h3>
     <p>Latest utilities launched with schedule updates for capital gains, etc.</p>
-  </article>
+  </div>
 
   <script>
+    function toggleMenu() {
+      const nav = document.getElementById('mobileMenu');
+      nav.classList.toggle('active');
+    }
+
+    // Dropdown functionality
     const toggle = document.querySelector('.dropdown-toggle');
     const wrapper = document.querySelector('.dropdown-wrapper');
     const dropdown = document.getElementById('toolsDropdown');
 
-    toggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      wrapper.classList.toggle('active');
-      const expanded = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", !expanded);
+    if (toggle && wrapper && dropdown) {
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        wrapper.classList.toggle('active');
+      });
+
+      dropdown.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', () => {
+        wrapper.classList.remove('active');
+      });
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const nav = document.getElementById('mobileMenu');
+      const hamburger = document.querySelector('.hamburger');
+
+      if (nav && hamburger && !nav.contains(e.target) && !hamburger.contains(e.target)) {
+        nav.classList.remove('active');
+      }
     });
 
-    dropdown.addEventListener('click', (e) => {
-      e.stopPropagation();
-    });
-
-    document.addEventListener('click', () => {
-      wrapper.classList.remove('active');
-      toggle.setAttribute("aria-expanded", false);
+    // Close mobile menu when window is resized to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        const nav = document.getElementById('mobileMenu');
+        if (nav) {
+          nav.classList.remove('active');
+        }
+      }
     });
   </script>
-  <script>
-  function openRefundStatus() {
-    alert("You will be redirected to the official NSDL Refund Status page.");
-    window.open("https://tin.tin.nsdl.com/oltas/refund-status-pan.html", "_blank");
-  }
-</script>
 </body>
 </html>
