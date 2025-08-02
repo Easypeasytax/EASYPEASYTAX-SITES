@@ -1,63 +1,4 @@
 <!DOCTYPE html>
-<!-- BCI Disclaimer Modal (Styled for EasyPeasyTax) -->
-<div id="bci-disclaimer-overlay" style="
-  position: fixed;
-  z-index: 9999;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.85);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-">
-  <div style="
-    background: #ffffff;
-    color: #333333;
-    padding: 35px 30px;
-    max-width: 640px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
-    text-align: justify;
-  ">
-    <h2 style="text-align:center; color: #ff6f61; margin-bottom: 20px;">DISCLAIMER</h2>
-    <p style="font-size: 15px; line-height: 1.6; margin-bottom: 20px;">
-      As per the rules of the Bar Council of India, we are not permitted to solicit work or advertise.
-      By clicking on “I Agree”, the user acknowledges and confirms that:
-    </p>
-    <ul style="padding-left: 20px; font-size: 15px; line-height: 1.6; color: #555;">
-      <li>There has been no advertisement, personal communication, solicitation, invitation or inducement of any sort from us or any of our members to solicit any work through this website.</li>
-      <li>The user wishes to gain more information about us for his/her own information and use.</li>
-      <li>Any information obtained from this website is at the user's discretion and will not create any lawyer-client relationship.</li>
-    </ul>
-    <div style="text-align: center; margin-top: 30px;">
-      <button onclick="acceptDisclaimer()" style="
-        padding: 12px 30px;
-        font-size: 16px;
-        background-color: #ff6f61;
-        color: #ffffff;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        transition: background 0.3s;
-      " onmouseover="this.style.backgroundColor='#e75b4f'" onmouseout="this.style.backgroundColor='#ff6f61'">
-        I Agree
-      </button>
-    </div>
-  </div>
-</div>
-
-<script>
-  function acceptDisclaimer() {
-       document.getElementById('bci-disclaimer-overlay').style.display = 'none';
-  }
-
- window.onload = function() {
-  document.getElementById('bci-disclaimer-overlay').style.display = 'flex';
-};
-</script>
 
 <html lang="en">
 <head>
@@ -65,35 +6,562 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>EasyPeasyTax – Your Expert Legal &amp; Tax Partner</title>
 <style>
-    body { margin:0; font-family:sans-serif; scroll-behavior:smooth; background:#fff; color:#333; }
-    header { background:#fff; position:fixed; top:0; width:100%; z-index:100; padding:10px 20px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-    nav ul { list-style:none; margin:0; padding:0; display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
-    nav a { text-decoration:none; color:#333; font-weight:500; padding:10px; }
-    nav a:hover, nav a.active { color:#ff6f61; }
-    section { padding:80px 20px; max-width:1000px; margin:0 auto; }
-    .hero { text-align:center; padding-top:120px; background:#f9f9f9; }
-    .hero h1 { font-size:2.5rem; margin-bottom:10px; }
-    .btn { display:inline-block; padding:12px 24px; background:#ff6f61; color:#fff; text-decoration:none; border-radius:4px; }
-    .services .card { display:flex; align-items:flex-start; gap:15px; margin-bottom:30px; }
-    .services .icon { font-size:30px; color:#ff6f61; width:40px; }
-    form input, form textarea, form select { width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px; }
-    footer { text-align:center; padding:20px; font-size:0.9em; color:#777; background:#f5f5f5; }
-  
-.fade-in-modal { animation: fadeIn 0.4s ease-out; }
-.fade-out-modal { animation: fadeOut 0.4s ease-out; }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-@keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+    /* Reset and base styles */
+    * {
+        box-sizing: border-box;
+    }
+
+    body { 
+        margin: 0; 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        scroll-behavior: smooth; 
+        background: #fff; 
+        color: #333; 
+        line-height: 1.6;
+    }
+
+    /* Header styles - responsive */
+    header { 
+        background: #fff; 
+        position: fixed; 
+        top: 0; 
+        width: 100%; 
+        z-index: 100; 
+        padding: 10px 20px; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+        min-width: 44px;
+        min-height: 44px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: #333;
+        margin: 3px 0;
+        transition: 0.3s;
+    }
+
+    .hamburger:hover {
+        background-color: #f5f5f5;
+    }
+
+    nav ul { 
+        list-style: none; 
+        margin: 0; 
+        padding: 0; 
+        display: flex; 
+        justify-content: center; 
+        gap: 20px; 
+        flex-wrap: wrap; 
+        align-items: center;
+    }
+
+    nav a { 
+        text-decoration: none; 
+        color: #333; 
+        font-weight: 500; 
+        padding: 10px 15px; 
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    nav a:hover, nav a.active { 
+        color: #ff6f61; 
+        background-color: rgba(255, 111, 97, 0.1);
+    }
+
+    .logo-link {
+        font-weight: bold;
+      font-size: 20px;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    /* Dropdown styles */
+    .dropdown-wrapper {
+        position: relative;
+    }
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        border-radius: 8px;
+        padding: 8px 0;
+        min-width: 200px;
+        z-index: 1000;
+    }
+
+    .dropdown-wrapper.active .dropdown {
+        display: block;
+    }
+
+    .dropdown li {
+        margin: 0;
+    }
+
+    .dropdown a {
+        padding: 12px 16px;
+        display: block;
+        color: #333;
+        border-radius: 0;
+    }
+
+    .dropdown a:hover {
+        background-color: #f8f8f8;
+        color: #ff6f61;
+    }
+
+    /* Main content styles */
+    section { 
+        padding: 80px 20px; 
+        max-width: 1200px; 
+        margin: 0 auto; 
+    }
+
+    .hero { 
+        text-align: center; 
+        padding-top: 120px; 
+        background: #f9f9f9; 
+    }
+
+    .hero img {
+        width: 100%;
+        max-height: clamp(300px, 50vh, 500px);
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+    .hero h1 { 
+        font-size: clamp(2rem, 5vw, 2.5rem); 
+        margin-bottom: 10px; 
+        color: #ff6f61;
+    }
+
+    .hero h2 {
+        font-size: clamp(1.2rem, 3vw, 1.6rem);
+        margin-bottom: 20px;
+        color: #333;
+        font-weight: 400;
+    }
+
+    .hero p {
+        font-size: clamp(1rem, 2.5vw, 1.1rem);
+        margin-bottom: 30px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn { 
+        display: inline-block; 
+        padding: clamp(10px, 2vw, 15px) clamp(20px, 4vw, 30px); 
+        background: #ff6f61; 
+        color: #fff; 
+        text-decoration: none; 
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: clamp(14px, 2.5vw, 16px);
+        transition: all 0.3s ease;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+    }
+
+    .btn:hover {
+        background: #e55a50;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255, 111, 97, 0.3);
+    }
+
+    /* Section headings */
+    h2 {
+        font-size: clamp(1.5rem, 4vw, 2.2rem);
+        margin-bottom: clamp(20px, 4vw, 30px);
+        color: #333;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: clamp(1.1rem, 3vw, 1.4rem);
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    p {
+        font-size: clamp(0.9rem, 2.5vw, 1rem);
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    /* Services cards - responsive */
+    .services .card { 
+        display: flex; 
+        align-items: flex-start; 
+        gap: 15px; 
+        margin-bottom: 30px; 
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .services .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .services .icon { 
+        font-size: clamp(24px, 5vw, 30px); 
+        color: #ff6f61; 
+        width: 50px;
+        flex-shrink: 0;
+    }
+
+    /* Form styles - responsive */
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    form input, form textarea, form select { 
+        width: 100%; 
+        padding: clamp(10px, 2vw, 15px); 
+        margin-bottom: 15px; 
+        border: 2px solid #e0e0e0; 
+        border-radius: 6px;
+        font-size: clamp(14px, 2.5vw, 16px);
+        transition: border-color 0.3s ease;
+    }
+
+    form input:focus, form textarea:focus, form select:focus {
+        outline: none;
+        border-color: #ff6f61;
+        box-shadow: 0 0 0 3px rgba(255, 111, 97, 0.1);
+    }
+
+    /* Testimonials section */
+    .testimonials {
+        display: grid;
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .testimonial {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 8px;
+        border-left: 4px solid #ff6f61;
+    }
+
+    .testimonial p {
+        font-style: italic;
+        margin-bottom: 15px;
+        font-size: clamp(0.9rem, 2.2vw, 1rem);
+    }
+
+    .testimonial strong {
+        color: #ff6f61;
+        font-size: clamp(0.85rem, 2vw, 0.9rem);
+    }
+
+    /* Footer */
+    footer { 
+        text-align: center; 
+        padding: clamp(20px, 4vw, 40px) 20px; 
+        font-size: clamp(0.8rem, 2vw, 0.9rem); 
+        color: #777; 
+        background: #f5f5f5; 
+    }
+
+    /* Contact info */
+    .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin: 30px 0;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    /* Disclaimer modal */
+    .fade-in-modal { animation: fadeIn 0.4s ease-out; }
+    .fade-out-modal { animation: fadeOut 0.4s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+
+    #bci-disclaimer-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.8);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        padding: 20px;
+    }
+
+    .disclaimer-content {
+        background: white;
+        padding: clamp(20px, 4vw, 40px);
+        border-radius: 12px;
+        max-width: 600px;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .disclaimer-content h3 {
+        color: #ff6f61;
+        margin-bottom: 20px;
+    }
+
+    .disclaimer-content p {
+        margin-bottom: 15px;
+        font-size: clamp(0.9rem, 2.2vw, 1rem);
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+        body {
+            padding-top: 70px;
+        }
+
+        header {
+            padding: 15px 20px;
+        }
+
+         .hamburger {
+    display: flex;
+    position: relative;
+    z-index: 2;
+  }
+
+        nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 0 0 8px 8px;
+        }
+
+        nav.active {
+            display: block;
+        }
+
+        nav ul {
+            flex-direction: column;
+            gap: 0;
+            padding: 10px 0;
+        }
+
+        nav li {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        nav li:last-child {
+            border-bottom: none;
+        }
+
+        nav a {
+            padding: 15px 20px;
+            display: block;
+            border-radius: 0;
+            justify-content: flex-start;
+        }
+
+        .nav-container {
+    position: relative;
+    justify-content: flex-start;
+  }
+
+ .logo-link {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+        /* Mobile dropdown */
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            background: #f8f8f8;
+            margin-left: 20px;
+            border-radius: 0;
+        }
+
+        .dropdown a {
+            padding: 12px 25px;
+            font-size: 14px;
+        }
+
+        /* Mobile hero adjustments */
+        .hero {
+            padding-top: 100px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        section {
+            padding: 40px 15px;
+        }
+
+        /* Mobile services cards */
+        .services .card {
+            flex-direction: column;
+            text-align: center;
+            padding: 20px 15px;
+        }
+
+        .services .icon {
+            align-self: center;
+            margin-bottom: 10px;
+        }
+
+        /* Mobile testimonials */
+        .testimonials {
+            gap: 20px;
+        }
+
+        .testimonial {
+            padding: 20px 15px;
+        }
+
+        /* Mobile contact info */
+        .contact-info {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-item {
+            justify-content: center;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+        }
+    }
+
+    /* Tablet styles */
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .services .card {
+            padding: 25px 20px;
+        }
+
+        .testimonials {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        nav ul {
+            gap: 15px;
+        }
+
+        nav a {
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+    }
+
+    /* Large desktop styles */
+    @media (min-width: 1200px) {
+        .testimonials {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .services h2 {
+            grid-column: 1 / -1;
+        }
+    }
+
+    /* Accessibility improvements */
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+
+    @media (prefers-contrast: high) {
+        .btn {
+            border: 2px solid currentColor;
+        }
+
+        .services .card {
+            border: 2px solid #e0e0e0;
+        }
+    }
 </style>
 </head>
 <body>
+<div id="bci-disclaimer-overlay" class="fade-in-modal">
+  <div class="disclaimer-content">
+    <h3>🏛️ Bar Council of India Disclaimer</h3>
+    <p>As per the rules of the Bar Council of India, we are not permitted to solicit work or advertise. By clicking on "I Agree", the user acknowledges and confirms that:</p>
+    <ul>
+      <li>The user is seeking information of their own accord</li>
+      <li>There has been no advertisement, personal communication, solicitation, invitation, or inducement of any sort whatsoever</li>
+      <li>The user wishes to gain more information about legal services for their own information and use</li>
+    </ul>
+    <button onclick="acceptDisclaimer()" style="background: #ff6f61; color: white; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; min-width: 120px; min-height: 44px;">I Agree</button>
+  </div>
+</div>
 <header>
-    <nav>
-      <ul>
-        <li>
-    <a class="active" href="#hero" style="padding: 0;">
+    <div class="nav-container">
+        <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+	    <span></span>
+            <span></span>
+            <span></span>
+        </div>
+<a class="active" href="#hero" style="padding: 0;">
       <img src="logowb.png" alt="EasyPeasyTax Logo" style="height: 40px; vertical-align: middle;">
     </a>
-  </li>
+        <nav id="mobileMenu">
+      <ul>
         <li><a href="#about">About Us</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="hsn-sac-tabbed-themed.html">HSN & SAC Codes</a></li>
@@ -114,61 +582,15 @@
       </ul>
     </nav>
   </header>
-
-  <style>
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #f9f9f9;
-      padding: 10px 0;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      min-width: 180px;
-      z-index: 100;
-    }
-    .dropdown li a {
-      display: block;
-      padding: 8px 20px;
-      color: #000;
-      text-decoration: none;
-    }
-    .dropdown-wrapper:hover .dropdown,
-    .dropdown-wrapper.active .dropdown {
-      display: block;
-    }
-  </style>
-
-  <script>
-    const toggle = document.querySelector('.dropdown-toggle');
-    const wrapper = document.querySelector('.dropdown-wrapper');
-    const dropdown = document.getElementById('toolsDropdown');
-
-    toggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      wrapper.classList.toggle('active');
-      const expanded = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", !expanded);
-    });
-
-    dropdown.addEventListener('click', (e) => {
-      e.stopPropagation();
-    });
-
-    document.addEventListener('click', () => {
-      wrapper.classList.remove('active');
-      toggle.setAttribute("aria-expanded", false);
-    });
-  </script>
-
 <section class="hero" id="hero">
-  <img src="HERO IMAGE.jpeg" alt="Hero Image" style="width:100%; max-height:500px; object-fit:cover; border-radius:8px; margin-bottom:20px;" />
+  <img src="HERO IMAGE.jpeg" alt="Professional tax and legal services" />
+  <h1>EasyPeasyTax</h1>
+  <h2>Legal Tax Support for Individuals & Businesses</h2>
+  <p>Get expert help on GST filings, income tax notices, and business registrations—simple, secure, and compliant.</p>
+  <a href="#services" class="btn">Get Started</a>
+  <a href="#services" class="btn">Explore Services</a>
+</section>
 
-<h1>EasyPeasyTax</h1>
-<h2>Legal Tax Support for Individuals &amp; Businesses</h2>
-<p>Get expert help on GST filings, income tax notices, and business registrations—simple, secure, and compliant.</p>
-<a class="btn" href="#requirements">Get Started</a>
-<a class="btn" href="#services">Explore Services</a></section>
 <section id="about">
 <h2>About EasyPeasyTax</h2>
 <p>We are a legal-tech initiative led by a practicing advocate helping startups, professionals, and businesses navigate India's tax and regulatory landscape. Our core expertise includes GST compliance, TDS filing, Income Tax responses, and business registrations including Trademark and MSME.</p>
@@ -185,6 +607,7 @@
   Our goal is to ensure that entrepreneurs and professionals can focus on growth, while we handle the complexities of compliance in the background — securely, confidentially, and competently.
   </p>
 </section>
+
 <section class="services" id="services">
 <h2>Our Services</h2>
 <div class="card"><div class="icon">🧾</div><div><h3>GST &amp; Returns</h3><p>End-to-end filing, notices, audits, LUT, and refund assistance.</p></div></div>
@@ -192,7 +615,7 @@
 <div class="card"><div class="icon">📄</div><div><h3>Business Registrations</h3><p>Startups, MSMEs, and Trademark processes simplified for you.</p></div></div>
 <div class="card"><div class="icon">📊</div><div><h3>Accounting &amp; TDS</h3><p>Monthly compliance, Form 16/16A, challans, and reports.</p></div></div>
 <div class="card"><div class="icon">📥</div><div><h3>TDS Filing &amp; Compliance</h3>
-<p>Monthly TDS deduction checks, challan generation, Form 26Q/27Q submissions, and Form 16 issuance.</p></div></div>
+<p>Monthly TDS deduction checks, challan generation, Form 26Q/27EQ submissions, and Form 16 issuance.</p></div></div>
 <div class="card"><div class="icon">📞</div><div><h3>Legal Drafting &amp; Notices</h3>
 <p>Reply to GST/IT notices, prepare representations, and support during audits or scrutiny proceedings.</p></div></div>
 <div class="card"><div class="icon">🔐</div><div><h3>ROC &amp; MCA Filings</h3>
@@ -267,7 +690,7 @@
   background:#25D366; color:white; padding:10px;
   border-radius:50%; font-weight:bold; text-decoration:none;
   box-shadow:0 0 10px rgba(0,0,0,0.3); z-index:999;" target="_blank">
-<img alt="WhatsApp" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width:24px; height:24px;"/>
+<img alt="WhatsApp" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width:28px; height:28px;"/>
 </a>
 <script>
   if (window.location.search.includes("success=true")) {
@@ -286,6 +709,115 @@
     document.body.appendChild(popup);
     setTimeout(() => popup.remove(), 5000);
   }
+</script>
+<div class="fade-in-modal" id="successModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+  background:rgba(0,0,0,0.5); z-index:1000; justify-content:center; align-items:center;">
+<div id="modalContent" style="background:white; padding:30px; border-radius:8px; max-width:400px; text-align:center;
+  box-shadow:0 2px 10px rgba(0,0,0,0.2);">
+<h3>✅ Form Submitted</h3>
+<p>Thank you! We will contact you shortly.</p>
+<button onclick="document.getElementById('successModal').style.display='none'" style="margin-top:15px; padding:10px 20px;
+    background:#ff6f61; color:white; border:none; border-radius:4px;">Close</button>
+</div>
+</div>
+<script>
+  function acceptDisclaimer() {
+       document.getElementById('bci-disclaimer-overlay').style.display = 'none';
+  }
+
+  window.onload = function() {
+    document.getElementById('bci-disclaimer-overlay').style.display = 'flex';
+  };
+
+  function toggleMenu() {
+    const nav = document.getElementById('mobileMenu');
+    nav.classList.toggle('active');
+  }
+
+  // Dropdown functionality
+  const toggle = document.querySelector('.dropdown-toggle');
+  const wrapper = document.querySelector('.dropdown-wrapper');
+  const dropdown = document.getElementById('toolsDropdown');
+
+  if (toggle && wrapper && dropdown) {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      wrapper.classList.toggle('active');
+    });
+
+    dropdown.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', () => {
+      wrapper.classList.remove('active');
+    });
+  }
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    const nav = document.getElementById('mobileMenu');
+    const hamburger = document.querySelector('.hamburger');
+
+    if (nav && hamburger && !nav.contains(e.target) && !hamburger.contains(e.target)) {
+      nav.classList.remove('active');
+    }
+  });
+
+  // Close mobile menu when window is resized to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      const nav = document.getElementById('mobileMenu');
+      if (nav) {
+        nav.classList.remove('active');
+      }
+    }
+  });
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        // Close mobile menu after clicking a link
+        const nav = document.getElementById('mobileMenu');
+        if (nav && nav.classList.contains('active')) {
+          nav.classList.remove('active');
+        }
+      }
+    });
+  });
+document.getElementById('requirementForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const now = new Date();
+    const istOffset = 5.5 * 60 * 60 * 1000;
+    const istTime = new Date(now.getTime() + istOffset);
+    document.getElementById('submittedAtIST').value = istTime.toISOString();
+    
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+    
+    const successMessage = document.getElementById('successMessage');
+    successMessage.style.display = 'block';
+    
+    this.reset();
+    
+    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    
+    console.log('Form submitted:', data);
+    
+    setTimeout(() => {
+      successMessage.style.display = 'none';
+    }, 5000);
+  });
 </script>
 <div class="fade-in-modal" id="successModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
   background:rgba(0,0,0,0.5); z-index:1000; justify-content:center; align-items:center;">
@@ -345,6 +877,5 @@ window.addEventListener('click', function(event) {
     window.open("https://tin.tin.nsdl.com/oltas/refund-status-pan.html", "_blank");
   }
 </script>
-
 </body>
 </html>
