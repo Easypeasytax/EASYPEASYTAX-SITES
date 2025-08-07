@@ -183,23 +183,20 @@
       }
 
       .header-container {
-        justify-content: center;
+        justify-content: space-between;
         position: relative;
       }
 
       /* Show hamburger on mobile */
      .hamburger {
   display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-  min-width: 44px;
-  min-height: 44px;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
 }
+
 .hamburger span {
   width: 25px;
   height: 3px;
@@ -217,6 +214,13 @@
         font-size: 22px;
         flex-grow: 0;
       }
+.logo-link {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
 
       /* Hide desktop navigation by default on mobile */
       nav {
@@ -310,9 +314,9 @@
   <span></span>
   <span></span>
       </div>
-    <a href="https://easypeasytax.com/#hero" style="padding: 0;">
-    <img src="logowb.png" alt="EasyPeasyTax Logo" style="height: 40px; vertical-align: middle;">
-  </a>
+   <a class="logo-link" href="https://easypeasytax.com/#hero">
+  <img src="logowb.png" alt="EasyPeasyTax Logo" style="height: 40px; vertical-align: middle;">
+</a>
     </div>
     <nav id="mobileMenu">
         <ul>
@@ -458,6 +462,7 @@
   <a href="https://easypeasytax.com/" class="back-button">← Back to Main Page</a>
 </body>
 </html>
+
 
 
 
