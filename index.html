@@ -417,10 +417,12 @@
     position: relative;
   }
 
- .logo-link {
-    text-align: center;
-        font-size: 22px;
-        flex-grow: 0;
+.logo-link {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
   }
         /* Mobile dropdown */
         .dropdown {
