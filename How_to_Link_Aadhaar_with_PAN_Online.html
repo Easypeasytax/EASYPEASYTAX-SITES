@@ -179,6 +179,32 @@
   height: auto;
   display: block;
 }
+/* Mobile responsiveness improvements */
+@media (max-width: 768px) {
+  .grid.page {
+    grid-template-columns: 1fr; /* stack TOC and content */
+  }
+  .toc {
+    position: relative; /* prevent sticky issues */
+    top: auto;
+    margin-bottom: 20px;
+  }
+  .kpis {
+    grid-template-columns: 1fr 1fr; /* 2 columns instead of 3 */
+  }
+  .logo-container img {
+    max-width: 120px; /* shrink logo */
+  }
+}
+
+@media (max-width: 480px) {
+  .kpis {
+    grid-template-columns: 1fr; /* single column on very small screens */
+  }
+  .wrap {
+    padding: 10px; /* reduce side padding */
+  }
+}
 
   </style>
 
