@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>GSTR-3B Penalty, Late Fees & Interest — EasyPeasyTax</title>
+<meta name="description" content="Clear guide to GSTR-3B late fee, maximum caps, and 18% interest on delayed tax. Includes calculator example, FAQs, and official links." />
+<link rel="canonical" href="https://www.easypeasytax.com/blog/gstr-3b-penalty" />
+
+
+<!-- Open Graph -->
+<meta property="og:title" content="GSTR-3B Penalty, Late Fees & Interest" />
+<meta property="og:description" content="Simple breakdown of GSTR-3B late fee, caps, and interest. With examples and FAQs." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.easypeasytax.com/blog/gstr-3b-penalty" />
+<meta property="og:image" content="https://www.easypeasytax.com/assets/og/gstr-3b-penalty.png" />
+
+
+<!-- Brand Styles -->
+<style>
+:root{
+/* === EasyPeasyTax Brand Theme === */
+--brand: #ff6f61; /* primary coral */
+--brand-alt: #ff967d; /* softer coral accent */
+--accent: #ffd166; /* warm highlight */
+--ink: #2e2e2e; /* dark text */
+--muted: #6b7280; /* secondary text */
+--bg: #fff9f8; /* light coral-tinted background */
+--card: #ffffff; /* panels/cards */
+--ring: rgba(255,111,97,.25);/* coral focus ring */
+--success: #16a34a; /* green */
+--danger: #dc2626; /* red */
+}
+
+
+/* Reset + base */
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+color: var(--ink);
+background: linear-gradient(180deg, var(--bg) 0%, #fff 40%);
+line-height: 1.65;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.wrap{max-width:1040px;margin:0 auto;padding:20px}
+.container{max-width:840px;margin:0 auto}
+
+
+/* Header */
+.hero{
+background: radial-gradient(1200px 400px at 20% -10%, rgba(255,111,97,.12), transparent),
+radial-gradient(1200px 400px at 80% -10%, rgba(255,111,97,.08), transparent);
+border-bottom: 1px solid #e5e7eb;
+}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;color:var(--ink)}
+.brand .logo{width:36px;height:36px;border-radius:12px;background: linear-gradient(135deg, var(--brand), var(--brand-alt));box-shadow: 0 6px 18px rgba(255,111,97,.25)}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{appearance:none;border:0;border-radius:12px;padding:10px 14px;font-weight:600;cursor:pointer;background:var(--brand);color:#fff;box-shadow: 0 8px 20px rgba(255,111,97,.25);transition: transform .05s ease, box-shadow .2s ease, background .2s ease}
+.btn:hover{transform: translateY(-1px)}
+.btn.alt{background:var(--brand-alt)}
+.btn.ghost{background:#fff;color:var(--brand);border:1px solid rgba(255,111,97,.25);box-shadow:none}
+
+
+.hero-body{padding:28px 0 18px 0;display:grid;gap:16px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:#ffeceb;border:1px solid rgba(255,111,97,.2); padding:6px 10px;border-radius:999px}
+h1{font-size:clamp(26px, 3.4vw, 40px);line-height:1.15;margin:6px 0 4px 0}
+.lede{font-size:clamp(15px, 1.6vw, 18px);color:var(--muted);max-width:65ch} 
+/* Cards, layout */
+.grid{display:grid;gap:18px}
+.card{background:var(--card);border:1px solid #e5e7eb;border-radius:16px;padding:16px;box-shadow: 0 10px 24px rgba(2,6,23,.04)}
+.toc{position:sticky;top:10px}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.kpi{border-radius:12px;padding:12px 14px;border:1px dashed rgba(255,111,97,.4);background:linear-gradient(180deg, #fff2f0, #fff);font-size:14px}
+.kpi strong{display:block;font-size:18px}
+
+
+/* Content */
+h2{font-size:clamp(20px,2.4vw,28px);margin:12px 0 8px 0}
+h3{font-size:clamp(17px,2vw,22px);margin:10px 0 6px 0}
+ul,ol{padding-left:22px}
+.note{border-left:4px solid var(--brand-alt);background:#fff2f0;border-radius:8px;padding:10px 12px}
+.warn{border-left:4px solid var(--danger);background:#fff1f2}
+
+
+.steps ol{counter-reset: step}
+.steps li{margin:10px 0}
+.steps li::marker{font-weight:700}
+/* Accordions (FAQs) */
+details{border:1px solid #e5e7eb;border-radius:12px;padding:10px 12px;background:#fff}
+details + details{margin-top:10px}
+summary{cursor:pointer;list-style:none;font-weight:600}
+summary::-webkit-details-marker{display:none}
+details[open]{box-shadow:0 10px 24px rgba(2,6,23,.05)}
+details:focus-within{outline:2px solid var(--ring);outline-offset:2px}
+
+
+/* Table */
+table{width:100%;border-collapse:separate;border-spacing:0;margin:8px 0}
+th,td{padding:10px 12px;border-bottom:1px solid #e5e7eb}
+th{text-align:left;background:#f8fafc}
+
+
+/* Footer */
+footer{margin:40px 0 20px 0;color:var(--muted);font-size:14px}
+/* Responsive */
+@media (min-width: 960px){
+.hero-body{grid-template-columns: 3fr 2fr;align-items:center}
+.grid.page{grid-template-columns: 1fr 2.2fr}
+}
+@media (max-width: 480px){
+.btn{width:100%}
+.kpis{grid-template-columns:1fr}
+}
+
+
+.logo-container {display:flex;justify-content:center;align-items:center;padding: 20px 0}
+.logo-container img {max-width: 200px; height:auto; display:block}
+
+
+.back-button{display:block;width:fit-content;margin:2rem auto;background-color:#ff6f61;color:#fff;padding:0.75rem 1.5rem;text-align:center;border-radius:5px;font-weight:bold;transition:background-color .3s ease}
+.back-button:hover{background-color:#e85c50}
+.footer{margin-top:3rem;font-size:.9rem;color:#777;text-align:center}
+/* Mobile responsiveness improvements */
+@media (max-width: 768px) {
+  .grid.page {
+    grid-template-columns: 1fr; /* stack TOC and content */
+  }
+  .toc {
+    position: relative; /* prevent sticky issues */
+    top: auto;
+    margin-bottom: 20px;
+  }
+  .kpis {
+    grid-template-columns: 1fr 1fr; /* 2 columns instead of 3 */
+  }
+  .logo-container img {
+    max-width: 120px; /* shrink logo */
+  }
+}
+
+@media (max-width: 480px) {
+  .kpis {
+    grid-template-columns: 1fr; /* single column on very small screens */
+  }
+  .wrap {
+    padding: 10px; /* reduce side padding */
+  }
+}
+</style>
+<!-- SEO: Article + FAQ Schema -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"BlogPosting",
+"headline":"GSTR-3B Penalty, Late Fees & Interest",
+"description":"Clear guide to late fee per day, maximum caps, and 18% interest on delayed tax for GSTR-3B.",
+"author":{"@type":"Organization","name":"EasyPeasyTax"},
+"publisher":{"@type":"Organization","name":"EasyPeasyTax","logo":{"@type":"ImageObject","url":"https://www.easypeasytax.com/assets/logo.png"}},
+"datePublished":"2025-08-20",
+"dateModified":"2025-08-20",
+"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.easypeasytax.com/blog/gstr-3b-penalty"}
+}
+</script>
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"FAQPage",
+"mainEntity":[
+{"@type":"Question","name":"What is the per-day late fee for GSTR-3B?","acceptedAnswer":{"@type":"Answer","text":"₹50 per day (₹25 CGST + ₹25 SGST). For NIL returns, ₹20 per day (₹10 + ₹10)."}},
+{"@type":"Question","name":"What is the maximum late fee (cap)?","acceptedAnswer":{"@type":"Answer","text":"Caps have been revised via notifications and amnesty schemes. Currently, portals commonly show caps between ₹2,000–₹10,000 depending on turnover/period. Verify on the GST portal while filing."}},
+{"@type":"Question","name":"What interest is payable on delayed tax?","acceptedAnswer":{"@type":"Answer","text":"18% per annum on the unpaid tax under Section 50(1) of the CGST Act until the date of payment."}}
+]
+}
+</script>
+</head>
+<body>
+<!-- HEADER / HERO -->
+<header class="hero">
+<div class="wrap">
+<div class="logo-container">
+<img src="logowb.png" alt="EasyPeasyTax Logo" />
+</div>
+
+
+<div class="hero-body container">
+<div>
+<span class="eyebrow">GST • Compliance</span>
+<h1>GSTR-3B Penalty, Late Fees & <span style="color:var(--brand)">18% Interest</span></h1>
+<p class="lede">
+Missed the due date? Here’s the simple breakdown of <strong>late fee per day</strong>, the
+<strong>maximum cap</strong> that may apply, and <strong>interest</strong> on delayed tax payment under Section 50.
+</p>
+<div class="kpis" role="list" aria-label="Key facts">
+<div class="kpi" role="listitem"><strong>₹50/day</strong> Late fee (₹20/day for NIL)</div>
+<div class="kpi" role="listitem"><strong>Up to ₹10,000</strong> Typical cap per return*</div>
+<div class="kpi" role="listitem"><strong>18% p.a.</strong> Interest on unpaid tax</div>
+</div>
+</div>
+<div class="card">
+<h3 style="margin-top:0">Quick Links</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.gst.gov.in/">GST Portal (Login)</a></li>
+<li><a target="_blank" rel="noopener" href="https://tutorial.gst.gov.in/userguide/returns/GSTR3B.htm">GSTR-3B Help / FAQs</a></li>
+<li><a target="_blank" rel="noopener" href="https://taxinformation.cbic.gov.in/content/html/tax_repository/gst/acts/2017_CGST_act/active/chapter10/section50_v1.00.html">CGST Act: Section 50 (Interest)</a></li>
+</ul>
+<div class="note" style="margin-top:10px">
+<strong>Heads-up:</strong> Late-fee <em>caps</em> have changed over time and via amnesty schemes. The portal shows the <em>actual</em> payable amount when you proceed to file.
+</div>
+</div>
+</div>
+</div>
+</header>
+ <!-- BODY -->
+  <main class="wrap">
+    <div class="grid page container">
+      <!-- TOC -->
+      <aside class="card toc" aria-label="Table of contents">
+        <strong>On this page</strong>
+        <nav>
+          <ol>
+            <li><a href="#what">What is GSTR‑3B</a></li>
+            <li><a href="#latefee">Late Fee (Per Day & Caps)</a></li>
+            <li><a href="#interest">Interest @ 18% p.a.</a></li>
+            <li><a href="#example">Example Calculation</a></li>
+            <li><a href="#tips">How to Avoid Penalties</a></li>
+            <li><a href="#faq">FAQs</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+      <!-- CONTENT -->
+      <article class="card" id="content">
+        <section id="what">
+          <h2>What is GSTR‑3B?</h2>
+          <p>GSTR‑3B is a <strong>monthly self‑declaration</strong> return summarising outward supplies, input tax credit (ITC) and the net tax payable. It must be filed <strong>even for NIL activity</strong> for a tax period.</p>
+        </section>
+
+        <section id="latefee">
+          <h2>Late Fee for Delay in Filing</h2>
+          <table aria-label="Late fee per day and caps">
+            <thead><tr><th>Scenario</th><th>Per‑day Late Fee</th><th>Maximum Cap <small>(varies by period/turnover)</small></th></tr></thead>
+            <tbody>
+              <tr><td>Return with liability</td><td><strong>₹50/day</strong> (₹25 CGST + ₹25 SGST)</td><td>Often shown up to <strong>₹10,000</strong> per return; some periods had <strong>₹5,000</strong> cap or turnover‑based caps (₹2,000/₹5,000/₹10,000). Check portal while filing.</td></tr>
+              <tr><td>NIL return</td><td><strong>₹20/day</strong> (₹10 CGST + ₹10 SGST)</td><td>Commonly capped at <strong>₹500–₹1,000</strong> in relief periods; verify current cap on the portal.</td></tr>
+            </tbody>
+          </table>
+          <p class="note"><strong>Why this varies:</strong> CBIC notifications and periodic <em>amnesty schemes</em> have altered caps for specific tax periods and classes of taxpayers. Always rely on the amount computed in the portal for the selected period.</p>
+        </section>
+
+        <section id="interest">
+          <h2>Interest on Delayed Tax Payment</h2>
+          <ul>
+            <li><strong>18% per annum</strong> on the <em>unpaid</em> tax from due date till the date you actually pay (Section 50(1), CGST Act).</li>
+            <li>For <em>wrongly availed & utilised</em> ITC, a higher rate (up to <strong>24% p.a.</strong>) may apply under Section 50(3).</li>
+          </ul>
+          <div class="warn" style="margin-top:10px;padding:10px 12px;border-radius:8px">
+            <strong>Note:</strong> Courts/notifications clarified that interest is payable on the portion paid <em>in cash</em> for the delayed period. If unsure, seek professional advice.
+          </div>
+        </section>
+
+        <section id="example">
+          <h2>Quick Example</h2>
+          <p>Tax payable (cash): <strong>₹50,000</strong>; Delay: <strong>30 days</strong>; Return is not NIL.</p>
+          <ul>
+            <li><strong>Interest</strong> = 50,000 × 18% × (30/365) ≈ <strong>₹739</strong></li>
+            <li><strong>Late fee</strong> = ₹50 × 30 = <strong>₹1,500</strong> (subject to cap)</li>
+          </ul>
+          <p><strong>Total</strong> ≈ ₹2,239 (before any cap adjustments shown by the portal).</p>
+        </section>
+
+        <section id="tips">
+          <h2>How to Avoid GSTR‑3B Penalties</h2>
+          <ul>
+            <li>Use calendar reminders and file <strong>before</strong> the due date.</li>
+            <li>If there’s no activity, file a <strong>NIL return</strong> to minimise late fee.</li>
+            <li>Pay any cash liability promptly to reduce interest days.</li>
+            <li>Review auto‑filled data to avoid wrong ITC and future notices.</li>
+          </ul>
+        </section>
+
+        <section id="faq">
+          <h2>FAQs</h2>
+
+          <details>
+            <summary>Is the late‑fee cap ₹5,000 or ₹10,000?</summary>
+            <div style="margin-top:8px">Both figures have applied in different windows. Caps were <em>rationalised</em> by notifications and further relaxed under amnesty schemes for specific periods. The GST portal will display the exact payable late fee for your tax period and turnover band.</div>
+          </details>
+
+          <details>
+            <summary>What if my return is NIL?</summary>
+            <div style="margin-top:8px">Per‑day fee is ₹20. During relief windows, the cap for NIL returns has been lower (e.g., ₹500). Always check the portal’s computation.</div>
+          </details>
+
+          <details>
+            <summary>What interest rate applies if I wrongly avail & utilise ITC?</summary>
+            <div style="margin-top:8px">Up to 24% p.a. under Section 50(3), separate from the 18% for delayed tax payment.</div>
+          </details>
+
+          <details>
+            <summary>Where can I confirm the latest official rules?</summary>
+            <div style="margin-top:8px">See Section 50 on the CBIC Tax Information Portal, the GST portal’s GSTR‑3B guide, and current CBIC notifications. Links are listed above.</div>
+          </details>
+        </section>
+      </article>
+    </div>
+
+    <a href="/blog" class="back-button">← Back to Blog</a>
+  </main>
+
+  <div class="footer">
+    <p><em>Disclaimer: This article is for informational purposes only and not a substitute for legal advice. For tailored guidance, consult a tax professional.</em></p>
+    © <span id="year"></span> EasyPeasyTax.com
+  </div>
+
+  <script>
+    // Small niceties
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
