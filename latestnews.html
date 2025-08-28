@@ -283,6 +283,63 @@
         font-size: 14px;
       }
     }
+    .news-card {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background: var(--card-bg);
+    color: var(--ink);
+    border: 1px solid #f1f5f9;
+    border-radius: 16px;
+    padding: clamp(16px, 2vw, 24px);
+    box-shadow: 0 6px 18px rgba(17, 24, 39, 0.06);
+    position: relative;
+    overflow: clip;
+    max-width: 900px;
+    margin: 16px auto;
+  }
+
+  .news-card__badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--brand);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .02em;
+    box-shadow: 0 4px 10px rgba(255, 111, 97, .35);
+  }
+
+  .news-card__title {
+    margin: 0 0 6px 0;
+    font-size: clamp(18px, 2.2vw, 24px);
+    line-height: 1.25;
+  }
+
+  .news-card__meta {
+    margin: 0 0 12px 0;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .news-card__lead {
+    margin: 0 0 10px 0;
+    font-size: clamp(14px, 1.8vw, 16px);
+  }
+
+  .news-card__list {
+    margin: 8px 0 16px 18px;
+    padding: 0;
+    font-size: clamp(14px, 1.8vw, 16px);
+  }
+  .news-card__list li { margin: 6px 0; }
+
+  .news-card__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
   </style>
 </head>
 <body>
@@ -318,6 +375,31 @@
  <div class="container">
   <h1 class="news-title">📰 EasyPeasyTax Latest News </h1>
 
+<section class="news-card" aria-labelledby="news-itr67-title">
+  <div class="news-card__badge" aria-hidden="true">Latest</div>
+
+  <h2 id="news-itr67-title" class="news-card__title">
+    ITR-6 & ITR-7 Excel Utilities Released (AY 2025-26)
+  </h2>
+
+  <p class="news-card__meta">
+    Updated: <time datetime="2025-08-28">28 Aug 2025</time> · Source: Income Tax Dept.
+  </p>
+
+  <p class="news-card__lead">
+    The Income Tax Department has released the Excel Utilities for <strong>ITR-6</strong> (companies)
+    and <strong>ITR-7</strong> (trusts, charitable/religious institutions, political parties, universities, hospitals, etc.).
+    Prepare returns offline, validate, and upload on the portal for AY 2025-26.
+  </p>
+
+  <ul class="news-card__list">
+    <li><strong>ITR-6:</strong> For companies (except those claiming exemption under Section 11).</li>
+    <li><strong>ITR-7:</strong> For persons required to file under Sections 139(4A), 139(4B), 139(4C), or 139(4D).</li>
+  </ul>
+
+
+
+   
 <div class="news-item">
     <h3>💡 ITR-5 Excel Utility Released for AY 2025–26.</h3>
     <p> The Income Tax Department has released the ITR-5 Excel utility for Assessment Year 2025–26 on August 9–10, 2025. </p>
@@ -458,4 +540,5 @@
 </script>
 </body>
 </html>
+
 
