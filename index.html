@@ -7,17 +7,17 @@
 <title>EasyPeasyTax – Your Expert Legal &amp; Tax Partner</title>
 <style>
 	.glowing-link-wrapper {
-  position: relative;
-  display: inline-block;
-  text-align: center;
+  position: relative; /* ensures dropdown is positioned relative to this wrapper */
+  display: inline-block; /* shrink to button size */
+  margin: 0 auto; /* center the wrapper itself if it's a block-level parent */
 }
 
 .glowing-dropdown {
   display: none;
   position: absolute;
-  top: 110%; /* show below button */
-  left: 50%;
-  transform: translateX(-50%);
+  top: 110%; /* below the button */
+  left: 50%; /* start at 50% of parent */
+  transform: translateX(-50%); /* center horizontally */
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -26,6 +26,7 @@
   z-index: 999;
 }
 
+/* Dropdown links */
 .glowing-dropdown a {
   display: block;
   padding: 10px 15px;
@@ -47,6 +48,16 @@
 .glowing-link-wrapper:hover .glowing-dropdown {
   display: block;
 }
+
+/* Ensure wrapper is centered on desktop */
+@media (min-width: 1024px) {
+  .glowing-link-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
     /* Reset and base styles */
     * {
         box-sizing: border-box;
