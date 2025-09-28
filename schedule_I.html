@@ -1,0 +1,3720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HSN Code List – EasyPeasyTax</title>
+  <meta name="description" content="Find the latest GST HSN Code list with updated tax rates. EasyPeasyTax provides a searchable database of goods under Schedule I.">
+  <meta name="keywords" content="HSN Code, GST, EasyPeasyTax, Schedule I, GST Rates India, Tax Codes">
+  <meta name="author" content="EasyPeasyTax">
+  <style>
+    :root {
+      --primary: #FF6F61;
+      --text: #2c2c2c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Roboto', system-ui, sans-serif;
+      margin: 0;
+      padding-top: 100px;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Header styles for desktop (default) */
+    header {
+      background: #ffffff;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Desktop: Hide hamburger, show full navigation */
+    .hamburger {
+      font-size: 26px;
+      cursor: pointer;
+      display: none; /* Hidden on desktop */
+      padding: 8px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      min-width: 44px;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hamburger:hover {
+      background-color: #f9f9f9;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    /* Desktop navigation - visible by default */
+    nav {
+      display: block;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      padding: 10px 15px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #f9f9f9;
+    }
+
+    nav a.active {
+      color: var(--primary);
+      background-color: #f9f9f9;
+    }
+
+    /* Dropdown styles */
+    .dropdown-wrapper {
+      position: relative;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #f9f9f9;
+      padding: 10px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      min-width: 180px;
+      z-index: 100;
+      border-radius: 4px;
+    }
+
+    .dropdown-wrapper.active .dropdown {
+      display: block;
+    }
+
+    .dropdown li {
+      padding: 0;
+    }
+
+    .dropdown a {
+      padding: 8px 15px;
+      display: block;
+      margin: 0;
+    }
+
+    .dropdown a:hover {
+      background-color: #e9e9e9;
+    }
+
+    /* Content styles */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .news-title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+      color: var(--primary);
+    }
+
+    .news-item {
+      background: #f9f9f9;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary);
+    }
+
+    .news-item h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .news-item p {
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      body {
+        padding-top: 80px;
+      }
+
+      header {
+        padding: 15px 20px;
+      }
+
+      .header-container {
+        justify-content: center;
+        position: relative;
+      }
+
+      /* Show hamburger on mobile */
+      .hamburger {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      /* Center logo on mobile */
+      .logo {
+        text-align: center;
+        font-size: 22px;
+        flex-grow: 0;
+      }
+
+      /* Hide desktop navigation by default on mobile */
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        border-radius: 0 0 8px 8px;
+      }
+
+      /* Show navigation when active */
+      nav.active {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+      }
+
+      nav li {
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      nav li:last-child {
+        border-bottom: none;
+      }
+
+      nav a {
+        padding: 15px 20px;
+        display: block;
+        border-radius: 0;
+      }
+
+      /* Mobile dropdown adjustments */
+      .dropdown {
+        position: static;
+        box-shadow: none;
+        background: #f0f0f0;
+        margin-left: 20px;
+        border-radius: 0;
+      }
+
+      .dropdown a {
+        padding: 12px 25px;
+        font-size: 14px;
+      }
+
+      /* Mobile content adjustments */
+      .container {
+        padding: 15px;
+      }
+
+      .news-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .news-item {
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+
+      .news-item h3 {
+        font-size: 16px;
+      }
+    }
+
+    /* Tablet styles */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      nav ul {
+        gap: 15px;
+      }
+
+      nav a {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+    }
+/* Table Styling */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+table th {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+table tr:hover {
+  background: #f1f7ff;
+}
+/* Centered Search Bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.search-bar input {
+  width: 60%;
+  max-width: 500px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-bar input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 5px rgba(255, 111, 97, 0.4);
+}
+.footer {
+  margin-top: auto;   /* THIS is key */
+  padding: 20px;
+  font-size: .9rem;
+  color: #777;
+  text-align: center;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+ /* Mobile styles */
+    @media (max-width: 768px) {
+      body {
+        padding-top: 80px;
+      }
+
+      header {
+        padding: 15px 20px;
+      }
+
+      .header-container {
+        justify-content: center;
+        position: relative;
+      }
+
+      /* Show hamburger on mobile */
+      .hamburger {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      /* Center logo on mobile */
+      .logo {
+        text-align: center;
+        font-size: 22px;
+        flex-grow: 0;
+      }
+
+      /* Hide desktop navigation by default on mobile */
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        border-radius: 0 0 8px 8px;
+      }
+
+      /* Show navigation when active */
+      nav.active {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+      }
+
+      nav li {
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      nav li:last-child {
+        border-bottom: none;
+      }
+
+      nav a {
+        padding: 15px 20px;
+        display: block;
+        border-radius: 0;
+      }
+
+      /* Mobile dropdown adjustments */
+      .dropdown {
+        position: static;
+        box-shadow: none;
+        background: #f0f0f0;
+        margin-left: 20px;
+        border-radius: 0;
+      }
+
+      .dropdown a {
+        padding: 12px 25px;
+        font-size: 14px;
+      }
+
+      /* Mobile content adjustments */
+      .container {
+        padding: 15px;
+      }
+
+      .news-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .news-item {
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+
+      .news-item h3 {
+        font-size: 16px;
+      }
+    }
+
+    /* Tablet styles */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      nav ul {
+        gap: 15px;
+      }
+
+      nav a {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</div>
+      <a href="https://easypeasytax.com" class="logo">EasyPeasyTax</a>
+    </div>
+    <nav id="mobileMenu">
+       <ul>
+        <li><a class="active" href="https://easypeasytax.com">Home</a></li>
+        <li><a href="https://easypeasytax.com/about">About Us</a></li>
+        <li><a href="https://easypeasytax.com/services">Services</a></li>
+        <li><a href="hsn-sac-tabbed-themed.html">HSN & SAC Codes</a></li>
+        <li><a href="latestnews.html">Latest News</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="dropdown-wrapper">
+          <a href="#" class="dropdown-toggle">Tools ▼</a>
+          <ul class="dropdown" id="toolsDropdown">
+            <li><a href="incometaxcalculator_final_fixed.html">Income Tax Calculator</a></li>
+            <li><a href="hracalculator.html">HRA Calculator</a></li>
+            <li><a href="capital_gain_calculator.html">Capital Gain Tax Calculator</a></li>
+            <li><a href="ssy-calculator.html">SSY Calculator</a></li>
+            <li><a href="fdcalculator_centered.html">FD Interest Calculator</a></li>
+          </ul>
+        </li>
+        <li><a href="https://easypeasytax.com/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- Search Bar -->
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search by HSN code or keyword...">
+</div>
+<script>
+  document.getElementById("searchInput").addEventListener("keyup", function () {
+    var filter = this.value.toLowerCase();
+    var rows = document.querySelectorAll("table tr");
+
+    rows.forEach(function (row, index) {
+      if (index === 0) return; // Skip header row
+      var text = row.textContent.toLowerCase();
+      row.style.display = text.indexOf(filter) > -1 ? "" : "none";
+    });
+  });
+</script>
+<div class="table-wrapper">
+  <table>
+    <table>
+    <tr>
+  <td colspan="4" style="text-align:center; font-weight:bold; background:#f9f9f9; font-size:18px; padding:12px;">
+    Schedule I – 5%
+  </td>
+</tr>
+
+    <tr>
+        <td>S. No.</td>
+        <td>Chapter/Heading/Sub- Heading/Tariff item</td>
+        <td>Description of goods</td>
+ <td></td>
+    </tr>
+    <tr>
+        <td>(1)</td>
+        <td>(2)</td>
+        <td>(3)</td>
+ <td></td>
+    </tr>
+
+    <tr>
+        <td>1.</td>
+        <td>0101 21 00, 0101 29</td>
+        <td>Live horses</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>2.</td>
+        <td>0202, 0203, 0204, 0205,<br>0206, 0207, 0208, 0209,<br>0210</td>
+        <td>All goods, other than fresh or chilled, pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>3.</td>
+        <td>0303, 0304, 0305, 0306,<br>0307, 0308, 0309</td>
+        <td>All goods, other than fresh or chilled, pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>4.</td>
+        <td>0402</td>
+        <td>Milk and cream, concentrated or containing added sugar or other sweetening matter, including condensed milk</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>5.</td>
+        <td>0403</td>
+        <td>Yoghurt; Cream, kephir  and other fermented  or  acidified  milk and  cream,  whether  or  not  concentrated  or  containing  added sugar or other sweetening matter or flavored or containing added fruit, nuts or cocoa; Pre-packaged and labelled Curd, Lassi and Butter  milk</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>6.</td>
+        <td>0404</td>
+        <td>Whey, whether or not concentrated or containing added sugar or other  sweetening  matter;  products  consisting  of  natural  milk constituents,  whether  or  not  containing  added  sugar  or  other<br>sweetening matter, not elsewhere specified or included</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>7.</td>
+        <td>0405</td>
+        <td>Butter and other fats and oils derived from milk, including ghee; dairy spreads</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>8.</td>
+        <td>0406</td>
+        <td>Cheese, other than chena or paneer</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>9.</td>
+        <td>0408</td>
+        <td>Birds&#39; eggs, not in shell, and egg yolks, fresh, dried, cooked by</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>steaming or by boiling in water, moulded, frozen or otherwise<br>preserved,  whether  or  not  containing  added  sugar  or  other sweetening matter.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>10.</td>
+        <td>0409</td>
+        <td>Natural honey, pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>11.</td>
+        <td>0410</td>
+        <td>Insects and other edible products of animal origin, not elsewhere specified or included</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>12.</td>
+        <td>0502</td>
+        <td>Pigs&#39;, hogs&#39; or boars&#39; bristles and hair; badger hair and other brush making hair; waste of such bristles or hair.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>13.</td>
+        <td>0504</td>
+        <td>All goods, other than fresh or chilled, pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>14.</td>
+        <td>0505</td>
+        <td>Skins  and  other  parts  of  birds,  with  their  feathers  or  down, feathers  and  parts  of  feathers  (whether  or  not  with  trimmed edges) and down, not further worked than cleaned, disinfected or treated for preservation; powder and waste of feathers or parts of<br>feathers</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>15.</td>
+        <td>0507 (Except 050790)</td>
+        <td>Ivory,  tortoise-shell,  whalebone  and  whalebone  hair,  horns, unworked or simply prepared but not cut to shape; powder and waste of these products.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>16.</td>
+        <td>0508</td>
+        <td>Coral and similar materials, unworked or simply prepared but not otherwise    worked;    shells    of    molluscs,    crustaceans    or<br>echinoderms and cuttle-bone, unworked or simply prepared but not cut to shape, powder and waste thereof.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>17.</td>
+        <td>0510</td>
+        <td>Ambergris,   castoreum,   civet   and   musk;   cantharides;   bile, whether or not dried; glands and other animal products used in<br>the preparation of pharmaceutical products, fresh, chilled, frozen or otherwise provisionally preserved.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>18.</td>
+        <td>0511</td>
+        <td>Animal  products  not  elsewhere  specified  or  included;  dead animals of Chapter 1 or 3, unfit for human consumption, other than semen including frozen semen.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>19.</td>
+        <td>07</td>
+        <td>Herb, bark, dry plant, dry root, commonly known as jaribooti and dry flower</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>20.</td>
+        <td>0713</td>
+        <td>Dried leguminous vegetables, shelled, whether or not skinned or split pre-packaged and labelled; Guar gum refined split</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>21.</td>
+        <td>0714</td>
+        <td>Manioc, arrowroot, salep, Jerusalem artichokes, sweet potatoes and similar roots and tubers with high starch or inulin content, frozen,  whether  or  not  sliced  or  in  the  form  of  pellets,  pre-<br>packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>22.</td>
+        <td>0801</td>
+        <td>Cashew  nuts,  whether  or  not  shelled  or  peeled,  desiccated coconuts; Brazil nuts, dried, whether or not Shelled or Peeled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>23.</td>
+        <td>0802</td>
+        <td>Dried areca nuts, whether or not shelled or peeled; Other nuts, dried,  whether  or  not  shelled  or  peeled,  such  as  Almonds, Hazelnuts or filberts (Corylus spp.), Chestnuts (Castanea spp.), Pistachios,  Macadamia  nuts, Kola nuts  (Cola  spp.),  Pine nuts, chestnuts (singhada), Walnuts, whether or not shelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>24.</td>
+        <td>0802, 0813</td>
+        <td>Chestnuts (singhada), dried whether or not shelled or peeled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>25.</td>
+        <td>08</td>
+        <td>Dried makhana, whether or not shelled or peeled pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>26.</td>
+        <td>0804</td>
+        <td>Dates (soft or hard), figs, pineapples, avocados, guavas, mangoes and mangosteens, dried</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>27.</td>
+        <td>0805</td>
+        <td>Citrus fruit, such as Oranges, Mandarins (including tangerines and satsumas); clementines, wilkings and similar citrus hybrids,<br>Grapefruit,  including  pomelos,  Lemons  (Citrus  limon,  Citrus limonum) and limes (Citrus aurantifolia, Citrus latifolia), dried</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>28.</td>
+        <td>0806</td>
+        <td>Grapes, dried, and raisins</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>29.</td>
+        <td>0811</td>
+        <td>Fruit and nuts, uncooked or cooked by steaming or boiling in</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>water,  frozen,  whether  or  not  containing  added  sugar  or  other sweetening matter</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>30.</td>
+        <td>0812</td>
+        <td>Fruit and nuts, provisionally preserved (for example, by sulphur dioxide gas, in brine, in sulphur water or in other preservative solutions),    but    unsuitable    in    that    state    for    immediate<br>consumption</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>31.</td>
+        <td>0813</td>
+        <td>Fruit, dried, other than that of headings 0801 to 0806; mixtures of nuts or dried fruits of Chapter 8 [other than dried tamarind]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>32.</td>
+        <td>0814</td>
+        <td>Peel of citrus fruit or melons (including watermelons), frozen,<br>dried or provisionally preserved in brine, in sulphur water or in other preservative solutions</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>33.</td>
+        <td>0901</td>
+        <td>Coffee roasted, whether or not decaffeinated; coffee husks and skins;  coffee  substitutes  containing  coffee  in  any  proportion<br>[other than coffee beans not roasted]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>34.</td>
+        <td>0902</td>
+        <td>Tea,  whether  or  not  flavoured  [other  than  unprocessed  green leaves of tea]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>35.</td>
+        <td>0903</td>
+        <td>Maté</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>36.</td>
+        <td>0904</td>
+        <td>Pepper of the genus Piper; dried or crushed or ground fruits of the genus Capsicum or of the genus Pimenta</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>37.</td>
+        <td>0905</td>
+        <td>Vanilla</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>38.</td>
+        <td>0906</td>
+        <td>Cinnamon and cinnamon-tree flowers</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>39.</td>
+        <td>0907</td>
+        <td>Cloves (whole fruit, cloves and stems)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>40.</td>
+        <td>0908</td>
+        <td>Nutmeg, mace and cardamoms</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>41.</td>
+        <td>0909</td>
+        <td>Seeds  of  anise,  badian,  fennel,  coriander,  cumin  or  caraway; juniper berries [other than of seed quality]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>42.</td>
+        <td>0910 [other than 0910 11 10,<br>0910 30 10]</td>
+        <td>Ginger other than fresh ginger, saffron, turmeric (curcuma) other than fresh turmeric, thyme, bay leaves, curry and other spices</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>43.</td>
+        <td>1001</td>
+        <td>Wheat and meslin, pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>44.</td>
+        <td>1002</td>
+        <td>Rye, pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>45.</td>
+        <td>1003</td>
+        <td>Barley, pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>46.</td>
+        <td>1004</td>
+        <td>Oats, pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>47.</td>
+        <td>1005</td>
+        <td>Maize (corn), pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>48.</td>
+        <td>1006</td>
+        <td>Rice, pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>49.</td>
+        <td>1007</td>
+        <td>Grain sorghum, pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>50.</td>
+        <td>1008</td>
+        <td>Buckwheat, millet and canary seed; other cereals such as Jawar, Bajra, Ragi, pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>51.</td>
+        <td>1101</td>
+        <td>Wheat or meslin flour, pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>52.</td>
+        <td>1102</td>
+        <td>Cereal flours other than of wheat or meslin i.e. maize (corn) flour, Rye flour, etc., pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>53.</td>
+        <td>1103</td>
+        <td>Cereal  groats,  meal  and  pellets,  including  suji  and  dalia,  pre- packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>54.</td>
+        <td>1104</td>
+        <td>Cereal  grains  otherwise  worked  (for  example,  rolled,  flaked, pearled, sliced or kibbled), except rice of heading 1006; germ of cereals, whole, rolled, flaked or ground (other than hulled cereal<br>grains)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>55.</td>
+        <td>1105</td>
+        <td>Flour, meal, powder, flakes, granules and pellets of potatoes, pre- packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>56.</td>
+        <td>1106</td>
+        <td>Flour, meal and powder of the dried leguminous vegetables of heading 0713 (pulses) [other than guar meal (HS 1106 10 10) and guar gum refined split ( HS 0713)], of sago or of roots or tubers of heading 0714 or of the products of Chapter 8, pre-packaged<br>and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>57.</td>
+        <td>1107</td>
+        <td>Malt, whether or not roasted</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>58.</td>
+        <td>1108</td>
+        <td>Starches; inulin</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>59.</td>
+        <td>1109 00 00</td>
+        <td>Wheat gluten, whether or not dried</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>60.</td>
+        <td>12</td>
+        <td>All goods other than of seed quality</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>61.</td>
+        <td>1201</td>
+        <td>Soya beans, whether or not broken other than of seed quality.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>62.</td>
+        <td>1202</td>
+        <td>Ground-nuts, not roasted  or  otherwise cooked,  whether or not shelled or broken other than of seed quality.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>63.</td>
+        <td>1203</td>
+        <td>Copra</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>64.</td>
+        <td>1204</td>
+        <td>Linseed, whether or not broken other than of seed quality.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>65.</td>
+        <td>1205</td>
+        <td>Rape or colza seeds, whether or not broken other than of seed quality.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>66.</td>
+        <td>1206</td>
+        <td>Sunflower  seeds,  whether  or  not  broken  other  than  of  seed quality</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>67.</td>
+        <td>1207</td>
+        <td>Other oil seeds and oleaginous fruits (i.e. Palm nuts and kernels, cotton seeds, Castor oil seeds, Sesamum seeds, Mustard seeds, Safflower  (Carthamus  tinctorius)  seeds,  Melon  seeds,  Poppy seeds, Ajams, Mango kernel, Niger seed, Kokam) whether or not<br>broken, other than of seed quality</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>68.</td>
+        <td>1208</td>
+        <td>Flour and meals of oil seeds or oleaginous fruits, other than those of mustard</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>69.</td>
+        <td>1209</td>
+        <td>Tamarind seeds meant for any use other than sowing</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>70.</td>
+        <td>1210 20 00</td>
+        <td>Hop cones, ground, powdered or in the form of pellets; lupulin</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>71.</td>
+        <td>1211</td>
+        <td>Plants and parts of plants (including seeds and fruits), of a kind used  primarily  in  perfumery,  in  pharmacy  or  for  insecticidal,<br>fungicidal or similar purpose, frozen or dried, whether or not cut, crushed or powdered</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>72.</td>
+        <td>1212</td>
+        <td>Locust beans, seaweeds and other algae, sugar beet and sugar cane, frozen or  dried, whether  or  not ground;  fruit stones  and kernels   and   other   vegetable   products   (including   unroasted chicory roots of the variety Cichorium intybus sativum) of a kind<br>used primarily for human consumption, not elsewhere specified or included</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>73.</td>
+        <td>1301</td>
+        <td>Natural gums, resins, gum-resins  and oleoresins (for example, balsams) [other  than  lac and shellac]; Compounded asafoetida commonly known as heeng</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>74.</td>
+        <td>1302</td>
+        <td>Vegetable  saps  and  extracts;  pectic  substances,  pectinates  and pectates; agar-agar and other mucilages and thickeners, whether<br>or  not  modified,  derived  from  vegetable  products  including tamarind kernel powder</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>75.</td>
+        <td>1401</td>
+        <td>Vegetable  materials  of  a  kind  used  primarily  for  plaiting  (for example, bamboos, rattans, reeds, rushes, osier, raffia, cleaned,<br>bleached or dyed cereal straw, and lime bark)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>76.</td>
+        <td>1404 [other than 1404 90 40,<br>1404 90 60]</td>
+        <td>Vegetable products not elsewhere specified or included such as, Cotton linters, Soap nuts, Hard seeds, pips, hulls and nuts, of a kind used primarily for carving, Rudraksha seeds, bidi wrapper leaves(tendu), Indian katha [other than betel leaves, coconut shell<br>unworked]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>77.</td>
+        <td>1404 or 3305</td>
+        <td>Mehendi paste in cones</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>78.</td>
+        <td>1501</td>
+        <td>Pig  fats  (including  lard)  and  poultry  fat,  other  than  that  of heading 0209 or 1503</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>79.</td>
+        <td>1502</td>
+        <td>Fats  of  bovine  animals,  sheep  or  goats,  other  than  those  of heading 1503</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>80.</td>
+        <td>1503</td>
+        <td>Lard  stearin, lard oil,  oleo stearin, oleo-oil and tallow  oil, not emulsified or mixed or otherwise prepared</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>81.</td>
+        <td>1504</td>
+        <td>Fats  and  oils  and  their  fractions,  of  fish  or  marine  mammals, whether or not refined, but not chemically modified</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>82.</td>
+        <td>1505</td>
+        <td>Wool grease and fatty substances derived therefrom (including lanolin)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>83.</td>
+        <td>1506</td>
+        <td>Other  animal  fats  and  oils  and  their  fractions,  whether  or  not refined, but not chemically modified</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>84.</td>
+        <td>1507</td>
+        <td>Soya-bean oil and its fractions, whether or not refined, but not chemically modified</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>85.</td>
+        <td>1508</td>
+        <td>Ground-nut oil and its fractions, whether or not refined, but not chemically modified</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>86.</td>
+        <td>1509</td>
+        <td>Olive  oil  and  its  fractions,  whether  or  not  refined,  but  not chemically modified</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>87.</td>
+        <td>1510</td>
+        <td>Other  oils  and  their  fractions,  obtained  solely  from  olives, whether or not refined, but not chemically modified, including<br>blends of these oils or fractions with oils or fractions of heading 1509</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>88.</td>
+        <td>1511</td>
+        <td>Palm  oil  and  its  fractions,  whether  or  not  refined,  but  not chemically modified.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>89.</td>
+        <td>1512</td>
+        <td>Sunflower-seed,   safflower   or   cotton-seed   oil   and   fractions thereof, whether or not refined, but not chemically modified</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>90.</td>
+        <td>1513</td>
+        <td>Coconut  (copra),  palm  kernel  or  babassu  oil  and  fractions thereof, whether or not refined, but not chemically modified</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>91.</td>
+        <td>1514</td>
+        <td>Rape, colza or mustard oil and fractions thereof, whether or not refined, but not chemically modified</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>92.</td>
+        <td>1515</td>
+        <td>Other fixed vegetable or microbial fats and oils (including jojoba oil) and their fractions, whether or not refined, but not chemically<br>modified</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>93.</td>
+        <td>1516</td>
+        <td>Vegetable  fats  and  oils  and  their  fractions,  partly  or  wholly hydrogenated,    inter-esterified,    re-esterified    or    elaidinised,<br>whether or not refined, but not further prepared</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>94.</td>
+        <td>1516</td>
+        <td>Animal or microbial fats  and animal    or    microbial oils    and their  fractions, partly  or  wholly hydrogenated, inter-esterified, re-esterified or elaidinised, whether or not refined, but not further<br>prepared</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>95.</td>
+        <td>1517</td>
+        <td>Margarine, linoxyn; Edible mixtures or preparations of  animal, vegetable or microbial fats or oils or of fractions of different fats or  oils  of  this  Chapter,  other  than  edible  fats  or  oils  or  their<br>fractions of heading 1516</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>96.</td>
+        <td>1518</td>
+        <td>Animal, vegetable or microbial fats   and oils their    fractions, boiled,    oxidised, dehydrated, sulphurised, blown, polymerised by  heat  in  vacuum  or  in  inert  gas  or   otherwise   chemically modified,  excluding  those  of  heading  1516;  inedible mixtures or  preparations  of  animal, vegetable or  microbial fats  or  oils<br>or  of fractions  of  different  fats  or  oils  of  this  Chapter,  not elsewhere  specified  or included</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>97.</td>
+        <td>1520 00 00</td>
+        <td>Glycerol, crude; glycerol waters and glycerol lyes</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>98.</td>
+        <td>1521</td>
+        <td>Vegetable waxes (other than triglycerides), Beeswax, other insect waxes and spermaceti, whether or not refined or coloured</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>99.</td>
+        <td>1522</td>
+        <td>Degras, residues resulting from the treatment of fatty substances or animal or vegetable waxes</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>100.</td>
+        <td>1601</td>
+        <td>Sausages and similar products,  of  meat,  meat  offal,  blood  or insects;  food  preparations  based  on these products</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>101.</td>
+        <td>1602</td>
+        <td>Other prepared or preserved meat, meat offal, blood or insects</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>102.</td>
+        <td>1603</td>
+        <td>Extracts and juices of meat, fish or crustaceans, molluscs or other aquatic invertebrates</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>103.</td>
+        <td>1604</td>
+        <td>Prepared or preserved fish; caviar and caviar substitutes prepared from fish eggs</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>104.</td>
+        <td>1605</td>
+        <td>Crustaceans, molluscs and other aquatic invertebrates prepared or preserved</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>105.</td>
+        <td>1701</td>
+        <td>Cane or beet sugar and chemically pure sucrose, in solid form including refined sugar containing added flavouring or colouring matter, sugar cubes [other than jaggery of all types, khandsari<br>sugar, rab]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>106.</td>
+        <td>1701 or1702</td>
+        <td>Jaggery of all types  including  Cane    Jaggery  (gur),  Palmyra Jaggery, Khandsari Sugar, Rab, pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>107.</td>
+        <td>1702 or 1704</td>
+        <td>Palmyra sugar, mishri, batasha, bura, sakar, khadi sakar, harda, sakariya,  gatta,  kuliya,  elaichidana,  lukumdana,  chikkis  like puffed  rice chikki, peanut chikki,  sesame chikki,  til  chikki,  til<br>patti, til revdi, sugar makhana, groundnut sweets, gajak, khaja, khajuli, anarsa</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>108.</td>
+        <td>1702</td>
+        <td>Other   sugars,   including   chemically   pure   lactose,   maltose,</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>glucose and fructose, in solid form; sugar syrups not containing added flavouring or colouring matter; caramel</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>109.</td>
+        <td>1703</td>
+        <td>Molasses</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>110.</td>
+        <td>1704</td>
+        <td>Sugar confectionary (including white chocolate), not containing cocoa, sugar boiled confectionary</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>111.</td>
+        <td>1801</td>
+        <td>Cocoa beans whole or broken, raw or roasted</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>112.</td>
+        <td>1802</td>
+        <td>Cocoa shells, husks, skins and other cocoa waste</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>113.</td>
+        <td>1803</td>
+        <td>Cocoa paste whether or not de-fatted</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>114.</td>
+        <td>1804</td>
+        <td>Cocoa butter, fat and oil</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>115.</td>
+        <td>1805</td>
+        <td>Cocoa powder, not containing added sugar or sweetening matter</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>116.</td>
+        <td>1806</td>
+        <td>Chocolates and other food preparations containing cocoa</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>117.</td>
+        <td>1901 20 00</td>
+        <td>Mixes and doughs for the preparation of bread, pastry and other baker&#39;s wares</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>118.</td>
+        <td>1901</td>
+        <td>Food preparation of millet flour, in powder form, containing at least  70%  millets  by  weight,  pre-packaged  and  labelled;  Malt extract, food preparations of flour, groats, meal, starch or malt extract,  not  containing  cocoa  or  containing  less  than  40%  by weight  of  cocoa  calculated  on  a  totally  defatted  basis,  not elsewhere specified or included; food preparations of goods of heading 0401 to 0404, not containing cocoa or containing less than 5% by weight of cocoa calculated on a totally defatted basis not elsewhere specified or included</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>119.</td>
+        <td>1902</td>
+        <td>Seviyan  (vermicelli);  Pasta,  whether  or  not  cooked  or  stuffed (with meat or other substances) or otherwise prepared, such as spaghetti,    macaroni,    noodles,    lasagne,    gnocchi,    ravioli, cannelloni; couscous, whether or not prepared</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>120.</td>
+        <td>1903</td>
+        <td>Tapioca and substitutes therefor prepared from starch, in the form of flakes, grains, pearls, siftings or in similar forms (sabudana)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>121.</td>
+        <td>1904</td>
+        <td>Puffed rice, commonly known as Muri, flattened or beaten rice, commonly known as chira, parched  rice,  commonly  known  as khoi,   parched  paddy   or   rice   coated   with   sugar   or   gur, commonly known as murki, pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>122.</td>
+        <td>1904</td>
+        <td>All goods i.e. Corn flakes, bulgar wheat, prepared foods obtained from cereal flakes (other than puffed rice, commonly known as muri,  flattened  or  beaten  rice,  commonly  known  as  chira, parched rice, commonly known as khoi, parched paddy or rice coated with sugar or gur, commonly known as murki); Fortified Rice Kernel (FRK)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>123.</td>
+        <td>1905</td>
+        <td>Pastry, cakes, biscuits and other bakers’ wares, whether or not containing cocoa; communion wafers, empty cachets of a kind suitable for pharmaceutical use, sealing wafers, rice paper and similar   products;   Un-fried   or   un-cooked   snack   pellets,   by whatever   name   called,   manufactured   through   process   of extrusion; Extruded or expanded products, savoury or salted</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>124.</td>
+        <td>1905 40 00</td>
+        <td>Rusks, toasted bread and similar toasted products</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>125.</td>
+        <td>2001</td>
+        <td>Vegetables, fruit, nuts and other edible parts of plants, prepared</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>or preserved by vinegar or acetic acid</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>126.</td>
+        <td>2002</td>
+        <td>Tomatoes  prepared  or  preserved  otherwise  than  by  vinegar  or acetic acid</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>127.</td>
+        <td>2003</td>
+        <td>Mushrooms and truffles, prepared or preserved otherwise than by vinegar or acetic acid</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>128.</td>
+        <td>2004</td>
+        <td>Other   vegetables  prepared  or  preserved  otherwise   than  by<br>vinegar  or  acetic  acid,  frozen,  other  than  products  of  heading 2006</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>129.</td>
+        <td>2005</td>
+        <td>Other   vegetables  prepared  or  preserved  otherwise   than  by vinegar or acetic acid, not frozen, other than products of heading<br>2006</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>130.</td>
+        <td>2006</td>
+        <td>Vegetables,  fruit,  nuts,  fruit-peel  and  other  parts  of  plants, preserved by sugar (drained, glacé or crystallised)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>131.</td>
+        <td>2007</td>
+        <td>Jams, fruit jellies, marmalades, fruit or nut purée and fruit or nut<br>pastes,  obtained  by  cooking,  whether  or  not  containing  added sugar or other sweetening matter</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>132.</td>
+        <td>2008</td>
+        <td>Fruit, nuts and other edible parts of plants, otherwise prepared or preserved,  whether  or  not  containing  added  sugar  or  other sweetening matter or spirit, not elsewhere specified or included; such as Ground-nuts, Cashew nut, roasted, salted or roasted and salted, Other roasted nuts and seeds, squash of Mango, Lemon,<br>Orange, Pineapple or other fruits</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>133.</td>
+        <td>2009</td>
+        <td>Fruit or  nut juices (including  grape  must)  and  vegetable  juices,<br>unfermented  and  not  containing added  spirit,  whether  or  not containing  added  sugar  or  other  sweetening matter</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>134.</td>
+        <td>2009 89 90</td>
+        <td>Tender coconut water, pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>135.</td>
+        <td>2101 11, 2101 12 00</td>
+        <td>Extracts, essences and concentrates of coffee, and preparations with a basis of these extracts, essences or concentrates or with a<br>basis of coffee</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>136.</td>
+        <td>210,120</td>
+        <td>All goods i.e Extracts, essences and concentrates of tea or mate, and  preparations  with  a  basis  of  these  extracts,  essences  or concentrates or with a basis of tea or mate</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>137.</td>
+        <td>210,130</td>
+        <td>Roasted   chicory   and   other   roasted   coffee   substitutes,   and extracts, essences and concentrates thereof</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>138.</td>
+        <td>2102</td>
+        <td>Yeasts (active and inactive); other single cell micro-organisms, dead  (but  not  including  vaccines  of  heading  3002);  prepared baking powders</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>139.</td>
+        <td>2103</td>
+        <td>All  goods,  including  sauces  and  preparations  therefor,  mixed condiments and mixed seasonings; mustard flour and meal and prepared mustard including Curry paste, mayonnaise and salad<br>dressings</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>140.</td>
+        <td>2104</td>
+        <td>Soups   and   broths   and   preparations   therefor;   homogenised composite food preparations</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>141.</td>
+        <td>2105 00 00</td>
+        <td>Ice cream and other edible ice, whether or not containing cocoa</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>142.</td>
+        <td>2106</td>
+        <td>Texturised vegetable proteins (soya bari), Bari made of pulses including mungodi and batters;   Roasted Gram idli/dosa batter, chutney powder; Sweetmeats</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>143.</td>
+        <td>210,690</td>
+        <td>Namkeens,   bhujia,   mixture,   chabena   and   similar   edible preparations in ready for consumption form, whether or not pre-<br>packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>144.</td>
+        <td>2106 90 91</td>
+        <td>Diabetic foods</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>145.</td>
+        <td>2106<br>(other than 21069020)</td>
+        <td>Food  preparations  not  elsewhere  specified  or  included  [other than pan masala]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>146.</td>
+        <td>2201</td>
+        <td>Waters, including natural or artificial mineral waters and aerated waters, not containing added sugar or other sweetening matter<br>nor flavoured</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>147.</td>
+        <td>2201 90 10</td>
+        <td>Ice and snow</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>148.</td>
+        <td>220,299</td>
+        <td>Plant-based milk drinks, ready for direct consumption as</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>beverages</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>149.</td>
+        <td>2202 99 10</td>
+        <td>Soya milk drinks, whether or not sweetened or flavoured</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>150.</td>
+        <td>2202 99 20</td>
+        <td>Fruit  pulp  or  fruit  juice  based  drinks  [other  than  Carbonated Beverages  of  Fruit  Drink  or Carbonated Beverages with Fruit Juice]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>151.</td>
+        <td>2202 99 30</td>
+        <td>Beverages containing milk</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>152.</td>
+        <td>2207</td>
+        <td>Ethyl alcohol supplied to Oil Marketing Companies or Petroleum refineries  for blending  with motor spirit (petrol)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>153.</td>
+        <td>2301</td>
+        <td>Flours,  meals and pellets,  of  meat  or meat offal,  of  fish or of<br>crustaceans,  molluscs  or  other  aquatic  invertebrates,  unfit  for human consumption; greaves</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>154.</td>
+        <td>2302</td>
+        <td>Bran, sharps and other residues, whether or not in the form of pellets,  derived  from  the  sifting,  milling  or  other  working  of cereals or of leguminous plants [other than aquatic feed including shrimp  feed  and  prawn  feed,  poultry  feed  and  cattle  feed, including grass, hay and straw, supplement and additives, husk of   pulses   including chilka, concentrates   including   chuni   or<br>churi,  khanda,  wheat bran, de-oiled cake]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>155.</td>
+        <td>2302</td>
+        <td>Rice bran (other than de-oiled rice bran)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>156.</td>
+        <td>2303</td>
+        <td>Residues of starch manufacture and similar residues, beet-pulp,<br>bagasse  and  other  waste  of  sugar  manufacture,  brewing  or distilling dregs and waste, whether or not in the form of pellets</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>157.</td>
+        <td>2304</td>
+        <td>Oil-cake and other solid residues, whether or not ground or in the form of pellets, resulting from the extraction of soyabean oil</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>158.</td>
+        <td>2305</td>
+        <td>Oil-cake and other solid residues, whether or not ground or in the form of pellets, resulting from the extraction of ground-nut oil</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>159.</td>
+        <td>2306</td>
+        <td>Oil-cake and other solid residues, whether or not ground or in the form of pellets, resulting from the   extraction   of   vegetable or microbial fats   or   oils,   other   than   those   of heading 2304 or<br>2305 other than cottonseed oil cake and de-oiled rice bran</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>160.</td>
+        <td>2307</td>
+        <td>Wine lees; argol</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>161.</td>
+        <td>2309</td>
+        <td>Fish soluble paste</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>162.</td>
+        <td>2401</td>
+        <td>Tobacco leave</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>163.</td>
+        <td>2502</td>
+        <td>Unroasted iron pyrites</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>164.</td>
+        <td>2503</td>
+        <td>Sulphur of all kinds, other than sublimed sulphur, precipitated sulphur and colloidal sulphur</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>165.</td>
+        <td>2504</td>
+        <td>Natural graphite</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>166.</td>
+        <td>2505</td>
+        <td>Natural sands of all kinds, whether or not coloured, other than metal bearing sands of Chapter 26</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>167.</td>
+        <td>2506</td>
+        <td>Quartz  (other  than  natural  sands);  quartzite,  whether  or  not roughly  trimmed  or  merely  cut,  by  sawing  or  otherwise,  into<br>blocks or slabs of a rectangular (including square) shape</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>168.</td>
+        <td>2507</td>
+        <td>Kaolin and other kaolinic clays, whether or not calcined</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>169.</td>
+        <td>2508</td>
+        <td>Other  clays  (not  including  expanded  clays  of  heading  6806),<br>andalusite,  kyanite  and  sillimanite,  whether  or  not  calcined; mullite; chamotte or dinas earths</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>170.</td>
+        <td>2509</td>
+        <td>Chalk</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>171.</td>
+        <td>2510</td>
+        <td>Natural    calcium    phosphates,    natural    aluminium    calcium phosphates and phosphatic chalk</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>172.</td>
+        <td>2511</td>
+        <td>Natural  barium  sulphate  (barytes);  natural  barium  carbonate<br>(witherite), whether or not calcined, other than barium oxide of heading 2816</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>173.</td>
+        <td>2512</td>
+        <td>Siliceous  fossil  meals  (for  example,  kieselguhr,  tripolite  and<br>diatomite) and similar siliceous earths, whether or not calcined, of an apparent specific gravity of 1 or less</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>174.</td>
+        <td>2513</td>
+        <td>Pumice stone; emery; natural corundum, natural garnet and other natural abrasives, whether or not heat-treated</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>175.</td>
+        <td>2514</td>
+        <td>Slate, whether or not roughly trimmed or merely cut, by sawing or  otherwise,  into  blocks  or  slabs  of  a  rectangular  (including</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>square) shape</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>176.</td>
+        <td>2515 [Except 2515 12 20,<br>2515 12 90] or 6802</td>
+        <td>Ecaussine  and  other  calcareous  monumental  or  building  stone<br>(other than marble and travertine), alabaster, other than mirror polished stone which is ready to use</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>177.</td>
+        <td>2515 11 00</td>
+        <td>Marble and travertine, crude or roughly trimmed</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>178.</td>
+        <td>2515 12 10</td>
+        <td>Marble and travertine blocks</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>179.</td>
+        <td>2516 [Except 2516 11 00,<br>25161200]</td>
+        <td>Porphyry, basalt, sandstone and other monumental or building stone, whether or not roughly trimmed or merely cut, by sawing<br>or  otherwise,  into  blocks  or  slabs  of  a  rectangular  (including square) shape</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>180.</td>
+        <td>2516 11 00</td>
+        <td>Granite crude or roughly trimmed</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>181.</td>
+        <td>2516</td>
+        <td>Granite blocks</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>182.</td>
+        <td>2517</td>
+        <td>Pebbles, gravel, broken or crushed stone, of a kind commonly used for concrete aggregates, for road metalling or for railway or other  ballast,  shingle  and  flint,  whether  or  not  heat-treated; macadam of slag, dross or similar industrial waste, whether or not  incorporating  the  materials  cited  in  the  first  part  of  the heading;  tarred  macadam;  granules,  chippings  and  powder,  of<br>stones heading 2515 or 2516 whether or not heat-treated</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>183.</td>
+        <td>2518</td>
+        <td>Dolomite,   whether   or   not   calcined   or   sintered,   including dolomite  roughly  trimmed  or  merely  cut,  by     sawing     or otherwise,  into  blocks  or  slabs  of  a  rectangular  (including<br>square)   shape</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>184.</td>
+        <td>2519</td>
+        <td>Natural  magnesium  carbonate  (magnesite);  fused  magnesia; dead-burned  (sintered)  magnesia,  whether  or  not  containing small  quantities  of  other  oxides  added  before  sintering;  other<br>magnesium oxide, whether or not pure</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>185.</td>
+        <td>2520</td>
+        <td>Gypsum; anhydrite; plasters (consisting of calcined gypsum or<br>calcium sulphate) whether or not coloured, with or without small quantities of accelerators or retarders</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>186.</td>
+        <td>2521</td>
+        <td>Limestone flux; limestone and other calcareous stone, of a kind used for the manufacture of lime or cement.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>187.</td>
+        <td>2522</td>
+        <td>Quicklime, slaked lime and hydraulic lime, other than calcium oxide and hydroxide of heading 2825</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>188.</td>
+        <td>2524</td>
+        <td>Asbestos</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>189.</td>
+        <td>2525</td>
+        <td>Mica, including splitting; mica waste.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>190.</td>
+        <td>2526</td>
+        <td>Natural steatite, whether or not roughly trimmed or merely cut, by  sawing  or  otherwise,  into  blocks  or  slabs  of  a  rectangular<br>(including square) shape; talc.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>191.</td>
+        <td>2528</td>
+        <td>Natural   borates   and   concentrates   thereof   (whether   or   not calcined), but not including borates separated from natural brine;<br>natural  boric  acid  containing  not  more  than  85%  of  H3BO3 (calculated on dry weight)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>192.</td>
+        <td>2529</td>
+        <td>Feldspar; leucite, nepheline and nepheline syenite; fluorspar</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>193.</td>
+        <td>2530</td>
+        <td>Mineral substances not elsewhere specified or included</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>194.</td>
+        <td>2611</td>
+        <td>Tungsten ores and concentrates</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>195.</td>
+        <td>2612</td>
+        <td>Uranium or thorium ores and concentrates</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>196.</td>
+        <td>2613</td>
+        <td>Molybdenum ores and concentrates</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>197.</td>
+        <td>2614</td>
+        <td>Titanium ores and concentrates</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>198.</td>
+        <td>2615</td>
+        <td>Niobium,    tantalum,    vanadium    or    zirconium    ores    and concentrates</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>199.</td>
+        <td>2616</td>
+        <td>Precious metal ores and concentrates</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>200.</td>
+        <td>2617</td>
+        <td>Other ores and concentrates</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>201.</td>
+        <td>2618</td>
+        <td>Granulated slag (slag sand) from the manufacture of iron or steel</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>202.</td>
+        <td>2619</td>
+        <td>Linz-Donawitz (LD) Slag</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>203.</td>
+        <td>2621</td>
+        <td>Fly Ash</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>204.</td>
+        <td>27</td>
+        <td>Bio-gas</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>205.</td>
+        <td>2704</td>
+        <td>Coke and semi coke of coal, of lignite or of peat, whether or not agglomerated; retort carbon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>206.</td>
+        <td>2705</td>
+        <td>Coal gas, water gas, producer gas and similar gases, other than petroleum gases and other gaseous hydrocarbons</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>207.</td>
+        <td>2710</td>
+        <td>(a) Kerosene oil PDS, (b) The following bunker fuels for use in ships or vessels, namely,<br>i. IFO 180 CST<br>ii. IFO 380 CST<br>iii. Marine Fuel 0.5% (FO)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>208.</td>
+        <td>2711 12 00, 2711 13 00,<br>2711 19 10</td>
+        <td>Liquefied  Propane  and  Butane  mixture,  Liquefied  Propane, Liquefied  Butane  and  Liquefied  Petroleum  Gases  (LPG)  for supply to non-domestic exempted category (NDEC) customers by  the  Indian  Oil  Corporation  Limited,  Hindustan  Petroleum<br>Corporation Limited or Bharat Petroleum Corporation Limited</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>209.</td>
+        <td>2711 12 00 2711 13 00, 2711<br>19 10</td>
+        <td>Liquefied  Propane  and  Butane  mixture,  Liquefied  Propane, Liquefied  Butane  and  Liquefied  Petroleum  Gases  (LPG)  for<br>supply to household domestic consumers</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>210.</td>
+        <td>28</td>
+        <td>Thorium    oxalate,    Enriched    KBF4    (enriched    potassium fluroborate), Enriched elemental boron, Nuclear fuel</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>211.</td>
+        <td>28</td>
+        <td>Anaesthetics, Potassium Iodate, Iodine, Steam</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>212.</td>
+        <td>2804 40 10</td>
+        <td>Medical grade oxygen</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>213.</td>
+        <td>280,511</td>
+        <td>Nuclear grade sodium</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>214.</td>
+        <td>2807</td>
+        <td>Sulphuric Acid</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>215.</td>
+        <td>2808</td>
+        <td>Nitric acid</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>216.</td>
+        <td>2809</td>
+        <td>Fertilizer grade phosphoric acid</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>217.</td>
+        <td>2814</td>
+        <td>Ammonia</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>218.</td>
+        <td>2845</td>
+        <td>Heavy water and other nuclear fuels</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>219.</td>
+        <td>2847</td>
+        <td>Medicinal grade hydrogen peroxide</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>220.</td>
+        <td>2853</td>
+        <td>Compressed air</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>221.</td>
+        <td>28 or 38</td>
+        <td>Micronutrients, which   are   covered   under serial number  1(g) of Schedule 1, Part (A) of the Fertilizer Control Order, 1985 and are manufactured by the manufacturers which    are    registered<br>under    the Fertilizer Control Order, 1985</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>222.</td>
+        <td>29 or 3808 93</td>
+        <td>Gibberellic acid</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>223.</td>
+        <td>2906 11 10</td>
+        <td>Natural Menthol</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>224.</td>
+        <td>2906 11 10, 30, 3301</td>
+        <td>Following goods from Natural Menthol namely:-<br>a. Menthol and menthol crystals,<br>b.  Peppermint (Mentha Oil),<br>c. Fractionated / de-terpenated mentha oil (DTMO)<br>d. De-mentholised oil (DMO),<br>e. Spearmint oil<br>f. Mentha piperita oil</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>225.</td>
+        <td>30</td>
+        <td>Insulin, Cyclosporin, Desferrioxamine injection or deferiprone, Oral re-hydration salts</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>226.</td>
+        <td>30 or any Chapter</td>
+        <td>All  Drugs  and  medicines  including  their  salts  and  esters  and diagnostic test kits; formulations manufactured from bulk drugs<br>[other than those specified at nil at S. No. 113 of notification No. 10/2025-Central Tax (Rate) dated 17th September, 2025]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>227.</td>
+        <td>30</td>
+        <td>Diagnostic kits for detection of all types of hepatitis</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>228.</td>
+        <td>30</td>
+        <td>Medicaments  (including  veterinary  medicaments)  used  in  bio- chemic systems</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>229.</td>
+        <td>30</td>
+        <td>Medicaments (including those used in Ayurvedic, Unani, Siddha, Homeopathic or Bio-chemic systems), manufactured exclusively in  accordance with  the formulae described in the authoritative books specified in the First Schedule to the Drugs and Cosmetics Act, 1940 (23 of 1940) or Homeopathic Pharmacopoeia of India or the United States of America or the United Kingdom or the German Homeopathic Pharmacopoeia, as the case may be, and<br>sold under the name as specified in such books or pharmacopoeia</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>230.</td>
+        <td>3001</td>
+        <td>Glands  and  other  organs  for  organo-therapeutic  uses,  dried, whether or not powdered; extracts of glands or other organs or of</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>their secretions for organo-therapeutic uses; heparin and its salts;<br>other  human  or  animal  substances  prepared  for  therapeutic  or prophylactic uses, not elsewhere specified or included</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>231.</td>
+        <td>3002</td>
+        <td>Animal   blood   prepared   for   therapeutic,   prophylactic   or diagnostic uses; antisera and other blood fractions and modified immunological products, whether or not obtained by means of biotechnological processes; toxins, cultures of micro-organisms (excluding yeasts) and similar products; cell cultures whether or<br>not modified</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>232.</td>
+        <td>3002, 3006</td>
+        <td>Animal or Human Blood Vaccines</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>233.</td>
+        <td>3003</td>
+        <td>Medicaments (excluding goods of heading 3002, 3005 or 3006) consisting of two or more constituents which have been mixed together  for  therapeutic  or  prophylactic  uses,  not  put  up  in measured doses or in forms or packings for retail sale, including Ayurvedic, Unani, Siddha, homoeopathic or Bio-chemic systems<br>medicaments</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>234.</td>
+        <td>3004</td>
+        <td>Medicaments (excluding goods of heading 3002, 3005 or 3006) consisting  of  mixed  or  unmixed  products  for  therapeutic  or prophylactic uses, put up in measured doses (including those in the form of transdermal administration systems) or in forms or packings    for    retail    sale,    including    Ayurvedic,    Unani, homoeopathic siddha or Bio-chemic systems medicaments, put<br>up for retail sale</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>235.</td>
+        <td>3005</td>
+        <td>Wadding,  gauze,  bandages  and  similar  articles  (for  example, dressings,  adhesive  plasters,  poultices),  impregnated  or  coated with pharmaceutical substances or put up in forms or packings<br>for retail sale for medical, surgical, dental or veterinary purposes</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>236.</td>
+        <td>3006</td>
+        <td>Pharmaceutical  goods  specified  in  Note  4  to  this  Chapter  i.e. Sterile surgical catgut, similar sterile suture materials (including sterile  absorbable  surgical  or  dental  yarns)  and  sterile  tissue adhesives for surgical wound closure; sterile laminaria and sterile laminaria    tents;    sterile    absorbable    surgical    or    dental haemostatics; sterile surgical or dental adhesion barriers, whether or    not    absorbable;    Waste    pharmaceuticals    (other    than contraceptives); Ostomy appliances including pouch or flange, stoma adhesive paste, barrier cream, irrigator kit, sleeves, belt,<br>micro-pore tapes</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>237.</td>
+        <td>3101</td>
+        <td>All goods i.e. animal or vegetable fertilisers or organic fertilisers pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>238.</td>
+        <td>3102</td>
+        <td>Mineral  or  chemical  fertilisers,  nitrogenous,  other  than  those which are clearly not to be used as fertilizers</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>239.</td>
+        <td>3103</td>
+        <td>Mineral  or  chemical  fertilisers,  phosphatic,  other  than  those which are clearly not to be used as fertilizers</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>240.</td>
+        <td>3104</td>
+        <td>Mineral or chemical fertilisers, potassic, other than those which are clearly not to be used as fertilizers</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>241.</td>
+        <td>3105</td>
+        <td>Mineral  or  chemical  fertilisers  containing  two  or  three  of  the fertilising elements nitrogen, phosphorus and potassium; other fertilisers; goods of this Chapter in tablets or similar forms or in<br>packages of a gross weight not exceeding 10 kg; other than those which are clearly not to be used as fertilizers</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>242.</td>
+        <td>32</td>
+        <td>Wattle extract, quebracho extract, chestnut extract</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>243.</td>
+        <td>3202</td>
+        <td>Enzymatic preparations for pre-tanning</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>244.</td>
+        <td>3304</td>
+        <td>Talcum powder, Face powder</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>245.</td>
+        <td>3305</td>
+        <td>Hair oil, shampoo</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>246.</td>
+        <td>3306</td>
+        <td>Toothpaste</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>247.</td>
+        <td>3306 10 10</td>
+        <td>Tooth powder</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>248.</td>
+        <td>3306 20 00</td>
+        <td>Yarn used to clean between the teeth (Dental floss)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>249.</td>
+        <td>3307</td>
+        <td>Shaving cream, shaving lotion, aftershave lotion</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>250.</td>
+        <td>3307 41 00</td>
+        <td>Agarbatti, lobhan, dhoop batti, dhoop, sambraani</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>251.</td>
+        <td>3401</td>
+        <td>Toilet Soap (other than industrial soap) in the form of bars, cakes, moulded pieces or shapes</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>252.</td>
+        <td>3402</td>
+        <td>Sulphonated castor oil, fish oil or sperm oil</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>253.</td>
+        <td>3406</td>
+        <td>Candles, tapers and the like</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>254.</td>
+        <td>3503</td>
+        <td>Gelatin  (including  gelatin  in  rectangular  (including  square) sheets, whether or not surface-worked or coloured) and gelatin derivatives;  isinglass;  other  glues  of  animal  origin,  excluding<br>casein glues of heading 3501</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>255.</td>
+        <td>3505</td>
+        <td>Dextrins    and     other     modified     starches     (for    example, pregelatinised or esterified starches); glues based on starches, or<br>on dextrins or other modified starches</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>256.</td>
+        <td>3605 00 10</td>
+        <td>All goods</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>257.</td>
+        <td>3701</td>
+        <td>Photographic plates and film for x-ray for medical use</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>258.</td>
+        <td>3705</td>
+        <td>Photographic  plates  and  films,  exposed  and  developed,  other than cinematographic film</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>259.</td>
+        <td>3706</td>
+        <td>Photographic plates and films, exposed and developed, whether or  not  incorporating  sound  track  or  consisting  only  of  sound track, other than feature films</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>260.</td>
+        <td>3808</td>
+        <td>The following Bio-pesticides, namely -<br>1 Bacillus thuringiensis var. israelensis<br>2 Bacillus thuringiensis var. kurstaki<br>3 Bacillus thuringiensis var. galleriae<br>4 Bacillus sphaericus<br>5 Trichoderma viride<br>6 Trichoderma harzianum<br>7 Pseudomonas fluoresens<br>8 Beauveriabassiana<br>9 NPV of Helicoverpaarmigera<br>10 NPV of Spodopteralitura<br>11 Neem based pesticides<br>12 Cymbopogan</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>261.</td>
+        <td>3816</td>
+        <td>Dolomite ramming mix</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>262.</td>
+        <td>3818</td>
+        <td>Silicon wafers</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>263.</td>
+        <td>3822</td>
+        <td>All  diagnostic  kits  or  reagents  including  certified  reference materials</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>264.</td>
+        <td>3826</td>
+        <td>Bio-diesel     supplied     to     Oil     Marketing     Companies  for blending with High Speed Diesel</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>265.</td>
+        <td>3926</td>
+        <td>Feeding bottles, Plastic beads</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>266.</td>
+        <td>4001</td>
+        <td>Natural rubber, balata, gutta-percha, guayule, chicle and similar natural gums, in primary forms or in plates, sheets or strip</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>267.</td>
+        <td>4004 00 00</td>
+        <td>Waste, parings or scrap of rubber (other than hard rubber)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>268.</td>
+        <td>4007</td>
+        <td>Latex Rubber Thread</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>269.</td>
+        <td>4011</td>
+        <td>Rear Tractor tyres and rear tractor tyre tubes</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>270.</td>
+        <td>4011 30 00</td>
+        <td>New pneumatic tyres, of rubber of a kind used on aircraft</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>271.</td>
+        <td>4011 70 00</td>
+        <td>Tyre for tractors</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>272.</td>
+        <td>4011, 4013</td>
+        <td>Pneumatic tyres or inner tubes, of rubber, of a kind used on/in bicycles,  cycle-rickshaws  and  three  wheeled  powered  cycle<br>rickshaws</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>273.</td>
+        <td>4013 90 49</td>
+        <td>Tube for tractor tyres</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>274.</td>
+        <td>4014</td>
+        <td>Nipples of feeding bottles</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>275.</td>
+        <td>4015</td>
+        <td>Surgical rubber gloves or medical examination rubber gloves</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>276.</td>
+        <td>4016</td>
+        <td>Rubber bands</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>277.</td>
+        <td>4017</td>
+        <td>Waste or scrap of hard rubber</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>278.</td>
+        <td>4101</td>
+        <td>Raw  hides  and  skins  of  bovine  (including  buffalo)  or  equine animals  (fresh,  or  salted,  dried,  limed,  pickled  or  otherwise<br>preserved,   but   not   tanned,   parchment-dressed   or   further prepared), whether or not dehaired or split</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>279.</td>
+        <td>4102</td>
+        <td>Raw  skins  of  sheep  or  lambs  (fresh,  or  salted,  dried,  limed, pickled  or  otherwise  preserved,  but  not  tanned,  parchment-</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>dressed or further prepared), whether or not with wool on or split</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>280.</td>
+        <td>4103</td>
+        <td>Other raw hides and skins (fresh, or salted, dried, limed, pickled<br>or  otherwise  preserved,  but  not  tanned,  parchment-dressed  or further prepared), whether or not dehaired or split</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>281.</td>
+        <td>4104</td>
+        <td>Tanned or crust hides and skins of bovine (including buffalo) or<br>equine  animals,  without  hair  on,  whether  or  not  split,  but  not further prepared</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>282.</td>
+        <td>4105</td>
+        <td>Tanned  or  crust  skins  of  sheep  or  lambs,  without  wool  on, whether or not split, but not further prepared</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>283.</td>
+        <td>4106</td>
+        <td>Tanned or crust hides and skins of other animals, without wool or hair on, whether or not split, but not further prepared</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>284.</td>
+        <td>4107</td>
+        <td>Leather  further  prepared  after  tanning  or  crusting,  including parchment-dressed  leather,  of  bovine  (including  buffalo)  or equine animals, without hair on, whether or not split, other than<br>leather of heading 4114</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>285.</td>
+        <td>4112</td>
+        <td>Leather  further  prepared  after  tanning  or  crusting,  including parchment-dressed leather, of sheep or lamb, without wool on,<br>whether or not split, other than leather of heading 4114</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>286.</td>
+        <td>4113</td>
+        <td>Leather  further  prepared  after  tanning  or  crusting,  including parchment-dressed leather, of other animals, without wool or hair on, whether or not split, other than leather of heading 4114</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>287.</td>
+        <td>4114</td>
+        <td>Chamois (including combination chamois) leather; patent leather and patent laminated leather; metallised leather</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>288.</td>
+        <td>4115</td>
+        <td>Composition leather with a basis of leather or leather fibre, in slabs, sheets or strip, whether or not in rolls; parings and other waste of leather or of composition leather, not suitable for the<br>manufacture of leather articles; leather dust, powder and flour</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>289.</td>
+        <td>4202 22 20</td>
+        <td>Hand bags and shopping bags, of cotton</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>290.</td>
+        <td>4202 22 30</td>
+        <td>Hand bags and shopping bags, of jute</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>291.</td>
+        <td>4203</td>
+        <td>Gloves specially designed for use in sports</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>292.</td>
+        <td>44 or any Chapter</td>
+        <td>The following goods, namely: —<br>b.   Cement Bonded Particle Board;<br>c.   Jute Particle Board;<br>d.   Rice Husk Board;<br>e.   Glass-fibre Reinforced Gypsum Board (GRG)<br>f.   Sisal-fibre Boards;<br>g.   Bagasse Board; and<br>h.   Cotton Stalk Particle Board<br>i.     Particle/fibre  board  manufactured  from  agricultural crop residues</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>293.</td>
+        <td>44, 68, 83</td>
+        <td>Idols of wood, stone [including marble] and metals [other than those made of precious metals]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>294.</td>
+        <td>4401</td>
+        <td>Wood in chips or particles; sawdust and wood waste and scrap, whether or not agglomerated in logs, briquettes, pellets or similar<br>forms</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>295.</td>
+        <td>4404</td>
+        <td>Hoopwood; split poles; piles, pickets and stakes of wood, pointed but not sawn lengthwise; wooden sticks, roughly trimmed but not turned, bent or otherwise worked, suitable for the manufacture of<br>walking-sticks, umbrellas, tool handles or the like</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>296.</td>
+        <td>4405</td>
+        <td>Wood wool; wood flour</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>297.</td>
+        <td>4406</td>
+        <td>Railway or tramway sleepers (cross-ties) of wood</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>298.</td>
+        <td>4408</td>
+        <td>Sheets   for   veneering   (including   those   obtained   by   slicing laminated wood), for plywood or for similar laminated wood and other wood, sawn lengthwise, sliced or peeled, whether or not<br>planed,   sanded,   spliced  or   end-jointed,  of   a  thickness   not exceeding 6 mm [for match splints]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>299.</td>
+        <td>4409</td>
+        <td>Bamboo flooring</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>300.</td>
+        <td>4415</td>
+        <td>Packing  cases,  boxes,  crates,  drums  and  similar  packings,  of wood; cable-drums of wood; pallets, box pallets and other load</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>boards, of wood; pallet collars of wood</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>301.</td>
+        <td>4416</td>
+        <td>Casks, barrels, vats, tubs and other coopers’ products and parts thereof, of wood, including staves</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>302.</td>
+        <td>4417</td>
+        <td>Tools,  tool  bodies,  tool  handles,  broom  or  brush  bodies  and handles, of wood; boot or shoe lasts and trees, of wood</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>303.</td>
+        <td>4418</td>
+        <td>Bamboo wood building joinery</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>304.</td>
+        <td>4419</td>
+        <td>Tableware and Kitchenware of wood</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>305.</td>
+        <td>4420</td>
+        <td>Wood marquetry and inlaid wood; caskets and cases for jewellery or  cutlery,  and  similar  articles,  of  wood;  statuettes  and  other<br>ornaments, of wood; wooden articles of furniture not falling in Chapter 94</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>306.</td>
+        <td>4421</td>
+        <td>Other articles of wood; such as clothes hangers, Spools,   cops, bobbins,   sewing thread reels and  the like of turned  wood  for various  textile  machinery,  Match  splints,  Pencil  slats,  Parts  of wood,   namely oars,   paddles and rudders for ships, boats and other  similar  floating  structures,  Parts  of  domestic  decorative articles  used  as  tableware  and  kitchenware  [other  than  Wood paving blocks, articles of densified wood not elsewhere included or  specified,  Parts  of  domestic  decorative  articles  used  as<br>tableware and kitchenware]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>307.</td>
+        <td>4501</td>
+        <td>Natural cork, raw or simply prepared</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>308.</td>
+        <td>4502 00 00</td>
+        <td>Natural  cork,  debacked  or  roughly  squared,  or  in  rectangular (including square) blocks, plates, sheets or strip (including sharp- edged blanks for corks or stoppers)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>309.</td>
+        <td>4503</td>
+        <td>Articles of natural cork such as Corks and Stoppers, Shuttlecock cork bottom</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>310.</td>
+        <td>4504</td>
+        <td>Agglomerated  cork  (with  or  without a binding  substance) and articles of agglomerated cork</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>311.</td>
+        <td>4601, 4602</td>
+        <td>Manufactures of straw, of esparto or of other plaiting materials; basketware and wickerwork</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>312.</td>
+        <td>4701</td>
+        <td>Mechanical wood pulp</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>313.</td>
+        <td>4703</td>
+        <td>Chemical  wood  pulp,  soda  or  sulphate,  other  than  dissolving grades</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>314.</td>
+        <td>4704</td>
+        <td>Chemical wood pulp, sulphite, other than dissolving grades</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>315.</td>
+        <td>4705</td>
+        <td>Wood  pulp  obtained  by  a  combination  of  mechanical  and chemical pulping processes</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>316.</td>
+        <td>4706</td>
+        <td>Pulps of fibres derived from recovered (waste and scrap) paper or paperboard or of other fibrous cellulosic material</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>317.</td>
+        <td>4707</td>
+        <td>Recovered waste or scrap of paper or paperboard</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>318.</td>
+        <td>48</td>
+        <td>Paper  splints  for  matches,  whether  or  not  waxed,  Asphaltic roofing sheets</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>319.</td>
+        <td>39, 48</td>
+        <td>Paper Sacks/Bags and bio-degradable bags</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>320.</td>
+        <td>4801</td>
+        <td>Newsprint, in rolls or sheets</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>321.</td>
+        <td>481,730</td>
+        <td>Boxes, pouches, wallets and writing compendiums, of paper or paperboard, containing an assortment of paper stationery</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>322.</td>
+        <td>4819 10, 4819 20</td>
+        <td>Cartons, boxes and cases of, -<br>(a)   Corrugated paper or paper boards; or<br>(b)   Non-corrugated paper or paper board</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>323.</td>
+        <td>4823</td>
+        <td>Paper pulp moulded trays; Kites, Paper mache articles</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>324.</td>
+        <td>4901</td>
+        <td>Brochures, leaflets and similar printed matter, whether or not in single sheets</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>325.</td>
+        <td>5004 to 5006</td>
+        <td>Silk yarn</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>326.</td>
+        <td>5007</td>
+        <td>Woven fabrics of silk or of silk waste</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>327.</td>
+        <td>5104</td>
+        <td>Garneted stock of wool or of fine or coarse animal hair, shoddy wool</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>328.</td>
+        <td>5105</td>
+        <td>Wool and fine or coarse animal hair, carded or combed</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>329.</td>
+        <td>5106 to 5110</td>
+        <td>Yarn of wool or of animal hair</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>330.</td>
+        <td>5111 to 5113</td>
+        <td>Woven fabrics of wool or of animal hair</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>331.</td>
+        <td>5201 to 5203</td>
+        <td>Cotton and Cotton waste</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>332.</td>
+        <td>5204</td>
+        <td>Cotton sewing thread, whether or not put up for retail sale</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>333.</td>
+        <td>5205 to 5207</td>
+        <td>Cotton yarn [other than khadi yarn]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>334.</td>
+        <td>5208 to 5212</td>
+        <td>Woven fabrics of cotton</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>335.</td>
+        <td>5301</td>
+        <td>All goods i.e. flax, raw or processed but not spun; flax tow and waste (including yarn waste and garneted stock)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>336.</td>
+        <td>5302</td>
+        <td>True hemp (Cannabis sativa L), raw or processed but not spun; tow and waste of true hemp (including yarn waste and garneted<br>stock)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>337.</td>
+        <td>5303</td>
+        <td>All goods i.e. textile bast fibres [other than jute fibres, raw or<br>processed but not spun]; tow and waste of these fibres (including yarn waste and garneted stock)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>338.</td>
+        <td>5305 to 5308</td>
+        <td>All goods [other than coconut coir fibre] including yarn of flax, jute, other textile bast fibres, other vegetable textile fibres; paper yarn including coir pith compost pre-packaged and labelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>339.</td>
+        <td>5309 to 5311</td>
+        <td>Woven fabrics of other vegetable textile fibres, paper yarn</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>340.</td>
+        <td>5401</td>
+        <td>Sewing thread of manmade filaments, whether or not put up for retail sale</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>341.</td>
+        <td>5402, 5403, 5404, 5405,<br>5406</td>
+        <td>All goods including synthetic or artificial filament yarns</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>342.</td>
+        <td>5407, 5408</td>
+        <td>Woven fabrics of manmade textile materials</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>343.</td>
+        <td>5501, 5502</td>
+        <td>Synthetic or artificial filament tow</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>344.</td>
+        <td>5503, 5504, 5506, 5507</td>
+        <td>Synthetic or artificial staple fibres</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>345.</td>
+        <td>5505</td>
+        <td>Waste of manmade fibres</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>346.</td>
+        <td>5508</td>
+        <td>Sewing thread of manmade staple fibres, whether or not put up for retail sale</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>347.</td>
+        <td>5509, 5510, 5511</td>
+        <td>Yarn of manmade staple fibres</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>348.</td>
+        <td>5512 to 5516</td>
+        <td>Woven fabrics of manmade staple fibres</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>349.</td>
+        <td>5601</td>
+        <td>Wadding  of  textile  materials  and   articles  thereof;  such   as Absorbent cotton wool except cigarette filter rods</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>350.</td>
+        <td>5602</td>
+        <td>Felt, whether or not impregnated, coated, covered or laminated</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>351.</td>
+        <td>5603</td>
+        <td>Nonwovens,  whether  or  not  impregnated,  coated,  covered  or laminated</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>352.</td>
+        <td>5604</td>
+        <td>Rubber thread and cord, textile covered; textile yarn, and strip and  the  like  of  heading  5404  or  5405,  impregnated,  coated,<br>covered or sheathed with rubber or plastics</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>353.</td>
+        <td>5605</td>
+        <td>Metallised  yarn,  whether  or  not  gimped,  being  textile  yarn, or  strip  or  the  like  of heading 5404 or 5405, combined with metal  in  the  form  of  thread,  strip  or  powder  or  covered  with metal,   including   real   zari   thread   (gold)   and   silver   thread combined with   textile   thread, imitation   zari   thread or   yarn<br>known  by  any  name  in  trade parlance</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>354.</td>
+        <td>5606</td>
+        <td>Gimped yarn, and strip and the like of heading 5404 or 5405, gimped (other than those of heading 5605 and gimped horsehair yarn); chenille yarn (including flock chenille yarn); loop wale-<br>yarn</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>355.</td>
+        <td>5607</td>
+        <td>Twine,  cordage,  ropes  and  cables,  whether  or  not  plaited  or braided  and  whether  or  not  impregnated,  coated,  covered  or sheathed  with  rubber  or  plastics  including  jute  twine,  coir<br>cordage or ropes</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>356.</td>
+        <td>5608</td>
+        <td>Knotted netting of twine, cordage or rope; made up fishing nets and other made up nets, of textile materials</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>357.</td>
+        <td>5609</td>
+        <td>Articles of yarn, strip or the like of heading 5404 or 5405, twine, cordage,  rope  or  cables,  not  elsewhere  specified  or  included,<br>products of coir</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>358.</td>
+        <td>5701</td>
+        <td>Carpets and other textile floor coverings, knotted, whether or not made up</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>359.</td>
+        <td>5702</td>
+        <td>Carpets and other textile floor coverings, woven, not tufted or<br>flocked,   whether   or   not   made   up,   including   “Kelem”, “Schumacks”, “Karamanie” and similar hand-woven rugs</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>360.</td>
+        <td>5703</td>
+        <td>Carpets and other textile floor coverings (including Turf), tufted, whether or not made up</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>361.</td>
+        <td>5704</td>
+        <td>Carpets and other textile floor  coverings, of felt, not tufted  or flocked, whether or not made up</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>362.</td>
+        <td>5705</td>
+        <td>Other carpets and other textile floor coverings, whether or not made up; such as Mats and mattings including Bath Mats, where<br>cotton predominates by weight, of Handloom, Cotton Rugs of handloom</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>363.</td>
+        <td>5702, 5703, 5705</td>
+        <td>Coir mats, matting, floor covering and handloom durries</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>364.</td>
+        <td>5801</td>
+        <td>All goods</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>365.</td>
+        <td>5802</td>
+        <td>Terry  towelling  and  similar  woven  terry  fabrics,  other  than<br>narrow fabrics of heading 5806; tufted textile fabrics, other than products of heading 5703</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>366.</td>
+        <td>5803</td>
+        <td>Gauze, other than narrow fabrics of heading 5806</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>367.</td>
+        <td>5804</td>
+        <td>Tulles  and  other  net  fabrics,  not  including  woven,  knitted  or<br>crocheted fabrics; lace in the piece, in strips or in motifs, other than fabrics of headings 6002 to 6006</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>368.</td>
+        <td>5805</td>
+        <td>Hand-woven    tapestries    of    the    type    Gobelins,    Flanders, Aubusson, Beauvais and the like, and needle-worked tapestries<br>(for example, petit point, cross stitch), whether or not made up</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>369.</td>
+        <td>5806</td>
+        <td>Narrow woven fabrics, other than goods of heading 5807; narrow<br>fabrics consisting of warp without weft assembled by means of an adhesive (bolducs)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>370.</td>
+        <td>5807</td>
+        <td>Labels,  badges  and  similar  articles  of  textile  materials,  in  the piece, in strips or cut to shape or size, not embroidered</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>371.</td>
+        <td>5808</td>
+        <td>Braids in the piece; ornamental trimmings in the piece, without<br>embroidery,  other  than  knitted  or  crocheted;  tassels,  pompons and similar articles; saree fall</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>372.</td>
+        <td>5809</td>
+        <td>Woven fabrics of metal thread and woven fabrics of metallised yarn of heading 5605, of a kind used in apparel, as furnishing fabrics  or  for  similar  purposes,  not  elsewhere  specified  or<br>included; such as Zari borders</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>373.</td>
+        <td>5809, 5810</td>
+        <td>Embroidery or zari articles, that is to say,- imi, zari, kasab, salma, dabka, chumki, gota, sitara, naqsi, kora, glass beads, badla, gizai</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>374.</td>
+        <td>5810</td>
+        <td>Embroidery  in  the  piece,  in  strips  or  in  motifs,  Embroidered badges, motifs and the like</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>375.</td>
+        <td>5811</td>
+        <td>Quilted textile products in the piece, composed of one or more layers of textile materials assembled with padding by stitching or<br>otherwise, other than embroidery of heading 5810</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>376.</td>
+        <td>5901</td>
+        <td>Textile fabrics coated with gum or amylaceous substances, of a kind used for the outer covers of books or the like; tracing cloth;<br>prepared painting canvas; buckram and similar stiffened textile fabrics of a kind used for hat foundations</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>377.</td>
+        <td>5902</td>
+        <td>Tyre  cord  fabric  of  high  tenacity  yarn  of  nylon  or  other polyamides, polyesters or viscose rayon</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>378.</td>
+        <td>5903</td>
+        <td>Textile fabrics impregnated, coated, covered or laminated with plastics, other than those of heading 5902</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>379.</td>
+        <td>5904</td>
+        <td>Linoleum, whether or not cut to shape; floor coverings consisting<br>of a coating or covering applied on a textile backing, whether or not cut to shape</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>380.</td>
+        <td>5905</td>
+        <td>Textile wall coverings</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>381.</td>
+        <td>5906</td>
+        <td>Rubberised textile fabrics, other than those of heading 5902</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>382.</td>
+        <td>5907</td>
+        <td>Textile   fabrics   otherwise   impregnated,   coated   or   covered; painted canvas being theatrical scenery, studio back-cloths or the like</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>383.</td>
+        <td>5908</td>
+        <td>Textile  wicks,  woven,  plaited  or  knitted,  for  lamps,  stoves, lighters, candles or the like; incandescent gas mantles and tubular knitted gas mantle fabric therefor, whether or not impregnated</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>384.</td>
+        <td>5909</td>
+        <td>Textile hose piping  and  similar textile tubing, with  or without</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>lining, armour or accessories of other materials</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>385.</td>
+        <td>5910</td>
+        <td>Transmission  or  conveyor  belts  or  belting,  of  textile  material,<br>whether or not impregnated, coated, covered or laminated with plastics, or reinforced with metal or other material</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>386.</td>
+        <td>5911</td>
+        <td>Textile products and articles, for technical uses, specified in Note 7 to this Chapter; such as Textile fabrics, felt and felt-lined woven fabrics, coated, covered or laminated with rubber, leather or other material, of a kind used for card clothing, and similar fabrics of a kind used for other technical purposes, including narrow fabrics made of velvet impregnated with rubber, for covering weaving spindles (weaving beams); Bolting cloth, whether or not made up; Felt for cotton textile industries, woven; Woven textiles felt, whether or not impregnated or coated, of a kind commonly used in other machines; Cotton fabrics and articles used in machinery and plant; Jute fabrics and articles used in machinery or plant; Textile  fabrics  of  metalised  yarn  of  a kind  commonly  used  in paper making or other machinery; Straining cloth of a kind used in  oil  presses or  the  like,  including  that  of  human  hair;  Paper maker&#39;s felt, woven; Gaskets, washers, polishing discs and other<br>machinery parts of textile articles</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>387.</td>
+        <td>60</td>
+        <td>Knitted or crocheted fabrics [All goods]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>388.</td>
+        <td>61</td>
+        <td>Article of apparel and clothing accessories, knitted or crocheted, of sale value not exceeding Rs 2500 per piece</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>389.</td>
+        <td>62</td>
+        <td>Articles  of  apparel  and  clothing  accessories,  not  knitted  or crocheted, of sale value not exceeding Rs. 2500 per piece</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>390.</td>
+        <td>63 [other than 6305 32 00,<br>6305 33 00, 6309]</td>
+        <td>Other made up textile articles, sets, of sale value not exceeding Rs. 2500 per piece</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>391.</td>
+        <td>6309 or 6310</td>
+        <td>Worn clothing and other worn articles; rags</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>392.</td>
+        <td>64</td>
+        <td>Footwear of sale value not exceeding Rs.2500 per pair</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>393.</td>
+        <td>6501</td>
+        <td>Textile caps</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>394.</td>
+        <td>6505</td>
+        <td>Hats (knitted/crocheted) or made up from lace or other textile fabrics</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>395.</td>
+        <td>6601</td>
+        <td>Umbrellas    and    sun    umbrellas    (including    walking-stick umbrellas, garden umbrellas and similar umbrellas)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>396.</td>
+        <td>6602</td>
+        <td>Whips, riding-crops and the like</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>397.</td>
+        <td>6602 00 00</td>
+        <td>Walking-sticks including seat sticks</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>398.</td>
+        <td>6603</td>
+        <td>Parts, trimmings and accessories of articles of heading 6601 or 6602</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>399.</td>
+        <td>6701</td>
+        <td>Skins  and  other  parts  of  birds  with  their  feathers  or  down, feathers, parts of feathers, down and articles thereof (other than goods of heading 0505 and worked quills and scapes)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>400.</td>
+        <td>68</td>
+        <td>Sand lime bricks or Stone inlay work</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>401.</td>
+        <td>6802</td>
+        <td>Statues, statuettes, pedestals; high or low reliefs, crosses, figures of  animals,  bowls,  vases,  cups,  cachou  boxes,  writing  sets, ashtrays,  paper  weights,  artificial  fruit  and  foliage,  etc.;  other<br>ornamental goods essentially of stone</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>402.</td>
+        <td>6909</td>
+        <td>Pots, jars and similar articles of a kind used for the conveyance and packing of goods of ceramic</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>403.</td>
+        <td>6911</td>
+        <td>Tableware,  kitchenware,  other  household  articles  and  toilet articles, of porcelain or china</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>404.</td>
+        <td>6912</td>
+        <td>Tableware,  kitchenware,  other  household  articles  and  toilet articles, other than of porcelain or china</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>405.</td>
+        <td>6913</td>
+        <td>Statues and other ornamental articles</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>406.</td>
+        <td>7001</td>
+        <td>Cullet or other waste or scrap of glass</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>407.</td>
+        <td>701,510</td>
+        <td>Glasses for corrective spectacles and flint buttons</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>408.</td>
+        <td>7018</td>
+        <td>Glass beads</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>409.</td>
+        <td>7020</td>
+        <td>Globes for lamps and lanterns, Founts for kerosene wick lamps, Glass chimneys for lamps and lanterns</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>410.</td>
+        <td>7310 or 7326</td>
+        <td>Mathematical boxes, geometry boxes and colour boxes</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>411.</td>
+        <td>7310, 7323, 7612, or 7615</td>
+        <td>Milk cans made of Iron, Steel, or Aluminium</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>412.</td>
+        <td>7317</td>
+        <td>Animal shoe nails</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>413.</td>
+        <td>7319</td>
+        <td>Sewing needles</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>414.</td>
+        <td>7321</td>
+        <td>Kerosene burners, kerosene stoves and wood burning stoves of iron or steel</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>415.</td>
+        <td>7321 or 8516</td>
+        <td>Solar cookers</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>416.</td>
+        <td>7323</td>
+        <td>Table,  kitchen  or  other  household  articles  of  iron  &amp;  steel; Utensils</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>417.</td>
+        <td>7418</td>
+        <td>Table, kitchen or other household articles of copper; Utensils</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>418.</td>
+        <td>7419 80 30</td>
+        <td>Brass Kerosene Pressure Stove</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>419.</td>
+        <td>7615</td>
+        <td>Table, kitchen or other household articles of aluminium; Utensils</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>420.</td>
+        <td>8306</td>
+        <td>Bells, gongs and the like, non-electric, of base metal; statuettes and  other  ornaments,  of  base  metal;  photograph,  picture  or similar  frames,  of  base  metal;  mirrors  of  base  metal;  metal bidriware</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>421.</td>
+        <td>8401</td>
+        <td>Fuel elements (cartridges), non-irradiated, for nuclear reactors</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>422.</td>
+        <td>8407 10 00, 8411</td>
+        <td>Aircraft engines</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>423.</td>
+        <td>8408</td>
+        <td>Fixed Speed Diesel Engines of power not exceeding 15HP</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>424.</td>
+        <td>8408 20 20</td>
+        <td>Agricultural Diesel Engine of cylinder capacity exceeding 250 cc for Tractor</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>425.</td>
+        <td>8413, 8413 91</td>
+        <td>Hand pumps and parts thereof</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>426.</td>
+        <td>8413 81 90</td>
+        <td>Hydraulic Pumps for tractors</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>427.</td>
+        <td>8414 20 20</td>
+        <td>Other hand pumps</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>428.</td>
+        <td>841,912</td>
+        <td>Solar water heater and system</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>429.</td>
+        <td>8420</td>
+        <td>Hand operated rubber roller</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>430.</td>
+        <td>8424</td>
+        <td>Nozzles for drip irrigation equipment or nozzles for sprinklers</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>431.</td>
+        <td>8424</td>
+        <td>Sprinklers; drip irrigation system including laterals; mechanical sprayers</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>432.</td>
+        <td>8432</td>
+        <td>Agricultural,   horticultural   or   forestry   machinery   for   soil preparation  or cultivation; lawn or sports-ground rollers; Parts<br>[8432 90]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>433.</td>
+        <td>8433</td>
+        <td>Harvesting  or  threshing  machinery,  including  straw  or  fodder balers; grass or hay mowers; parts thereof</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>434.</td>
+        <td>8436</td>
+        <td>Other agricultural, horticultural, forestry, poultry-keeping or bee- keeping  machinery,  including  germination  plant  fitted  with mechanical   or   thermal   equipment;   poultry   incubators   and<br>brooders; parts thereof</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>435.</td>
+        <td>8452</td>
+        <td>Sewing machines, other than book-sewing machine of heading 8440; furniture, bases and covers specially designed for sewing machines;   sewing   machines   needles   and   parts   of   sewing<br>machines</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>436.</td>
+        <td>8479</td>
+        <td>Composting Machines</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>437.</td>
+        <td>84, 85 or 94</td>
+        <td>Following   renewable   energy   devices   and   parts   for   their manufacture:-<br>(a) Bio-gas plant;<br>(b) Solar power-based devices;<br>(c) Solar power generator;<br>(d) Wind mills, Wind Operated Electricity Generator (WOEG);<br>(e) Waste to energy plants / devices;<br>(f) Solar lantern / solar lamp;<br>(g) Ocean waves/tidal waves energy devices/plants;<br>(h) Photo voltaic cells, whether or not assembled in modules or made up into panels.<br>Explanation:- If the goods specified in this entry are supplied, by a supplier, along with supplies of other goods and services, one of which being a taxable service specified in the entry at S. No.<br>38  of  the  Table  mentioned  in  the  notification  No.  11/2017- Central Tax (Rate), dated 28th June, 2017 [G.S.R. 690(E)], the</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>value of supply of goods for the purposes of this entry shall be deemed as seventy per cent. of the gross consideration charged for all such supplies, and the remaining thirty per cent. of the gross consideration charged shall be deemed as value of the said<br>taxable service</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>438.</td>
+        <td>8504</td>
+        <td>Charger or charging station for Electrically operated vehicles</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>439.</td>
+        <td>852,560</td>
+        <td>Two-way  radio  (Walkie  talkie)  used  by  defence,  police  and paramilitary forces etc.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>440.</td>
+        <td>87</td>
+        <td>Fuel Cell Motor Vehicles including hydrogen vehicles based on fuel cell technology</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>441.</td>
+        <td>87</td>
+        <td>Electrically operated vehicles, including two and three wheeled electric vehicles.<br>Explanation.-  For  the  purposes  of  this  entry,  “Electrically operated  vehicles”  means  vehicles  which  are  run  solely  on electrical energy derived from an external source or from one or more  electrical  batteries  fitted  to  such  road  vehicles  and  shall<br>include E- bicycles.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>442.</td>
+        <td>8701</td>
+        <td>Tractors (except road tractors for semi-trailers of engine capacity more than 1800 cc)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>443.</td>
+        <td>8708</td>
+        <td>Following parts of tractors namely:<br>a.  Rear Tractor wheel rim,<br>b.  tractor centre housing,<br>c.  tractor housing transmission,<br>d.  tractor support front axle</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>444.</td>
+        <td>8708 10 10</td>
+        <td>Bumpers and parts thereof for tractors</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>445.</td>
+        <td>8708 30 00</td>
+        <td>Brakes assembly and its parts thereof for tractors</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>446.</td>
+        <td>8708 40 00</td>
+        <td>Gear boxes and parts thereof for tractors</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>447.</td>
+        <td>8708 50 00</td>
+        <td>Transaxles and its parts thereof for tractors</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>448.</td>
+        <td>8708 70 00</td>
+        <td>Road wheels and parts and accessories thereof for tractors</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>449.</td>
+        <td>8708 91 00</td>
+        <td>(i)   Radiator assembly for tractors and parts thereof  (ii) Cooling system for tractor engine and parts thereof</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>450.</td>
+        <td>8708 92 00</td>
+        <td>Silencer assembly for tractors and parts thereof</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>451.</td>
+        <td>8708 93 00</td>
+        <td>Clutch assembly and its parts thereof for tractors</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>452.</td>
+        <td>8708 94 00</td>
+        <td>Steering wheels and its parts thereof for tractor</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>453.</td>
+        <td>8708 99 00</td>
+        <td>Hydraulic and its parts thereof for tractors</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>454.</td>
+        <td>8708 99 00</td>
+        <td>Fender, Hood, Wrapper, Grill, Side Panel, Extension Plates, Fuel Tank and parts thereof for tractors.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>455.</td>
+        <td>8710</td>
+        <td>Tanks and other armoured fighting vehicles, motorised, whether or not fitted with weapons, and parts of such vehicles</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>456.</td>
+        <td>8712</td>
+        <td>Bicycles  and  other  cycles  (including  delivery  tricycles),  not motorised</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>457.</td>
+        <td>8713</td>
+        <td>Carriages  for  disabled  persons,  whether  or  not  motorised  or otherwise mechanically propelled</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>458.</td>
+        <td>8714</td>
+        <td>Parts  and  accessories  of  bicycles  and  other  cycles  (including delivery tricycles), not motorised, of heading 8712</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>459.</td>
+        <td>871,420</td>
+        <td>Parts and accessories of carriage for disabled persons</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>460.</td>
+        <td>8716 20 00</td>
+        <td>Self-loading or self-unloading trailers for agricultural purposes</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>461.</td>
+        <td>871,680</td>
+        <td>Hand propelled vehicles (e.g. hand carts, rickshaws and the like); animal drawn vehicles</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>462.</td>
+        <td>88 or Any other Chapter</td>
+        <td>Scientific   and   technical   instruments,   apparatus,   equipment, accessories,  parts,  components,  spares,  tools,  mock  ups  and<br>modules,  raw  material  and  consumables  required  for  launch vehicles and satellites and payloads</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>463.</td>
+        <td>8802</td>
+        <td>Other  aircraft (for  example, helicopters, aeroplanes), other than for personal use</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>464.</td>
+        <td>8806</td>
+        <td>Unmanned aircraft</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>465.</td>
+        <td>8807</td>
+        <td>Parts of goods of heading 8802 or 8806</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>466.</td>
+        <td>8901</td>
+        <td>Cruise  ships,  excursion  boats,  ferry-boats,  cargo  ships,  barges and similar vessels for the transport of persons or goods</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>467.</td>
+        <td>8902</td>
+        <td>Fishing vessels; factory ships and other vessels for processing or preserving fishery products</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>468.</td>
+        <td>8904</td>
+        <td>Tugs and pusher craft</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>469.</td>
+        <td>8905</td>
+        <td>Light-vessels,  fire-floats,  dredgers,  floating  cranes  and  other vessels  the  navigability  of  which  is  subsidiary  to  their  main function;  floating  docks;  floating  or  submersible  drilling  or<br>production platforms</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>470.</td>
+        <td>8906</td>
+        <td>Other vessels, including warships and lifeboats other than rowing boats</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>471.</td>
+        <td>8907</td>
+        <td>Other floating structures (for example, rafts, tanks, coffer-dams, landing-stages, buoys and beacons)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>472.</td>
+        <td>Any chapter</td>
+        <td>Parts of goods of headings 8901, 8902, 8904, 8905, 8906, 8907</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>473.</td>
+        <td>90</td>
+        <td>Coronary stents and coronary stent systems for use with cardiac catheters</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>474.</td>
+        <td>90 or any other Chapter</td>
+        <td>Artificial kidney</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>475.</td>
+        <td>90 or any other Chapter</td>
+        <td>Blood glucose monitoring system (Glucometer) and test strips</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>476.</td>
+        <td>90 or any other Chapter</td>
+        <td>Patent Ductus Arteriosus / Atrial Septal Defect occlusion device</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>477.</td>
+        <td>90 or any other Chapter</td>
+        <td>Parts of the following goods, namely: -<br>(i) Crutches;     (ii)     Wheel     chairs;     (iii)Walking     frames; (iv)Tricycles; (v)Braillers; and (vi) Artificial limbs</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>478.</td>
+        <td>90 or any other Chapter</td>
+        <td>Assistive   devices,   rehabilitation   aids   and   other   goods   for disabled, specified in List 1 appended to this Schedule</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>479.</td>
+        <td>90 or 84</td>
+        <td>Disposable sterilized dialyzer or micro barrier of artificial kidney</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>480.</td>
+        <td>9001</td>
+        <td>Contact lenses; Spectacle lenses</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>481.</td>
+        <td>9003</td>
+        <td>Frames and mountings for spectacles, goggles or the like, and parts thereof</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>482.</td>
+        <td>9004</td>
+        <td>Spectacles, corrective (including goggles for correcting vision)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>483.</td>
+        <td>9018</td>
+        <td>Instruments and appliances used in medical, surgical, dental or<br>veterinary  sciences,  including  scientigraphic  apparatus,  other electro-medical apparatus and sight-testing instruments</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>484.</td>
+        <td>9019</td>
+        <td>Mechano-therapy appliances; massage apparatus; psychological aptitude-testing   apparatus;   ozone   therapy,   oxygen   therapy, aerosol   therapy,   artificial   respiration   or   other   therapeutic<br>respiration apparatus</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>485.</td>
+        <td>9020</td>
+        <td>Other breathing appliances and gas masks, excluding protective masks having neither mechanical parts nor replaceable filters</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>486.</td>
+        <td>9021</td>
+        <td>Orthopaedic  appliances,  such  as  crutches,  surgical  belts,  and trusses; Splints and other fracture appliances; artificial parts of the  body;  other  appliances  which  are  worn  or  carried,  or implanted in the body, to compensate for a defect or disability;<br>intraocular lens [other than hearing aids]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>487.</td>
+        <td>9022</td>
+        <td>Apparatus based on the use of X-rays or of alpha, beta or gamma radiations,  for  medical,  surgical,  dental  or  veterinary  uses, including  radiography  or  radiotherapy  apparatus,  X-ray  tubes and  other  X-ray  generators,  high  tension  generators,  control panels  and  desks,  screens,  examinations  or  treatment  tables,<br>chairs and the like</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>488.</td>
+        <td>9025</td>
+        <td>Thermometers for medical, surgical, dental or veterinary usage</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>489.</td>
+        <td>9027</td>
+        <td>Instruments   and   apparatus   for   medical,  surgical,   dental   or veterinary uses, for physical or chemical analysis</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>490.</td>
+        <td>9403</td>
+        <td>Furniture wholly made of bamboo, cane or rattan</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>491.</td>
+        <td>9404</td>
+        <td>Coir products (except coir mattresses)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>492.</td>
+        <td>9404</td>
+        <td>Products wholly made of quilted textile materials not exceeding Rs 2500 per piece</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>493.</td>
+        <td>9404</td>
+        <td>Cotton quilts of sale value not exceeding Rs. 2500 per piece</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>494.</td>
+        <td>9401 10 00</td>
+        <td>Aircraft seats</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>495.</td>
+        <td>9405</td>
+        <td>Hurricane lanterns, Kerosene lamp / pressure lantern, petromax, glass chimney, and parts thereof</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>496.</td>
+        <td>9503</td>
+        <td>Toy balloons made of natural rubber latex</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>497.</td>
+        <td>9503</td>
+        <td>Toys like tricycles, scooters, pedal cars etc. (including parts and accessories thereof) [other than electronic toys]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>498.</td>
+        <td>9504</td>
+        <td>Playing cards, chess board, carom board and other board games, like ludo, etc. (other than Video game consoles and Machines)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>499.</td>
+        <td>9506</td>
+        <td>Sports  goods  other  than  articles  and  equipment  for  general physical exercise</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>500.</td>
+        <td>9507</td>
+        <td>Fishing hooks</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>501.</td>
+        <td>9507</td>
+        <td>Fishing  rods,  and  other  line  fishing  tackle;  fish  landing  nets,<br>butterfly nets and similar nets; decoy birds (other than those of heading 9208 or 9705) and similar hunting or shooting requisites</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>502.</td>
+        <td>9601</td>
+        <td>Worked ivory, bone, tortoise shell, horn, antlers, corals, mother of pearl, and other animal carving material and articles of these<br>materials,   articles   of   coral   (including   articles   obtained   by moulding)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>503.</td>
+        <td>9603 [other than 9603 10<br>00]</td>
+        <td>Broomsticks  (other  than  brooms  consisting  of  twigs  or  other vegetable materials bound together, with or without handles)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>504.</td>
+        <td>9603 21 00</td>
+        <td>Tooth brushes including dental-plate brushes</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>505.</td>
+        <td>9607</td>
+        <td>Slide fasteners and parts thereof</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>506.</td>
+        <td>9615</td>
+        <td>Combs, hair-slides  and  the like; hairpins,  curling pins, curling grips, hair-curlers and the like, other than those of heading 8516,<br>and parts thereof</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>507.</td>
+        <td>9619 00 30, 9619 00 40, or<br>9619 00 90</td>
+        <td>All goods</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>508.</td>
+        <td>9701</td>
+        <td>Paintings, drawings and pastels,   executed   entirely   by   hand, other  than  drawings  of  heading  4906 and   other   than   hand- painted   or   hand-decorated   manufactured   articles; collages,<br>mosaics and similar decorative plaques</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>509.</td>
+        <td>9702</td>
+        <td>Original engravings, prints and lithographs</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>510.</td>
+        <td>9703</td>
+        <td>Original sculptures and statuary, in any material</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>511.</td>
+        <td>9704</td>
+        <td>Postage or revenue stamps, stamp-postmarks,  first-day  covers, postal stationery (stamped paper), and the like, used or unused,<br>other than those of heading 4907</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>512.</td>
+        <td>9705</td>
+        <td>Collections   and   collectors&#39;   pieces   of   zoological,   botanical, mineralogical,       anatomical,       historical,       archaeological, paleontological,  ethnographic or numismatic  interest including<br>numismatic coins</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>513.</td>
+        <td>9706</td>
+        <td>Antiques of an age exceeding one hundred years</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>514.</td>
+        <td>9804</td>
+        <td>All  drugs  or  medicines  including  their  salts  and  esters  and diagnostic test kits and formulations intended for personal use [other than those specified at nil at S No. 113 of Notification No.<br>10/2025-Central Tax (Rate) dated 17th September, 2025]</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>515.</td>
+        <td>Any chapter</td>
+        <td>Rosaries, prayer beads or Hawan samagri</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>516.</td>
+        <td>Any chapter</td>
+        <td>Biomass briquettes or solid bio fuel pellets</td>
+        <td></td>
+    </tr>
+   
+
+    
+</table>
+ </table>
+<section id="download">
+          <h2>Download Official Notification</h2>
+          <p><a href="/downloads/09-2025-CTR-eng.pdf" target="_blank">Download Notification 09/2025 (PDF)</a></p>
+        </section>
+<div class="footer">
+      <p><em>Disclaimer: This article is for informational purposes only and not a substitute for legal advice. For tailored guidance, consult a tax professional.</em></p>
+      © <span id="year"></span> EasyPeasyTax.com
+    </div>
+</div>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

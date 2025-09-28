@@ -1,0 +1,3848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HSN Code List – EasyPeasyTax</title>
+  <meta name="description" content="Find the latest GST HSN Code list with updated tax rates. EasyPeasyTax provides a searchable database of goods under Schedule II.">
+  <meta name="keywords" content="HSN Code, GST, EasyPeasyTax, Schedule II, GST Rates India, Tax Codes">
+  <meta name="author" content="EasyPeasyTax">
+  <style>
+    :root {
+      --primary: #FF6F61;
+      --text: #2c2c2c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Roboto', system-ui, sans-serif;
+      margin: 0;
+      padding-top: 100px;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Header styles for desktop (default) */
+    header {
+      background: #ffffff;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Desktop: Hide hamburger, show full navigation */
+    .hamburger {
+      font-size: 26px;
+      cursor: pointer;
+      display: none; /* Hidden on desktop */
+      padding: 8px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      min-width: 44px;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hamburger:hover {
+      background-color: #f9f9f9;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    /* Desktop navigation - visible by default */
+    nav {
+      display: block;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      padding: 10px 15px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #f9f9f9;
+    }
+
+    nav a.active {
+      color: var(--primary);
+      background-color: #f9f9f9;
+    }
+
+    /* Dropdown styles */
+    .dropdown-wrapper {
+      position: relative;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #f9f9f9;
+      padding: 10px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      min-width: 180px;
+      z-index: 100;
+      border-radius: 4px;
+    }
+
+    .dropdown-wrapper.active .dropdown {
+      display: block;
+    }
+
+    .dropdown li {
+      padding: 0;
+    }
+
+    .dropdown a {
+      padding: 8px 15px;
+      display: block;
+      margin: 0;
+    }
+
+    .dropdown a:hover {
+      background-color: #e9e9e9;
+    }
+
+    /* Content styles */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .news-title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+      color: var(--primary);
+    }
+
+    .news-item {
+      background: #f9f9f9;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary);
+    }
+
+    .news-item h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .news-item p {
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      body {
+        padding-top: 80px;
+      }
+
+      header {
+        padding: 15px 20px;
+      }
+
+      .header-container {
+        justify-content: center;
+        position: relative;
+      }
+
+      /* Show hamburger on mobile */
+      .hamburger {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      /* Center logo on mobile */
+      .logo {
+        text-align: center;
+        font-size: 22px;
+        flex-grow: 0;
+      }
+
+      /* Hide desktop navigation by default on mobile */
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        border-radius: 0 0 8px 8px;
+      }
+
+      /* Show navigation when active */
+      nav.active {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+      }
+
+      nav li {
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      nav li:last-child {
+        border-bottom: none;
+      }
+
+      nav a {
+        padding: 15px 20px;
+        display: block;
+        border-radius: 0;
+      }
+
+      /* Mobile dropdown adjustments */
+      .dropdown {
+        position: static;
+        box-shadow: none;
+        background: #f0f0f0;
+        margin-left: 20px;
+        border-radius: 0;
+      }
+
+      .dropdown a {
+        padding: 12px 25px;
+        font-size: 14px;
+      }
+
+      /* Mobile content adjustments */
+      .container {
+        padding: 15px;
+      }
+
+      .news-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .news-item {
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+
+      .news-item h3 {
+        font-size: 16px;
+      }
+    }
+
+    /* Tablet styles */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      nav ul {
+        gap: 15px;
+      }
+
+      nav a {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+    }
+/* Table Styling */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+table th {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+table tr:hover {
+  background: #f1f7ff;
+}
+/* Centered Search Bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.search-bar input {
+  width: 60%;
+  max-width: 500px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-bar input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 5px rgba(255, 111, 97, 0.4);
+}
+.footer {
+  margin-top: auto;   /* THIS is key */
+  padding: 20px;
+  font-size: .9rem;
+  color: #777;
+  text-align: center;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+ /* Mobile styles */
+    @media (max-width: 768px) {
+      body {
+        padding-top: 80px;
+      }
+
+      header {
+        padding: 15px 20px;
+      }
+
+      .header-container {
+        justify-content: center;
+        position: relative;
+      }
+
+      /* Show hamburger on mobile */
+      .hamburger {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      /* Center logo on mobile */
+      .logo {
+        text-align: center;
+        font-size: 22px;
+        flex-grow: 0;
+      }
+
+      /* Hide desktop navigation by default on mobile */
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        border-radius: 0 0 8px 8px;
+      }
+
+      /* Show navigation when active */
+      nav.active {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+      }
+
+      nav li {
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      nav li:last-child {
+        border-bottom: none;
+      }
+
+      nav a {
+        padding: 15px 20px;
+        display: block;
+        border-radius: 0;
+      }
+
+      /* Mobile dropdown adjustments */
+      .dropdown {
+        position: static;
+        box-shadow: none;
+        background: #f0f0f0;
+        margin-left: 20px;
+        border-radius: 0;
+      }
+
+      .dropdown a {
+        padding: 12px 25px;
+        font-size: 14px;
+      }
+
+      /* Mobile content adjustments */
+      .container {
+        padding: 15px;
+      }
+
+      .news-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .news-item {
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+
+      .news-item h3 {
+        font-size: 16px;
+      }
+    }
+
+    /* Tablet styles */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      nav ul {
+        gap: 15px;
+      }
+
+      nav a {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</div>
+      <a href="https://easypeasytax.com" class="logo">EasyPeasyTax</a>
+    </div>
+    <nav id="mobileMenu">
+       <ul>
+        <li><a class="active" href="https://easypeasytax.com">Home</a></li>
+        <li><a href="https://easypeasytax.com/about">About Us</a></li>
+        <li><a href="https://easypeasytax.com/services">Services</a></li>
+        <li><a href="hsn-sac-tabbed-themed.html">HSN & SAC Codes</a></li>
+        <li><a href="latestnews.html">Latest News</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="dropdown-wrapper">
+          <a href="#" class="dropdown-toggle">Tools ▼</a>
+          <ul class="dropdown" id="toolsDropdown">
+            <li><a href="incometaxcalculator_final_fixed.html">Income Tax Calculator</a></li>
+            <li><a href="hracalculator.html">HRA Calculator</a></li>
+            <li><a href="capital_gain_calculator.html">Capital Gain Tax Calculator</a></li>
+            <li><a href="ssy-calculator.html">SSY Calculator</a></li>
+            <li><a href="fdcalculator_centered.html">FD Interest Calculator</a></li>
+          </ul>
+        </li>
+        <li><a href="https://easypeasytax.com/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- Search Bar -->
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search by HSN code or keyword...">
+</div>
+<script>
+  document.getElementById("searchInput").addEventListener("keyup", function () {
+    var filter = this.value.toLowerCase();
+    var rows = document.querySelectorAll("table tr");
+
+    rows.forEach(function (row, index) {
+      if (index === 0) return; // Skip header row
+      var text = row.textContent.toLowerCase();
+      row.style.display = text.indexOf(filter) > -1 ? "" : "none";
+    });
+  });
+</script>
+<div class="table-wrapper">
+  <table>
+
+<table>
+    <tr>
+  <td colspan="4" style="text-align:center; font-weight:bold; background:#f9f9f9; font-size:18px; padding:12px;">
+    Schedule II – 18%
+  </td>
+</tr>
+
+    <tr>
+        <td>S. No.</td>
+        <td>Chapter/Heading/Sub- Heading/Tariff item</td>
+        <td>Description of goods</td>
+    </tr>
+    <tr>
+        <td>(1)</td>
+        <td>(2)</td>
+        <td>(3)</td>
+    </tr>
+    <tr>
+        <td>1.</td>
+        <td>1702</td>
+        <td>Artificial honey, whether or not mixed with natural honey</td>
+    </tr>
+    <tr>
+        <td>2.</td>
+        <td>2207</td>
+        <td>Ethyl alcohol and other spirits, denatured, of any strength [other than ethyl alcohol  supplied  to Oil  Marketing  Companies  or  petroleum refineries for blending with motor spirit (petrol)]</td>
+    </tr>
+    <tr>
+        <td>3.</td>
+        <td>22071012</td>
+        <td>Spirits for industrial use</td>
+    </tr>
+    <tr>
+        <td>4.</td>
+        <td>2209</td>
+        <td>Vinegar and substitutes for vinegar obtained from acetic acid</td>
+    </tr>
+    <tr>
+        <td>5.</td>
+        <td>24041200</td>
+        <td>Products  containing  nicotine  and  intended  for  inhalation  without combustion</td>
+    </tr>
+    <tr>
+        <td>6.</td>
+        <td>24049100, 24049200,<br>24049900</td>
+        <td>Products  for  oral  application  or  transdermal  application  or  for application   otherwise   than   orally   or   transdermally,   containing<br>nicotine and intended to assist tobacco use cessation</td>
+    </tr>
+    <tr>
+        <td>7.</td>
+        <td>2515 12 20, 2515 12 90</td>
+        <td>Marble and travertine, other than blocks</td>
+    </tr>
+    <tr>
+        <td>8.</td>
+        <td>2516 12 00</td>
+        <td>Granite, other than blocks</td>
+    </tr>
+    <tr>
+        <td>9.</td>
+        <td>2523</td>
+        <td>Portland  cement,  aluminous  cement,  slag  cement,  super  sulphate<br>cement and similar hydraulic cements, whether or not coloured or in the form of clinkers</td>
+    </tr>
+    <tr>
+        <td>10.</td>
+        <td>2601</td>
+        <td>Iron ores and concentrates, including roasted iron pyrites</td>
+    </tr>
+    <tr>
+        <td>11.</td>
+        <td>2602</td>
+        <td>Manganese      ores      and      concentrates,  including  ferruginous<br>manganese ores and concentrates with a manganese content of 20% or more, calculated on the dry weight.</td>
+    </tr>
+    <tr>
+        <td>12.</td>
+        <td>2603</td>
+        <td>Copper ores and concentrates</td>
+    </tr>
+    <tr>
+        <td>13.</td>
+        <td>2604</td>
+        <td>Nickel ores and concentrates</td>
+    </tr>
+    <tr>
+        <td>14.</td>
+        <td>2605</td>
+        <td>Cobalt ores and concentrates</td>
+    </tr>
+    <tr>
+        <td>15.</td>
+        <td>2606</td>
+        <td>Aluminium ores and concentrates</td>
+    </tr>
+    <tr>
+        <td>16.</td>
+        <td>2607</td>
+        <td>Lead ores and concentrates</td>
+    </tr>
+    <tr>
+        <td>17.</td>
+        <td>2608</td>
+        <td>Zinc ores and concentrates</td>
+    </tr>
+    <tr>
+        <td>18.</td>
+        <td>2609</td>
+        <td>Tin ores and concentrates</td>
+    </tr>
+    <tr>
+        <td>19.</td>
+        <td>2610</td>
+        <td>Chromium ores and concentrates</td>
+    </tr>
+    <tr>
+        <td>20.</td>
+        <td>2619</td>
+        <td>Slag, dross (other than granulated  slag), scalings and other waste<br>from  the  manufacture  of  iron  or  steel,  other  than  Linz-Donawitz (LD) slag</td>
+    </tr>
+    <tr>
+        <td>21.</td>
+        <td>2620</td>
+        <td>Slag, ash and residues (other than from the manufacture of iron or steel) containing metals, arsenic or their compounds</td>
+    </tr>
+    <tr>
+        <td>22.</td>
+        <td>2621</td>
+        <td>Other slag and ash, including seaweed ash (kelp); ash and residues from the incineration of municipal waste [other than fly ash]</td>
+    </tr>
+    <tr>
+        <td>23.</td>
+        <td>2701</td>
+        <td>Coal; briquettes, ovoids and similar solid fuels manufactured from coal</td>
+    </tr>
+    <tr>
+        <td>24.</td>
+        <td>2702</td>
+        <td>Lignite, whether or not agglomerated, excluding jet</td>
+    </tr>
+    <tr>
+        <td>25.</td>
+        <td>2703</td>
+        <td>Peat (including peat litter), whether or not agglomerated</td>
+    </tr>
+    <tr>
+        <td>26.</td>
+        <td>2706</td>
+        <td>Tar distilled from coal, from lignite or from peat and other mineral tars,  whether  or  not  dehydrated  or  partially  distilled,  including reconstituted tars</td>
+    </tr>
+    <tr>
+        <td>27.</td>
+        <td>2707</td>
+        <td>Oils and other products of the distillation of high temperature coal tar; similar products in which the weight of the aromatic constituents<br>exceeds  that  of  the  non-aromatic  constituents,  such  as  Benzole (benzene), Toluole (toluene), Xylole (xylenes), Naphthelene</td>
+    </tr>
+    <tr>
+        <td>28.</td>
+        <td>2708</td>
+        <td>Pitch and pitch coke, obtained from coal tar or from other mineral tars</td>
+    </tr>
+    <tr>
+        <td>29.</td>
+        <td>2710</td>
+        <td>Petroleum oils and oils obtained from bituminous minerals, other than  petroleum  crude;  preparations  not  elsewhere  specified  or included, containing by weight 70% or more of petroleum oils or of oils obtained from bituminous minerals, these oils being the basic<br>constituents  of  the  preparations;  waste  oils;  Avgas  (other  than kerosene PDS, petrol, diesel and ATF which are not in GST)</td>
+    </tr>
+    <tr>
+        <td>30.</td>
+        <td>2711</td>
+        <td>Petroleum gases and other gaseous hydrocarbons, such as Propane, Butanes, Ethylene, propylene, butylene and butadiene [Other than Liquefied   Propane   and   Butane   mixture,   Liquefied   Propane, Liquefied Butane and Liquefied Petroleum Gases (LPG) for supply to  household  domestic  consumers  or  to  non-domestic  exempted category (NDEC) customers by the Indian Oil Corporation Limited, Hindustan  petroleum  Corporation  Limited  or  Bharat  Petroleum<br>Corporation Limited]</td>
+    </tr>
+    <tr>
+        <td>31.</td>
+        <td>2712</td>
+        <td>Petroleum  jelly;  paraffin  wax,  micro-crystalline  petroleum  wax, slack wax, ozokerite, lignite wax, peat wax, other mineral waxes, and similar products obtained by synthesis or by other processes,<br>whether or not coloured</td>
+    </tr>
+    <tr>
+        <td>32.</td>
+        <td>2713</td>
+        <td>Petroleum coke, petroleum bitumen and other residues of petroleum oils or of oils obtained from bituminous minerals</td>
+    </tr>
+    <tr>
+        <td>33.</td>
+        <td>2714</td>
+        <td>Bitumen and asphalt, natural; bituminous or oil shale and tar sands; asphaltites and asphaltic rocks</td>
+    </tr>
+    <tr>
+        <td>34.</td>
+        <td>2715</td>
+        <td>Bituminous mixtures based on natural asphalt, on natural bitumen,<br>on petroleum bitumen, on mineral tar or on mineral tar pitch (for example, bituminous mastics, cut-backs)</td>
+    </tr>
+    <tr>
+        <td>35.</td>
+        <td>28</td>
+        <td>All inorganic chemicals [other than those specified in notification No.10/2025- Central Tax (Rate) dated 17th September 2025 or other<br>Schedules of this notification]</td>
+    </tr>
+    <tr>
+        <td>36.</td>
+        <td>29</td>
+        <td>All organic chemicals other than giberellic acid</td>
+    </tr>
+    <tr>
+        <td>37.</td>
+        <td>2906 11 90</td>
+        <td>Goods other than Natural Menthol</td>
+    </tr>
+    <tr>
+        <td>38.</td>
+        <td>29061190, 30, 3301</td>
+        <td>Following goods made from other than natural menthol, namely:-<br>a. Menthol and menthol crystals,<br>b. Peppermint (Mentha Oil)<br>c. Fractionated / de-terpenated mentha oil (DTMO)<br>d. De-mentholised oil (DMO)<br>e. Spearmint oil<br>f. Mentha piperita oil</td>
+    </tr>
+    <tr>
+        <td>39.</td>
+        <td>3102</td>
+        <td>Mineral or chemical fertilisers, nitrogenous, which are clearly not to be used as fertilizers</td>
+    </tr>
+    <tr>
+        <td>40.</td>
+        <td>3103</td>
+        <td>Mineral or chemical fertilisers, phosphatic, which are clearly not to be used as fertilizers</td>
+    </tr>
+    <tr>
+        <td>41.</td>
+        <td>3104</td>
+        <td>Mineral or chemical fertilisers, potassic, which are clearly not to be used as fertilizers</td>
+    </tr>
+    <tr>
+        <td>42.</td>
+        <td>3105</td>
+        <td>Mineral  or  chemical  fertilisers  containing  two  or  three  of  the fertilising  elements  nitrogen,  phosphorus  and  potassium;  other fertilisers; goods  of  this  Chapter  in  tablets or  similar  forms or  in packages of a gross weight not exceeding 10 kg, which are clearly<br>not to be used as fertilizers</td>
+    </tr>
+    <tr>
+        <td>43.</td>
+        <td>3201</td>
+        <td>Tanning extracts of vegetable origin; tannins and their salts, ethers, esters  and  other  derivatives  (other  than Wattle  extract,  quebracho<br>extract, chestnut extract)</td>
+    </tr>
+    <tr>
+        <td>44.</td>
+        <td>3202</td>
+        <td>Synthetic organic tanning substances; inorganic tanning substances;<br>tanning  preparations,  whether  or  not  containing  natural  tanning substances (other than Enzymatic preparations for pre-tanning)</td>
+    </tr>
+    <tr>
+        <td>45.</td>
+        <td>3203</td>
+        <td>Colouring matter of vegetable or animal origin (including dyeing extracts  but  excluding  animal  black),  whether  or  not  chemically defined; preparations as specified in Note 3 to this Chapter based on<br>colouring matter of vegetable or animal origin</td>
+    </tr>
+    <tr>
+        <td>46.</td>
+        <td>3204</td>
+        <td>Synthetic  organic  colouring  matter,  whether  or  not  chemically defined; preparations as specified in Note 3 to this Chapter based on synthetic organic colouring matter; synthetic organic products of a<br>kind  used  as  fluorescent  brightening  agents  or  as  luminophores, whether or not chemically defined</td>
+    </tr>
+    <tr>
+        <td>47.</td>
+        <td>3205</td>
+        <td>Colour  lakes;  preparations  as  specified  in  Note  3  to  this  Chapter based on colour lakes</td>
+    </tr>
+    <tr>
+        <td>48.</td>
+        <td>3206</td>
+        <td>Other colouring matter; preparations as specified in Note 3 to this Chapter, other than those of heading 32.03, 32.04 or 32.05; inorganic products of a kind used as luminophores, whether or not chemically<br>defined</td>
+    </tr>
+    <tr>
+        <td>49.</td>
+        <td>3207</td>
+        <td>Prepared   pigments,   prepared   opacifiers   and   prepared   colours, vitrifiable  enamels  and  glazes,  engobes  (slips),  liquid  lustres  and similar preparations of a kind used  in the ceramic, enamelling  or glass  industry;  glass  frit  and  other  glass,  in  the  form  of  powder,<br>granules or flakes</td>
+    </tr>
+    <tr>
+        <td>50.</td>
+        <td>3208</td>
+        <td>Paints  and  varnishes  (including  enamels  and  lacquers)  based  on synthetic   polymers   or   chemically   modified   natural   polymers, dispersed  or  dissolved  in  a  non-aqueous  medium;  solutions  as<br>defined in Note 4 to this Chapter</td>
+    </tr>
+    <tr>
+        <td>51.</td>
+        <td>3209</td>
+        <td>Paints  and  varnishes  (including  enamels  and  lacquers)  based  on synthetic   polymers   or   chemically   modified   natural   polymers, dispersed or dissolved in an aqueous medium</td>
+    </tr>
+    <tr>
+        <td>52.</td>
+        <td>3210</td>
+        <td>Other   paints   and   varnishes   (including   enamels,   lacquers   and<br>distempers); prepared water pigments of a kind used for finishing leather</td>
+    </tr>
+    <tr>
+        <td>53.</td>
+        <td>3211 00 00</td>
+        <td>Prepared driers</td>
+    </tr>
+    <tr>
+        <td>54.</td>
+        <td>3212</td>
+        <td>Pigments (including metallic powders and flakes) dispersed in non- aqueous  media,  in  liquid  or  paste  form,  of  a  kind  used  in  the manufacture of paints (including enamels); stamping foils; dyes and<br>other colouring matter put up in forms or packings for retail sale</td>
+    </tr>
+    <tr>
+        <td>55.</td>
+        <td>3213</td>
+        <td>Artists’,  students’ or  signboard  painters’ colours,  modifying  tints, amusement colours and the like, in tablets, tubes, jars, bottles, pans or in similar forms or packings</td>
+    </tr>
+    <tr>
+        <td>56.</td>
+        <td>3214</td>
+        <td>Glaziers’ putty, grafting putty, resin cements, caulking compounds and  other  mastics;  painters’  fillings;  non-  refractory  surfacing<br>preparations for facades, indoor walls, floors, ceilings or the like</td>
+    </tr>
+    <tr>
+        <td>57.</td>
+        <td>3215</td>
+        <td>All Goods, including printing ink, writing or drawing ink and other<br>inks, whether or not concentrated or solid, fountain pen ink, ball pen ink</td>
+    </tr>
+    <tr>
+        <td>58.</td>
+        <td>3301</td>
+        <td>Essential   oils   (terpeneless   or   not),   including   concretes   and absolutes; resinoids; extracted oleoresins; concentrates of essential oils in fats, in fixed oils, in waxes or the like, obtained by enfleurage or maceration; terpenic by-products of the deterpenation of essential oils; aqueous distillates and aqueous solutions of essential oils such as essential oils of citrus fruit, essential oils other than those of citrus fruit  such  as  eucalyptus  oil,  etc.,  flavouring  essences  all  types<br>(including those for liquors), attars of all kinds in fixed oil bases</td>
+    </tr>
+    <tr>
+        <td>59.</td>
+        <td>3302</td>
+        <td>Mixtures   of   odoriferous   substances   and   mixtures   (including alcoholic solutions) with a basis of one or more of these substances, of a kind used as raw materials in industry; other preparations based on odoriferous substances, of a kind  used  for the manufacture of beverages  such  as  synthetic  perfumery  compounds  [other  than natural menthol and goods made from natural menthol  i.e menthol and menthol crystals, Peppermint (Mentha Oil), Fractionated / de-<br>terpenated   mentha   oil   (DTMO),   De-mentholised   oil   (DMO), Spearmint oil, Mentha piperita oil]</td>
+    </tr>
+    <tr>
+        <td>60.</td>
+        <td>3303</td>
+        <td>Perfumes and toilet waters</td>
+    </tr>
+    <tr>
+        <td>61.</td>
+        <td>3304</td>
+        <td>Beauty or make-up preparations and preparations for the care of the skin  (other  than  medicaments)  including  sunscreen  or  sun  tan preparations; manicure or pedicure preparations [other than kajal,<br>kumkum, bindi, sindur, alta, talcum powder and face powder]</td>
+    </tr>
+    <tr>
+        <td>62.</td>
+        <td>3305</td>
+        <td>Preparations for use on the hair [other than mehendi paste in cones, hair oil, shampoo]</td>
+    </tr>
+    <tr>
+        <td>63.</td>
+        <td>3306</td>
+        <td>Preparations for oral or dental hygiene, including denture fixative pastes and powders in individual retail packages [other than tooth powder, tooth paste and yarn used to clean between the teeth (dental<br>floss)]</td>
+    </tr>
+    <tr>
+        <td>64.</td>
+        <td>3307</td>
+        <td>Pre-shave, shaving or after-shave preparations, personal deodorants, bath  preparations,  depilatories  and  other  perfumery,  cosmetic  or toilet  preparations,  not  elsewhere  specified  or  included;  prepared room deodorisers, whether or not perfumed or having disinfectant<br>properties [other than shaving cream, shaving lotion and aftershave lotion]</td>
+    </tr>
+    <tr>
+        <td>65.</td>
+        <td>3307 41 00</td>
+        <td>Odoriferous  preparations  which  operate  by  burning  [other  than agarbattis, lobhan, dhoop batti, dhoop, sambhrani]</td>
+    </tr>
+    <tr>
+        <td>66.</td>
+        <td>3401</td>
+        <td>Soap; organic surface-active products and preparations for  use  as soap, in the form of cakes, moulded pieces or shapes, whether or not containing  soap[other  than  toilet soap  in  the form of bars,  cakes, moulded  pieces  or  shapes];  organic  surface  active  products  and preparations for washing the skin, in the form of liquid or cream and put  up  for  retail  sale,  whether  or  not  containing  soap;  paper, wadding, felt and nonwovens, impregnated, coated or covered with<br>soap or detergent</td>
+    </tr>
+    <tr>
+        <td>67.</td>
+        <td>3402</td>
+        <td>Organic  surface-active  agents  (other  than  soap);  surface-active preparations,  washing  preparations  (including  auxiliary  washing preparations) and cleaning preparations, whether or not containing soap,  other  than  those  of  heading  3401  [other  than  Sulphonated<br>castor oil, fish oil or sperm oil]</td>
+    </tr>
+    <tr>
+        <td>68.</td>
+        <td>3403</td>
+        <td>Lubricating preparations (including cutting-oil preparations, bolt or nut release preparations, anti-rust or anti-corrosion preparations and mould release preparations, based on lubricants) and preparations of a  kind  used  for  the  oil  or  grease  treatment  of  textile  materials, leather,  furskins  or  other  materials,  but  excluding  preparations containing,  as  basic  constituents,  70%  or  more  by  weight  of<br>petroleum oils or of oils obtained from bituminous minerals</td>
+    </tr>
+    <tr>
+        <td>69.</td>
+        <td>3404</td>
+        <td>Artificial waxes and prepared waxes</td>
+    </tr>
+    <tr>
+        <td>70.</td>
+        <td>3405</td>
+        <td>Polishes  and  creams,  for  footwear,  furniture,  floors,  coachwork,<br>glass or metal, scouring pastes and powders and similar preparations (whether  or  not  in  the  form  of  paper,  wadding,  felt,  nonwovens,</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>cellular plastics or cellular rubber, impregnated, coated or covered with such preparations), excluding waxes of heading 3404</td>
+    </tr>
+    <tr>
+        <td>71.</td>
+        <td>3407</td>
+        <td>Modelling pastes, including those put up for children&#39;s amusement; Preparations  known  as  “dental  wax”  or  as  “dental  impression compounds”, put up in sets, in packings for retail sale or in plates, horseshoe shapes, sticks or similar forms; other preparations for use<br>in dentistry, with a basis of plaster (of calcined gypsum or calcium sulphate)</td>
+    </tr>
+    <tr>
+        <td>72.</td>
+        <td>3501</td>
+        <td>Casein, caseinates and other casein derivatives; casein glues</td>
+    </tr>
+    <tr>
+        <td>73.</td>
+        <td>3502</td>
+        <td>Albumins  (including  concentrates  of  two  or  more  whey  proteins, containing by weight more than 80% whey proteins, calculated on<br>the dry matter), albuminates and other albumin derivatives</td>
+    </tr>
+    <tr>
+        <td>74.</td>
+        <td>3504</td>
+        <td>Peptones  and  their derivatives; other protein  substances  and  their<br>derivatives,  not  elsewhere  specified  or  included;  hide  powder, whether or not chromed; including Isolated soya protein</td>
+    </tr>
+    <tr>
+        <td>75.</td>
+        <td>3506</td>
+        <td>Prepared   glues   and   other   prepared   adhesives,   not   elsewhere specified or included; products suitable for use as glues or adhesives, put  up  for  retail  sale  as  glues  or  adhesives,  not  exceeding  a  net<br>weight of 1 kg</td>
+    </tr>
+    <tr>
+        <td>76.</td>
+        <td>3507</td>
+        <td>Enzymes, prepared enzymes</td>
+    </tr>
+    <tr>
+        <td>77.</td>
+        <td>3601</td>
+        <td>Propellant powders</td>
+    </tr>
+    <tr>
+        <td>78.</td>
+        <td>3602</td>
+        <td>Prepared   explosives,   other   than   propellant   powders,   such   as industrial explosives</td>
+    </tr>
+    <tr>
+        <td>79.</td>
+        <td>3603</td>
+        <td>Safety fuses; detonating cords; percussion    or    detonating    caps; igniters; electric detonators</td>
+    </tr>
+    <tr>
+        <td>80.</td>
+        <td>3604</td>
+        <td>Fireworks,  signalling  flares,  rain  rockets,  fog  signals  and  other pyrotechnic articles</td>
+    </tr>
+    <tr>
+        <td>81.</td>
+        <td>3606</td>
+        <td>Ferro-cerium and other pyrophoric alloys in all forms; articles of combustible materials as specified in Note 2 to this Chapter; such as liquid or liquefied-gas fuels in containers of a kind used for filling<br>or refilling cigarette or similar lighters</td>
+    </tr>
+    <tr>
+        <td>82.</td>
+        <td>3701</td>
+        <td>Photographic plates and film in the flat, sensitised, unexposed, of any material other than paper, paperboard or textiles; instant print film in the flat, sensitised, unexposed, whether or not in packs; such as Instant print film, Cinematographic film (other than for x-ray for<br>Medical use)</td>
+    </tr>
+    <tr>
+        <td>83.</td>
+        <td>3702</td>
+        <td>Photographic film  in rolls, sensitised, unexposed, of  any  material other than paper, paperboard or textiles; instant print film in rolls,<br>sensitised, unexposed</td>
+    </tr>
+    <tr>
+        <td>84.</td>
+        <td>3703</td>
+        <td>Photographic paper, paperboard and textiles, sensitised, unexposed</td>
+    </tr>
+    <tr>
+        <td>85.</td>
+        <td>3704</td>
+        <td>Photographic plates, film, paper, paperboard and textiles, exposed but not developed</td>
+    </tr>
+    <tr>
+        <td>86.</td>
+        <td>3706</td>
+        <td>Cinematographic  film,    exposed  and  developed,  whether  or  not incorporating sound track or consisting only of sound track</td>
+    </tr>
+    <tr>
+        <td>87.</td>
+        <td>3707</td>
+        <td>Chemical preparations for photographic uses (other than varnishes, glues,  adhesives  and  similar  preparations);  unmixed  products  for<br>photographic uses, put up in measured portions or put up for retail sale in a form ready for use</td>
+    </tr>
+    <tr>
+        <td>88.</td>
+        <td>3801</td>
+        <td>Artificial graphite; colloidal or semi-colloidal graphite; preparations<br>based  on  graphite  or  other  carbon  in  the  form  of  pastes,  blocks, plates or other semi-manufactures</td>
+    </tr>
+    <tr>
+        <td>89.</td>
+        <td>3802</td>
+        <td>Activated carbon; activated natural mineral products; animal black, including spent animal black</td>
+    </tr>
+    <tr>
+        <td>90.</td>
+        <td>3803 00 00</td>
+        <td>Tall oil, whether or not refined</td>
+    </tr>
+    <tr>
+        <td>91.</td>
+        <td>3804</td>
+        <td>Residual lyes from the manufacture of wood pulp, whether or not concentrated,  desugared  or  chemically  treated,  including  lignin sulphonates, but excluding tall oil of heading 3803</td>
+    </tr>
+    <tr>
+        <td>92.</td>
+        <td>3805</td>
+        <td>Gum, wood or sulphate turpentine and other terpenic oils produced by  the  distillation  or  other  treatment  of  coniferous  woods;  crude</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>dipentene; sulphite turpentine and other crude para-cymene; pine oil containing alpha-terpineol as the main constituent</td>
+    </tr>
+    <tr>
+        <td>93.</td>
+        <td>3806</td>
+        <td>Rosin and resin acids, and derivatives thereof; rosin spirit and rosin oils; run gums</td>
+    </tr>
+    <tr>
+        <td>94.</td>
+        <td>3807</td>
+        <td>Wood tar; wood tar oils; wood creosote; wood naphtha; vegetable<br>pitch; brewers&#39; pitch and similar preparations based on rosin, resin acids or on vegetable pitch</td>
+    </tr>
+    <tr>
+        <td>95.</td>
+        <td>3808</td>
+        <td>Insecticides,   rodenticides,  fungicides,  herbicides,  anti-sprouting products  and  plant-growth  regulators,  disinfectants  and  similar<br>products [other than bio-pesticides mentioned against S. No. 260 of Schedule –I]</td>
+    </tr>
+    <tr>
+        <td>96.</td>
+        <td>3809</td>
+        <td>Finishing agents, dye carriers to accelerate the dyeing or fixing of dyestuffs   and   other   products   and   preparations   (for   example, dressings and mordants), of a kind used in the textile, paper, leather<br>or like industries, not elsewhere specified or included</td>
+    </tr>
+    <tr>
+        <td>97.</td>
+        <td>3810</td>
+        <td>Pickling preparations for metal surfaces; fluxes and other auxiliary preparations for soldering, brazing or welding; soldering, brazing or welding powders and pastes consisting of metal and other materials; preparations  of  a  kind  used  as  cores  or  coatings  for  welding<br>electrodes or rods</td>
+    </tr>
+    <tr>
+        <td>98.</td>
+        <td>3811</td>
+        <td>Anti-knock   preparations,   oxidation   inhibitors,   gum   inhibitors, viscosity improvers, anti-corrosive preparations and other prepared additives, for mineral oils (including gasoline) or for other liquids<br>used for the same purposes as mineral oils</td>
+    </tr>
+    <tr>
+        <td>99.</td>
+        <td>3812</td>
+        <td>Prepared rubber accelerators; compound plasticisers for rubber or plastics,   not   elsewhere   specified   or   included;   anti-oxidising preparations and other compound stabilisers for rubber or plastics<br>such as vulcanizing agents for rubber</td>
+    </tr>
+    <tr>
+        <td>100.</td>
+        <td>3813</td>
+        <td>Preparations   and   charges   for   fire-extinguishers;   charged   fire extinguishing grenades</td>
+    </tr>
+    <tr>
+        <td>101.</td>
+        <td>3814</td>
+        <td>Organic composite solvents and thinners, not elsewhere specified or included; prepared paint or varnish removers</td>
+    </tr>
+    <tr>
+        <td>102.</td>
+        <td>3815</td>
+        <td>Reaction initiators, reaction accelerators and catalytic preparations, not elsewhere specified or included</td>
+    </tr>
+    <tr>
+        <td>103.</td>
+        <td>3816</td>
+        <td>Refractory  cements,  mortars,  concretes  and  similar  compositions, other than products of heading 3801 [other than dolomite ramming<br>mix]</td>
+    </tr>
+    <tr>
+        <td>104.</td>
+        <td>3817</td>
+        <td>Mixed alkylbenzenes and mixed alkylnaphthalenes, other than those of heading 2707 or 2902</td>
+    </tr>
+    <tr>
+        <td>105.</td>
+        <td>3818</td>
+        <td>Chemical elements doped for use in electronics, in the form of discs, wafers  or  similar  forms;  chemical  compounds  doped  for  use  in<br>electronics [other than silicon wafers]</td>
+    </tr>
+    <tr>
+        <td>106.</td>
+        <td>3819</td>
+        <td>Hydraulic  brake  fluids  and  other  prepared  liquids  for  hydraulic<br>transmission, not containing or containing less than 70% by weight of petroleum oils or oils obtained from bituminous minerals</td>
+    </tr>
+    <tr>
+        <td>107.</td>
+        <td>3820</td>
+        <td>Anti-freezing preparations and prepared de-icing fluids</td>
+    </tr>
+    <tr>
+        <td>108.</td>
+        <td>3821</td>
+        <td>Prepared culture media for development or maintenance of micro- organisms  (including  viruses  and  the  like)  or  of  plant,  human  or<br>animal cells</td>
+    </tr>
+    <tr>
+        <td>109.</td>
+        <td>3823</td>
+        <td>Industrial  monocarboxylic  fatty  acids,  acid  oils  from  refining; industrial fatty alcohols</td>
+    </tr>
+    <tr>
+        <td>110.</td>
+        <td>3824</td>
+        <td>Prepared binders for foundry moulds or cores; chemical products and preparations of the chemical or allied industries (including those consisting of mixtures of natural products), not elsewhere specified<br>or included</td>
+    </tr>
+    <tr>
+        <td>111.</td>
+        <td>3825</td>
+        <td>Residual products of the chemical or allied industries, not elsewhere<br>specified or included [except municipal waste; sewage sludge; other wastes specified in Note 6 to this Chapter.]</td>
+    </tr>
+    <tr>
+        <td>112.</td>
+        <td>3826</td>
+        <td>Biodiesel   (other   than   biodiesel   supplied   to   Oil   Marketing</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>Companies for blending with High Speed Diesel)</td>
+    </tr>
+    <tr>
+        <td>113.</td>
+        <td>3827</td>
+        <td>Mixtures containing halogenated  derivatives of methane, ethane or propane, not elsewhere specified or included</td>
+    </tr>
+    <tr>
+        <td>114.</td>
+        <td>3901 to 3913</td>
+        <td>All  goods  i.e.  polymers;  Polyacetals,  other  polyethers,  epoxide resins,   polycarbonates,   alkyd   resins,   polyallyl   esters,   other polyesters;    polyamides;    Amino-resins,    phenolic    resins    and polyurethanes;   silicones;   Petroleum   resins,   coumarone-indene resins,   polyterpenes,   polysulphides,   polysulphones   and   other products specified in Note 3 to this Chapter, not elsewhere specified or included; Cellulose and its chemical derivatives, not elsewhere specified or included; Natural polymers (for example, alginic acid) and  modified  natural  polymers  (for  example,  hardened  proteins, chemical derivatives of natural rubber), not elsewhere specified or<br>included; in primary forms</td>
+    </tr>
+    <tr>
+        <td>115.</td>
+        <td>3914</td>
+        <td>Ion  exchangers  based  on  polymers  of  headings  3901  to  3913,  in primary forms</td>
+    </tr>
+    <tr>
+        <td>116.</td>
+        <td>3915</td>
+        <td>Waste, Parings and Scrap, of Plastics</td>
+    </tr>
+    <tr>
+        <td>117.</td>
+        <td>3916</td>
+        <td>Monofilament  of  which  any  cross-sectional  dimension  exceeds  1 mm, rods, sticks and profile shapes, whether or not surface-worked but not otherwise worked, of plastics</td>
+    </tr>
+    <tr>
+        <td>118.</td>
+        <td>3917</td>
+        <td>Tubes, pipes and hoses, and fittings therefor, of plastics</td>
+    </tr>
+    <tr>
+        <td>119.</td>
+        <td>3918</td>
+        <td>Floor coverings of plastics, whether or not self-adhesive, in rolls or in the form of tiles; wall or ceiling coverings of plastics, as defined in Note 9 to this Chapter</td>
+    </tr>
+    <tr>
+        <td>120.</td>
+        <td>3919</td>
+        <td>Self-adhesive  plates,  sheets,  film,  foil,  tape,  strip  and  other  flat shapes, of plastics, whether or not in rolls</td>
+    </tr>
+    <tr>
+        <td>121.</td>
+        <td>3920</td>
+        <td>Other plates, sheets, film, foil and strip, of plastics, non-cellular and<br>not  reinforced,  laminated,  supported  or  similarly  combined  with other materials</td>
+    </tr>
+    <tr>
+        <td>122.</td>
+        <td>3921</td>
+        <td>Other plates, sheets, film, foil and strip, of plastics</td>
+    </tr>
+    <tr>
+        <td>123.</td>
+        <td>3922</td>
+        <td>Baths, shower-baths, sinks, wash-basins, bidets, lavatory pans, seats and covers, flushing cisterns and similar sanitary ware of plastics</td>
+    </tr>
+    <tr>
+        <td>124.</td>
+        <td>3923</td>
+        <td>Articles  for  the  conveyance  or  packing  of  goods,  of  plastics; stoppers, lids, caps and other closures, of plastics</td>
+    </tr>
+    <tr>
+        <td>125.</td>
+        <td>3924</td>
+        <td>Tableware,  kitchenware,  other  household  articles  and  hygienic  or toilet articles, of plastics</td>
+    </tr>
+    <tr>
+        <td>126.</td>
+        <td>3925</td>
+        <td>Builders’ ware of plastics, not elsewhere specified or included</td>
+    </tr>
+    <tr>
+        <td>127.</td>
+        <td>3926</td>
+        <td>Other articles of plastics and articles of other materials of headings<br>3901  to  3914  [other  than  bangles  of  plastic,  plastic  beads  and feeding bottles]</td>
+    </tr>
+    <tr>
+        <td>128.</td>
+        <td>4002</td>
+        <td>Synthetic rubber and factice derived from oils, in primary forms or in plates, sheets or strip; mixtures of any product of heading 4001 with  any  product  of  this  heading,  in  primary  forms  or  in  plates, sheets or strip; such as Latex, styrene butadiene rubber, butadiene<br>rubber  (BR),  Isobutene-isoprene  (butyl)  rubber  (IIR),  Ethylene- propylene-Non-conjugated diene rubber (EPDM)</td>
+    </tr>
+    <tr>
+        <td>129.</td>
+        <td>4003</td>
+        <td>Reclaimed rubber in primary forms or in plates, sheets or strip</td>
+    </tr>
+    <tr>
+        <td>130.</td>
+        <td>4004</td>
+        <td>Powders  and  granules  obtained  from  waste,  parings  and  scrap  of rubber (other than hard rubber)</td>
+    </tr>
+    <tr>
+        <td>131.</td>
+        <td>4005</td>
+        <td>Compounded rubber, unvulcanised, in primary forms or in plates, sheets or strip</td>
+    </tr>
+    <tr>
+        <td>132.</td>
+        <td>4006</td>
+        <td>Other  forms  (for  example,  rods,  tubes  and  profile  shapes)  and articles (for example, discs and rings), of unvulcanised rubber</td>
+    </tr>
+    <tr>
+        <td>133.</td>
+        <td>4007</td>
+        <td>Vulcanised rubber thread and cord, other than latex rubber thread</td>
+    </tr>
+    <tr>
+        <td>134.</td>
+        <td>4008</td>
+        <td>Plates, sheets, strip, rods and profile shapes, of vulcanised rubber other than hard rubber</td>
+    </tr>
+    <tr>
+        <td>135.</td>
+        <td>4009</td>
+        <td>Tubes, pipes and hoses, of vulcanised rubber other than hard rubber, with or without their fittings (for example, joints, elbows, flanges)</td>
+    </tr>
+    <tr>
+        <td>136.</td>
+        <td>4010</td>
+        <td>Conveyor or transmission belts or belting, of vulcanised rubber</td>
+    </tr>
+    <tr>
+        <td>137.</td>
+        <td>4011</td>
+        <td>New  pneumatic  tyres,  of  rubber  (other  than  of  a  kind  used  on/in<br>bicycles,   cycle-rickshaws   and   three   wheeled   powered   cycle rickshaws; rear tractor tyres; and of a kind used on aircraft)</td>
+    </tr>
+    <tr>
+        <td>138.</td>
+        <td>4012</td>
+        <td>Retreaded or used pneumatic tyres of rubber; solid or cushion tyres, tyre treads and tyre flaps, of rubber</td>
+    </tr>
+    <tr>
+        <td>139.</td>
+        <td>4013</td>
+        <td>Inner tubes of rubber (other than of a kind used on/in bicycles, cycle- rickshaws  and  three  wheeled  powered  cycle  rickshaws; and  Rear Tractor tyre tubes)</td>
+    </tr>
+    <tr>
+        <td>140.</td>
+        <td>4014</td>
+        <td>Hygienic or pharmaceutical articles (including teats), of vulcanised rubber  other  than  hard  rubber,  with  or  without  fittings  of  hard rubber;  such  as  Hot  water  bottles,  Ice  bags  [other  than  Sheath contraceptives,  Rubber  contraceptives,  male  (condoms),  Rubber<br>contraceptives, female (diaphragms), such as cervical caps]</td>
+    </tr>
+    <tr>
+        <td>141.</td>
+        <td>4015</td>
+        <td>Articles  of  apparel  and  clothing  accessories  (including  gloves, mittens and mitts), for all purposes, of vulcanised rubber other than hard rubber [other than Surgical gloves]</td>
+    </tr>
+    <tr>
+        <td>142.</td>
+        <td>4016</td>
+        <td>Other  articles  of  vulcanised  rubber  other  than  hard  rubber  [other than erasers, rubber bands]</td>
+    </tr>
+    <tr>
+        <td>143.</td>
+        <td>4017</td>
+        <td>Hard rubber (for example ebonite) in all forms, other than waste and scrap; articles of hard rubber</td>
+    </tr>
+    <tr>
+        <td>144.</td>
+        <td>4201</td>
+        <td>Saddlery and harness for any animal (including traces, leads, knee<br>pads, muzzles, saddle cloths, saddle bags, dog coats and the like), of any material</td>
+    </tr>
+    <tr>
+        <td>145.</td>
+        <td>4202</td>
+        <td>Trunks,   suit-cases,    vanity-cases,   executive-cases,    brief-cases, school  satchels,  spectacle  cases,  binocular  cases,  camera  cases, musical instrument cases, gun cases, holsters and similar containers; travelling  bags,  insulated  food  or  beverages  bags,  toilet  bags, rucksacks,  handbags,  shopping  bags,  wallets,  purses,  map-cases, cigarette-cases,  tobacco-  pouches,  tool  bags,  sports  bags,  bottle- cases,  jewellery  boxes,  powder-boxes,  cutlery  cases  and  similar containers, of leather, of sheeting of plastics, of textile materials, of vulcanised fibre or of paperboard, or wholly or mainly covered with such  materials  or  with  paper  [other  than  handbags  and  shopping<br>bags, of cotton or jute]</td>
+    </tr>
+    <tr>
+        <td>146.</td>
+        <td>4203</td>
+        <td>Articles  of  apparel  and  clothing  accessories,  of  leather  or  of<br>composition leather [other than gloves specially designed for use in sports]</td>
+    </tr>
+    <tr>
+        <td>147.</td>
+        <td>4205</td>
+        <td>Other articles of leather or of composition leather</td>
+    </tr>
+    <tr>
+        <td>148.</td>
+        <td>4206</td>
+        <td>Articles of gut (other than silk-worm gut), of goldbeater&#39;s skin, of bladders or of tendons</td>
+    </tr>
+    <tr>
+        <td>149.</td>
+        <td>4301</td>
+        <td>Raw  furskins  (including  heads,  tails,  paws  and  other  pieces  or cuttings, suitable for furriers&#39; use), other than raw hides and skins of heading 4101, 4102 or 4103.</td>
+    </tr>
+    <tr>
+        <td>150.</td>
+        <td>4302</td>
+        <td>Tanned or dressed furskins (including heads, tails, paws and other pieces or cuttings), unassembled, or assembled (without the addition of other materials) other than those of heading 4303</td>
+    </tr>
+    <tr>
+        <td>151.</td>
+        <td>4303</td>
+        <td>Articles of apparel, clothing accessories and other articles of furskin</td>
+    </tr>
+    <tr>
+        <td>152.</td>
+        <td>4304</td>
+        <td>Artificial fur and articles thereof</td>
+    </tr>
+    <tr>
+        <td>153.</td>
+        <td>4403</td>
+        <td>Wood in the rough</td>
+    </tr>
+    <tr>
+        <td>154.</td>
+        <td>4407</td>
+        <td>Wood sawn or chipped</td>
+    </tr>
+    <tr>
+        <td>155.</td>
+        <td>4408</td>
+        <td>Sheets for veneering (including those obtained by slicing laminated wood), for plywood or for similar laminated wood and other wood, sawn lengthwise, sliced or peeled, whether or not planed, sanded, spliced or end-jointed, of a thickness not exceeding 6 mm [other<br>than for match splints]</td>
+    </tr>
+    <tr>
+        <td>156.</td>
+        <td>4409</td>
+        <td>Wood   (including   strips   and   friezes   for   parquet   flooring,   not assembled)   continuously   shaped   (tongued,   grooved,   rebated,<br>chamfered, v-jointed, beaded, moulded, rounded or the like) along any  of  its  edges  or  faces,  whether  or  not  planed,  sanded  or  end-</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>jointed [other than bamboo flooring]</td>
+    </tr>
+    <tr>
+        <td>157.</td>
+        <td>4410</td>
+        <td>Particle  board,  Oriented  Strand  Board  and  similar  board  (for example, wafer board) of wood or other ligneous materials, whether<br>or not agglomerated with resins or other organic binding substances, other than specified boards</td>
+    </tr>
+    <tr>
+        <td>158.</td>
+        <td>4411</td>
+        <td>Fibre  board  of  wood  or  other  ligneous  materials,  whether  or  not bonded with resins or other organic substances, other than specified boards</td>
+    </tr>
+    <tr>
+        <td>159.</td>
+        <td>4412</td>
+        <td>Plywood, veneered panels and similar laminated wood</td>
+    </tr>
+    <tr>
+        <td>160.</td>
+        <td>4413</td>
+        <td>Densified wood, in blocks, plates, strips, or profile shapes</td>
+    </tr>
+    <tr>
+        <td>161.</td>
+        <td>4414</td>
+        <td>Wooden  frames  for  paintings,  photographs,  mirrors  or  similar objects</td>
+    </tr>
+    <tr>
+        <td>162.</td>
+        <td>4418</td>
+        <td>Builders’ joinery  and  carpentry  of  wood,  including  cellular  wood panels, assembled flooring panels, shingles and shakes [other than<br>bamboo wood building joinery]</td>
+    </tr>
+    <tr>
+        <td>163.</td>
+        <td>4421</td>
+        <td>Wood  paving  blocks,  articles  of  densified  wood  not  elsewhere included or specified, Parts of domestic decorative articles used as tableware and kitchenware</td>
+    </tr>
+    <tr>
+        <td>164.</td>
+        <td>44 or any Chapter</td>
+        <td>Resin  bonded  bamboo  mat  board,  with  or  without  veneer  in between; Bamboo flooring tiles</td>
+    </tr>
+    <tr>
+        <td>165.</td>
+        <td>4501</td>
+        <td>Waste cork; crushed, granulated or ground cork</td>
+    </tr>
+    <tr>
+        <td>166.</td>
+        <td>4702</td>
+        <td>Chemical wood pulp, dissolving grades</td>
+    </tr>
+    <tr>
+        <td>167.</td>
+        <td>4802</td>
+        <td>Uncoated paper and paperboard, of a kind used for writing, printing or  other  graphic  purposes,  and  non-perforated  punch-cards  and punch tape paper, in rolls or rectangular (including square) sheets, of any size, other than paper of heading 4801 or 4803; [other than<br>uncoated  paper  and  paperboard  for  exercise  book,  graph  book, laboratory note book and notebooks only]</td>
+    </tr>
+    <tr>
+        <td>168.</td>
+        <td>4803</td>
+        <td>Toilet or facial tissue stock, towel or napkin stock and similar paper of a kind used for household or sanitary purposes, cellulose wadding and  webs  of  cellulose  fibres,  whether  or  not  creped,  crinkled, embossed,   perforated,    surface-coloured,    surface-decorated    or<br>printed, in rolls or sheets</td>
+    </tr>
+    <tr>
+        <td>169.</td>
+        <td>4804</td>
+        <td>Uncoated kraft paper and paperboard, in rolls or sheets, other than that of heading 4802 or 4803</td>
+    </tr>
+    <tr>
+        <td>170.</td>
+        <td>4805</td>
+        <td>Other uncoated paper and paperboard, in rolls or sheets, not further worked or processed than as specified in Note 3 to this Chapter</td>
+    </tr>
+    <tr>
+        <td>171.</td>
+        <td>4806</td>
+        <td>Vegetable parchment, tracing papers and other glazed transparent or translucent papers, in rolls or sheets</td>
+    </tr>
+    <tr>
+        <td>172.</td>
+        <td>4806 20 00</td>
+        <td>Greaseproof papers</td>
+    </tr>
+    <tr>
+        <td>173.</td>
+        <td>4806 40 10</td>
+        <td>Glassine papers</td>
+    </tr>
+    <tr>
+        <td>174.</td>
+        <td>4807</td>
+        <td>Composite paper and paperboard (made by sticking flat layers of paper or paperboard together with an adhesive), not surface-coated or  impregnated,  whether  or  not  internally  reinforced,  in  rolls  or<br>sheets</td>
+    </tr>
+    <tr>
+        <td>175.</td>
+        <td>4808</td>
+        <td>Paper and paperboard, corrugated (with or without glued flat surface sheets), creped, crinkled, embossed or perforated, in rolls or sheets,<br>other than paper of the kind described in heading 4803</td>
+    </tr>
+    <tr>
+        <td>176.</td>
+        <td>4809</td>
+        <td>Carbon paper, self-copy paper and other copying or transfer papers<br>(including  coated  or  impregnated  paper  for  duplicator  stencils  or offset plates), whether or not printed, in rolls or sheets</td>
+    </tr>
+    <tr>
+        <td>177.</td>
+        <td>4810</td>
+        <td>Paper  and  paperboard,  coated  on  one  or  both  sides  with  kaolin (China clay) or other inorganic substances, with or without a binder, and with no other coating, whether or not surface-coloured, surface- decorated or printed, in rolls or rectangular (including square) sheets<br>of any size</td>
+    </tr>
+    <tr>
+        <td>178.</td>
+        <td>4811</td>
+        <td>Paper, paperboard, cellulose wadding and webs of cellulose fibres, coated, impregnated, covered, surface-coloured, surface-decorated<br>or printed, in rolls or rectangular (including square) sheets, of any</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>size, other than goods of the kind described in heading 4803, 4809 or 4810</td>
+    </tr>
+    <tr>
+        <td>179.</td>
+        <td>4812</td>
+        <td>Filter blocks, slabs and plates, of paper pulp</td>
+    </tr>
+    <tr>
+        <td>180.</td>
+        <td>4813</td>
+        <td>Cigarette paper, whether or not cut to size or in the form of booklets or tubes</td>
+    </tr>
+    <tr>
+        <td>181.</td>
+        <td>4814</td>
+        <td>Wall  paper  and  similar  wall coverings;  window  transparencies  of paper</td>
+    </tr>
+    <tr>
+        <td>182.</td>
+        <td>4816</td>
+        <td>Carbon paper, self-copy paper and other copying or transfer papers<br>(other  than  those  of  heading  4809),  duplicator  stencils  and  offset plates, of paper, whether or not put up in boxes</td>
+    </tr>
+    <tr>
+        <td>183.</td>
+        <td>4817 [Except 4817 30]</td>
+        <td>Envelopes, letter cards, plain postcards and correspondence cards, of  paper  or  paperboard;  [other  than  boxes,  pouches,  wallets  and<br>writing   compendiums,   of   paper   or   paperboard,   containing   an assortment of paper stationery including writing blocks]</td>
+    </tr>
+    <tr>
+        <td>184.</td>
+        <td>4818</td>
+        <td>Toilet  paper  and  similar  paper,  cellulose  wadding  or  webs  of cellulose fibres, of a kind used for household or sanitary purposes, in  rolls of  a  width  not  exceeding  36  cm,  or  cut  to  size or  shape; handkerchiefs,  cleansing  tissues,  towels,  table  cloths,  serviettes, napkins  for  babies,  tampons,  bed  sheets  and  similar  household, sanitary   or   hospital   articles,   articles   of   apparel   and   clothing accessories,  or  paper  pulp,  paper,  cellulose  wadding  or  webs  of<br>cellulose fibres</td>
+    </tr>
+    <tr>
+        <td>185.</td>
+        <td>4819  (except  4819 10,<br>4819 20)</td>
+        <td>All Goods (other than Cartons, boxes and cases of, –<br>(a) corrugated paper or paper board; or<br>(b) non-corrugated paper or paper board)</td>
+    </tr>
+    <tr>
+        <td>186.</td>
+        <td>4820</td>
+        <td>Registers,  account  books,  order  books,  receipt  books,  letter  pads, memorandum   pads,   diaries  and   similar   articles,   blotting-pads, binders (loose-leaf or other), folders, file covers, manifold business forms,  interleaved  carbon  sets  and  other  articles  of  stationary,  of<br>paper or paperboard; and book covers, of paper or paperboard [other than note books and exercise books]</td>
+    </tr>
+    <tr>
+        <td>187.</td>
+        <td>4821</td>
+        <td>Paper or paperboard labels of all kinds, whether or not printed</td>
+    </tr>
+    <tr>
+        <td>188.</td>
+        <td>4822</td>
+        <td>Bobbins, spools, cops and similar supports of paper pulp, paper or paperboard (whether or not perforated or hardened)</td>
+    </tr>
+    <tr>
+        <td>189.</td>
+        <td>4823</td>
+        <td>Other paper, paperboard, cellulose wadding and webs of cellulose fibres,  cut  to  size  or  shape;  other  articles  of  paper  pulp,  paper, paperboard,  cellulose  wadding  or  webs  of  cellulose  fibres  [other than paper pulp moulded trays, Braille paper, Kites, Paper mache<br>articles]</td>
+    </tr>
+    <tr>
+        <td>190.</td>
+        <td>4906 00 00</td>
+        <td>Plans   and   drawings   for   architectural,   engineering,   industrial, commercial,  topographical  or  similar  purposes,  being  originals<br>drawn by hand; hand-written texts; photographic reproductions on sensitised paper and carbon copies of the foregoing</td>
+    </tr>
+    <tr>
+        <td>191.</td>
+        <td>4907</td>
+        <td>Unused postage, revenue or similar stamps of current or new issue in the country in which they have, or will have, a recognised face value;  stamp-impressed  paper;  banknotes;  cheque  forms;  stock, share or bond certificates and similar documents of title (other than<br>Duty Credit Scrips); Cheques, loose or in book form</td>
+    </tr>
+    <tr>
+        <td>192.</td>
+        <td>4908</td>
+        <td>Transfers (decalcomanias).</td>
+    </tr>
+    <tr>
+        <td>193.</td>
+        <td>4909</td>
+        <td>Printed  or  illustrated  postcards;  printed  cards  bearing  personal<br>greetings, messages or announcements, whether or not illustrated, with or without envelopes or trimmings.</td>
+    </tr>
+    <tr>
+        <td>194.</td>
+        <td>4910</td>
+        <td>Calendars of any kind, printed, including calendar blocks.</td>
+    </tr>
+    <tr>
+        <td>195.</td>
+        <td>4911</td>
+        <td>Other  printed  matter,  including  printed  pictures  and  photographs; such as Trade advertising material, Commercial catalogues and the like,  printed  Posters,  Commercial catalogues, Printed inlay  cards, Pictures,   designs   and   photographs,   Plan   and   drawings   for<br>architectural engineering, industrial, commercial, topographical or similar purposes reproduced with the aid of computer or any other</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>devices.</td>
+    </tr>
+    <tr>
+        <td>196.</td>
+        <td>5601 22 00</td>
+        <td>Cigarette Filter rods</td>
+    </tr>
+    <tr>
+        <td>197.</td>
+        <td>61</td>
+        <td>Articles of apparel and clothing accessories, knitted or crocheted, of sale value exceeding Rs. 2500 per piece</td>
+    </tr>
+    <tr>
+        <td>198.</td>
+        <td>62</td>
+        <td>Articles   of   apparel   and   clothing   accessories,   not   knitted   or crocheted, of sale value exceeding Rs. 2500 per piece</td>
+    </tr>
+    <tr>
+        <td>199.</td>
+        <td>63 [other than 6309]</td>
+        <td>Other made-up textile articles, sets of sale value exceeding Rs. 2500 per piece [other than worn clothing and other worn articles; rags]</td>
+    </tr>
+    <tr>
+        <td>200.</td>
+        <td>3923 or 6305</td>
+        <td>Woven   and   non-woven   bags   and   sacks   of   polyethylene   or<br>polypropylene strips or the like, whether or not laminated, of a kind used for packing of goods</td>
+    </tr>
+    <tr>
+        <td>201.</td>
+        <td>6305 32 00</td>
+        <td>Flexible intermediate bulk containers</td>
+    </tr>
+    <tr>
+        <td>202.</td>
+        <td>6401</td>
+        <td>Waterproof  footwear  with  outer  soles  and  uppers  of  rubber  or  of plastics,  the  uppers  of  which  are  neither  fixed  to  the  sole  nor assembled  by  stitching,  riveting,  nailing,  screwing,  plugging  or<br>similar processes</td>
+    </tr>
+    <tr>
+        <td>203.</td>
+        <td>6402</td>
+        <td>Other footwear with outer soles and uppers of rubber or plastics</td>
+    </tr>
+    <tr>
+        <td>204.</td>
+        <td>6403</td>
+        <td>Footwear with outer soles of rubber, plastics, leather or composition leather and uppers of leather</td>
+    </tr>
+    <tr>
+        <td>205.</td>
+        <td>6404</td>
+        <td>Footwear with outer soles of rubber, plastics, leather or composition leather and uppers of textile materials</td>
+    </tr>
+    <tr>
+        <td>206.</td>
+        <td>6405</td>
+        <td>Other footwear</td>
+    </tr>
+    <tr>
+        <td>207.</td>
+        <td>6406</td>
+        <td>Parts of footwear (including uppers whether or not attached to soles other  than  outer  soles);  removable  in-soles,  heel  cushions  and<br>similar  articles;  gaiters,  leggings  and  similar  articles,  and  parts thereof</td>
+    </tr>
+    <tr>
+        <td>208.</td>
+        <td>6501</td>
+        <td>Hat-forms, hat bodies and hoods of felt, neither blocked to shape nor<br>with made brims; plateaux and manchons (including slit manchons), of felt [other than textile caps]</td>
+    </tr>
+    <tr>
+        <td>209.</td>
+        <td>6502</td>
+        <td>Hat-shapes, plaited or made by assembling strips of any material, neither  blocked  to  shape,  nor  with  made  brims,  nor  lined,  nor<br>trimmed</td>
+    </tr>
+    <tr>
+        <td>210.</td>
+        <td>6504 00 00</td>
+        <td>Hats and other headgear, plaited or made by assembling strips of any material, whether or not lined or trimmed</td>
+    </tr>
+    <tr>
+        <td>211.</td>
+        <td>6505</td>
+        <td>Other headgear, knitted or crocheted, or made up from lace, felt or other textile fabric, in the piece (but not in strips), whether or not<br>lined or trimmed; hair-nets of any material, whether or not lined or trimmed</td>
+    </tr>
+    <tr>
+        <td>212.</td>
+        <td>6506</td>
+        <td>Other headgear, whether or not lined or trimmed</td>
+    </tr>
+    <tr>
+        <td>213.</td>
+        <td>6507</td>
+        <td>Head-bands, linings, covers, hat foundations, hat frames, peaks and chinstraps, for headgear</td>
+    </tr>
+    <tr>
+        <td>214.</td>
+        <td>6702</td>
+        <td>Artificial flowers, foliage and fruit and parts thereof; articles made of artificial flowers, foliage or fruit</td>
+    </tr>
+    <tr>
+        <td>215.</td>
+        <td>6703</td>
+        <td>Wool or other animal hair or other textile materials, prepared for use in making wigs or the like</td>
+    </tr>
+    <tr>
+        <td>216.</td>
+        <td>6704</td>
+        <td>Wigs, false beards, eyebrows and eyelashes, switches and the like, of human or animal hair or of textile materials; articles of human<br>hair not elsewhere specified or included</td>
+    </tr>
+    <tr>
+        <td>217.</td>
+        <td>6801</td>
+        <td>Setts, curbstones and flagstones, of natural stone (except slate)</td>
+    </tr>
+    <tr>
+        <td>218.</td>
+        <td>6802</td>
+        <td>Worked monumental or building stone (except slate) and   articles thereof, other than goods of heading 6801; mosaic cubes and  the like, of natural stone (including slate), whether or not on a backing; artificially coloured granules, chippings and power, of natural stone (including  slate)  [other  than  statues,  statuettes,  pedestals;  high  or low reliefs, crosses, figures of animals, bowls, vases, cups, cachou boxes,  writing  sets,  ashtrays,  paper  weights,  artificial  fruit  and foliage, etc.; other ornamental goods essentially of stone][except the<br>items covered in Sl. No. 176 in Schedule I]</td>
+    </tr>
+    <tr>
+        <td>219.</td>
+        <td>6803</td>
+        <td>Worked slate and articles of slate or of agglomerated slate</td>
+    </tr>
+    <tr>
+        <td>220.</td>
+        <td>6804</td>
+        <td>Millstones,  grindstones,  grinding  wheels  and  the  like,  without frameworks, for grinding, sharpening, polishing, trueing or cutting, hand sharpening or polishing stones, and parts thereof, of natural stone, of agglomerated natural or artificial abrasives, or of ceramics,<br>with or without parts of other materials</td>
+    </tr>
+    <tr>
+        <td>221.</td>
+        <td>6805</td>
+        <td>Natural or artificial abrasive powder or grain, on a base of textile material, of paper, of paperboard or of other materials, whether or not cut to shape or sewn or otherwise made up</td>
+    </tr>
+    <tr>
+        <td>222.</td>
+        <td>6806</td>
+        <td>Slag   wool,   rock   wool   and   similar   mineral   wools;   exfoliated vermiculite,  expanded  clays,  foamed  slag  and  similar  expanded mineral materials; mixtures and articles of heat-insulating, sound-<br>insulating or sound-absorbing mineral materials, other than those of heading 6811 or 6812 or chapter 69</td>
+    </tr>
+    <tr>
+        <td>223.</td>
+        <td>6807</td>
+        <td>Articles of asphalt or of similar material (for example, petroleum bitumen or coal tar pitch)</td>
+    </tr>
+    <tr>
+        <td>224.</td>
+        <td>6808</td>
+        <td>Panels, boards, tiles, blocks and similar articles of vegetable fibre,<br>of straw or of shavings, chips, particles, sawdust or other waste, of wood, agglomerated with cement, plaster or other mineral binders</td>
+    </tr>
+    <tr>
+        <td>225.</td>
+        <td>6809</td>
+        <td>Articles  of  plaster  or  of  compositions  based  on  plaster;  such  as Boards, sheets, panels, tiles and similar articles, not ornamented</td>
+    </tr>
+    <tr>
+        <td>226.</td>
+        <td>6810</td>
+        <td>Articles of cement, of concrete or of artificial stone, whether or not reinforced</td>
+    </tr>
+    <tr>
+        <td>227.</td>
+        <td>6811</td>
+        <td>Articles of asbestos-cement, of cellulose fibre-cement or the like</td>
+    </tr>
+    <tr>
+        <td>228.</td>
+        <td>6812</td>
+        <td>Fabricated asbestos fibres; mixtures with a basis of asbestos or with a  basis  of  asbestos  and  magnesium  carbonate;  articles  of  such mixtures or of asbestos (for example, thread, woven fabric, clothing, headgear, footwear, gaskets), whether or not reinforced, other than<br>goods of heading 6811 or 6813</td>
+    </tr>
+    <tr>
+        <td>229.</td>
+        <td>6813</td>
+        <td>Friction  material  and  articles  thereof  (for  example,  sheets,  rolls, strips, segments, discs, washers, pads), not mounted, for brakes, for clutches  or  the  like,  with  a  basis  of  asbestos,  of  other  mineral substances or of cellulose, whether or not combined with textiles or<br>other materials</td>
+    </tr>
+    <tr>
+        <td>230.</td>
+        <td>6814</td>
+        <td>Worked  mica  and  articles  of  mica,  including  agglomerated  or reconstituted mica, whether or not on a support of paper, paperboard<br>or other materials</td>
+    </tr>
+    <tr>
+        <td>231.</td>
+        <td>6815</td>
+        <td>Articles of stone or of other mineral substances (including carbon fibres, articles of carbon fibres and articles of peat), not elsewhere specified or included [other than Fly ash bricks Fly ash aggregates;<br>Fly ash blocks]</td>
+    </tr>
+    <tr>
+        <td>232.</td>
+        <td>6901</td>
+        <td>Blocks, tiles and other ceramic goods of siliceous fossil meals (for example, kieselguhr, tripolite or diatomite) or of similar siliceous earths</td>
+    </tr>
+    <tr>
+        <td>233.</td>
+        <td>6902</td>
+        <td>Refractory  bricks,  blocks,  tiles  and  similar  refractory  ceramic constructional goods, other than those of siliceous fossil meals or similar siliceous earths</td>
+    </tr>
+    <tr>
+        <td>234.</td>
+        <td>6903</td>
+        <td>Other  refractory  ceramic  goods  (for  example,  retorts,  crucibles, muffles, nozzles, plugs, supports, cupels, tubes, pipes, sheaths and rods),  other  than  those  of  siliceous  fossil  meals  or  of  similar<br>siliceous earths</td>
+    </tr>
+    <tr>
+        <td>235.</td>
+        <td>6904</td>
+        <td>Ceramic flooring blocks, support or filler tiles and the like</td>
+    </tr>
+    <tr>
+        <td>236.</td>
+        <td>6905</td>
+        <td>Chimney-pots, cowls, chimney liners, architectural ornaments and other ceramic constructional goods</td>
+    </tr>
+    <tr>
+        <td>237.</td>
+        <td>6906</td>
+        <td>Ceramic pipes, conduits, guttering and pipe fittings</td>
+    </tr>
+    <tr>
+        <td>238.</td>
+        <td>6907</td>
+        <td>Ceramic flags and paving, hearth or wall tiles; ceramic mosaic cubes and the like, whether or not on a backing; finishing ceramics</td>
+    </tr>
+    <tr>
+        <td>239.</td>
+        <td>6909</td>
+        <td>Ceramic  wares  for  laboratory,  chemical  or  other  technical  uses; ceramic  troughs,  tubs  and  similar  receptacles  of  a  kind  used  in agriculture; ceramic pots, jars and similar articles of a kind used for</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>the conveyance or packing of goods</td>
+    </tr>
+    <tr>
+        <td>240.</td>
+        <td>6910</td>
+        <td>Ceramic  sinks,  wash  basins,  wash  basin  pedestals,  baths,  bidets,<br>water  closet  pans,  flushing  cisterns,  urinals  and  similar  sanitary fixtures</td>
+    </tr>
+    <tr>
+        <td>241.</td>
+        <td>6914</td>
+        <td>Other ceramic articles</td>
+    </tr>
+    <tr>
+        <td>242.</td>
+        <td>7002</td>
+        <td>Glass in balls (other than microspheres of heading 70.18), rods or tubes, unworked</td>
+    </tr>
+    <tr>
+        <td>243.</td>
+        <td>7003</td>
+        <td>Cast  glass  and  rolled  glass,  in  sheets  or  profiles,  whether  or  not<br>having  an  absorbent,  reflecting  or  non-reflecting  layer,  but  not otherwise worked</td>
+    </tr>
+    <tr>
+        <td>244.</td>
+        <td>7004</td>
+        <td>Drawn glass and blown glass, in sheets, whether or not having an<br>absorbent,  reflecting  or  non-reflecting  layer,  but  not  otherwise worked</td>
+    </tr>
+    <tr>
+        <td>245.</td>
+        <td>7005</td>
+        <td>Float glass and surface ground or polished glass, in sheets, whether<br>or not having an absorbent, reflecting or non-reflecting layer, but not otherwise worked</td>
+    </tr>
+    <tr>
+        <td>246.</td>
+        <td>7006 00 00</td>
+        <td>Glass of heading 7003, 7004 or 7005, bent, edge-worked, engraved, drilled, enamelled or otherwise worked, but not framed or fitted with<br>other materials</td>
+    </tr>
+    <tr>
+        <td>247.</td>
+        <td>7007</td>
+        <td>Safety glass, consisting of toughened (tempered) or laminated glass</td>
+    </tr>
+    <tr>
+        <td>248.</td>
+        <td>7008</td>
+        <td>Multiple-walled insulating units of glass</td>
+    </tr>
+    <tr>
+        <td>249.</td>
+        <td>7009</td>
+        <td>Glass mirrors, whether or not framed, including rear-view mirrors</td>
+    </tr>
+    <tr>
+        <td>250.</td>
+        <td>7010</td>
+        <td>Carboys,  bottles,  flasks,  jars,  pots,  phials,  ampoules  and  other containers, of glass, of a kind used for the conveyance or packing of<br>goods; preserving jars of glass; stoppers, lids and other closures, of glass</td>
+    </tr>
+    <tr>
+        <td>251.</td>
+        <td>7011</td>
+        <td>Glass envelopes (including bulbs and tubes), open, and glass parts thereof,  without  fittings,  for  electric   lamps   and   light   sources, cathode  ray  tube  or  the  like</td>
+    </tr>
+    <tr>
+        <td>252.</td>
+        <td>7013</td>
+        <td>Glassware  of  a  kind  used  for  table,  kitchen,  toilet,  office,  indoor<br>decoration or similar purposes (other than that of heading 7010 or 7018)</td>
+    </tr>
+    <tr>
+        <td>253.</td>
+        <td>7014</td>
+        <td>Signalling glassware and optical elements of glass (other than those of heading 7015), not optically worked</td>
+    </tr>
+    <tr>
+        <td>254.</td>
+        <td>7015</td>
+        <td>Clock  or  watch  glasses  and  similar  glasses,  glasses  for  non- corrective  spectacles,  curved,  bent,  hollowed  or  the  like,  not<br>optically worked; hollow glass spheres and their segments, for the manufacture of such glasses</td>
+    </tr>
+    <tr>
+        <td>255.</td>
+        <td>7016</td>
+        <td>Paving  blocks,  slabs,  bricks,  squares,  tiles  and  other  articles  of pressed or moulded glass, whether or not wired, of a kind used for building or construction purposes; glass cubes and other glass small wares, whether or not on a backing, for mosaics or similar decorative purposes; leaded lights and the like; multi-cellular or foam glass in<br>blocks, panels, plates, shells or similar forms</td>
+    </tr>
+    <tr>
+        <td>256.</td>
+        <td>7017</td>
+        <td>Laboratory, hygienic or pharmaceutical glassware, whether or not graduated or calibrated</td>
+    </tr>
+    <tr>
+        <td>257.</td>
+        <td>7018</td>
+        <td>Imitation  pearls,  imitation  precious  or  semi-precious  stones  and similar glass smallwares, and articles thereof other than imitation jewellery;  glass  eyes  other  than  prosthetic  articles;  statuettes  and other   ornaments   of   lamp-worked   glass,   other   than   imitation<br>jewellery; glass microspheres not exceeding 1 mm in diameter</td>
+    </tr>
+    <tr>
+        <td>258.</td>
+        <td>7019</td>
+        <td>Glass  fibres (including glass wool) and articles thereof (for example, yarn, rovings, woven fabrics)</td>
+    </tr>
+    <tr>
+        <td>259.</td>
+        <td>7020</td>
+        <td>Other articles of glass [other than Globes for lamps and lanterns,<br>Founts  for  kerosene  wick  lamps,  Glass  chimneys  for  lamps  and lanterns]</td>
+    </tr>
+    <tr>
+        <td>260.</td>
+        <td>7201</td>
+        <td>Pig iron and spiegeleisen in pigs, blocks or other primary forms</td>
+    </tr>
+    <tr>
+        <td>261.</td>
+        <td>7202</td>
+        <td>Ferro-alloys</td>
+    </tr>
+    <tr>
+        <td>262.</td>
+        <td>7203</td>
+        <td>Ferrous products obtained by direct reduction of iron ore and other</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>spongy  ferrous  products,  in  lumps,  pellets  or  similar  forms;  iron<br>having a minimum purity by weight of 99.94%, in lumps, pellets or similar forms</td>
+    </tr>
+    <tr>
+        <td>263.</td>
+        <td>7204</td>
+        <td>Ferrous waste and scrap; remelting scrap ingots of iron or steel</td>
+    </tr>
+    <tr>
+        <td>264.</td>
+        <td>7205</td>
+        <td>Granules and powders, of pig iron, spiegeleisen, iron or steel</td>
+    </tr>
+    <tr>
+        <td>265.</td>
+        <td>7206</td>
+        <td>Iron and non-alloy steel in ingots or other primary forms (excluding iron of heading 7203)</td>
+    </tr>
+    <tr>
+        <td>266.</td>
+        <td>7207</td>
+        <td>Semi-finished products of iron or non-alloy steel</td>
+    </tr>
+    <tr>
+        <td>267.</td>
+        <td>7208 to 7212</td>
+        <td>All flat-rolled products of iron or non-alloy steel</td>
+    </tr>
+    <tr>
+        <td>268.</td>
+        <td>7213 to 7215</td>
+        <td>All bars and rods, of iron or non-alloy steel</td>
+    </tr>
+    <tr>
+        <td>269.</td>
+        <td>7216</td>
+        <td>Angles, shapes and sections of iron or non-alloy steel</td>
+    </tr>
+    <tr>
+        <td>270.</td>
+        <td>7217</td>
+        <td>Wire of iron or non-alloy steel</td>
+    </tr>
+    <tr>
+        <td>271.</td>
+        <td>7218</td>
+        <td>Stainless  steel  in  ingots  or  other  primary  forms;  semi-finished products of stainless steel</td>
+    </tr>
+    <tr>
+        <td>272.</td>
+        <td>7219, 7220</td>
+        <td>All flat-rolled products of stainless steel</td>
+    </tr>
+    <tr>
+        <td>273.</td>
+        <td>7221, 7222</td>
+        <td>All bars and rods, of stainless steel</td>
+    </tr>
+    <tr>
+        <td>274.</td>
+        <td>7223</td>
+        <td>Wire of stainless steel</td>
+    </tr>
+    <tr>
+        <td>275.</td>
+        <td>7224</td>
+        <td>Other  alloy  steel  in  ingots  or  other  primary  forms;  semi-finished products of other alloy steel</td>
+    </tr>
+    <tr>
+        <td>276.</td>
+        <td>7225, 7226</td>
+        <td>All flat-rolled products of other alloy steel</td>
+    </tr>
+    <tr>
+        <td>277.</td>
+        <td>7227, 7228</td>
+        <td>All bars and rods of other alloy steel.</td>
+    </tr>
+    <tr>
+        <td>278.</td>
+        <td>7229</td>
+        <td>Wire of other alloy steel</td>
+    </tr>
+    <tr>
+        <td>279.</td>
+        <td>7301</td>
+        <td>Sheet piling of iron or steel, whether or not drilled, punched or made<br>from assembled elements; welded  angles, shapes and  sections, of iron or steel</td>
+    </tr>
+    <tr>
+        <td>280.</td>
+        <td>7302</td>
+        <td>Railway or tramway track construction material of iron or steel, the following: rails, check-rails and rack rails, switch blades, crossing frogs,  point  rods  and  other  crossing  pieces,  sleepers  (cross-ties), fish-plates, chairs, chair wedges, sole plates (base plates), rail clips<br>bedplates, ties and other material specialized for jointing or fixing rails</td>
+    </tr>
+    <tr>
+        <td>281.</td>
+        <td>7303</td>
+        <td>Tubes, pipes and hollow profiles, of cast iron</td>
+    </tr>
+    <tr>
+        <td>282.</td>
+        <td>7304</td>
+        <td>Tubes, pipes and hollow profiles, seamless, of iron (other than cast iron) or steel</td>
+    </tr>
+    <tr>
+        <td>283.</td>
+        <td>7305</td>
+        <td>Other  tubes  and  pipes  (for  example,  welded,  riveted  or  similarly<br>closed),  having  circular  cross-sections,  the  external  diameter  of which exceeds 406.4 mm, of iron or steel</td>
+    </tr>
+    <tr>
+        <td>284.</td>
+        <td>7306</td>
+        <td>Other tubes, pipes and hollow profiles (for example, open seam or welded, riveted or similarly closed), of iron or steel</td>
+    </tr>
+    <tr>
+        <td>285.</td>
+        <td>7307</td>
+        <td>Tube or pipe fittings (for example, couplings, elbows, sleeves), of iron or steel</td>
+    </tr>
+    <tr>
+        <td>286.</td>
+        <td>7308</td>
+        <td>Structures (excluding prefabricated buildings of heading 94.06) and parts  of   structures   (for   example,   bridges   and   bridge-sections, lock-gates, towers, lattice masts, roofs, roofing frame-works, doors and windows and their frames and thresholds for doors, and shutters, balustrades,  pillars,  and  columns),  of  iron  or  steel;  plates,  rods, angles,  shapes,  section,  tubes  and  the  like,  prepared  for  using<br>structures, of iron or steel [other than transmission towers]</td>
+    </tr>
+    <tr>
+        <td>287.</td>
+        <td>7309</td>
+        <td>Reservoirs, tanks, vats and similar containers for any material (other than  compressed  or  liquefied  gas),  of  iron  or  steel,  of  a capacity exceeding 300 l, whether or not lined or heat-insulated, but not fitted<br>with mechanical or thermal equipment</td>
+    </tr>
+    <tr>
+        <td>288.</td>
+        <td>7310</td>
+        <td>Tanks,  casks,  drums,  cans,  boxes  and  similar  containers,  for  any material (other than compressed or liquefied gas), of iron or steel, of a  capacity  not  exceeding  300  l,  whether  or  not  lined  or  heat- insulated, but not fitted with mechanical or thermal equipment, other<br>than Milk cans made of Iron or Steel</td>
+    </tr>
+    <tr>
+        <td>289.</td>
+        <td>7311</td>
+        <td>Containers for compressed or liquefied gas, of iron or steel</td>
+    </tr>
+    <tr>
+        <td>290.</td>
+        <td>7312</td>
+        <td>Stranded wire, ropes, cables, plaited bands, slings and the like, of</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>iron or steel, not electrically insulated</td>
+    </tr>
+    <tr>
+        <td>291.</td>
+        <td>7313</td>
+        <td>Barbed wire of iron or steel; twisted hoop or single flat wire, barbed<br>or not, and loosely twisted double wire, of a kind used for fencing, of iron or steel</td>
+    </tr>
+    <tr>
+        <td>292.</td>
+        <td>7314</td>
+        <td>Cloth (including endless bands), grill, netting and fencing, of iron or steel wire; expanded metal of iron or steel</td>
+    </tr>
+    <tr>
+        <td>293.</td>
+        <td>7315</td>
+        <td>Chain and parts thereof, of iron or steel falling under 7315 20, 7315 81, 7315 82, 7315 89, 7315 90</td>
+    </tr>
+    <tr>
+        <td>294.</td>
+        <td>7316</td>
+        <td>Anchors, grapnels and parts thereof, of iron or steel</td>
+    </tr>
+    <tr>
+        <td>295.</td>
+        <td>7317</td>
+        <td>Nails, tacks, drawing pins, corrugated nails, staples (other than those of heading 8305) and similar articles, of iron or steel, whether or not with heads of other material, but excluding such articles with heads<br>of copper</td>
+    </tr>
+    <tr>
+        <td>296.</td>
+        <td>7318</td>
+        <td>Screws,  bolts,  nuts,  coach  screws,  screw  hooks,  rivets,  cotters,<br>cotter-pins, washers (including spring washers) and similar articles, of iron or steel</td>
+    </tr>
+    <tr>
+        <td>297.</td>
+        <td>7319</td>
+        <td>Knitting needles, bodkins, crochet hooks, embroidery stilettos and similar articles, for use in the hand, of iron or steel; safety pins and<br>other pins of iron or steel, not elsewhere specified or included</td>
+    </tr>
+    <tr>
+        <td>298.</td>
+        <td>7320</td>
+        <td>Springs and leaves for springs, of iron and steel</td>
+    </tr>
+    <tr>
+        <td>299.</td>
+        <td>7321</td>
+        <td>Stoves,  ranges,  grates,  cookers  (including  those  with  subsidiary boilers  for  central  heating),  barbecues,  braziers,  gas-rings,  plate warmers  and  similar  non-electric  domestic  appliances,  and  parts thereof,  of  iron  or  steel  [other  than  Kerosene  burners,  kerosene<br>stoves, wood burning stoves  of  iron  or  steel,  and  solar cookers]</td>
+    </tr>
+    <tr>
+        <td>300.</td>
+        <td>7322</td>
+        <td>Radiators  for  central  heating,  not  electrically  heated,  and  parts thereof, of iron or steel; air heaters and hot air distributors (including distributors which can also distribute fresh or conditioned air), not electrically heated, incorporating a motor-driven fan or blower, and<br>parts thereof, of iron or steel</td>
+    </tr>
+    <tr>
+        <td>301.</td>
+        <td>7323</td>
+        <td>Iron  or  steel  wool;  pot  scourers  and  scouring  or  polishing  pads, gloves and the like, of iron or steel (other than Milk cans made of Iron or Steel)</td>
+    </tr>
+    <tr>
+        <td>302.</td>
+        <td>73,239,410</td>
+        <td>Ghamella</td>
+    </tr>
+    <tr>
+        <td>303.</td>
+        <td>7324</td>
+        <td>Sanitary ware and parts thereof, of iron and steel</td>
+    </tr>
+    <tr>
+        <td>304.</td>
+        <td>7325</td>
+        <td>Other cast articles of iron or steel</td>
+    </tr>
+    <tr>
+        <td>305.</td>
+        <td>7326</td>
+        <td>Other articles of iron or steel</td>
+    </tr>
+    <tr>
+        <td>306.</td>
+        <td>7401</td>
+        <td>Copper mattes; cement copper (precipitated copper)</td>
+    </tr>
+    <tr>
+        <td>307.</td>
+        <td>7402</td>
+        <td>Unrefined copper; copper anodes for electrolytic refining</td>
+    </tr>
+    <tr>
+        <td>308.</td>
+        <td>7403</td>
+        <td>Refined copper and copper alloys, unwrought</td>
+    </tr>
+    <tr>
+        <td>309.</td>
+        <td>7404</td>
+        <td>Copper waste and scrap</td>
+    </tr>
+    <tr>
+        <td>310.</td>
+        <td>7405</td>
+        <td>Master alloys of copper</td>
+    </tr>
+    <tr>
+        <td>311.</td>
+        <td>7406</td>
+        <td>Copper powders and flakes</td>
+    </tr>
+    <tr>
+        <td>312.</td>
+        <td>7407</td>
+        <td>Copper bars, rods and profiles</td>
+    </tr>
+    <tr>
+        <td>313.</td>
+        <td>7408</td>
+        <td>Copper wire</td>
+    </tr>
+    <tr>
+        <td>314.</td>
+        <td>7409</td>
+        <td>Copper plates, sheets and strip, of a thickness exceeding 0.15 mm</td>
+    </tr>
+    <tr>
+        <td>315.</td>
+        <td>7410</td>
+        <td>Copper foils</td>
+    </tr>
+    <tr>
+        <td>316.</td>
+        <td>7411</td>
+        <td>Copper tubes and pipes</td>
+    </tr>
+    <tr>
+        <td>317.</td>
+        <td>7412</td>
+        <td>Copper  tube  or  pipe  fittings  (for  example,  couplings,  elbows, sleeves)</td>
+    </tr>
+    <tr>
+        <td>318.</td>
+        <td>7413</td>
+        <td>Stranded wires and cables</td>
+    </tr>
+    <tr>
+        <td>319.</td>
+        <td>7415</td>
+        <td>Nails,  tacks,  drawing  pins,  staples  (other  than  those  of  heading 83.05) and similar articles, of copper or of iron or steel with heads of copper; screws, bolts, nuts, screw hooks, rivets, cotters, cotter-<br>pins,  washers  (including  spring  washers)  and  similar  articles,  of copper</td>
+    </tr>
+    <tr>
+        <td>320.</td>
+        <td>7418</td>
+        <td>All goods (other than table, kitchen or other household articles of copper; Utensils)</td>
+    </tr>
+    <tr>
+        <td>321.</td>
+        <td>7419</td>
+        <td>Other articles of copper (other than Brass Kerosene Pressure Stove)</td>
+    </tr>
+    <tr>
+        <td>322.</td>
+        <td>7501</td>
+        <td>Nickel mattes, nickel oxide sinters and other intermediate products of nickel metallurgy</td>
+    </tr>
+    <tr>
+        <td>323.</td>
+        <td>7502</td>
+        <td>Unwrought nickel</td>
+    </tr>
+    <tr>
+        <td>324.</td>
+        <td>7503</td>
+        <td>Nickel waste and scrap</td>
+    </tr>
+    <tr>
+        <td>325.</td>
+        <td>7504</td>
+        <td>Nickel powders and flakes</td>
+    </tr>
+    <tr>
+        <td>326.</td>
+        <td>7505</td>
+        <td>Nickel bars, rods, profiles and wire</td>
+    </tr>
+    <tr>
+        <td>327.</td>
+        <td>7506</td>
+        <td>Nickel plates, sheets, strip and foil</td>
+    </tr>
+    <tr>
+        <td>328.</td>
+        <td>7507</td>
+        <td>Nickel tubes, pipes and tube or pipe fittings (for example, couplings, elbows, sleeves)</td>
+    </tr>
+    <tr>
+        <td>329.</td>
+        <td>7508</td>
+        <td>Other articles of nickel</td>
+    </tr>
+    <tr>
+        <td>330.</td>
+        <td>7601</td>
+        <td>Unwrought Aluminium</td>
+    </tr>
+    <tr>
+        <td>331.</td>
+        <td>7602</td>
+        <td>Aluminium waste and scrap</td>
+    </tr>
+    <tr>
+        <td>332.</td>
+        <td>7603</td>
+        <td>Aluminium powders and flakes</td>
+    </tr>
+    <tr>
+        <td>333.</td>
+        <td>7604</td>
+        <td>Aluminium bars, rods and profiles</td>
+    </tr>
+    <tr>
+        <td>334.</td>
+        <td>7605</td>
+        <td>Aluminium wire</td>
+    </tr>
+    <tr>
+        <td>335.</td>
+        <td>7606</td>
+        <td>Aluminium plates, sheets and strip, of a thickness exceeding 0.2 mm</td>
+    </tr>
+    <tr>
+        <td>336.</td>
+        <td>7607</td>
+        <td>Aluminium  foil  (whether  or  not  printed  or  backed  with  paper,<br>paperboard,  plastics  or  similar  backing  materials)  of  a  thickness (excluding any backing) not exceeding 0.2 mm</td>
+    </tr>
+    <tr>
+        <td>337.</td>
+        <td>7608</td>
+        <td>Aluminium tubes and pipes</td>
+    </tr>
+    <tr>
+        <td>338.</td>
+        <td>7609</td>
+        <td>Aluminium tube or pipe fittings (for example, couplings, elbows, sleeves)</td>
+    </tr>
+    <tr>
+        <td>339.</td>
+        <td>7610</td>
+        <td>Aluminium structures (excluding prefabricated buildings of heading 9406)  and  parts  of  structures  (for  example,  bridges  and  bridge- sections,    towers,    lattice    masts,    roofs,    roofing    frameworks, balustrades, pillars and columns); aluminium plates, rods, profiles,<br>tubes and the like, prepared for use in structures</td>
+    </tr>
+    <tr>
+        <td>340.</td>
+        <td>7611</td>
+        <td>Aluminium  reservoirs,  tanks,  vats  and  similar  containers,  for  any material  (other  than  compressed  or  liquefied  gas),  of  a  capacity<br>exceeding 300 l, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment</td>
+    </tr>
+    <tr>
+        <td>341.</td>
+        <td>7612</td>
+        <td>Aluminium  casks, drums,  cans, boxes,  etc.,  other  than  Milk  cans made of Aluminium</td>
+    </tr>
+    <tr>
+        <td>342.</td>
+        <td>7613</td>
+        <td>Aluminium containers for compressed or liquefied gas</td>
+    </tr>
+    <tr>
+        <td>343.</td>
+        <td>7614</td>
+        <td>Stranded wires, cables, plaited bands and the like, of aluminium, not electrically insulated</td>
+    </tr>
+    <tr>
+        <td>344.</td>
+        <td>7615</td>
+        <td>All goods (other than table, kitchen or other household articles, of aluminium; Utensils, Milk cans made of Aluminium)</td>
+    </tr>
+    <tr>
+        <td>345.</td>
+        <td>7616</td>
+        <td>Other articles of aluminium</td>
+    </tr>
+    <tr>
+        <td>346.</td>
+        <td>7801</td>
+        <td>Unwrought lead</td>
+    </tr>
+    <tr>
+        <td>347.</td>
+        <td>7802</td>
+        <td>Lead waste and scrap</td>
+    </tr>
+    <tr>
+        <td>348.</td>
+        <td>7804</td>
+        <td>Lead plates, sheets, strip and foil; lead powders and flakes</td>
+    </tr>
+    <tr>
+        <td>349.</td>
+        <td>7806</td>
+        <td>Other  articles of lead (including sanitary fixtures  and  Indian  lead seals)</td>
+    </tr>
+    <tr>
+        <td>350.</td>
+        <td>7901</td>
+        <td>Unwrought zinc</td>
+    </tr>
+    <tr>
+        <td>351.</td>
+        <td>7902</td>
+        <td>Zinc waste and scrap</td>
+    </tr>
+    <tr>
+        <td>352.</td>
+        <td>7903</td>
+        <td>Zinc dust, powders and flakes</td>
+    </tr>
+    <tr>
+        <td>353.</td>
+        <td>7904</td>
+        <td>Zinc bars, rods, profiles and wire</td>
+    </tr>
+    <tr>
+        <td>354.</td>
+        <td>7905</td>
+        <td>Zinc plates, sheets, strip and foil</td>
+    </tr>
+    <tr>
+        <td>355.</td>
+        <td>7907</td>
+        <td>Other articles of zinc including sanitary fixtures</td>
+    </tr>
+    <tr>
+        <td>356.</td>
+        <td>8001</td>
+        <td>Unwrought tin</td>
+    </tr>
+    <tr>
+        <td>357.</td>
+        <td>8002</td>
+        <td>Tin waste and scrap</td>
+    </tr>
+    <tr>
+        <td>358.</td>
+        <td>8003</td>
+        <td>Tin bars, rods, profiles and wire</td>
+    </tr>
+    <tr>
+        <td>359.</td>
+        <td>8007</td>
+        <td>Other articles of tin</td>
+    </tr>
+    <tr>
+        <td>360.</td>
+        <td>8101 to 8112</td>
+        <td>Other  base  metals,  namely,  Tungsten,  Molybdenum,  Tantalum, Magnesium,  Cobalt  mattes,  and  other  intermediate  products  of cobalt   metallurgy,   Bismuth,   Cadmium,   Titanium,   Zirconium,<br>Antimony,    Manganese,    Beryllium,    chromium,    germanium,</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>vanadium,   gallium,   hafnium,   indium,   niobium   (columbium),<br>rhenium  and  thallium,  and  articles  thereof,  including  waste  and scrap</td>
+    </tr>
+    <tr>
+        <td>361.</td>
+        <td>8113</td>
+        <td>Cermets and articles thereof, including waste and scrap</td>
+    </tr>
+    <tr>
+        <td>362.</td>
+        <td>8202</td>
+        <td>Hand saws; blades for saws of all kinds (including slitting, slotting or toothless saw blades)</td>
+    </tr>
+    <tr>
+        <td>363.</td>
+        <td>8203</td>
+        <td>Files,  rasps,  pliers  (including  cutting  pliers),  pincers,  tweezers, metal cutting shears, pipe-cutters, bolt croppers, perforating punches and similar hand tools</td>
+    </tr>
+    <tr>
+        <td>364.</td>
+        <td>8204</td>
+        <td>Hand-operated  spanners  and  wrenches  (including  torque  meter<br>wrenches but not including tap wrenches); interchangeable spanner sockets, with or without handles</td>
+    </tr>
+    <tr>
+        <td>365.</td>
+        <td>8205</td>
+        <td>Hand tools (including glaziers&#39; diamonds), not elsewhere specified or  included;  blow  lamps;  vices,  clamps  and  the  like,  other  than accessories  for  and  parts  of,  machine-tools  or  water-jet  cutting machines; anvils; portable forges; hand or pedal-operated grinding<br>wheels with frameworks</td>
+    </tr>
+    <tr>
+        <td>366.</td>
+        <td>8206</td>
+        <td>Tools of two or more of the headings 8202 to 8205, put up in sets for retail sale</td>
+    </tr>
+    <tr>
+        <td>367.</td>
+        <td>8207</td>
+        <td>Interchangeable tools for hand tools, whether or not power-operated, or for machine-tools (for example, for pressing, stamping, punching, tapping, threading, drilling, boring, broaching, milling, turning or screw driving), including dies for drawing or extruding metal, and<br>rock drilling or earth boring tools</td>
+    </tr>
+    <tr>
+        <td>368.</td>
+        <td>8208</td>
+        <td>Knives   and   cutting   blades,   for   machines   or   for   mechanical appliances</td>
+    </tr>
+    <tr>
+        <td>369.</td>
+        <td>8209</td>
+        <td>Plates, sticks, tips and the like for tools, unmounted, of cermets</td>
+    </tr>
+    <tr>
+        <td>370.</td>
+        <td>8210 00 00</td>
+        <td>Hand-operated mechanical appliances, weighing 10 kg or less, used in the preparation, conditioning or serving of food or drink</td>
+    </tr>
+    <tr>
+        <td>371.</td>
+        <td>8211</td>
+        <td>Knives  with  cutting  blades,  serrated  or  not  (including  pruning knives), other than knives of heading 8208, and blades therefor</td>
+    </tr>
+    <tr>
+        <td>372.</td>
+        <td>8212</td>
+        <td>Razors and razor blades (including razor blade blanks in strips)</td>
+    </tr>
+    <tr>
+        <td>373.</td>
+        <td>8213 00 00</td>
+        <td>Scissors, tailors&#39; shears and similar shears, and blades therefor</td>
+    </tr>
+    <tr>
+        <td>374.</td>
+        <td>8214</td>
+        <td>Other  articles  of  cutlery  (for  example,  hair  clippers,  butchers&#39;  or kitchen   cleavers,   choppers   and   mincing  knives);  manicure   or<br>pedicure sets and instruments including nail files [other than pencil sharpeners]</td>
+    </tr>
+    <tr>
+        <td>375.</td>
+        <td>8215</td>
+        <td>Spoons, forks, ladles, skimmers, cake-servers, fish-knives, butter- knives, sugar tongs and similar kitchen or tableware</td>
+    </tr>
+    <tr>
+        <td>376.</td>
+        <td>8301</td>
+        <td>Padlocks and locks (key, combination or electrically operated), of base metal; clasps and frames with clasps, incorporating locks, of<br>base metal; keys for any of the foregoing articles, of base metal</td>
+    </tr>
+    <tr>
+        <td>377.</td>
+        <td>8302</td>
+        <td>Base  metal  mountings,  fittings  and  similar  articles  suitable  for furniture, doors, staircases, windows, blinds, coachwork, saddlery, trunks, chests, caskets or the like; base metal hat-racks, hat-pegs, brackets and similar fixtures; castors with mountings of base metal;<br>automatic door closers of base metal</td>
+    </tr>
+    <tr>
+        <td>378.</td>
+        <td>8303</td>
+        <td>Armoured  or  reinforced  safes,  strong-boxes  and  doors  and  safe deposit lockers for strong-rooms, cash or deed boxes and the like, of<br>base metal</td>
+    </tr>
+    <tr>
+        <td>379.</td>
+        <td>8304</td>
+        <td>Filing  cabinets,  card-index  cabinets,  paper  trays,  paper  rests,  pen trays, office-stamp stands and similar office or desk equipment, of base metal, other than office furniture of heading 9403</td>
+    </tr>
+    <tr>
+        <td>380.</td>
+        <td>8305</td>
+        <td>Fittings  for  loose-leaf  binders  or  files,  letter  clips,  letter  corners, paper clips, indexing tags and similar office articles, of base metal;<br>staples in strips (for example, for offices, upholstery, packaging), of base metal</td>
+    </tr>
+    <tr>
+        <td>381.</td>
+        <td>8307</td>
+        <td>Flexible tubing of base metal, with or without fittings</td>
+    </tr>
+    <tr>
+        <td>382.</td>
+        <td>8308</td>
+        <td>Clasps,  frames  with  clasps,  buckles,  buckle-clasps,  hooks,  eyes,</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>eyelets and the like, of base metal, of a kind used for clothing or clothing  accessories,  footwear,  jewellery,  wrist  watches,  books, awnings, leather goods, travel goods or saddlery or for other made up  articles; tubular  or  bifurcated  rivets,  of  base metal; beads  and<br>spangles, of base metal</td>
+    </tr>
+    <tr>
+        <td>383.</td>
+        <td>8309</td>
+        <td>Stoppers,  caps  and  lids  (including  crown  corks,  screw  caps  and pouring stoppers), capsules for bottles, threaded bungs, bung covers, seals and other packing accessories, of base metal</td>
+    </tr>
+    <tr>
+        <td>384.</td>
+        <td>8310</td>
+        <td>Sign-plates,    name-plates,    address-plates    and    similar    plates, numbers, letters and other symbols, of base metal, excluding those of heading 9405</td>
+    </tr>
+    <tr>
+        <td>385.</td>
+        <td>8311</td>
+        <td>Wire, rods, tubes, plates, electrodes and similar products, of base metal or of metal carbides, coated or cored with flux material, of a kind used for soldering, brazing, welding or deposition of metal or of  metal  carbides;  wire  and  rods,  of  agglomerated  base  metal<br>powder, used for metal spraying</td>
+    </tr>
+    <tr>
+        <td>386.</td>
+        <td>84</td>
+        <td>Parts suitable for use solely or principally with fixed Speed Diesel Engines of power not exceeding 15HP</td>
+    </tr>
+    <tr>
+        <td>387.</td>
+        <td>84 or 85</td>
+        <td>Parts suitable for use solely or principally with power driven pumps primarily designed for handling water, namely, centrifugal pumps (horizontal and vertical), deep tube-well turbine pumps, submersible<br>pumps, axial flow and mixed flow vertical pumps</td>
+    </tr>
+    <tr>
+        <td>388.</td>
+        <td>8401</td>
+        <td>Nuclear reactors; machinery and apparatus for isotopes separation</td>
+    </tr>
+    <tr>
+        <td>389.</td>
+        <td>8402</td>
+        <td>Steam or other vapour generating boilers (other than central heating<br>hot  water  boilers  capable  also  of  producing  low  pressure  steam); super-heated water boilers</td>
+    </tr>
+    <tr>
+        <td>390.</td>
+        <td>8403</td>
+        <td>Central heating boilers other than those of heading 8402</td>
+    </tr>
+    <tr>
+        <td>391.</td>
+        <td>8404</td>
+        <td>Auxiliary plant for use with boilers of heading 8402 or 8403 (for example,    economisers,    super-heaters,    soot    removers,    gas<br>recoverers); condensers for steam or other vapour power units</td>
+    </tr>
+    <tr>
+        <td>392.</td>
+        <td>8405</td>
+        <td>Producer gas or water gas generators, with or without their purifiers; acetylene gas generators and similar water process gas generators,<br>with or without their purifiers</td>
+    </tr>
+    <tr>
+        <td>393.</td>
+        <td>8406</td>
+        <td>Steam turbines and other vapour turbines</td>
+    </tr>
+    <tr>
+        <td>394.</td>
+        <td>8407</td>
+        <td>Spark-ignition  reciprocating  or  rotary  internal  combustion  piston engine [other than aircraft engines]</td>
+    </tr>
+    <tr>
+        <td>395.</td>
+        <td>8408</td>
+        <td>Compression-ignition internal combustion piston engines (diesel or semi-diesel engines)</td>
+    </tr>
+    <tr>
+        <td>396.</td>
+        <td>8409</td>
+        <td>Parts  suitable  for  use  solely  or  principally  with  the  engines  of heading 8407 or 8408</td>
+    </tr>
+    <tr>
+        <td>397.</td>
+        <td>8410</td>
+        <td>Hydraulic turbines, water wheels, and regulators therefor</td>
+    </tr>
+    <tr>
+        <td>398.</td>
+        <td>8411</td>
+        <td>Turbo-jets,  turbo-propellers  and  other  gas  turbines  [other  than aircraft engines]</td>
+    </tr>
+    <tr>
+        <td>399.</td>
+        <td>8412</td>
+        <td>Other engines and motors (Reaction engines other than turbo jets, Hydraulic power engines and motors, Pneumatic power engines and<br>motors, other parts) [other than wind turbine or engine]</td>
+    </tr>
+    <tr>
+        <td>400.</td>
+        <td>8413</td>
+        <td>(a)   Concrete   pumps   [8413   40   00];   (b)   other   rotary   positive displacement    pumps    [8413    60];    (c)    Power    driven    pumps primarily  designed  for  handling  water,  namely, centrifugal pumps (horizontal and vertical), deep tube-well turbine pumps, submersible pumps,  axial  flow  and  mixed  flow  vertical  pumps];  Pumps  for dispensing fuel or lubricants of the type used in filling stations or<br>garages [8413 11], Fuel, lubricating or cooling medium pumps for internal combustion piston engines [8413 30]</td>
+    </tr>
+    <tr>
+        <td>401.</td>
+        <td>8414</td>
+        <td>Air  or  vacuum pumps,  air  or  other  gas  compressors  and  fans; ventilating  or  recycling  hoods incorporating  a  fan,  whether  or not    fitted    with    filters;  Gas-tight    biological  safety    cabinets, whether  or  not  fitted  with  filters[other  than  bicycle  pumps, other<br>hand  pumps  and  parts  of  air  or  vacuum  pumps  and  compressors</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>of bicycle pumps]</td>
+    </tr>
+    <tr>
+        <td>402.</td>
+        <td>8414 20 10</td>
+        <td>Bicycles pumps</td>
+    </tr>
+    <tr>
+        <td>403.</td>
+        <td>8414 90 12</td>
+        <td>Parts of air or vacuum pumps and compressors of bicycle pumps</td>
+    </tr>
+    <tr>
+        <td>404.</td>
+        <td>8415</td>
+        <td>Air-conditioning  machines,  comprising  a  motor-driven  fan  and elements for changing the temperature and humidity, including those machines in which the humidity cannot be separately regulated</td>
+    </tr>
+    <tr>
+        <td>405.</td>
+        <td>8416</td>
+        <td>Furnace burners for liquid fuel, for pulverised solid fuel or for gas; mechanical stokers, including their mechanical grates, mechanical ash dischargers and similar appliances</td>
+    </tr>
+    <tr>
+        <td>406.</td>
+        <td>8417</td>
+        <td>Industrial or laboratory furnaces and ovens, including incinerators, non-electric</td>
+    </tr>
+    <tr>
+        <td>407.</td>
+        <td>8418</td>
+        <td>Refrigerators,    freezers    and    other    refrigerating    or    freezing equipment, electric or other; heat pumps other than air conditioning machines of heading 8415</td>
+    </tr>
+    <tr>
+        <td>408.</td>
+        <td>8419  [other  than 8419 12]</td>
+        <td>Machinery,   plant   or   laboratory   equipment,   whether   or   not electrically heated (excluding furnaces, ovens and other equipment of  heading  8514),  for  the  treatment  of  materials  by  a  process involving  a  change  of  temperature  such  as  heating,  cooking, roasting,  distilling,  rectifying,  sterilising,  pasteurising,  steaming, drying, evaporating, vaporising, condensing or cooling, other than machinery   or   plant   of   a   kind   used   for   domestic   purposes;<br>instantaneous or storage water heaters, non-electric [other than Solar water heater and system]</td>
+    </tr>
+    <tr>
+        <td>409.</td>
+        <td>8420</td>
+        <td>Calendering or other rolling machines, other than for metals or glass, and cylinders therefor [other than Hand operated rubber roller]</td>
+    </tr>
+    <tr>
+        <td>410.</td>
+        <td>8421</td>
+        <td>Centrifuges,  including  centrifugal  dryers;  filtering  or  purifying machinery and apparatus, for liquids or gases</td>
+    </tr>
+    <tr>
+        <td>411.</td>
+        <td>8422</td>
+        <td>Dish washing machines, household [8422 11 00] and other [8422 19 00]; Machinery for cleaning or drying bottles or other containers; machinery  for  filling,  closing,  sealing  or  labelling  bottles,  cans, boxes,  bags  or  other  containers;  machinery  for  capsuling  bottles, jars,  tubes  and  similar  containers;  other  packing  or  wrapping<br>machinery (including heat-shrink wrapping machinery); machinery for aerating beverages</td>
+    </tr>
+    <tr>
+        <td>412.</td>
+        <td>8423</td>
+        <td>Weighing  machinery  (excluding  balances  of  a  sensitivity  of  5 centigrams   or   better),   including   weight   operated   counting   or<br>checking machines; weighing machine weights of all kinds</td>
+    </tr>
+    <tr>
+        <td>413.</td>
+        <td>8424</td>
+        <td>Mechanical   appliances   (whether   or   not   hand-operated)   for projecting,   dispersing   or   spraying   liquids   or   powders;   fire extinguishers,  whether  or  not  charged;  spray  guns  and  similar appliances;   steam   or   sand   blasting   machines   and   similar   jet projecting machines [other than sprinklers; drip irrigation systems including  laterals;  mechanical  sprayer;  nozzles  for  drip  irrigation<br>equipment or nozzles for sprinklers]</td>
+    </tr>
+    <tr>
+        <td>414.</td>
+        <td>8425</td>
+        <td>Pulley  tackle  and  hoists  other  than  skip  hoists;  winches  and capstans; jacks</td>
+    </tr>
+    <tr>
+        <td>415.</td>
+        <td>8426</td>
+        <td>Ship’s derricks; cranes including cable cranes; mobile lifting frames, straddle carriers and works trucks fitted with a crane</td>
+    </tr>
+    <tr>
+        <td>416.</td>
+        <td>8427</td>
+        <td>Fork-lift trucks; other works trucks fitted with lifting or handling equipment</td>
+    </tr>
+    <tr>
+        <td>417.</td>
+        <td>8428</td>
+        <td>Other   lifting,   handling,   loading   or   unloading   machinery   (for example, lifts, escalators, conveyors, teleferics)</td>
+    </tr>
+    <tr>
+        <td>418.</td>
+        <td>8429</td>
+        <td>Self-propelled bulldozers, angledozers, graders, levellers, scrapers, mechanical shovels, excavators, shovel loaders, tamping machines and road rollers</td>
+    </tr>
+    <tr>
+        <td>419.</td>
+        <td>8430</td>
+        <td>Other  moving,  grading,  levelling,  scraping,  excavating,  tamping, compacting, extracting or boring machinery, for earth, minerals or ores;   piledrivers   and  pile-extractors;   snow-ploughs  and   snow-<br>blowers</td>
+    </tr>
+    <tr>
+        <td>420.</td>
+        <td>8431</td>
+        <td>Parts suitable for  use  solely  or principally with  the machinery  of headings 8425 to 8430</td>
+    </tr>
+    <tr>
+        <td>421.</td>
+        <td>8433</td>
+        <td>Machines for cleaning, sorting   or   grading   eggs,   fruit   or   other agricultural produce, other than machinery of heading 8437; parts thereof [8433 90 00]</td>
+    </tr>
+    <tr>
+        <td>422.</td>
+        <td>8434</td>
+        <td>Milking machines and dairy machinery</td>
+    </tr>
+    <tr>
+        <td>423.</td>
+        <td>8435</td>
+        <td>Presses, crushers and similar machinery used in the manufacture of wine, cider, fruit juices or similar beverages</td>
+    </tr>
+    <tr>
+        <td>424.</td>
+        <td>8437</td>
+        <td>Machines  for  cleaning,  sorting  or  grading,  seed,  grain  or  dried leguminous vegetables; machinery used in milling industry or for the working of cereals or dried  leguminous  vegetables  other  than<br>farm  type  machinery  and  parts thereof</td>
+    </tr>
+    <tr>
+        <td>425.</td>
+        <td>8438</td>
+        <td>Machinery,  not specified  or  included  elsewhere  in  this  Chapter, for  the  industrial  preparation or  manufacture  of  food  or  drink,<br>other than machinery for the  extraction  or preparation  of  animal or  fixed  vegetable or  microbial fats  or  oils</td>
+    </tr>
+    <tr>
+        <td>426.</td>
+        <td>8439</td>
+        <td>Machinery  for  making  pulp  of  fibrous  cellulosic  material  or  for making or finishing paper or paperboard</td>
+    </tr>
+    <tr>
+        <td>427.</td>
+        <td>8440</td>
+        <td>Book-binding machinery, including book-sewing machines</td>
+    </tr>
+    <tr>
+        <td>428.</td>
+        <td>8441</td>
+        <td>Other machinery for making up paper pulp, paper or paperboard, including cutting machines of all kinds</td>
+    </tr>
+    <tr>
+        <td>429.</td>
+        <td>8442</td>
+        <td>Machinery,  apparatus  and  equipment  (other  than  the  machines  of headings  8456  to  8465)  for  preparing  or  making  plates,  printing components; plates, cylinders and lithographic stones, prepared for<br>printing purposes (for example, planed, grained or polished)</td>
+    </tr>
+    <tr>
+        <td>430.</td>
+        <td>8443</td>
+        <td>Printing machinery used for printing by means of plates, cylinders and  other  printing  components  of  heading  8442;  other  printers, copying   machines   and   facsimile   machines,   whether   or   not<br>combined; parts and accessories thereof</td>
+    </tr>
+    <tr>
+        <td>431.</td>
+        <td>8444</td>
+        <td>Machines  for  extruding,  drawing,  texturing  or  cutting  man-made textile materials</td>
+    </tr>
+    <tr>
+        <td>432.</td>
+        <td>8445</td>
+        <td>Machines for preparing textile fibres; spinning, doubling or twisting machines and other machinery for producing textile yarns; textile reeling   or   winding   (including   weft-winding)   machines   and machines  for  preparing  textile  yarns  for  use  on  the  machines  of<br>heading 8446 or 8447</td>
+    </tr>
+    <tr>
+        <td>433.</td>
+        <td>8446</td>
+        <td>Weaving machines (looms)</td>
+    </tr>
+    <tr>
+        <td>434.</td>
+        <td>8447</td>
+        <td>Knitting  machines,  stitch-bonding  machines  and  machines  for making gimped yarn, tulle, lace, embroidery, trimmings, braid or net and machines for tufting</td>
+    </tr>
+    <tr>
+        <td>435.</td>
+        <td>8448</td>
+        <td>Auxiliary machinery for use with machines of heading 8444, 8445, 8446  or  8447  (for  example,  dobbies,  Jacquards,  automatic  stop motions,  shuttle  changing  mechanisms);  parts  and   accessories suitable  for  use  solely  or  principally  with  the  machines  of  this heading  or  of  heading  8444,  8445,  8446  or  8447  (for  example,<br>spindles   and   spindles   flyers,   card   clothing,   combs,   extruding nipples, shuttles, healds and heald frames, hosiery needles)</td>
+    </tr>
+    <tr>
+        <td>436.</td>
+        <td>8449</td>
+        <td>Machinery for the manufacture or finishing of felt or nonwovens in<br>the piece or  in shapes, including machinery  for making  felt hats; blocks for making hats</td>
+    </tr>
+    <tr>
+        <td>437.</td>
+        <td>8450</td>
+        <td>Household or laundry-type washing machines, including machines which both wash and dry</td>
+    </tr>
+    <tr>
+        <td>438.</td>
+        <td>8451</td>
+        <td>Machinery  (other  than  machines  of  heading  8450)  for  washing, cleaning,  wringing,  drying,  ironing,  pressing  (including  fusing presses),   bleaching,   dyeing,   dressing,   finishing,   coating   or impregnating textile yarns, fabrics or made up textile articles and machines for applying the paste to the base fabric or other support used  in  the  manufacture  of  floor  covering  such  as  linoleum;<br>machines for reeling, unreeling, folding, cutting or pinking textile</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>fabrics</td>
+    </tr>
+    <tr>
+        <td>439.</td>
+        <td>8453</td>
+        <td>Machinery for preparing, tanning or working hides, skins or leather<br>or for making or repairing footwear or other articles of hides, skins or leather, other than sewing machines</td>
+    </tr>
+    <tr>
+        <td>440.</td>
+        <td>8454</td>
+        <td>Converters,  ladles, ingot  moulds and  casting  machines, of  a kind used in metallurgy or in metal foundries</td>
+    </tr>
+    <tr>
+        <td>441.</td>
+        <td>8455</td>
+        <td>Metal-rolling mills and rolls therefor</td>
+    </tr>
+    <tr>
+        <td>442.</td>
+        <td>8456</td>
+        <td>Machine-tools for working any material by removal of material, by laser  or  other  light  or  photon  beam, ultrasonic,  electro-discharge, electro-chemical,   electron   beam,   ionic-beam   or   plasma   arc<br>processes</td>
+    </tr>
+    <tr>
+        <td>443.</td>
+        <td>8457</td>
+        <td>Machining centres, unit construction machines (single station) and multi-station transfer machines, for working metal</td>
+    </tr>
+    <tr>
+        <td>444.</td>
+        <td>8458</td>
+        <td>Lathes (including turning centres) for removing metal</td>
+    </tr>
+    <tr>
+        <td>445.</td>
+        <td>8459</td>
+        <td>Machine-tools (including way-type unit head machines) for drilling,<br>boring, milling, threading or tapping by removing metal, other than lathes (including turning centres) of heading 8458</td>
+    </tr>
+    <tr>
+        <td>446.</td>
+        <td>8460</td>
+        <td>Machine-tools for deburring, sharpening, grinding, honing, lapping, polishing  or  otherwise  finishing  metal,  or  cermets  by  means  of grinding  stones,  abrasives  or  polishing  products,  other  than  gear<br>cutting, gear grinding or gear finishing machines of heading 8461</td>
+    </tr>
+    <tr>
+        <td>447.</td>
+        <td>8461</td>
+        <td>Machine-tools   for   planing,   shaping,   slotting,   broaching,   gear cutting,  gear  grinding  or  gear  finishing,  sawing,  cutting-off  and other  machine-tools  working  by  removing  metal  or  cermets,  not<br>elsewhere specified or included</td>
+    </tr>
+    <tr>
+        <td>448.</td>
+        <td>8462</td>
+        <td>Machine-tools (including presses) for  working  metal by  forging, hammering or die forging (excluding rolling mills); Machine-tools (including  presses,  slitting  lines  and  cut-to-length     lines)     for working   metal  by  bending,   folding,  straightening,      flattening, shearing,      punching,      notching  or  nibbling  (excluding   draw- benches);    Presses  for  working    metal  or  metal    carbides,  not<br>specified above</td>
+    </tr>
+    <tr>
+        <td>449.</td>
+        <td>8463</td>
+        <td>Other   machine-tools   for   working   metal,   or   cermets,   without removing material</td>
+    </tr>
+    <tr>
+        <td>450.</td>
+        <td>8464</td>
+        <td>Machine-tools  for  working  stone,  ceramics,  concrete,  asbestos- cement or like mineral materials or for cold working glass</td>
+    </tr>
+    <tr>
+        <td>451.</td>
+        <td>8465</td>
+        <td>Machine-tools (including machines for nailing, stapling, glueing or otherwise assembling) for working wood, cork, bone, hard rubber,<br>hard plastics or similar hard materials</td>
+    </tr>
+    <tr>
+        <td>452.</td>
+        <td>8466</td>
+        <td>Parts and accessories suitable for use solely or principally with the machines of headings 8456 to 8465 including work or tool holders, self-opening   dieheads,         dividing   heads   and   other   special attachments for the machines; tool holders for any type of tool, for<br>working in the hand</td>
+    </tr>
+    <tr>
+        <td>453.</td>
+        <td>8467</td>
+        <td>Tools for working in the hand, pneumatic, hydraulic or with self- contained electric or non-electric motor</td>
+    </tr>
+    <tr>
+        <td>454.</td>
+        <td>8468</td>
+        <td>Machinery and apparatus for soldering, brazing or welding, whether or not capable of  cutting,  other  than  those of heading  8515; gas-<br>operated surface tempering machines and appliances</td>
+    </tr>
+    <tr>
+        <td>455.</td>
+        <td>8470</td>
+        <td>Calculating machines and pocket-size data recording, reproducing and  displaying  machines  with  calculating  functions;  accounting<br>machines, postage-franking machines, ticket-issuing machines and similar machines, incorporating a calculating device; cash registers</td>
+    </tr>
+    <tr>
+        <td>456.</td>
+        <td>8471</td>
+        <td>Automatic data processing machines and units thereof; magnetic or optical readers, machines for transcribing data onto data media in<br>coded form and machines for processing such data, not elsewhere specified or included</td>
+    </tr>
+    <tr>
+        <td>457.</td>
+        <td>8472</td>
+        <td>Other   office   machines   (for   example,   hectograph   or   stencil duplicating  machines,  addressing  machines,  automatic  banknote</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>dispensers,  coin  sorting  machines,  coin  counting  or  wrapping<br>machines,  pencil  sharpening  machines,  perforating  or  stapling machines) [other than Braille typewriters, electric or non-electric]</td>
+    </tr>
+    <tr>
+        <td>458.</td>
+        <td>8473</td>
+        <td>Parts and accessories (other than covers, carrying cases and the like) suitable for use solely or principally with machines of headings 8470<br>to 8472</td>
+    </tr>
+    <tr>
+        <td>459.</td>
+        <td>8474</td>
+        <td>Machinery  for  sorting,  screening,  separating,  washing,  crushing, grinding,  mixing  or  kneading  earth,  stone,  ores  or  other  mineral substances, in solid (including powder or paste) form; machinery for agglomerating,  shaping  or  moulding  solid  mineral  fuels,  ceramic paste,  unhardened  cements,  plastering  materials  or  other  mineral<br>products in powder or paste form; machines for forming foundry moulds of sand</td>
+    </tr>
+    <tr>
+        <td>460.</td>
+        <td>8475</td>
+        <td>Machines  for  assembling  electric  or  electronic  lamps,  tubes  or valves    or    flashbulbs,    in    glass    envelopes;    machines    for manufacturing or hot working glass or glassware</td>
+    </tr>
+    <tr>
+        <td>461.</td>
+        <td>8476</td>
+        <td>Automatic goods-vending machines (for example, postage stamps, cigarette, food or beverage machines), including money changing machines</td>
+    </tr>
+    <tr>
+        <td>462.</td>
+        <td>8477</td>
+        <td>Machinery for working rubber or plastics or for the manufacture of<br>products from these materials, not specified or included elsewhere in this Chapter</td>
+    </tr>
+    <tr>
+        <td>463.</td>
+        <td>8478</td>
+        <td>Machinery  for  preparing  or  making  up  tobacco,  not  specified  or included elsewhere in this chapter</td>
+    </tr>
+    <tr>
+        <td>464.</td>
+        <td>8479</td>
+        <td>Machines and mechanical appliances having individual functions, not  specified  or  included  elsewhere  in  this  Chapter  [other  than Composting Machines]</td>
+    </tr>
+    <tr>
+        <td>465.</td>
+        <td>8480</td>
+        <td>Moulding boxes for metal foundry; mould bases; moulding patterns; moulds for metal (other than ingot moulds), metal carbides, glass, mineral materials, rubber or plastics</td>
+    </tr>
+    <tr>
+        <td>466.</td>
+        <td>8481</td>
+        <td>Taps, cocks, valves and similar appliances for pipes, boiler shells, tanks,  vats  or  the  like,  including  pressure-reducing  valves  and<br>thermostatically controlled valves</td>
+    </tr>
+    <tr>
+        <td>467.</td>
+        <td>8482</td>
+        <td>Ball bearing, Roller Bearings</td>
+    </tr>
+    <tr>
+        <td>468.</td>
+        <td>8483</td>
+        <td>Transmission  shafts  (including  cam  shafts  and  crank  shafts)  and cranks; bearing housings and plain shaft bearings; gears and gearing; ball or roller screws; gear boxes and other speed changers, including torque converters; flywheels and pulleys, including pulley blocks;<br>clutches and shaft couplings (including universal joints)</td>
+    </tr>
+    <tr>
+        <td>469.</td>
+        <td>8484</td>
+        <td>Gaskets and similar joints of metal sheeting combined with other material or of two or more layers of metal; sets or assortments of<br>gaskets  and  similar  joints,  dissimilar  in  composition,  put  up  in pouches, envelopes or similar packings; mechanical seals</td>
+    </tr>
+    <tr>
+        <td>470.</td>
+        <td>8485</td>
+        <td>Machines for Additive Manufacturing</td>
+    </tr>
+    <tr>
+        <td>471.</td>
+        <td>8486</td>
+        <td>Machines and apparatus of a kind used solely or principally for the manufacture  of  semiconductor  boules  or  wafers,  semiconductor devices,   electronic   integrated   circuits   or   flat   panel   displays; machines  and  apparatus  specified  in  Note  11(C)  to  this  Chapter;<br>parts and accessories</td>
+    </tr>
+    <tr>
+        <td>472.</td>
+        <td>8487</td>
+        <td>Machinery  parts,  not  containing  electrical  connectors,  insulators,<br>coils, contacts or other electrical features not specified or included elsewhere in this chapter</td>
+    </tr>
+    <tr>
+        <td>473.</td>
+        <td>84 or 85</td>
+        <td>E-waste<br>Explanation.-  For  the  purpose  of  this  entry,  E-waste     means electrical and electronic equipment listed  in  Schedule I  of  the  E- Waste (Management) Rules, 2016 (published in the Gazette of India vide G.S.R. 338 (E) dated the 23rd March, 2016), whole or in part<br>if discarded as waste by the consumer or bulk consumer</td>
+    </tr>
+    <tr>
+        <td>474.</td>
+        <td>8501</td>
+        <td>Electric motors and generators (excluding generating sets)</td>
+    </tr>
+    <tr>
+        <td>475.</td>
+        <td>8502</td>
+        <td>Electric generating sets and rotary converters</td>
+    </tr>
+    <tr>
+        <td>476.</td>
+        <td>8503</td>
+        <td>Parts  suitable  for  use  solely  or  principally  with  the  machines  of heading 8501 or 8502</td>
+    </tr>
+    <tr>
+        <td>477.</td>
+        <td>8504</td>
+        <td>Electrical  transformers,  static  converters  (for  example,  rectifiers) and inductors other than charger or charging station for Electrically<br>operated vehicles</td>
+    </tr>
+    <tr>
+        <td>478.</td>
+        <td>8505</td>
+        <td>Electro-magnets;   permanent   magnets   and   articles   intended   to become permanent magnets  after  magnetisation;  electro-magnetic or permanent magnet chucks, clamps and similar holding devices;<br>electro-magnetic couplings, clutches and brakes; electro-magnetic lifting heads</td>
+    </tr>
+    <tr>
+        <td>479.</td>
+        <td>8506</td>
+        <td>Primary cells and primary batteries</td>
+    </tr>
+    <tr>
+        <td>480.</td>
+        <td>8507</td>
+        <td>Electric accumulators, including separators therefor, whether or not rectangular (including square)</td>
+    </tr>
+    <tr>
+        <td>481.</td>
+        <td>8508</td>
+        <td>Vacuum cleaners</td>
+    </tr>
+    <tr>
+        <td>482.</td>
+        <td>8509</td>
+        <td>Electro-mechanical    domestic    appliances,    with    self-contained electric motor, other than vacuum cleaners of heading 8508</td>
+    </tr>
+    <tr>
+        <td>483.</td>
+        <td>8510</td>
+        <td>Shavers,  hair  clippers  and  hair-removing  appliances,  with  self- contained electric motor</td>
+    </tr>
+    <tr>
+        <td>484.</td>
+        <td>8511</td>
+        <td>Electrical ignition or starting equipment of a kind used for spark- ignition  or  compression-ignition  internal combustion  engines  (for example,   ignition   magnetos,   magneto-dynamos,   ignition   coils, sparking  plugs  and  glow  plugs,  starter  motors);  generators  (for example,  dynamos,  alternators)  and  cut-outs  of  a  kind  used  in<br>conjunction with such engines</td>
+    </tr>
+    <tr>
+        <td>485.</td>
+        <td>8512</td>
+        <td>Electrical  lighting  or  signalling  equipment  (excluding  articles  of heading 8539),  windscreen  wipers,  defrosters  and demisters, of  a kind used for cycles or motor vehicles</td>
+    </tr>
+    <tr>
+        <td>486.</td>
+        <td>8513</td>
+        <td>Portable electric lamps designed to function by their own source of energy (for example, dry batteries, accumulators, magnetos), other<br>than lighting equipment of heading 8512</td>
+    </tr>
+    <tr>
+        <td>487.</td>
+        <td>8514</td>
+        <td>Industrial or laboratory electric furnaces and ovens (including those functioning  by  induction  or  dielectric  loss);  other  industrial  or laboratory   equipment   for   the   heat   treatment   of   materials   by<br>induction or dielectric loss</td>
+    </tr>
+    <tr>
+        <td>488.</td>
+        <td>8515</td>
+        <td>Electric (including  electrically  heated gas), laser or  other light or photo beam, ultrasonic, electron beam, magnetic pulse or plasma arc soldering, brazing or welding machines and apparatus, whether or not  capable  of  cutting;  electric  machines  and  apparatus  for  hot<br>spraying of metals or cermets</td>
+    </tr>
+    <tr>
+        <td>489.</td>
+        <td>8516</td>
+        <td>Electric  instantaneous  or  storage  water  heaters  and  immersion heaters; electric space heating apparatus and soil heating apparatus; electro thermic hairdressing apparatus (for example, hair dryers, hair curlers, curling tong heaters) and hand dryers; electric smoothing irons; other electro-thermic appliances of a kind used for domestic purposes [other than solar cookers]; electric heating resistors, other<br>than those of heading 8545</td>
+    </tr>
+    <tr>
+        <td>490.</td>
+        <td>8517</td>
+        <td>All goods</td>
+    </tr>
+    <tr>
+        <td>491.</td>
+        <td>8518</td>
+        <td>Microphones  and  stands  therefore;  loudspeakers,  whether  or  not mounted in their enclosures; headphones and earphones, whether or not   combined   with   a   microphone,   and   sets   consisting   of   a microphone and one or more loudspeakers; audio-frequency electric<br>amplifiers; electric sound amplifier set</td>
+    </tr>
+    <tr>
+        <td>492.</td>
+        <td>8519</td>
+        <td>Sound recording or reproducing apparatus</td>
+    </tr>
+    <tr>
+        <td>493.</td>
+        <td>8521</td>
+        <td>Video   recording   or   reproducing   apparatus,   whether   or   not incorporating a video tuner</td>
+    </tr>
+    <tr>
+        <td>494.</td>
+        <td>8522</td>
+        <td>Parts and accessories suitable for use solely or principally with the apparatus of headings 8519 or 8521</td>
+    </tr>
+    <tr>
+        <td>495.</td>
+        <td>8523</td>
+        <td>Discs, tapes, solid-state non-volatile storage devices, &quot;&quot;smart cards&quot;&quot; and other media for the recording of sound or of other phenomena,<br>whether  or  not  recorded,  including  matrices  and  masters  for  the production of discs, but excluding products of Chapter 37</td>
+    </tr>
+    <tr>
+        <td>496.</td>
+        <td>8524</td>
+        <td>Flat   Panel   Display   Modules,  Whether   or   Not Incorporating Touch-Sensitive Screens</td>
+    </tr>
+    <tr>
+        <td>497.</td>
+        <td>8525</td>
+        <td>Closed-circuit   television   (CCTV),   transmission   apparatus   for radio-broadcasting     or     television,  whether  or  not  incorporating reception apparatus or sound  recording  or reproducing   apparatus; television   cameras,   digital cameras  and  video camera  recorders [other than two-way  radio  (Walkie  talkie)  used  by defense, police<br>and paramilitary forces, etc.]</td>
+    </tr>
+    <tr>
+        <td>498.</td>
+        <td>8526</td>
+        <td>Radar apparatus, radio navigational aid apparatus and radio remote control apparatus</td>
+    </tr>
+    <tr>
+        <td>499.</td>
+        <td>8527</td>
+        <td>Reception   apparatus   for   radio-broadcasting,   whether   or   not combined,   in   the   same   housing,   with   sound   recording   or<br>reproducing apparatus or a clock</td>
+    </tr>
+    <tr>
+        <td>500.</td>
+        <td>8528</td>
+        <td>Television  set  (including  LCD  or  LED  television),  Computer Monitors, Set top Box for Television; monitors and projectors, not incorporating television reception apparatus, reception apparatus for television, whether or not incorporating radio-broadcast receivers or<br>sound or video recording or reproducing apparatus</td>
+    </tr>
+    <tr>
+        <td>501.</td>
+        <td>8529</td>
+        <td>Parts  suitable  for  use  solely  or  principally  with  the  apparatus  of headings 8525 to 8528</td>
+    </tr>
+    <tr>
+        <td>502.</td>
+        <td>8530</td>
+        <td>Electrical   signalling,   safety   or   traffic   control   equipment   for railways, tramways, roads, inland waterways, parking facilities, port installations or airfields (other than those of heading 8608)</td>
+    </tr>
+    <tr>
+        <td>503.</td>
+        <td>8531</td>
+        <td>Electric  sound  or  visual  signalling  apparatus  (for  example,  bells, sirens, indicator panels, burglar or fire alarms), other than those of heading 8512 or 8530</td>
+    </tr>
+    <tr>
+        <td>504.</td>
+        <td>8532</td>
+        <td>Electrical capacitors, fixed, variable or adjustable (pre-set)</td>
+    </tr>
+    <tr>
+        <td>505.</td>
+        <td>8533</td>
+        <td>Electrical resistors (including rheostats and potentiometers), other than heating resistors</td>
+    </tr>
+    <tr>
+        <td>506.</td>
+        <td>8534 00 00</td>
+        <td>Printed Circuits</td>
+    </tr>
+    <tr>
+        <td>507.</td>
+        <td>8535</td>
+        <td>Electrical apparatus for switching or protecting electrical circuits, or for  making  connections  to  or  in  electrical  circuits  (for  example, switches,    fuses,    lightning    arresters,    voltage    limiters,    surge suppressors,  plugs  and  other  connectors,  junction  boxes),  for  a<br>voltage exceeding 1,000 volts</td>
+    </tr>
+    <tr>
+        <td>508.</td>
+        <td>8536</td>
+        <td>Electrical apparatus for switching or protecting electrical circuits, or for  making  connections  to  or  in  electrical  circuits  (for  example, switches,    relays,    fuses,    surge    suppressors,    plugs,    sockets, lampholders, and other connectors, junction boxes), for a voltage not exceeding  1,000  volts:  connectors  for  optical  fibres,  optical  fibre<br>bundles or cables</td>
+    </tr>
+    <tr>
+        <td>509.</td>
+        <td>8537</td>
+        <td>Boards, panels, consoles, desks, cabinets and other bases, equipped with two or more apparatus of heading 8535 or 8536, for electric control    or    the    distribution    of    electricity,    including    those incorporating instruments or apparatus of chapter 90, and numerical<br>control apparatus, other than switching apparatus of heading 8517</td>
+    </tr>
+    <tr>
+        <td>510.</td>
+        <td>8538</td>
+        <td>Parts  suitable  for  use  solely  or  principally  with  the  apparatus  of heading 8535, 8536 or 8537</td>
+    </tr>
+    <tr>
+        <td>511.</td>
+        <td>8539</td>
+        <td>Electrical Filament or discharge lamps including sealed beam lamp units and ultra-violet or infra-red lamps; arc lamps</td>
+    </tr>
+    <tr>
+        <td>512.</td>
+        <td>8540</td>
+        <td>Thermionic,  cold  cathode  or  photo-cathode  valves  and  tubes  (for example, vacuum or vapour or gas filled valves and tubes, mercury arc rectifying valves and tubes, cathode-ray tubes, television camera<br>tubes)</td>
+    </tr>
+    <tr>
+        <td>513.</td>
+        <td>8541</td>
+        <td>Semiconductor    Devices    (for    example,    Diodes,    Transistors,</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>Semiconductor                     Based    Transducers);    Photosensitive Semiconductor devices; Light-Emitting Diodes (LED), whether or<br>not assembled with other Light-Emitting Diodes (LED); mounted piezo-electric crystals</td>
+    </tr>
+    <tr>
+        <td>514.</td>
+        <td>8542</td>
+        <td>Electronic integrated circuits</td>
+    </tr>
+    <tr>
+        <td>515.</td>
+        <td>8543</td>
+        <td>Electrical machines and apparatus, having individual functions, not specified or included elsewhere in this Chapter</td>
+    </tr>
+    <tr>
+        <td>516.</td>
+        <td>8544</td>
+        <td>Insulated (including enamelled or anodised) wire, cable (including co-axial cable) and other insulated electric conductors, whether or not   fitted   with   connectors;   optical   fibre   cables,   made   up   of individually sheathed fibres, whether or not assembled with electric<br>conductors or fitted with connectors</td>
+    </tr>
+    <tr>
+        <td>517.</td>
+        <td>8545</td>
+        <td>Carbon electrodes, carbon brushes, Lamp carbons, battery carbons<br>and other articles of graphite or other carbon, with or without metal, of a kind used for electrical purposes</td>
+    </tr>
+    <tr>
+        <td>518.</td>
+        <td>8546</td>
+        <td>Electrical insulators of any material</td>
+    </tr>
+    <tr>
+        <td>519.</td>
+        <td>8547</td>
+        <td>Insulating fittings for electrical machines, appliances or equipment, being fittings wholly of insulating material apart from any minor components of metal (for example, threaded sockets) incorporated during  moulding  solely  for  the  purposes  of  assembly,  other  than<br>insulators  of  heading  8546;  electrical  conduit  tubing  and  joints therefor, of base metal lined with insulating material</td>
+    </tr>
+    <tr>
+        <td>520.</td>
+        <td>8548 00 00</td>
+        <td>Electrical parts of machinery or apparatus, not specified or included elsewhere in Chapter 85</td>
+    </tr>
+    <tr>
+        <td>521.</td>
+        <td>8549</td>
+        <td>Electrical and electronic waste and scrap</td>
+    </tr>
+    <tr>
+        <td>522.</td>
+        <td>8601</td>
+        <td>Rail locomotives powered from an external source of electricity or by electric accumulators.</td>
+    </tr>
+    <tr>
+        <td>523.</td>
+        <td>8602</td>
+        <td>Other rail locomotives; locomotive tenders; such as Diesel electric locomotives, Steam locomotives and tenders thereof</td>
+    </tr>
+    <tr>
+        <td>524.</td>
+        <td>8603</td>
+        <td>Self-propelled railway or tramway coaches, vans and trucks, other than those of heading 8604.</td>
+    </tr>
+    <tr>
+        <td>525.</td>
+        <td>8604</td>
+        <td>Railway or tramway maintenance or service vehicles, whether or not<br>self-propelled  (for  example,  workshops,  cranes,  ballast  tampers, track liners, testing coaches and track inspection vehicles)</td>
+    </tr>
+    <tr>
+        <td>526.</td>
+        <td>8605</td>
+        <td>Railway or tramway passenger coaches, not self-propelled; luggage vans,  post  office  coaches  and  other  special  purpose  railway  or<br>tramway  coaches,  not  self-propelled  (excluding  those  of  heading 8604)</td>
+    </tr>
+    <tr>
+        <td>527.</td>
+        <td>8606</td>
+        <td>Railway or tramway goods vans and wagons, not self-propelled</td>
+    </tr>
+    <tr>
+        <td>528.</td>
+        <td>8607</td>
+        <td>Parts of railway or tramway locomotives or rolling-stock; such as Bogies, bissel-bogies, axles and wheels, and parts thereof.</td>
+    </tr>
+    <tr>
+        <td>529.</td>
+        <td>8608</td>
+        <td>Railway   or   tramway   track   fixtures   and   fittings;   mechanical (including  electro-mechanical)  signalling,  safety  or  traffic  control equipment for railways, tramways, roads, inland waterways, parking<br>facilities, port installations or airfields; parts of the foregoing.</td>
+    </tr>
+    <tr>
+        <td>530.</td>
+        <td>8609</td>
+        <td>Containers (including containers for the transport of fluids) specially designed  and  equipped  for  carriage  by  one  or  more  modes  of transport [including refrigerated containers]</td>
+    </tr>
+    <tr>
+        <td>531.</td>
+        <td>8701</td>
+        <td>Road tractors for semi-trailers of engine capacity more than 1800 cc</td>
+    </tr>
+    <tr>
+        <td>532.</td>
+        <td>8702</td>
+        <td>Motor vehicles for the transport of ten or more persons, including<br>the  driver  [including  buses  for  use  in  public  transport,  which exclusively run on Bio-fuels]</td>
+    </tr>
+    <tr>
+        <td>533.</td>
+        <td>8702 or 8703</td>
+        <td>Motor  vehicles  cleared  as  ambulances  duly  fitted  with  all  the fitments, furniture and accessories necessary for an ambulance from<br>the factory manufacturing such motor vehicles</td>
+    </tr>
+    <tr>
+        <td>534.</td>
+        <td>8703 21 or 8703<br>22</td>
+        <td>Petrol, Liquefied petroleum gases (LPG) or compressed natural gas (CNG)  driven  motor  vehicles  of  engine  capacity  not  exceeding 1200cc and of length not exceeding 4000 mm</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>Explanation.- For the purposes of this entry, the specification     of the      motor     vehicle     shall      be determined  as  per  the  Motor Vehicles Act, 1988 (59 of 1988) and the rules made there under.</td>
+    </tr>
+    <tr>
+        <td>535.</td>
+        <td>870,331</td>
+        <td>Diesel driven motor vehicles of engine capacity not exceeding 1500 cc and of length not exceeding 4000 mm<br>Explanation.- For the purposes of this entry, the specification     of the      motor     vehicle     shall      be determined  as  per  the  Motor Vehicles Act, 1988 (59 of 1988) and the rules made there under.</td>
+    </tr>
+    <tr>
+        <td>536.</td>
+        <td>8703</td>
+        <td>Following  motor  vehicles  of  length  not  exceeding  4000  mm, namely:   -   (a)   Petrol,   Liquefied   petroleum   gases   (LPG)   or compressed natural gas (CNG) driven vehicles of engine capacity not  exceeding  1200cc;  and  (b)  Diesel  driven  vehicles  of  engine capacity not exceeding 1500 cc for persons with orthopedic physical disability, subject to the condition that an officer not below the rank of Deputy Secretary to the Government of India in the Department of Heavy Industries certifies that the said goods shall be used by the<br>persons with orthopedic physical disability in accordance with the guidelines issued by the said Department</td>
+    </tr>
+    <tr>
+        <td>537.</td>
+        <td>8703</td>
+        <td>Three wheeled vehicles</td>
+    </tr>
+    <tr>
+        <td>538.</td>
+        <td>8703 40, 8703 60</td>
+        <td>Following    Vehicles,    with    both    spark-ignition      internal combustion  reciprocating  piston  engine  and  electric  motor  as motors for propulsion;<br>(a)  Motor vehicles cleared as ambulances duly fitted with all the fitments,   furniture   and   accessories   necessary   for   an ambulance   from   the   factory   manufacturing   such   motor vehicles<br>(b) Three wheeled vehicles<br>(c)  Motor vehicles of engine capacity not exceeding 1200cc and of length not exceeding 4000 mm<br>Explanation.- For the purposes of this entry, the specification of the motor vehicle shall be determined as per the Motor Vehicles Act,<br>1988 (59 of 1988) and the rules made there under</td>
+    </tr>
+    <tr>
+        <td>539.</td>
+        <td>8703 50, 8703 70</td>
+        <td>Following  Vehicles,  with  both  compression-ignition  internal combustion  piston  engine  [diesel-or  semi  diesel]  and  electric motor as motors for propulsion;<br>(a)  Motor vehicles cleared as ambulances duly fitted with all the fitments,   furniture   and   accessories   necessary   for   an ambulance   from   the   factory   manufacturing   such   motor vehicles<br>(b)  Three wheeled vehicles<br>(c)  Motor vehicles of engine capacity not exceeding 1500 cc and of length not exceeding 4000 mm<br>Explanation.- For the purposes of this entry, the specification of the motor vehicle shall be determined as per the Motor Vehicles Act, 1988 (59 of 1988) and the rules made there under</td>
+    </tr>
+    <tr>
+        <td>540.</td>
+        <td>8704</td>
+        <td>Motor  vehicles for the transport  of  goods, including  Refrigerated motor vehicles</td>
+    </tr>
+    <tr>
+        <td>541.</td>
+        <td>8705</td>
+        <td>Special   purpose   motor   vehicles,   other   than   those   principally designed  for  the  transport  of  persons  or  goods  (for  example, breakdown  lorries,  crane  lorries,  fire  fighting  vehicles,  concrete-<br>mixer   lorries,   road   sweeper   lorries,   spraying   lorries,   mobile workshops, mobile radiological unit)</td>
+    </tr>
+    <tr>
+        <td>542.</td>
+        <td>8706</td>
+        <td>Chassis fitted with engines, for the motor vehicles of headings 8701 to 8705</td>
+    </tr>
+    <tr>
+        <td>543.</td>
+        <td>8707</td>
+        <td>Bodies (including cabs), for the motor vehicles of headings 8701 to 8705</td>
+    </tr>
+    <tr>
+        <td>544.</td>
+        <td>8708</td>
+        <td>Parts and accessories of the motor vehicles of headings 8701 to 8705 [other than specified parts of tractors]</td>
+    </tr>
+    <tr>
+        <td>545.</td>
+        <td>8709</td>
+        <td>Works  trucks,  self-propelled,  not  fitted  with  lifting  or  handling equipment, of the type used in factories, warehouses, dock areas or<br>airports for short distance transport of goods; tractors of the type used on railway station platforms; parts of the foregoing vehicles</td>
+    </tr>
+    <tr>
+        <td>546.</td>
+        <td>8711</td>
+        <td>Motorcycles (including mopeds) and cycles fitted with an auxiliary motor not exceeding 350 cc, with or without side-cars; side-cars</td>
+    </tr>
+    <tr>
+        <td>547.</td>
+        <td>8714</td>
+        <td>Parts and accessories of vehicles of heading 8711</td>
+    </tr>
+    <tr>
+        <td>548.</td>
+        <td>8715</td>
+        <td>Baby carriages and parts thereof</td>
+    </tr>
+    <tr>
+        <td>549.</td>
+        <td>8716</td>
+        <td>Trailers   and   semi-trailers;   other   vehicles,   not   mechanically propelled; parts thereof [other than Self-loading or self-unloading trailers for agricultural purposes, and Hand propelled vehicles (e.g.<br>hand carts, rickshaws and the like); animal drawn vehicles]</td>
+    </tr>
+    <tr>
+        <td>550.</td>
+        <td>8801</td>
+        <td>Balloons and dirigibles, gliders and other non-powered aircraft</td>
+    </tr>
+    <tr>
+        <td>551.</td>
+        <td>8804</td>
+        <td>Parachutes  (including  dirigible  parachutes  and  paragliders)  and rotochutes; parts thereof and accessories thereto and parts thereof</td>
+    </tr>
+    <tr>
+        <td>552.</td>
+        <td>8805</td>
+        <td>Aircraft launching gear, deck arrestor or similar gear; ground flying trainers and parts thereof</td>
+    </tr>
+    <tr>
+        <td>553.</td>
+        <td>8807</td>
+        <td>Parts of goods of heading 8801</td>
+    </tr>
+    <tr>
+        <td>554.</td>
+        <td>8903</td>
+        <td>Rowing boats and canoes</td>
+    </tr>
+    <tr>
+        <td>555.</td>
+        <td>8908 00 00</td>
+        <td>Vessels and other floating structures for breaking up</td>
+    </tr>
+    <tr>
+        <td>556.</td>
+        <td>9001</td>
+        <td>Optical fibres and optical fibre bundles; optical fibre cables other than those of heading 8544; sheets and plates of polarising material; prisms,   mirrors   and   other   optical   elements,   of   any   material,<br>unmounted, other than such elements of glass not optically worked</td>
+    </tr>
+    <tr>
+        <td>557.</td>
+        <td>9002</td>
+        <td>Lenses, prisms, mirrors and other optical elements, of any material, mounted,  being  parts  of  or  fittings  for  instruments  or  apparatus, other than such elements of glass not optically worked [other than<br>intraocular lens]</td>
+    </tr>
+    <tr>
+        <td>558.</td>
+        <td>9004</td>
+        <td>Spectacles [other than corrective]; Goggles [other than corrective]</td>
+    </tr>
+    <tr>
+        <td>559.</td>
+        <td>9005</td>
+        <td>Binoculars,  monoculars,  other  optical  telescopes,  and  mountings therefor; other astronomical instruments and mountings therefor, but<br>not including instruments for radio-astronomy</td>
+    </tr>
+    <tr>
+        <td>560.</td>
+        <td>9006</td>
+        <td>Photographic (other than cinematographic) cameras; photographic flashlight  apparatus and  flashbulbs other  than  discharge  lamps of heading 8539</td>
+    </tr>
+    <tr>
+        <td>561.</td>
+        <td>9007</td>
+        <td>Cinematographic    cameras    and    projectors,    whether    or    not incorporating sound recording or reproducing apparatus</td>
+    </tr>
+    <tr>
+        <td>562.</td>
+        <td>9008</td>
+        <td>Image projectors, other than cinematographic; photographic (other than cinematographic) enlargers and reducers</td>
+    </tr>
+    <tr>
+        <td>563.</td>
+        <td>9010</td>
+        <td>Apparatus     and     equipment     for     photographic     (including cinematographic) laboratories, not specified or included elsewhere in this Chapter; negatoscopes; projection screens</td>
+    </tr>
+    <tr>
+        <td>564.</td>
+        <td>9011</td>
+        <td>Compound      optical      microscopes,      including      those      for photomicrography, cinephotomicrography or microprojection</td>
+    </tr>
+    <tr>
+        <td>565.</td>
+        <td>9012</td>
+        <td>Microscopes other than optical microscopes; diffraction apparatus</td>
+    </tr>
+    <tr>
+        <td>566.</td>
+        <td>9013</td>
+        <td>Lasers, other than Laser   Diodes;   other   Optical  Appliances   and Instruments,  not  specified  or included elsewhere in this Chapter</td>
+    </tr>
+    <tr>
+        <td>567.</td>
+        <td>9014</td>
+        <td>Direction  finding  compasses;  other  navigational  instruments  and appliances</td>
+    </tr>
+    <tr>
+        <td>568.</td>
+        <td>9015</td>
+        <td>Surveying (including photogrammetrical surveying), hydrographic, oceanographic,    hydrological,    meteorological    or    geophysical instruments and appliances, excluding compasses; rangefinders</td>
+    </tr>
+    <tr>
+        <td>569.</td>
+        <td>9016</td>
+        <td>Balances of a sensitivity of 5 cg or better, with or without weights</td>
+    </tr>
+    <tr>
+        <td>570.</td>
+        <td>9017</td>
+        <td>Drawing, marking-out or mathematical calculating instruments  (for example,   drafting   machines,   pantographs,   protractors,   drawing</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>sets,   slide   rules,   disc   calculators);  instruments  for  measuring length, for use in the hand (for example, measuring rods and tapes,<br>micrometers, callipers), not specified or included elsewhere in this chapter</td>
+    </tr>
+    <tr>
+        <td>571.</td>
+        <td>9022</td>
+        <td>Apparatus based on  the  use  of  X-rays  or  of alpha,  beta, gamma or   other   ionizing  radiations  [other   than   those   for   medical, surgical,   dental   or   veterinary   uses],   including radiography    or radiotherapy     apparatus,     X-ray     tubes     and     other     X-ray<br>generators,   high   tension generators,   control   panels   and   desks, screens, examinations or treatment tables, chairs and the like</td>
+    </tr>
+    <tr>
+        <td>572.</td>
+        <td>9023</td>
+        <td>Instruments,  apparatus  and  models,  designed  for  demonstrational<br>purposes (for example, in education or exhibitions), unsuitable for other uses</td>
+    </tr>
+    <tr>
+        <td>573.</td>
+        <td>9024</td>
+        <td>Machines   and   appliances   for   testing   the   hardness,   strength, compressibility,   elasticity   or   other   mechanical   properties   of materials (for example, metals, wood, textiles, paper, plastics)</td>
+    </tr>
+    <tr>
+        <td>574.</td>
+        <td>9025</td>
+        <td>Hydrometers   and   similar   floating   instruments,   thermometers, pyrometers, barometers, hygrometers and psychrometers, recording or  not,  and  any  combination  of  these  instruments  [other  than<br>thermometers for medical, surgical, dental or veterinary usage]</td>
+    </tr>
+    <tr>
+        <td>575.</td>
+        <td>9026</td>
+        <td>Instruments and apparatus for measuring or checking the flow, level, pressure or other variables of liquids or gases (for example, flow meters,   level   gauges,   manometers,   heat   meters),   excluding<br>instruments and apparatus of heading 9014, 9015, 9028 or 9032</td>
+    </tr>
+    <tr>
+        <td>576.</td>
+        <td>9027</td>
+        <td>Instruments  and  apparatus  for  physical  or  chemical  analysis  (for example, polarimeters, refractometers, spectrometers, gas or smoke analysis  apparatus);  instruments  and  apparatus  for  measuring  or checking viscosity, porosity, expansion, surface tension or the like; instruments and apparatus for measuring or checking quantities of heat, sound or light (including exposure meters); microtomes  [other than  instruments  and  apparatus  for  medical,  surgical,  dental  or<br>veterinary uses for physical or chemical analysis]</td>
+    </tr>
+    <tr>
+        <td>577.</td>
+        <td>9028</td>
+        <td>Gas,  liquid  or  electricity  supply  or  production  meters,  including calibrating meters therefor</td>
+    </tr>
+    <tr>
+        <td>578.</td>
+        <td>9029</td>
+        <td>Revolution counters, production counters, taximeters, mileometers, pedometers  and  the  like;  speed  indicators  and  tachometers,  other than those of heading 9014 or 9015; stroboscopes</td>
+    </tr>
+    <tr>
+        <td>579.</td>
+        <td>9030</td>
+        <td>Oscilloscopes,   spectrum   analysers   and   other   instruments   and apparatus for measuring or checking electrical quantities, excluding meters of heading 9028; instruments and apparatus for measuring or detecting  alpha,  beta,  gamma,  X-ray,  cosmic  or  other  ionising<br>radiations</td>
+    </tr>
+    <tr>
+        <td>580.</td>
+        <td>9031</td>
+        <td>Measuring or checking instruments, appliances and machines, not specified or included elsewhere in this Chapter; profile projectors</td>
+    </tr>
+    <tr>
+        <td>581.</td>
+        <td>9032</td>
+        <td>Automatic regulating or controlling instruments and apparatus</td>
+    </tr>
+    <tr>
+        <td>582.</td>
+        <td>9033</td>
+        <td>Parts and  accessories (not specified  or included elsewhere in  this<br>Chapter)  for  machines,  appliances,  instruments  or  apparatus  of Chapter 90</td>
+    </tr>
+    <tr>
+        <td>583.</td>
+        <td>9101</td>
+        <td>Wrist-watches, pocket-watches and other watches, including stop- watches, with case of precious metal or of metal clad with precious<br>metal</td>
+    </tr>
+    <tr>
+        <td>584.</td>
+        <td>9102</td>
+        <td>Wrist-watches,  pocket-watches  and  other  watches,  including  stop watches, other than those of heading 9101</td>
+    </tr>
+    <tr>
+        <td>585.</td>
+        <td>9103</td>
+        <td>Clocks with watch movements, excluding clocks of heading 9104</td>
+    </tr>
+    <tr>
+        <td>586.</td>
+        <td>9104</td>
+        <td>Instrument panel clocks and clocks of a similar type for vehicles, aircraft, spacecraft or vessels</td>
+    </tr>
+    <tr>
+        <td>587.</td>
+        <td>9105</td>
+        <td>Other clocks</td>
+    </tr>
+    <tr>
+        <td>588.</td>
+        <td>9106</td>
+        <td>Time  of  day  recording  apparatus  and  apparatus  for  measuring, recording or otherwise indicating intervals of  time, with  clock  or</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>watch  movement  or  with  synchronous  motor  (for  example,  time- registers, time-recorders)</td>
+    </tr>
+    <tr>
+        <td>589.</td>
+        <td>9107</td>
+        <td>Time switches with clock or watch movement or with synchronous motor</td>
+    </tr>
+    <tr>
+        <td>590.</td>
+        <td>9108</td>
+        <td>Watch movements, complete and assembled</td>
+    </tr>
+    <tr>
+        <td>591.</td>
+        <td>9109</td>
+        <td>Clock movements, complete and assembled</td>
+    </tr>
+    <tr>
+        <td>592.</td>
+        <td>9110</td>
+        <td>Complete   watch   or   clock   movements,   unassembled   or   partly assembled (movement sets); incomplete watch or clock movements, assembled; rough watch or clock movements</td>
+    </tr>
+    <tr>
+        <td>593.</td>
+        <td>9111</td>
+        <td>Watch cases and parts thereof</td>
+    </tr>
+    <tr>
+        <td>594.</td>
+        <td>9112</td>
+        <td>Clock  cases  and  cases  of  a  similar  type  for  other  goods  of  this chapter, and parts thereof</td>
+    </tr>
+    <tr>
+        <td>595.</td>
+        <td>9113</td>
+        <td>Watch straps, watch bands and watch bracelets, and parts thereof</td>
+    </tr>
+    <tr>
+        <td>596.</td>
+        <td>9114</td>
+        <td>Other clock or watch parts</td>
+    </tr>
+    <tr>
+        <td>597.</td>
+        <td>9201</td>
+        <td>Pianos,   including   automatic   pianos;   harpsi-chords   and   other keyboard stringed instruments</td>
+    </tr>
+    <tr>
+        <td>598.</td>
+        <td>9202</td>
+        <td>Other  string  musical  instruments  (for  example,  guitars,  violins, harps)</td>
+    </tr>
+    <tr>
+        <td>599.</td>
+        <td>9205</td>
+        <td>Wind  musical  instruments  (for  example,  keyboard  pipe  organs, accordions,  clarinets,  trumpets,  bagpipes),  other  than  fairground<br>organs and mechanical street organs</td>
+    </tr>
+    <tr>
+        <td>600.</td>
+        <td>9206 00 00</td>
+        <td>Percussion musical instruments (for example, drums, xylophones, cymbols, castanets, maracas)</td>
+    </tr>
+    <tr>
+        <td>601.</td>
+        <td>9207</td>
+        <td>Musical instruments, the sound of which is produced, or must be amplified, electrically (for example, organs, guitars, accordions)</td>
+    </tr>
+    <tr>
+        <td>602.</td>
+        <td>9208</td>
+        <td>Musical   boxes,   fairground   organs,   mechanical   street   organs, mechanical   singing   birds,   musical   saws   and   other   musical instruments  not  falling  within  any  other  heading  of  this  chapter; decoy calls of all kinds; whistles, call horns and other mouth-blown<br>sound signalling instruments</td>
+    </tr>
+    <tr>
+        <td>603.</td>
+        <td>9209</td>
+        <td>Parts (for example, mechanisms for musical boxes) and accessories (for example, cards, discs and rolls for mechanical instruments) of musical instruments; metronomes, tuning forks and pitch pipes of<br>all kinds</td>
+    </tr>
+    <tr>
+        <td>604.</td>
+        <td>9301</td>
+        <td>Military weapons other than revolvers, pistols</td>
+    </tr>
+    <tr>
+        <td>605.</td>
+        <td>9303</td>
+        <td>Other firearms and similar devices which operate by the firing of an explosive charge (for example, sporting shotguns and rifles, muzzle- loading firearms, very pistols and other devices designed to project only signal flares, pistols and revolvers for firing blank ammunition,<br>captive-bolt humane killers, line-throwing guns)</td>
+    </tr>
+    <tr>
+        <td>606.</td>
+        <td>9304</td>
+        <td>Other  arms  (for  example,  spring,  air  or  gas  guns  and  pistols, truncheons), excluding those of heading 9307</td>
+    </tr>
+    <tr>
+        <td>607.</td>
+        <td>9305</td>
+        <td>Parts and accessories of articles of headings 9301 to 9304</td>
+    </tr>
+    <tr>
+        <td>608.</td>
+        <td>9306</td>
+        <td>Bombs, grenades, torpedoes, mines, missiles, and similar munitions of  war  and  parts  thereof;  cartridges  and  other  ammunition  and projectiles and parts thereof, including shot and cartridge wads</td>
+    </tr>
+    <tr>
+        <td>609.</td>
+        <td>9307</td>
+        <td>Swords,  cut  lasses,  bayonets,  lances  and  similar  arms  and  parts thereof and scabbards and sheaths therefor</td>
+    </tr>
+    <tr>
+        <td>610.</td>
+        <td>9401 [other than<br>9401 10 00]</td>
+        <td>Seats (other than those of heading 9402), whether or not convertible into beds and parts thereof, including seats of a kind used for motor<br>vehicles, other than seats of a kind used for aircraft</td>
+    </tr>
+    <tr>
+        <td>611.</td>
+        <td>9402</td>
+        <td>Medical,  surgical,  dental  or  veterinary  furniture  (for  example, operating tables, examination tables, hospital beds with mechanical fittings, dentists&#39; chairs); barbers&#39; chairs and similar chairs, having rotating as well as both reclining and elevating movements; parts of<br>the foregoing articles</td>
+    </tr>
+    <tr>
+        <td>612.</td>
+        <td>9403</td>
+        <td>Other furniture [other than furniture wholly made of bamboo, cane or rattan] and parts thereof</td>
+    </tr>
+    <tr>
+        <td>613.</td>
+        <td>9404</td>
+        <td>Mattress  supports;  articles  of  bedding  and  similar  furnishing  (for</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>example,  mattresses,  quilts,  eiderdowns,  cushions,  pouffes  and pillows) fitted with springs or stuffed or internally fitted with any material  or  of  cellular  rubber  or  plastics,  whether  or  not  covered [other than coir products (except coir mattresses), products wholly<br>made of quilted textile materials not exceeding Rs. 2500 per piece and cotton quilts not exceeding Rs. 2500 per piece]</td>
+    </tr>
+    <tr>
+        <td>614.</td>
+        <td>9405</td>
+        <td>Luminaires  and  lighting  fittings    including    searchlights    and spotlights  and  parts  thereof,  not elsewhere specified or included; illuminated signs, illuminated nameplates and the   like,   having   a permanently  fixed  light  source,  and  parts  thereof  not elsewhere specified or included [other than kerosene pressure lantern and parts thereof  including gas  mantles; hurricane  lanterns,  kerosene  lamp,<br>petromax, glass chimney, and parts thereof</td>
+    </tr>
+    <tr>
+        <td>615.</td>
+        <td>9406</td>
+        <td>Prefabricated buildings</td>
+    </tr>
+    <tr>
+        <td>616.</td>
+        <td>9503</td>
+        <td>Electronic Toys like tricycles,  scooters,  pedal  cars etc.  (including parts and accessories thereof)</td>
+    </tr>
+    <tr>
+        <td>617.</td>
+        <td>9504</td>
+        <td>Video  game  consoles  and  machines,  articles  of  funfair,  table  or parlour  games,  including  pintables,  billiards,  special  tables  for casino games and automatic bowling  alley equipment [other than playing  cards,  ganjifa  card,  chess  board,  carom  board  and  other<br>board games of 9504 90 90 like ludo, etc.</td>
+    </tr>
+    <tr>
+        <td>618.</td>
+        <td>9505</td>
+        <td>Festive, carnival or other entertainment articles, including conjuring tricks and novelty jokes</td>
+    </tr>
+    <tr>
+        <td>619.</td>
+        <td>9506</td>
+        <td>Articles and equipment for general physical exercise, gymnastics, athletics,  swimming  pools  and  padding  pools  [other  than  sports goods]</td>
+    </tr>
+    <tr>
+        <td>620.</td>
+        <td>9508</td>
+        <td>Travelling Circuses  and  Travelling  Menageries; Amusement  Park<br>Rides  and  Water  Part Amusements;    Fairground    Amusements, including    Shooting    Galleries; Travelling Theatres</td>
+    </tr>
+    <tr>
+        <td>621.</td>
+        <td>9602</td>
+        <td>Worked vegetable or mineral carving material and articles of these materials moulded or carved articles of wax, of stearin, of natural gums or natural resins or of modelling pastes, and other moulded or carved   articles,   not   elsewhere   specified   or   included;   worked, unhardened gelatin (except gelatin of heading 3503) and articles of<br>unhardened gelatin</td>
+    </tr>
+    <tr>
+        <td>622.</td>
+        <td>9606 21 00, 9606 22 00,<br>9606 29, 9606 30</td>
+        <td>Buttons, of plastics  not  covered  with  the textile material, of  base metals, buttons of coconut shell, button blanks</td>
+    </tr>
+    <tr>
+        <td>623.</td>
+        <td>9603 [other than 9603 10 00<br>and 9603 21 00]</td>
+        <td>Brushes   (including   brushes   constituting   parts   of   machines, appliances or vehicles), hand operated mechanical floor sweepers, not motorised, mops and feather dusters; prepared knots and tufts for broom or brush making; paint pads and rollers; squeegees (other than roller squeegees) [other than brooms and brushes, consisting of<br>twigs or other vegetable materials bound together, with or without handles, and tooth brushes including dental-plate brushes]</td>
+    </tr>
+    <tr>
+        <td>624.</td>
+        <td>9604 00 00</td>
+        <td>Hand sieves and hand riddles</td>
+    </tr>
+    <tr>
+        <td>625.</td>
+        <td>9605</td>
+        <td>Travel sets for personal toilet, sewing or shoe or clothes cleaning</td>
+    </tr>
+    <tr>
+        <td>626.</td>
+        <td>9608</td>
+        <td>Ball  point  pens;  felt  tipped  and  other  porous-tipped  pens  and markers; fountain pens; stylograph pens and other pens; duplicating stylos;  pen  holders,  pencil  holders  and  similar  holders;  parts (including caps and clips) of the foregoing articles, other than those<br>of heading 9609</td>
+    </tr>
+    <tr>
+        <td>627.</td>
+        <td>9610 00 00</td>
+        <td>Boards, with writing or drawing surface, whether or not framed</td>
+    </tr>
+    <tr>
+        <td>628.</td>
+        <td>9611</td>
+        <td>Date, sealing or numbering stamps, and the like (including devices for printing or embossing labels), designed for operating in the hand; hand-operated    composing    sticks    and    hand    printing    sets<br>incorporating such composing sticks</td>
+    </tr>
+    <tr>
+        <td>629.</td>
+        <td>9612</td>
+        <td>Typewriter  or  similar  ribbons,  inked  or  otherwise  prepared  for giving impressions, whether or not on spools or in cartridges; ink-<br>pads, whether or not inked, with or without boxes</td>
+    </tr>
+    <tr>
+        <td>630.</td>
+        <td>9613</td>
+        <td>Cigarette lighters and other lighters, whether or not mechanical or electrical, and parts thereof other than flints or wicks</td>
+    </tr>
+    <tr>
+        <td>631.</td>
+        <td>9616</td>
+        <td>Scent  sprays  and  similar  toilet  sprays,  and  mounts  and  heads therefor; powder-puffs and pads for the application of cosmetics or toilet preparations</td>
+    </tr>
+    <tr>
+        <td>632.</td>
+        <td>9617</td>
+        <td>Vacuum flasks and other  vacuum  vessels, Complete;  parts  thereof other  than  glass  inners</td>
+    </tr>
+    <tr>
+        <td>633.</td>
+        <td>9618</td>
+        <td>Tailors&#39; dummies and other lay figures; automata and other animated displays, used for shop window dressing</td>
+    </tr>
+    <tr>
+        <td>634.</td>
+        <td>9620 00 00</td>
+        <td>Monopods, bipods, tripods and similar articles</td>
+    </tr>
+    <tr>
+        <td>635.</td>
+        <td>9801</td>
+        <td>All  items  of  machinery  including  prime  movers,  instruments, apparatus and appliances, control gear and transmission equipment, auxiliary  equipment  (including  those  required  for  research  and development purposes, testing and quality control), as well as all components  (whether  finished  or  not)  or  raw  materials  for  the manufacture of the aforesaid items and their components, required for the initial setting up of a unit, or the substantial expansion of an existing  unit,  of  a  specified:  (1)    industrial  plant,  (2)    irrigation project, (3)   power project, (4)   mining project, (5)   project for the exploration for oil or other minerals, and (6)   such other projects as the  Central  Government  may,  having  regard  to  the  economic development  of  the  country  notify  in  the  Official  Gazette  in  this behalf; and spare parts, other raw materials (including semi-finished materials of consumable stores) not exceeding 10% of the value of the  goods  specified  above,  provided  that  such  spare  parts,  raw<br>materials or consumable stores are essential for the maintenance of the plant or project mentioned in (1) to (6) above.</td>
+    </tr>
+    <tr>
+        <td>636.</td>
+        <td>9802</td>
+        <td>Laboratory chemicals</td>
+    </tr>
+    <tr>
+        <td>637.</td>
+        <td>Any Chapter</td>
+        <td>Permanent transfer of Intellectual Property (IP) right</td>
+    </tr>
+    <tr>
+        <td>638.</td>
+        <td>Any chapter</td>
+        <td>Supply of any goods other than  capital  goods and cement falling under  chapter  heading  2523  in  the  first  schedule  to  the  Customs Tariff  Act,  1975  (51  of  1975),  by  an  unregistered  person  to  a promoter for construction of the project on which tax is payable by the promoter as recipient of goods under sub- section 4 of section 9 of the Central Goods and Services Tax Act, 2017 (12 of 2017), as prescribed in notification No. 07 / 2019- Central Tax (Rate), dated 29th March, 2019, published in Gazette of India vide G.S.R. No. 254(E), dated 29th March, 2019<br>Explanation.- For the purpose of this entry,–<br>(i) the term “promoter” shall have the same meaning     as assigned to it in in clause (zk) of section 2 of the Real Estate (Regulation and Development) Act, 2016 (16 of 2016).<br>(ii) “project” shall mean a Real Estate Project (REP) or a Residential Real Estate Project (RREP).<br>(iii) the term “Real Estate Project (REP)” shall have the same meaning as assigned to it in in clause (zn) of section 2  of  the  Real  Estate  (Regulation  and  Development) Act, 2016 (16 of 2016).<br>(iv) “Residential Real Estate Project (RREP)” shall mean a REP in which the carpet area of the commercial apartments is not more than 15 per cent. of the total carpet area of all the apartments in the REP.<br>(v) This entry is to be taken to apply to all goods which satisfy the conditions prescribed herein, even though they<br>may be covered by a more specific chapter/ heading/ sub heading or tariff item elsewhere in this notification.</td>
+    </tr>
+    <tr>
+        <td>639.</td>
+        <td>Any Chapter</td>
+        <td>Goods which are not specified in Schedule I, III, IV, V, VI or VII</td>
+    </tr>
+    <tr>
+        <td>640.</td>
+        <td>9804</td>
+        <td>All dutiable articles intended for personal use</td>
+    </tr>
+</table>
+</table>
+<section id="download">
+          <h2>Download Official Notification</h2>
+          <p><a href="/downloads/09-2025-CTR-eng.pdf" target="_blank">Download Notification 09/2025 (PDF)</a></p>
+        </section>
+<div class="footer">
+      <p><em>Disclaimer: This article is for informational purposes only and not a substitute for legal advice. For tailored guidance, consult a tax professional.</em></p>
+      © <span id="year"></span> EasyPeasyTax.com
+    </div>
+</div>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
