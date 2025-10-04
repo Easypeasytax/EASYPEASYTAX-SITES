@@ -3716,5 +3716,23 @@ table tr:hover {
 <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script>
+  // Toggle mobile menu
+  function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("active");
+  }
+
+  // Toggle dropdown inside mobile menu
+  document.addEventListener("DOMContentLoaded", function() {
+    const dropdownToggle = document.querySelector(".dropdown-toggle");
+    const dropdownWrapper = dropdownToggle.closest(".dropdown-wrapper");
+
+    dropdownToggle.addEventListener("click", function(e) {
+      e.preventDefault(); // prevent page jump
+      dropdownWrapper.classList.toggle("active");
+    });
+  });
+</script>
+
 </body>
 </html>
