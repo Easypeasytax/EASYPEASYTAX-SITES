@@ -340,6 +340,23 @@
     flex-wrap: wrap;
     gap: 10px;
   }
+    .tax-slabs {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+}
+.tax-slabs th, .tax-slabs td {
+  border: 1px solid #e5e7eb;
+  padding: 8px 10px;
+  text-align: left;
+}
+.tax-slabs th {
+  background: #f9fafb;
+  font-weight: 600;
+}
+.tax-slabs td strong {
+  color: #0b1220;
+}
   </style>
 </head>
 <body>
@@ -374,6 +391,69 @@
   </header>
  <div class="container">
   <h1 class="news-title">📰 EasyPeasyTax Latest News </h1>
+<div class="news-item">
+   <h3>
+    📊 Revised Income Tax Slabs under New Regime (FY 2025–26 / AY 2026–27)
+  </h3>
+
+  <p class="news-card__meta">
+    Updated: <time datetime="2025-10-03">3 Oct 2025</time>
+  </p>
+
+  <div class="news-body">
+    <p>
+      The government has notified new <strong>income tax slabs under the revised new regime</strong>,
+      effective from <strong>FY 2025–26 (AY 2026–27)</strong>.
+    </p>
+
+    <table class="tax-slabs">
+      <thead>
+        <tr>
+          <th>Income Range (₹)</th>
+          <th>Tax Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Up to 4,00,000</td>
+          <td><strong>Nil</strong></td>
+        </tr>
+        <tr>
+          <td>4,00,001 – 8,00,000</td>
+          <td>5%</td>
+        </tr>
+        <tr>
+          <td>8,00,001 – 12,00,000</td>
+          <td>10%</td>
+        </tr>
+        <tr>
+          <td>12,00,001 – 16,00,000</td>
+          <td>15%</td>
+        </tr>
+        <tr>
+          <td>16,00,001 – 20,00,000</td>
+          <td>20%</td>
+        </tr>
+        <tr>
+          <td>20,00,001 – 24,00,000</td>
+          <td>25%</td>
+        </tr>
+        <tr>
+          <td>Above 24,00,000</td>
+          <td>30%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="note">
+      ✅ These revised slabs apply only under the <strong>new tax regime</strong>.  
+      The old regime (with exemptions/deductions) continues to be available as an option.
+    </p>
+  </div>
+ </div>
+
+
+   
 <div class="news-item">
    <h3>
     🔗 Real-time PAN–Bank Account Linking Enabled via NPCI APIs
@@ -613,6 +693,7 @@
 </script>
 </body>
 </html>
+
 
 
 
