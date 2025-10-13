@@ -479,8 +479,8 @@ table tr:hover {
     <nav id="mobileMenu">
        <ul>
         <li><a class="active" href="https://easypeasytax.com">Home</a></li>
-        <li><a href="https://easypeasytax.com/about">About Us</a></li>
-        <li><a href="https://easypeasytax.com/services">Services</a></li>
+        <li><a href="https://easypeasytax.com/#about">About Us</a></li>
+        <li><a href="https://easypeasytax.com/#services">Services</a></li>
         <li><a href="hsn-sac-tabbed-themed.html">HSN & SAC Codes</a></li>
         <li><a href="latestnews.html">Latest News</a></li>
         <li><a href="blog.html">Blog</a></li>
@@ -494,7 +494,7 @@ table tr:hover {
             <li><a href="fdcalculator_centered.html">FD Interest Calculator</a></li>
           </ul>
         </li>
-        <li><a href="https://easypeasytax.com/contact">Contact</a></li>
+        <li><a href="https://easypeasytax.com/#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -566,5 +566,25 @@ table tr:hover {
 <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script>
+  // Toggle mobile menu
+  function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("active");
+  }
+
+  // Toggle dropdown inside mobile menu
+  document.addEventListener("DOMContentLoaded", function() {
+    const dropdownToggle = document.querySelector(".dropdown-toggle");
+    const dropdownWrapper = dropdownToggle.closest(".dropdown-wrapper");
+
+    dropdownToggle.addEventListener("click", function(e) {
+      e.preventDefault(); // prevent page jump
+      dropdownWrapper.classList.toggle("active");
+    });
+  });
+</script>
 </body>
 </html>
