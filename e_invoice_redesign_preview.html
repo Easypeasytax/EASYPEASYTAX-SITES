@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>E-Invoicing — Key Rules, Limits & Compliance (2025 Update) | EasyPeasyTax</title>
+<style>
+  :root{
+    --brand:#FF6F61;--muted:#6b6b6b;--text:#111;--bg:#fff;--divider:#e9e9e9;
+    --max-width:920px;--content-width:760px;--font-sans:Inter,system-ui
+  }
+  body{margin:0;font-family:var(--font-sans).back{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:fit-content;
+  margin:22px auto 12px;
+  border:1px solid var(--divider);
+  padding:8px 18px;
+  border-radius:6px;
+  color:var(--brand);
+  text-align:center;
+}ground:#fff;color:#111;}
+  .page{display:flex;justify-content:center;padding:32px;}
+  .wrap{max-width:var(--max-width);width:100%;}
+  .inner{max-width:var(--content-width);margin:auto;}
+  .top-strip{background:linear-gradient(90deg,rgba(255,111,97,.06),rgba(255,111,97,.02));border-left:4px solid var(--brand);padding:18px 20px;margin-bottom:18px;border-radius:4px;}
+  .eyebrow{font-size:13px;color:var(--muted);margin-bottom:6px;}
+  h1{font-size:28px;margin:0 0 6px;}
+  .subtitle{color:var(--muted);margin:0 0 10px;}
+  .meta{font-size:13px;color:var(--muted);margin-bottom:18px;}
+  .grid{display:grid;gap:18px;margin-bottom:20px;}
+  @media(min-width:880px){.grid{grid-template-columns:320px 1fr;}}
+  .toc{border:1px solid var(--divider);padding:14px;border-radius:6px;}
+  .toc h3{margin:0 0 6px;color:var(--brand);font-size:15px;}
+  .toc a{color:var(--muted);font-size:14px;display:block;padding:6px 0;}
+  section{padding:18px 0;border-bottom:1px solid var(--divider);}section:last-child{border-bottom:none;}
+  h2{color:var(--brand);font-size:20px;margin:0 0 10px;}
+  p{line-height:1.6;margin:0 0 12px;}
+  ul,ol{margin:8px 0 12px 20px;}
+  .example{background:#fff;border:1px solid #fff2ef;padding:14px;border-left:4px solid var(--brand);border-radius:4px;margin:10px 0;}
+  table{width:100%;border-collapse:collapse;margin-top:10px;}
+  th,td{border:1px solid var(--divider);padding:10px;font-size:14px;}
+  thead th{background:#fff0ee;}
+  
+footer { background: #ff6f61; color: #fff; text-align: center; padding: 1rem; }
+.back-button {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto;
+      background-color: #ff6f61;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-align: center;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .back-button:hover {
+      background-color: #e85c50;
+    }
+
+</style>
+</head>
+<body>
+<div class="page"><div class="wrap"><div class="inner">
+
+<div class="top-strip">
+  <div class="eyebrow">Updated • Nov 2025</div>
+  <h1>E-Invoicing — Key Rules, Limits & Compliance (2025 Update)</h1>
+  <p class="subtitle">Clear guidance on applicability, IRN generation, compliance and mistakes to avoid.</p>
+  <div class="meta">By EasyPeasyTax • </div>
+</div>
+
+<div class="grid">
+  <nav class="toc"><h3>On this page</h3>
+    <a href="#what">What is e-Invoicing?</a>
+    <a href="#applicability">Applicability</a>
+    <a href="#exempt">Exemptions</a>
+    <a href="#docs">Documents</a>
+    <a href="#irn">IRN Process</a>
+    <a href="#qr">QR Code</a>
+    <a href="#penalties">Penalties</a>
+    <a href="#common">Common Mistakes</a>
+    <a href="#checklist">Checklist</a>
+    <a href="#mixed">Taxable + Exempt Example</a>
+    <a href="#faqs">FAQs</a>    
+  </nav>
+
+  <aside class="toc"><h3>Key Takeaways</h3>
+    <ul>
+      <li>PAN-based aggregate turnover determines applicability.</li>
+      <li>Exempt supplies count for threshold but need no IRN.</li>
+      <li>E-invoicing covers taxable B2B/B2G/export invoices.</li>
+      <li>IRP issues IRN + signed QR code.</li>
+      <li>Checklist and examples included below.</li>
+    </ul>
+  </aside>
+</div>
+
+<section id="what"><h2>What is e-Invoicing?</h2>
+<p>E-Invoicing is authentication of B2B, B2G and export invoices through the IRP, returning an IRN and QR code.</p></section>
+
+<section id="applicability"><h2>Applicability</h2>
+<p>Threshold: ₹5 crore PAN-based aggregate turnover.</p>
+<ul><li>Once applicable, remains applicable.</li><li>Covers B2B, B2G, exports.</li></ul></section>
+
+<section id="exempt"><h2>Who is Exempt?</h2>
+<ul><li>Banks, NBFCs, Insurers</li><li>GTA</li><li>Passenger transport</li><li>Cinema exhibitors</li><li>Notified Govt entities</li><li>SEZ units</li></ul></section>
+
+<section id="docs"><h2>Documents Covered</h2>
+<ul><li>B2B invoices</li><li>B2G invoices</li><li>Export invoices</li><li>Taxable credit/debit notes</li></ul></section>
+
+<section id="irn"><h2>IRN Process</h2>
+<ol>
+<li>Generate invoice in ERP.</li>
+<li>Upload JSON to IRP.</li>
+<li>IRP validates and returns IRN + QR.</li>
+<li>Share authenticated invoice with buyer.</li>
+</ol></section>
+
+<section id="qr"><h2>QR Code Requirements</h2>
+<p>QR includes GSTINs, invoice number/date, value, IRN hash etc.</p></section>
+
+<section id="penalties"><h2>Penalties</h2>
+<ul><li>Invoice without IRN may be invalid.</li><li>Penalties up to ₹10,000 per invoice.</li></ul></section>
+
+<section id="common"><h2>Common Mistakes</h2>
+<ul><li>Issuing invoice before IRN.</li><li>Mismatch in ERP vs JSON.</li><li>Missing QR code print.</li></ul></section>
+
+<section id="checklist"><h2>Checklist</h2>
+<ul><li>Verify PAN turnover.</li><li>Ensure no exemption applies.</li><li>Upgrade ERP for IRN API.</li><li>Train staff.</li></ul></section>
+
+
+<section id="exempt-only">
+<h2>Does e-Invoicing Apply if a Business Has Only Exempt Turnover?</h2>
+<p><strong>No.</strong> E-Invoicing does <strong>not</strong> apply if a business makes <strong>fully exempt supplies</strong>, even if its aggregate turnover exceeds the ₹5 crore threshold.</p>
+<p>This is because:</p>
+<ul>
+<li>Exempt suppliers issue a <strong>Bill of Supply</strong>, not a Tax Invoice.</li>
+<li>Bills of Supply are <strong>not</strong> covered under e-invoicing rules.</li>
+<li>Only taxable B2B, B2G, export invoices, and taxable credit/debit notes require IRN.</li>
+</ul>
+<p><strong>Example:</strong> A hospital with ₹12 crore exempt turnover does <strong>not</strong> require e-invoicing.</p>
+</section>
+
+<section id="mixed">
+<p>When a business makes <strong>both taxable and exempt supplies</strong>, e‑invoicing applicability is based entirely on its <strong>PAN-level aggregate turnover</strong>. If this PAN-wide turnover crosses the notified threshold (₹5 crore), then e‑invoicing becomes <strong>mandatory</strong> — but <strong>only</strong> for taxable supplies. Exempt supplies always continue under a <strong>Bill of Supply</strong> and never require IRN.</p>
+<p><strong>Rule:</strong> Taxable B2B, B2G, and export invoices require IRN. Exempt invoices do not require IRN under any circumstances, even if turnover is high.</p>
+<h2>Taxable + Exempt Example</h2>
+<div class="example">
+<p>ABC Pvt Ltd — Taxable ₹2 Cr, Exempt ₹8 Cr, Total ₹10 Cr → E-invoicing applies only to taxable invoices.</p>
+</div>
+<table>
+<thead><tr><th>Supply Type</th><th>Document</th><th>IRN?</th></tr></thead>
+<tbody>
+<tr><td>B2B</td><td>Tax Invoice</td><td>✔</td></tr>
+<tr><td>B2G</td><td>Tax Invoice</td><td>✔</td></tr>
+<tr><td>Export</td><td>Tax Invoice</td><td>✔</td></tr>
+<tr><td>Exempt</td><td>Bill of Supply</td><td>✖</td></tr>
+<tr><td>B2C</td><td>Tax Invoice</td><td>✖</td></tr>
+</tbody>
+</table>
+</section>
+<section id="faqs">
+<h2>FAQs</h2>
+<p><strong>Q: Is e-Invoicing mandatory for exports?</strong><br>
+<strong>A:</strong> Yes, all export invoices require IRN + QR code.</p>
+
+<p><strong>Q: Does e-invoicing apply to B2C invoices?</strong><br>
+<strong>A:</strong> No. Only B2B, B2G, and exports.</p>
+
+<p><strong>Q: What turnover is considered?</strong><br>
+<strong>A:</strong> “Aggregate turnover” is PAN-based — including exempt supplies, branches, and all GSTINs under the PAN.</p>
+
+<p><strong>Q: Is IRN needed for delivery challans?</strong><br>
+<strong>A:</strong> No. Only invoices, credit notes, and debit notes.</p>
+
+<p><strong>Q: Once applicable, can the business opt-out later?</strong><br>
+<strong>A:</strong> No. Once applicable, always applicable.</p>
+</section>
+
+
+<a href="/blog" class="back-button">← Back to Blog</a>
+
+
+<footer>
+<p><em>Disclaimer: This article is for informational purposes only and not a substitute for legal advice. For tailored guidance, consult a tax or legal professional.</em></p><p>&copy; 2025 EasyPeasyTax.com</p>
+</div></div></div>
+
+
+</body>
+</html>
