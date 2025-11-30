@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GST on Government Contracts – Full Guide</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background-color: #f3f3f3;
+      color: #333;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      gap: 30px;
+    }
+    .main {
+      flex: 2;
+    }
+    .sidebar {
+      flex: 1;
+      position: sticky;
+      top: 40px;
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    h1, h2, h3 {
+      color: #FF6F61;
+    }
+    .header {
+      background: #FF6F61;
+      color: #fff;
+      padding: 30px 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .header p {
+      margin: 0;
+      font-size: 1.1em;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #FF6F61;
+      color: white;
+      text-align: left;
+    }
+    .faq {
+      margin-top: 20px;
+    }
+    .faq-item {
+      margin-bottom: 20px;
+      padding: 15px;
+      border-left: 4px solid #FF6F61;
+      background: #fff7f6;
+      border-radius: 4px;
+    }
+    .faq-item h4 {
+      margin: 0 0 5px;
+      font-size: 1.05em;
+      color: #D0414B;
+    }
+    .quick-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .quick-links li {
+      margin-bottom: 10px;
+    }
+    .quick-links a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .quick-links a:hover {
+      color: #FF6F61;
+    }
+    @media (max-width: 900px) {
+      .container { flex-direction: column; }
+      .sidebar { position: static; margin-bottom: 20px; }
+    }
+/* Footer */
+footer { background: #ff6f61; color: #fff; text-align: center; padding: 1rem; }
+.back-button {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto;
+      background-color: #ff6f61;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .back-button:hover {
+      background-color: #e85c50;
+    }
+.eyebrow{font-size:13px;color:var(--muted);margin-bottom:6px;}
+.top-strip{background:linear-gradient(90deg,rgba(255,111,97,.06),rgba(255,111,97,.02));border-left:4px solid var(--brand);padding:18px 20px;margin-bottom:18px;border-radius:4px;}
+  .meta{font-size:13px;color:var(--muted);margin-bottom:18px;}
+/* quick links */
+    .toc{position:sticky;top:18px;background:#fff;border-radius:10px;padding:14px;border:1px solid #f1e1e0}
+    .toc h4{margin:0 0 8px;font-size:15px}
+    .toc a{display:block;padding:8px 0;color:var(--brand);border-bottom:1px dashed #fdecea}
+  </style>
+</head>
+<body>
+
+  <div class="container">
+<div class="top-strip">
+    <div class="main">
+<div class="eyebrow">Updated • Nov 2025</div>
+<h1>GST on Government Contracts — Complete Guide</h1>
+  <p class="subtitle">Everything you need to know — Tax rates, SAC codes, ITC rules, TDS, and Compliance.</p>
+<div class="meta">By EasyPeasyTax • </div>
+</div>
+      
+      <div class="card" id="intro">
+        <h2>Introduction</h2>
+        <p>
+          Contractors working on government-awarded projects face unique GST challenges.
+          Whether it’s civil construction for state or central government, PPP infrastructure, or
+          repair works, the tax rate, Input Tax Credit (ITC), and invoicing norms can vary significantly.
+          This guide gives you clarity on SAC codes, current GST rates, ITC eligibility, and how to structure your contracts.
+        </p>
+      </div>
+
+      <div class="card" id="prev">
+        <h2>Background: Why This Is Important</h2>
+        <p>
+          Government projects broadly fall into two categories: <strong>pure services</strong> and <strong>works contracts</strong>.
+          For pure services, rates may vary based on the type of authority (local body vs PSU vs Govt Dept).
+          Works contracts typically involve the supply of goods + services, making SAC classification and compliance crucial.
+          The recent GST regime changes (Notification 03/2022, etc.) have made 18% the default rate for many such contracts.
+        </p>
+      </div>
+
+      <div class="card" id="table">
+        <h2>GST Rates & SAC Code Table</h2>
+        <table>
+  <tr>
+    <th>Contract Type</th>
+    <th>SAC Code</th>
+    <th>GST Rate</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>Govt Administrative / Local Authority Services</td>
+    <td>9983 / 9985</td>
+    <td><strong>18%</strong></td>
+    <td>No goods supply, service-only work.</td>
+  </tr>
+  <tr>
+    <td>Panchayat / Municipality Works (Article 243G / 243W)</td>
+    <td>9983 / 9985</td>
+    <td><strong>12%</strong></td>
+    <td>Local body services under specific notification.</td>
+  </tr>
+  <tr>
+    <td>Works Contract (Civil / Infrastructure) for Govt</td>
+    <td>9954</td>
+    <td><strong>18%</strong></td>
+    <td>Includes road, building, pipeline projects.</td>
+  </tr>
+  <tr>
+    <td>Public Benefit Construction (Non-Commercial Govt)</td>
+    <td>9954</td>
+    <td><strong>12%</strong></td>
+    <td>When structure is non-commercial and govt-funded.</td>
+  </tr>
+  <tr>
+    <td>Road / Water Project Construction</td>
+    <td>9954</td>
+    <td><strong>12%</strong></td>
+    <td>Concessional notification-based rate.</td>
+  </tr>
+  <tr>
+    <td>Sub-Contractor to Main Contractor (Govt Contract)</td>
+    <td>9954</td>
+    <td><strong>18%</strong></td>
+    <td>Matches the main contractor’s rate.</td>
+  </tr>
+  <tr>
+    <td>Repair / Maintenance of Govt Buildings</td>
+    <td>9954 / 9987</td>
+    <td><strong>18%</strong></td>
+    <td>Standard rate for maintenance / repair services (verify annually for updates).</td>
+  </tr>
+</table>
+
+      </div>
+
+      <div class="card" id="itc">
+        <h2>ITC (Input Tax Credit) Guidelines</h2>
+        <ul>
+          <li>ITC is generally allowed for materials and services used in government works contracts.</li>
+          <li>No ITC if the works contract is used for your *own* construction of immovable property.</li>
+          <li>Maintain detailed invoices, work orders, measurement books, and proof of supply.</li>
+          <li>Ensure vendor invoices reflect the correct SAC code and GSTIN for seamless ITC reconciliation.</li>
+        </ul>
+      </div>
+
+      <div class="card" id="tds">
+        <h2>GST TDS Rules for Govt Contracts</h2>
+        <p>The government agency (payer) must generally deduct GST TDS at <strong>2%</strong> when:</p>
+        <ul>
+          <li>The contract value is above ₹ 2.5 lakh.</li>
+          <li>Both supplier and government department are GST-registered.</li>
+          <li>The supply is intra-state (for CGST + SGST scenario).</li>
+        </ul>
+        <p>Contractors should match their TDS credits in their GSTR / ITC reconciliation to avoid mismatches.</p>
+      </div>
+
+      <div class="card faq" id="faq">
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <div class="faq-item">
+          <h4>1. Is 18% GST always applicable on government works contracts?</h4>
+          <p>Mostly yes, after the 2022 notification, 18% is the default rate unless a concessional rate applies.</p>
+        </div>
+        <div class="faq-item">
+          <h4>2. When can a government works contract be taxed at 12%?</h4>
+          <p>When the work is for local bodies (Panchayat/Municipality) or for public welfare with a specific concessional notification.</p>
+        </div>
+        <div class="faq-item">
+          <h4>3. Can a sub-contractor charge a lower rate than the main contractor?</h4>
+          <p>No — subcontractors must charge the same GST rate as the main contractor to ensure correct credit flow.</p>
+        </div>
+        <div class="faq-item">
+          <h4>4. Is ITC allowed on construction materials used in these projects?</h4>
+          <p>Yes, with proper documentation, ITC is typically allowed for materials and services used in government contracts.</p>
+        </div>
+        <div class="faq-item">
+          <h4>5. How to handle GST TDS deductions?</h4>
+          <p>You must reconcile TDS credits in your GST returns, ensure the deductor’s GSTIN is correct, and retain TDS certificates.</p>
+        </div>
+      </div>
+<a href="/blog" class="back-button">← Back to Blog</a>
+
+ <footer>
+    <p><em>Disclaimer: This article is for informational purposes only and not a substitute for legal advice. For tailored guidance, consult a tax or legal professional.</em></p><p>&copy; 2025 EasyPeasyTax.com</p>
+    </div>
+
+    
+  </div>
+ 
+ 
+ 
+
+</body>
+</html>
