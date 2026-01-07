@@ -861,6 +861,13 @@
 <script>
   function acceptDisclaimer() {
        document.getElementById('bci-disclaimer-overlay').style.display = 'none';
+	   if (window.goatcounter && typeof window.goatcounter.count === "function") {
+    window.goatcounter.count({
+      path: location.pathname,
+      title: document.title,
+      event: false
+    });
+  }
   }
 
   window.onload = function() {
