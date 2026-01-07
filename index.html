@@ -1001,40 +1001,12 @@ window.addEventListener('click', function(event) {
 
   <div class="sb-number" id="visits">0</div>
 </div>
+<script>
+    // Append to the <body>; can use a CSS selector to append somewhere else.
+    window.goatcounter.visit_count({append: 'body'})
+</script>
 <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
-
-</script>
-<script>
-setTimeout(async () => {
-  try {
-    const res = await fetch(
-      "https://easypeasytax.goatcounter.com/counter/all.json"
-    );
-    const data = await res.json();
-
-    const el = document.getElementById("visits");
-    if (!el) return;
-
-    const target = data.count || 0;
-    let current = 0;
-    const frames = 60;
-    const increment = Math.max(1, Math.floor(target / frames));
-
-    const animate = setInterval(() => {
-      current += increment;
-      if (current >= target) {
-        el.textContent = target.toLocaleString();
-        clearInterval(animate);
-      } else {
-        el.textContent = current.toLocaleString();
-      }
-    }, 20);
-  } catch (e) {
-    console.warn("Visitor counter unavailable");
-  }
-}, 1200);
-</script>
 
 
 </body>
