@@ -590,6 +590,73 @@
         }
 		
     }
+	/* Scoreboard Counter */
+.scoreboard-counter {
+  position: relative;
+  max-width: 300px;
+  margin: 70px auto 35px;
+  padding: 22px 26px 24px;
+  text-align: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+/* Brand Accent Strip */
+.sb-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #38bdf8, #22c55e);
+}
+
+/* Header */
+.sb-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+/* Live Pulse Dot */
+.sb-pulse {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+/* Label */
+.sb-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 1.2px;
+}
+
+/* Number */
+.sb-number {
+  margin-top: 4px;
+  font-size: 34px;
+  font-weight: 800;
+  color: #f8fafc;
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
 </style>
 </head>
 <body>
@@ -924,5 +991,37 @@ window.addEventListener('click', function(event) {
     window.open("https://tin.tin.nsdl.com/oltas/refund-status-pan.html", "_blank");
   }
 </script>
+	<div class="scoreboard-counter">
+  <div class="sb-accent"></div>
+
+  <div class="sb-header">
+    <span class="sb-pulse"></span>
+    <span class="sb-label">TOTAL SITE VISITS</span>
+  </div>
+
+  <div class="sb-number" id="visits">0</div>
+</div>
+<script>
+fetch('https://api.countapi.xyz/get/ezpztags.com/sitewide')
+  .then(res => res.json())
+  .then(data => {
+    const el = document.getElementById('visits');
+    const target = data.value;
+    let current = 0;
+    const frames = 60;
+    const increment = target / frames;
+
+    const counter = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        el.textContent = target.toLocaleString();
+        clearInterval(counter);
+      } else {
+        el.textContent = Math.floor(current).toLocaleString();
+      }
+    }, 20);
+  });
+</script>
+
 </body>
 </html>
