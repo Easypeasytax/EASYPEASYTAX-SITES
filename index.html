@@ -868,6 +868,7 @@
       event: false
     });
   }
+	  setTimeout(loadVisitorCount, 1500);
   }
 
   window.onload = function() {
@@ -1045,8 +1046,7 @@ async function loadVisitorCount() {
   }
 }
 
-/* wait a bit so GoatCounter has time to register visit */
-setTimeout(loadVisitorCount, 2000);
+
 </script>
 
 
