@@ -9,18 +9,17 @@
 
   if (botPatterns.some(p => p.test(navigator.userAgent))) return;
 
-  // Ignore background / preloaded tabs
-  if (document.visibilityState !== 'visible') return;
-
   // Count only once per browser session
   const SESSION_KEY = 'ezpztags_site_visited';
   if (sessionStorage.getItem(SESSION_KEY)) return;
   sessionStorage.setItem(SESSION_KEY, '1');
 
-  // Delay ensures real human visit
+  // Delay ensures real human visit (avoids prefetch)
   setTimeout(() => {
     fetch('https://api.countapi.xyz/hit/ezpztags.com/sitewide', {
-      cache: 'no-store'
+      cache: 'no-store',
+      keepalive: true
     }).catch(() => {});
-  }, 1200);
+  }, 1500);
 })();
+
