@@ -10,13 +10,13 @@
   if (botPatterns.some(p => p.test(navigator.userAgent))) return;
 
   // Count only once per browser session
-  const SESSION_KEY = 'ezpztags_site_visited';
+  const SESSION_KEY = 'easypeasytax_site_visited';
   if (sessionStorage.getItem(SESSION_KEY)) return;
   sessionStorage.setItem(SESSION_KEY, '1');
 
   // Delay ensures real human visit (avoids prefetch)
   setTimeout(() => {
-    fetch('https://api.countapi.xyz/hit/ezpztags.com/sitewide', {
+    fetch('https://api.countapi.xyz/hit/easypeasytax.com/sitewide', {
       cache: 'no-store',
       keepalive: true
     }).catch(() => {});
