@@ -1,0 +1,10 @@
+<script>
+    var t = setInterval(function() {
+        if (window.goatcounter && window.goatcounter.visit_count) {
+            clearInterval(t)
+            window.goatcounter.visit_count({append: 'body'})
+        }
+    }, 100)
+</script>
+<script data-goatcounter="https://easypeasytax.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
