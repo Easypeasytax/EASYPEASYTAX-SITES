@@ -1003,6 +1003,8 @@ window.addEventListener('click', function(event) {
 </div>
 <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+
+</script>
 <script>
 setTimeout(async () => {
   try {
@@ -1012,17 +1014,18 @@ setTimeout(async () => {
     const data = await res.json();
 
     const el = document.getElementById("visits");
-    const target = data.count || 0;
+    if (!el) return;
 
+    const target = data.count || 0;
     let current = 0;
     const frames = 60;
-    const inc = Math.max(1, Math.floor(target / frames));
+    const increment = Math.max(1, Math.floor(target / frames));
 
-    const anim = setInterval(() => {
-      current += inc;
+    const animate = setInterval(() => {
+      current += increment;
       if (current >= target) {
         el.textContent = target.toLocaleString();
-        clearInterval(anim);
+        clearInterval(animate);
       } else {
         el.textContent = current.toLocaleString();
       }
