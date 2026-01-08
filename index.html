@@ -1007,47 +1007,31 @@ window.addEventListener('click', function(event) {
     <span class="sb-label">TOTAL SITE VISITS</span>
   </div>
 
-  <div class="sb-number" id="visits">0</div>
-</div>
-<script
-  data-goatcounter="https://easypeasytax.goatcounter.com/count"
-  async
-  src="https://gc.zgo.at/count.js">
-</script>
+ Total visits: <span id="total-visits">loading…</span>
+
 <script>
-async function loadVisitorCount() {
-  try {
-    const res = await fetch(
-      "https://easypeasytax.goatcounter.com/counter/all.json",
-      { cache: "no-store" }
-    );
-    const data = await res.json();
+(function () {
+  var el = document.getElementById('total-visits');
+  if (!el) return;
 
-    const el = document.getElementById("visits");
-    if (!el) return;
+  var r = new XMLHttpRequest();
+  // NOTE: use TOTAL (no slash) and .json
+  r.addEventListener('load', function () {
+    var data = JSON.parse(this.responseText);
+    el.textContent = data.count; // already a formatted string
+  });
 
-    const target = Number(data.count || 0);
-    let current = 0;
-
-    const steps = 50;
-    const inc = Math.max(1, Math.floor(target / steps));
-
-    const anim = setInterval(() => {
-      current += inc;
-      if (current >= target) {
-        el.textContent = target.toLocaleString();
-        clearInterval(anim);
-      } else {
-        el.textContent = current.toLocaleString();
-      }
-    }, 25);
-  } catch (e) {
-    console.warn("GoatCounter count unavailable", e);
-  }
-}
-
-
+  r.open('GET',
+    'https://easypeasytax.goatcounter.com/counter/' +
+    encodeURIComponent('TOTAL') + '.json'
+  );
+  r.send();
+})();
 </script>
+
+<script data-goatcounter="https://easypeasytax.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
 
 
 
