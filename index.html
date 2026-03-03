@@ -862,7 +862,7 @@
 function acceptDisclaimer() {
   document.getElementById('bci-disclaimer-overlay').style.display = 'none';
 
-  // Save permanently in browser
+  // Save permanently
   localStorage.setItem("disclaimerAccepted", "true");
 
   if (window.goatcounter && typeof window.goatcounter.count === "function") {
@@ -874,6 +874,9 @@ function acceptDisclaimer() {
   }
 
   setTimeout(loadVisitorCount, 1500);
+
+  // 🔥 SHOW HOLI POPUP IMMEDIATELY
+  showHoliPopup();
 }
 </script>
 <script>
