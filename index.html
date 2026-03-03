@@ -859,23 +859,25 @@
 </div>
 </div>
 <script>
-  function acceptDisclaimer() {
-       document.getElementById('bci-disclaimer-overlay').style.display = 'none';
-	   if (window.goatcounter && typeof window.goatcounter.count === "function") {
+function acceptDisclaimer() {
+  document.getElementById('bci-disclaimer-overlay').style.display = 'none';
+
+  // Save permanently in browser
+  localStorage.setItem("disclaimerAccepted", "true");
+
+  if (window.goatcounter && typeof window.goatcounter.count === "function") {
     window.goatcounter.count({
       path: location.pathname,
       title: document.title,
       event: false
     });
   }
-	  setTimeout(loadVisitorCount, 1500);
-  }
 
-  window.onload = function() {
-    document.getElementById('bci-disclaimer-overlay').style.display = 'flex';
-  };
+  setTimeout(loadVisitorCount, 1500);
+}
+</script>
 
-  function toggleMenu() {
+   function toggleMenu() {
     const nav = document.getElementById('mobileMenu');
     nav.classList.toggle('active');
   }
@@ -1028,7 +1030,112 @@ window.addEventListener('click', function(event) {
   r.send();
 })();
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  if (!localStorage.getItem("disclaimerAccepted")) {
+    document.getElementById('bci-disclaimer-overlay').style.display = 'flex';
+  }
+});
+</script>
+		<!-- Holi Popup Modal -->
+<div id="holiPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <img src="Happy_Holi_Image1.jpg" alt="Happy Holi from easypeasytax.com" style="width:100%; border-radius:10px;">
+  </div>
+</div>
 
+<style>
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 650px;   /* Increased size */
+  width: 92%;
+  position: relative;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.popup-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+  .popup-content {
+    max-width: 95%;
+    padding: 12px;
+  }
+}
+.popup-overlay {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.popup-overlay.fade-out {
+  opacity: 0;
+}
+</style>
+<script>
+function showHoliPopup() {
+  const popup = document.getElementById("holiPopup");
+
+  if (!sessionStorage.getItem("holiShown")) {
+    popup.style.display = "flex";
+    sessionStorage.setItem("holiShown", "true");
+
+    setTimeout(closePopup, 7000);
+  }
+}
+
+function closePopup() {
+  const popup = document.getElementById("holiPopup");
+  popup.classList.add("fade-out");
+
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 400);
+}
+
+// Wait until page loads
+document.addEventListener("DOMContentLoaded", function() {
+
+  // Check if disclaimer was accepted
+  if (localStorage.getItem("disclaimerAccepted")) {
+    showHoliPopup();
+  }
+
+});
+</script>
 <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
