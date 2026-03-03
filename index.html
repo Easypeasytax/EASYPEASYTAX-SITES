@@ -1038,6 +1038,8 @@ window.addEventListener('click', function(event) {
 document.addEventListener("DOMContentLoaded", function() {
   if (!localStorage.getItem("disclaimerAccepted")) {
     document.getElementById('bci-disclaimer-overlay').style.display = 'flex';
+  } else {
+    showHoliPopup();
   }
 });
 </script>
@@ -1112,33 +1114,16 @@ document.addEventListener("DOMContentLoaded", function() {
 <script>
 function showHoliPopup() {
   const popup = document.getElementById("holiPopup");
-
-  if (!sessionStorage.getItem("holiShown")) {
-    popup.style.display = "flex";
-    sessionStorage.setItem("holiShown", "true");
-
-    setTimeout(closePopup, 7000);
-  }
-}
-
-function closePopup() {
-  const popup = document.getElementById("holiPopup");
-  popup.classList.add("fade-out");
+  popup.style.display = "flex";
 
   setTimeout(() => {
-    popup.style.display = "none";
-  }, 400);
+    popup.classList.add("fade-out");
+    setTimeout(() => {
+      popup.style.display = "none";
+      popup.classList.remove("fade-out");
+    }, 400);
+  }, 7000);
 }
-
-// Wait until page loads
-document.addEventListener("DOMContentLoaded", function() {
-
-  // Check if disclaimer was accepted
-  if (localStorage.getItem("disclaimerAccepted")) {
-    showHoliPopup();
-  }
-
-});
 </script>
 <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
