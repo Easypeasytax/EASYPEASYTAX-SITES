@@ -195,6 +195,8 @@ footer { background: #ff6f61; color: #fff; text-align: center; padding: 1rem; }
 </head>
 
 <body>
+<div id="header-placeholder"></div>
+
 <div class="container">
 <div class="top-strip">
     <div class="main">
@@ -927,7 +929,6 @@ function setLang(lang,btn){
  <footer>
     <p><em>Disclaimer: This article is for informational purposes only and not a substitute for legal advice. For tailored guidance, consult a tax or legal professional.</em></p><p>&copy; 2026 EasyPeasyTax.com</p>
 </div>
-<div id="header-placeholder"></div>
 <script>
 fetch("header.html")
 .then(res => res.text())
@@ -935,6 +936,7 @@ fetch("header.html")
 document.getElementById("header-placeholder").innerHTML = data;
 });
 </script>
+  <script src="script.js"></script>
 <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </body>
