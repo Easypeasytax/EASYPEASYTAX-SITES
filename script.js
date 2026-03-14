@@ -174,14 +174,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const el = document.getElementById("total-visits");
   if (!el) return;
 
-  fetch("https://easypeasytax.goatcounter.com/counter.json")
-    .then(res => res.json())
-    .then(data => {
-      el.textContent = data.count;
-    })
-    .catch(() => {
+  fetch("https://easypeasytax.goatcounter.com/api/v0/stats/total")
+  .then(res => res.json())
+  .then(data => {
+      el.textContent = data.total.toLocaleString();
+  })
+  .catch(err => {
       el.textContent = "N/A";
-    });
+      console.error(err);
+  });
 
 });
 </script>
