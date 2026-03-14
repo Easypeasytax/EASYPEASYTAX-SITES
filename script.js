@@ -207,23 +207,25 @@ window.addEventListener('click', function(event) {
 function loadVisitorCount() {
 
   const el = document.getElementById("total-visits");
-
   if (!el) {
-    console.log("Visitor counter element not found");
+    console.log("Element not found");
     return;
   }
 
   fetch("https://easypeasytax.goatcounter.com/counter/TOTAL.json")
-    .then(response => response.json())
-    .then(data => {
+    .then(function(response){
+      return response.json();
+    })
+    .then(function(data){
       el.textContent = Number(data.count).toLocaleString();
     })
-    .catch(error => {
-      console.log("GoatCounter fetch error:", error);
-      el.textContent = "0";
+    .catch(function(error){
+      console.log("Fetch error:", error);
     });
 
 }
+
+window.addEventListener("load", loadVisitorCount);
 </script>
 
 <script>
