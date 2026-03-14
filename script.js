@@ -169,23 +169,21 @@ window.addEventListener('click', function(event) {
   }
 </script>
 <script>
-(function () {
-  var el = document.getElementById('total-visits');
+document.addEventListener("DOMContentLoaded", function () {
+
+  const el = document.getElementById("total-visits");
   if (!el) return;
 
-  var r = new XMLHttpRequest();
-  // NOTE: use TOTAL (no slash) and .json
-  r.addEventListener('load', function () {
-    var data = JSON.parse(this.responseText);
-    el.textContent = data.count; // already a formatted string
-  });
+  fetch("https://easypeasytax.goatcounter.com/api/v0/stats/visits")
+    .then(res => res.json())
+    .then(data => {
+      el.textContent = Number(data.total).toLocaleString();
+    })
+    .catch(() => {
+      el.textContent = "Unavailable";
+    });
 
-  r.open('GET',
-    'https://easypeasytax.goatcounter.com/counter/' +
-    encodeURIComponent('TOTAL') + '.json'
-  );
-  r.send();
-})();
+});
 </script>
 
 <script>
