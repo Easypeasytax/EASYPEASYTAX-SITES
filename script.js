@@ -18,24 +18,59 @@
 </script>
 <script>
 function acceptDisclaimer() {
-  document.getElementById('bci-disclaimer-overlay').style.display = 'none';
 
-  // Save permanently
+  const overlay = document.getElementById("bci-disclaimer-overlay");
+
+  if (overlay) {
+    overlay.style.display = "none";
+  }
+
+  // Save acceptance permanently
   localStorage.setItem("disclaimerAccepted", "true");
 
+  // Send visit to GoatCounter
   if (window.goatcounter && typeof window.goatcounter.count === "function") {
+
     window.goatcounter.count({
       path: location.pathname,
       title: document.title,
       event: false
     });
+
   }
 
-  setTimeout(loadVisitorCount, 1500);
+  // Load visitor counter
+  setTimeout(loadVisitorCount, 1200);
 
-  // 🔥 SHOW HOLI POPUP IMMEDIATELY
-  showHoliPopup();
+  // Show Holi popup if function exists
+  if (typeof showHoliPopup === "function") {
+    showHoliPopup();
+  }
+
 }
+
+
+// ===============================
+// PAGE LOAD LOGIC
+// ===============================
+
+window.addEventListener("load", function () {
+
+  const accepted = localStorage.getItem("disclaimerAccepted");
+
+  if (accepted === "true") {
+
+    const overlay = document.getElementById("bci-disclaimer-overlay");
+
+    if (overlay) {
+      overlay.style.display = "none";
+    }
+
+    loadVisitorCount();
+
+  }
+
+});
 </script>
 <script>
 
@@ -169,12 +204,12 @@ window.addEventListener('click', function(event) {
   }
 </script>
 <script>
-window.addEventListener("load", function () {
+function loadVisitorCount() {
 
   const el = document.getElementById("total-visits");
 
   if (!el) {
-    console.log("Counter element not found");
+    console.log("Visitor counter element not found");
     return;
   }
 
@@ -184,11 +219,11 @@ window.addEventListener("load", function () {
       el.textContent = Number(data.count).toLocaleString();
     })
     .catch(error => {
-      console.error("GoatCounter error:", error);
+      console.log("GoatCounter fetch error:", error);
       el.textContent = "0";
     });
 
-});
+}
 </script>
 
 <script>
