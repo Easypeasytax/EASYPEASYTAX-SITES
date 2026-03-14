@@ -169,20 +169,23 @@ window.addEventListener('click', function(event) {
   }
 </script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
 
-  const visitElement = document.getElementById("total-visits");
+  const el = document.getElementById("total-visits");
 
-  if (!visitElement) return;
+  if (!el) {
+    console.log("Counter element not found");
+    return;
+  }
 
   fetch("https://easypeasytax.goatcounter.com/counter/TOTAL.json")
-    .then(res => res.json())
+    .then(response => response.json())
     .then(data => {
-      visitElement.textContent = data.count.toLocaleString();
+      el.textContent = Number(data.count).toLocaleString();
     })
-    .catch(err => {
-      console.error("GoatCounter fetch error:", err);
-      visitElement.textContent = "0";
+    .catch(error => {
+      console.error("GoatCounter error:", error);
+      el.textContent = "0";
     });
 
 });
