@@ -204,28 +204,43 @@ window.addEventListener('click', function(event) {
   }
 </script>
 <script>
+console.log("script.js loaded");
+
+// ==============================
+// LOAD VISITOR COUNT
+// ==============================
+
 function loadVisitorCount() {
 
   const el = document.getElementById("total-visits");
+
   if (!el) {
-    console.log("Element not found");
+    console.log("Visitor element not found");
     return;
   }
 
   fetch("https://easypeasytax.goatcounter.com/counter/TOTAL.json")
-    .then(function(response){
-      return response.json();
-    })
-    .then(function(data){
+    .then(res => res.json())
+    .then(data => {
+
+      console.log("GoatCounter data:", data);
+
       el.textContent = Number(data.count).toLocaleString();
+
     })
-    .catch(function(error){
-      console.log("Fetch error:", error);
+    .catch(err => {
+      console.log("Fetch error:", err);
     });
 
 }
 
-window.addEventListener("load", loadVisitorCount);
+// ==============================
+// PAGE LOAD
+// ==============================
+
+window.addEventListener("load", function () {
+  loadVisitorCount();
+});
 </script>
 
 <script>
