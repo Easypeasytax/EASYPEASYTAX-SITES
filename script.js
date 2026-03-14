@@ -171,22 +171,17 @@ window.addEventListener('click', function(event) {
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  var el = document.getElementById('total-visits');
+  const el = document.getElementById("total-visits");
   if (!el) return;
 
-  var r = new XMLHttpRequest();
-
-  r.addEventListener('load', function () {
-    var data = JSON.parse(this.responseText);
-    el.textContent = data.count;
-  });
-
-  r.open('GET',
-    'https://easypeasytax.goatcounter.com/counter/' +
-    encodeURIComponent('TOTAL') + '.json'
-  );
-
-  r.send();
+  fetch("https://easypeasytax.goatcounter.com/counter.json")
+    .then(res => res.json())
+    .then(data => {
+      el.textContent = data.count;
+    })
+    .catch(() => {
+      el.textContent = "N/A";
+    });
 
 });
 </script>
