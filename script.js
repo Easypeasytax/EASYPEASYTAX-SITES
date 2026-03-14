@@ -204,23 +204,14 @@ window.addEventListener('click', function(event) {
   }
 </script>
 <script>
-console.log("script.js loaded");
+console.log("Visitor counter script running");
 
-// ==============================
-// LOAD VISITOR COUNT
-// ==============================
+const el = document.getElementById("total-visits");
 
-function loadVisitorCount() {
-
-  const el = document.getElementById("total-visits");
-
-  if (!el) {
-    console.log("Visitor element not found");
-    return;
-  }
+if (el) {
 
   fetch("https://easypeasytax.goatcounter.com/counter/TOTAL.json")
-    .then(res => res.json())
+    .then(response => response.json())
     .then(data => {
 
       console.log("GoatCounter data:", data);
@@ -228,19 +219,17 @@ function loadVisitorCount() {
       el.textContent = Number(data.count).toLocaleString();
 
     })
-    .catch(err => {
-      console.log("Fetch error:", err);
+    .catch(error => {
+
+      console.log("Fetch error:", error);
+
     });
 
+} else {
+
+  console.log("Element #total-visits not found");
+
 }
-
-// ==============================
-// PAGE LOAD
-// ==============================
-
-window.addEventListener("load", function () {
-  loadVisitorCount();
-});
 </script>
 
 <script>
