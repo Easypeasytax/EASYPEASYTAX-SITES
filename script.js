@@ -197,8 +197,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 </script>
-<script data-goatcounter="https://easypeasytax.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+
 <!--
 <script>
 function showHoliPopup() {
