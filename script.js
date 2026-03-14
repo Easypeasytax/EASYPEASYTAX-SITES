@@ -168,21 +168,19 @@ window.addEventListener('click', function(event) {
     window.open("https://tin.tin.nsdl.com/oltas/refund-status-pan.html", "_blank");
   }
 </script>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-
-  const el = document.getElementById("total-visits");
+  var el = document.getElementById('total-visits');
   if (!el) return;
-
-  fetch("https://easypeasytax.goatcounter.com/api/v0/stats/visits")
-    .then(res => res.json())
-    .then(data => {
-      el.textContent = Number(data.total).toLocaleString();
-    })
-    .catch(() => {
-      el.textContent = "Unavailable";
-    });
-
+  
+  var t = setInterval(function() {
+    if (window.goatcounter && window.goatcounter.visit_count) {
+      clearInterval(t);
+      var data = window.goatcounter.visit_count();
+      el.textContent = data.count;
+    }
+  }, 100);
 });
 </script>
 
