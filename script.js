@@ -203,28 +203,33 @@ window.addEventListener('click', function(event) {
     window.open("https://tin.tin.nsdl.com/oltas/refund-status-pan.html", "_blank");
   }
 </script>
+
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+setTimeout(function(){
 
   const el = document.getElementById("total-visits");
 
-  if (!el) {
-    console.log("Element not found");
+  if(!el){
+    console.log("Counter element not found");
     return;
   }
 
   fetch("https://easypeasytax.goatcounter.com/counter/TOTAL.json")
-    .then(response => response.json())
-    .then(data => {
+  .then(function(res){
+    return res.json();
+  })
+  .then(function(data){
 
-      console.log("Visitor count:", data.count);
+    console.log("Counter:", data);
 
-      el.innerHTML = data.count;
+    el.innerHTML = data.count;
 
-    })
-    .catch(error => console.log(error));
+  })
+  .catch(function(err){
+    console.log("Error:", err);
+  });
 
-});
+},2000);
 </script>
 
 <script>
