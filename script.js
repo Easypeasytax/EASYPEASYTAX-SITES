@@ -204,32 +204,21 @@ window.addEventListener('click', function(event) {
   }
 </script>
 <script>
-console.log("Visitor counter script running");
+window.addEventListener("load", function () {
 
-const el = document.getElementById("total-visits");
-
-if (el) {
+  const el = document.getElementById("total-visits");
+  if (!el) return;
 
   fetch("https://easypeasytax.goatcounter.com/counter/TOTAL.json")
-    .then(response => response.json())
+    .then(res => res.json())
     .then(data => {
-
-      console.log("GoatCounter data:", data);
-
       el.textContent = Number(data.count).toLocaleString();
-
     })
-    .catch(error => {
-
-      console.log("Fetch error:", error);
-
+    .catch(err => {
+      console.log("Counter error:", err);
     });
 
-} else {
-
-  console.log("Element #total-visits not found");
-
-}
+});
 </script>
 
 <script>
