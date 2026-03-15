@@ -209,24 +209,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const el = document.getElementById("total-visits");
 
   if (!el) {
-    console.log("Element #total-visits not found");
+    console.log("Element not found");
     return;
   }
 
   fetch("https://easypeasytax.goatcounter.com/counter/TOTAL.json")
-    .then(function(res){
-      return res.json();
-    })
-    .then(function(data){
+    .then(response => response.json())
+    .then(data => {
 
-      console.log("Counter data:", data);
+      console.log("Visitor count:", data.count);
 
-      el.textContent = Number(data.count).toLocaleString();
+      el.innerHTML = data.count;
 
     })
-    .catch(function(err){
-      console.log("Fetch error:", err);
-    });
+    .catch(error => console.log(error));
 
 });
 </script>
