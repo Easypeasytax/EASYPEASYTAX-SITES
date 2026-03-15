@@ -204,31 +204,30 @@ window.addEventListener('click', function(event) {
   }
 </script>
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
+
   const el = document.getElementById("total-visits");
 
   if (!el) {
-    console.log("❌ #total-visits element not found");
+    console.log("Element #total-visits not found");
     return;
   }
 
-  console.log("✅ Counter element found");
-
   fetch("https://easypeasytax.goatcounter.com/counter/TOTAL.json")
-    .then(res => {
-      if (!res.ok) {
-        throw new Error("HTTP " + res.status);
-      }
+    .then(function(res){
       return res.json();
     })
-    .then(data => {
-      console.log("📊 GoatCounter response:", data);
+    .then(function(data){
+
+      console.log("Counter data:", data);
+
       el.textContent = Number(data.count).toLocaleString();
+
     })
-    .catch(err => {
-      console.error("⚠️ Counter fetch failed:", err);
-      el.textContent = "—";
+    .catch(function(err){
+      console.log("Fetch error:", err);
     });
+
 });
 </script>
 
