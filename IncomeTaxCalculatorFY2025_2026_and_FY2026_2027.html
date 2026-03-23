@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Income Tax Calculator India FY 2025-26 & 2026-27</title>
-  <style>
+  
+  <link rel="stylesheet" href="style.css">
+<style>
 body{
   font-family:Arial;
   background:#f4f6f9;
@@ -47,6 +49,10 @@ button{
 .small-note{
   font-size:13px;
   color:#666;
+}
+  body {
+    margin: 0;
+    padding-top: 70px; /* adjust based on navbar height */
 }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -172,6 +178,13 @@ document.getElementById("header-placeholder").innerHTML = data;
 <button onclick="submitLead()">Continue</button>
 </div>
 </div>
+  <script>
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header-placeholder").innerHTML = data;
+});
+</script>
 <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 <script src="script.js"></script>
