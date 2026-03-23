@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Creditors Payment, GST & MSME Compliance – EasyPeasyTax.com</title>
+      <link rel="stylesheet" href="style.css">
 <meta name="description" content="Complete guide on creditors payment, MSME rules, GST 180-day rule, ITC reversal, Section 43B(h), penalties, and accounting treatment.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -130,11 +131,16 @@ footer { background: #ff6f61; color: #fff; text-align: center; padding: 1rem; }
     .toc{position:sticky;top:18px;background:#fff;border-radius:10px;padding:14px;border:1px solid #f1e1e0}
     .toc h4{margin:0 0 8px;font-size:15px}
     .toc a{display:block;padding:8px 0;color:var(--brand);border-bottom:1px dashed #fdecea}
+    body {
+    margin: 0;
+    padding-top: 70px; /* adjust based on navbar height */
+}
   </style>
 </head>
 
 
 <body>
+    <div id="header-placeholder"></div>
 <div class="container">
 <div class="top-strip">
     <div class="main">
@@ -260,6 +266,13 @@ Creditor A/c Dr.
 <h3>7. Do companies have to file MSME Return (Form I)?</h3>
 <p>Yes, if outstanding dues to MSME suppliers exceed 45 days.</p>
 </div>
+    <script>
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header-placeholder").innerHTML = data;
+});
+</script>
 <a href="/blog" class="back-button">← Back to Blog</a>
 
  <footer>
@@ -273,6 +286,6 @@ Creditor A/c Dr.
  
 <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
