@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Income Tax Calculator India FY 2025-26 & 2026-27</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="container">
+
+<h1>Income Tax Calculator FY 2025-26 & 2026-27</h1>
+
+<div class="section">
+<label>Financial Year</label>
+<select id="fy">
+  <option value="2025">FY 2025-26</option>
+  <option value="2026">FY 2026-27</option>
+</select>
+</div>
+
+<div class="section">
+<h3>Salary</h3>
+<input id="basic" placeholder="Basic Salary">
+<input id="hraReceived" placeholder="HRA Received">
+<input id="rentPaid" placeholder="Rent Paid">
+<select id="city">
+  <option value="metro">Metro</option>
+  <option value="nonmetro">Non Metro</option>
+</select>
+<div class="small-note">HRA exemption is calculated only if rent is paid.</div>
+</div>
+
+<div class="section">
+<h3>House Property</h3>
+<input id="house" placeholder="House Property Income / Rent Received">
+<input id="home" placeholder="Home Loan Interest">
+<div class="small-note">For old regime, home loan interest benefit is limited to ₹2,00,000 for set-off here.</div>
+</div>
+
+<div class="section">
+<h3>Other Income</h3>
+<input id="business" placeholder="Business Income">
+<input id="other" placeholder="Other Income">
+</div>
+
+<div class="section">
+<h3>Capital Gains</h3>
+<input id="stcg" placeholder="STCG u/s 111A">
+<input id="ltcg" placeholder="LTCG u/s 112A">
+<div class="small-note">STCG taxed @15%. LTCG taxed @10% above ₹1,00,000.</div>
+</div>
+
+<div class="section">
+<h3>Deductions</h3>
+<input id="d80c" placeholder="80C">
+<input id="d80d_self" placeholder="80D Self">
+<input id="d80d_parent" placeholder="80D Parent">
+<input id="nps" placeholder="NPS 80CCD(1B)">
+</div>
+
+<button onclick="calculate()">Calculate</button>
+<button onclick="checkPremium()">📄 Download Tax Report</button>
+
+<div id="output"></div>
+<div id="recommendation"></div>
+
+<canvas id="chart" style="margin-top:20px;"></canvas>
+
+
+<div id="premiumContent" style="display:none;background:#e8f5e9;padding:20px;border-radius:8px;margin-top:20px">
+  <div id="premiumInsights"></div>
+</div>
+<div style="margin-top:15px;padding:15px;background:#e3f2fd;border-radius:8px">
+<b>📞 Need Help with Investment/Filling?</b><br><br>
+
+✔ Talk to Tax Expert<br>
+✔ Get Personalized Investment Plan<br>
+✔ Assistance in ELSS / Insurance / NPS<br><br>
+
+<button onclick="connectExpert()">Connect Now</button>
+</div>
+</div>
+
+
+<div id="userModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);justify-content:center;align-items:center;z-index:9999">
+
+<div style="background:white;padding:25px;border-radius:10px;width:300px">
+
+<!-- ❌ CLOSE BUTTON -->
+<span onclick="closeUserModal()" style="position:absolute;top:10px;right:15px;cursor:pointer;font-size:18px;">❌</span>
+
+<h3>Enter Details</h3>
+
+<input id="userName" placeholder="Full Name">
+<input id="userMobile" placeholder="Mobile (for WhatsApp report)">
+<input id="userEmail" placeholder="Email ID">
+
+<button onclick="submitUserDetails()">Download Report</button>
+</div>
+</div>
+
+<script>
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header-placeholder").innerHTML = data;
+});
+</script>
+
+<div id="leadModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);justify-content:center;align-items:center;z-index:9999">
+<div style="background:white;padding:20px;border-radius:10px;width:300px">
+<!-- ❌ CLOSE BUTTON -->
+<span onclick="closeLeadModal()" style="position:absolute;top:10px;right:15px;cursor:pointer;font-size:18px;">❌</span>
+
+<h3>Get Expert Help</h3>
+<input id="leadName" placeholder="Full Name">
+<input id="leadMobile" placeholder="Mobile">
+<input id="leadEmail" placeholder="Email">
+<button onclick="submitLead()">Continue</button>
+</div>
+</div>
+<script data-goatcounter="https://easypeasytax.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
