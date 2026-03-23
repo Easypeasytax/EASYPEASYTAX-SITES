@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>GST & Tax Guide for Kirana Store Owners – 2026 | EasyPeasyTax</title>
+  <link rel="stylesheet" href="style.css">
 <meta name="description" content="Complete GST & Income Tax guide for kirana and general store owners with HSN codes, GST rates, compliance rules in English, Hindi & Hinglish.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -124,11 +125,15 @@ footer { background: #ff6f61; color: #fff; text-align: center; padding: 1rem; }
       display: flex;
       gap: 30px;
     }
-
+body {
+    margin: 0;
+    padding-top: 70px; /* adjust based on navbar height */
+}
 </style>
 </head>
 
 <body>
+  <div id="header-placeholder"></div>
 <div class="container">
 <div class="top-strip">
     <div class="main">
@@ -574,6 +579,14 @@ function setLang(lang,btn){
   btn.classList.add('active');
 }
 </script>
+  <script>
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header-placeholder").innerHTML = data;
+});
+</script>
+
 <a href="/blog" class="back-button">← Back to Blog</a>
 
  <footer>
@@ -581,5 +594,6 @@ function setLang(lang,btn){
 </div>
 <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
