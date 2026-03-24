@@ -5,7 +5,8 @@ function toggleMenu() {
   }
 }
   window.toggleMenu = toggleMenu;
-<script>
+
+
   if (window.location.search.includes("success=true")) {
     const popup = document.createElement("div");
     popup.innerText = "✅ Form submitted successfully!";
@@ -22,8 +23,7 @@ function toggleMenu() {
     document.body.appendChild(popup);
     setTimeout(() => popup.remove(), 5000);
   }
-</script>
-<script>
+
 function acceptDisclaimer() {
 
   const overlay = document.getElementById("bci-disclaimer-overlay");
@@ -78,8 +78,7 @@ window.addEventListener("load", function () {
   }
 
 });
-</script>
-<script>
+
 
    document.addEventListener("DOMContentLoaded", function () {
 
@@ -156,8 +155,7 @@ window.addEventListener("load", function () {
   });
 
 });
-</script>
-<script>
+
 document.getElementById("requirementForm").addEventListener("submit", async function (e) {
   e.preventDefault();
   document.getElementById("submittedAtIST").value = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
@@ -198,15 +196,7 @@ window.addEventListener('click', function(event) {
     modal.style.display = 'none';
   }
 });
-</script>
-<script>
-  function openRefundStatus() {
-    alert("You will be redirected to the official NSDL Refund Status page.");
-    window.open("https://tin.tin.nsdl.com/oltas/refund-status-pan.html", "_blank");
-  }
-</script>
 
-<script>
 setTimeout(function(){
 
   const el = document.getElementById("total-visits");
@@ -232,9 +222,7 @@ setTimeout(function(){
   });
 
 },2000);
-</script>
 
-<script>
 document.addEventListener("DOMContentLoaded", function() {
   if (!localStorage.getItem("disclaimerAccepted")) {
     document.getElementById('bci-disclaimer-overlay').style.display = 'flex';
@@ -242,10 +230,8 @@ document.addEventListener("DOMContentLoaded", function() {
     showHoliPopup();
   }
 });
-</script>
 
-<!--
-<script>
+
 function showHoliPopup() {
   const popup = document.getElementById("holiPopup");
   popup.style.display = "flex";
@@ -258,5 +244,4 @@ function showHoliPopup() {
     }, 400);
   }, 5000);
 }
-</script>
--->		
+		
