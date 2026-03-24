@@ -1,3 +1,10 @@
+function toggleMenu() {
+  const nav = document.getElementById('mobileMenu');
+  if (nav) {
+    nav.classList.toggle('active');
+  }
+}
+  window.toggleMenu = toggleMenu;
 <script>
   if (window.location.search.includes("success=true")) {
     const popup = document.createElement("div");
@@ -76,12 +83,7 @@ window.addEventListener("load", function () {
 
    document.addEventListener("DOMContentLoaded", function () {
 
-  function toggleMenu() {
-    const nav = document.getElementById('mobileMenu');
-    nav.classList.toggle('active');
-  }
-
-  window.toggleMenu = toggleMenu;
+  
 
   /* DROPDOWN */
 
