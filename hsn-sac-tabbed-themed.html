@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HSN & SAC Codes</title>  <style>
+  <link rel="stylesheet" href="style.css">
   body {
     font-family: 'Poppins', 'Segoe UI', sans-serif;
     margin: 20px;
@@ -187,38 +188,14 @@ nav ul {
   position: relative;
   margin-bottom: 60px; 
 }
-
+body {
+    margin: 0;
+    padding-top: 70px; /* adjust based on navbar height */
+}
 </style>
 </head>
 <Body>
-<header>
-    <nav>
-      <ul>
-        <li>
-  <a href="https://easypeasytax.com/#hero" style="padding: 0;">
-    <img src="logowb.png" alt="EasyPeasyTax Logo" style="height: 40px; vertical-align: middle;">
-  </a>
-</li>
-        <li><a href="https://easypeasytax.com/#about">About Us</a></li>
-        <li><a href="https://easypeasytax.com/#services">Services</a></li>
-        <li><a href="hsn-sac-tabbed-themed.html">HSN & SAC Codes</a></li>
-        <li><a href="latestnews.html">Latest News</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li class="dropdown-wrapper" style="position:relative;">
-          <a href="#" class="dropdown-toggle">Tools ▼</a>
-          <ul class="dropdown" id="toolsDropdown">
-            <li><a href="incometaxcalculator_final_fixed.html">Income Tax Calculator</a></li>
-            <li><a href="hracalculator.html">HRA Calculator</a></li>
-            <li><a href="capital_gain_calculator.html">Capital Gain Tax Calculator</a></li>
-            <li><a href="ssy-calculator.html">SSY Calculator</a></li>
-            <li><a href="fdcalculator_centered.html">FD Interest Calculator</a></li>
-          </ul>
-        </li>
-        <li><a href="#" onclick="openRefundStatus()">Income Tax Refund Status</a></li>
-        <li><a href="https://easypeasytax.com/#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<div id="header-placeholder"></div>
 <div class="tab">
   <button class="tablinks active" onclick="openTab(event, 'HSN')">HSN</button>
   <button class="tablinks" onclick="openTab(event, 'SAC')">SAC</button>
@@ -89995,10 +89972,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <script>
-  function openRefundStatus() {
-    alert("You will be redirected to the official NSDL Refund Status page.");
-    window.open("https://tin.tin.nsdl.com/oltas/refund-status-pan.html", "_blank");
-  }
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header-placeholder").innerHTML = data;
+});
 </script>
+<script src="script.js"></script>
 </Body>
 </html>
