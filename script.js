@@ -245,19 +245,27 @@ function showHoliPopup() {
   }, 5000);
 }
 
-let index = 0;
-const track = document.querySelector(".testimonial-track");
-const slides = document.querySelectorAll(".testimonial");
 
-setInterval(() => {
-  index = (index + 1) % slides.length;
-  track.style.transform = `translateX(-${index * 100}%)`;
-}, 3000); // change every 3 seconds
+document.addEventListener("DOMContentLoaded", function () {
 
+  fetch('./testimonials.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('testimonials-section').innerHTML = data;
 
-		fetch('./testimonials.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('testimonials-section').innerHTML = data;
-  })
-  .catch(error => console.error('Error loading testimonials:', error));
+      // ✅ RUN SLIDER AFTER LOADING
+      let index = 0;
+      const track = document.querySelector(".testimonial-track");
+      const slides = document.querySelectorAll(".testimonial");
+
+      if (!track || slides.length === 0) return;
+
+      setInterval(() => {
+        index = (index + 1) % slides.length;
+        track.style.transform = `translateX(-${index * 100}%)`;
+      }, 3000);
+
+    })
+    .catch(error => console.error('Error loading testimonials:', error));
+
+});); // change every 3 seconds
