@@ -716,3 +716,73 @@ object-fit:cover;
     grid-template-columns: 1fr 1fr;
   }
 }
+.contact-pro {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact-sub {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.contact-card {
+  background: #f7f7f7;
+  padding: 20px; /* match services */
+  border-radius: 12px;
+  text-decoration: none;
+  color: #333;
+
+  /* SAME shadow as services */
+  box-shadow: 
+    0 1px 3px rgba(0,0,0,0.03),
+    0 4px 8px rgba(0,0,0,0.02);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-card .icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+/* SAME hover as services */
+.contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+}
+
+.contact-trust {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Floating WhatsApp */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 22px;
+  padding: 12px 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
