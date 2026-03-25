@@ -244,4 +244,10 @@ function showHoliPopup() {
     }, 400);
   }, 5000);
 }
-		
+
+		fetch('./testimonials.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('testimonials-section').innerHTML = data;
+  })
+  .catch(error => console.error('Error loading testimonials:', error));
