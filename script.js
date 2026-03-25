@@ -245,6 +245,16 @@ function showHoliPopup() {
   }, 5000);
 }
 
+let index = 0;
+const track = document.querySelector(".testimonial-track");
+const slides = document.querySelectorAll(".testimonial");
+
+setInterval(() => {
+  index = (index + 1) % slides.length;
+  track.style.transform = `translateX(-${index * 100}%)`;
+}, 3000); // change every 3 seconds
+
+
 		fetch('./testimonials.html')
   .then(response => response.text())
   .then(data => {
