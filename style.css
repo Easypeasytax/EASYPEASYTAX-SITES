@@ -786,3 +786,36 @@ object-fit:cover;
     grid-template-columns: 1fr;
   }
 }
+.testimonial-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.testimonial-slider {
+  overflow: hidden;
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+}
+
+.testimonial-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.testimonial {
+  min-width: 100%;
+  background: #f7f7f7;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.testimonial h4 {
+  color: #ff6f61;
+}
