@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HSN Code List – EasyPeasyTax</title>
+    <link rel="stylesheet" href="style.css">
   <meta name="description" content="Find the latest GST HSN Code list with updated tax rates. EasyPeasyTax provides a searchable database of goods under Schedule II.">
   <meta name="keywords" content="HSN Code, GST, EasyPeasyTax, Schedule II, GST Rates India, Tax Codes">
   <meta name="author" content="EasyPeasyTax">
@@ -467,38 +468,14 @@ table tr:hover {
         padding: 8px 12px;
         font-size: 14px;
       }
-
+body {
+    margin: 0;
+    padding-top: 70px; /* adjust based on navbar height */
+}
   </style>
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</div>
-      <a href="https://easypeasytax.com" class="logo">EasyPeasyTax</a>
-    </div>
-    <nav id="mobileMenu">
-       <ul>
-        <li><a class="active" href="https://easypeasytax.com">Home</a></li>
-        <li><a href="https://easypeasytax.com/#about">About Us</a></li>
-        <li><a href="https://easypeasytax.com/#services">Services</a></li>
-        <li><a href="hsn-sac-tabbed-themed.html">HSN & SAC Codes</a></li>
-        <li><a href="latestnews.html">Latest News</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li class="dropdown-wrapper">
-          <a href="#" class="dropdown-toggle">Tools ▼</a>
-          <ul class="dropdown" id="toolsDropdown">
-            <li><a href="incometaxcalculator_final_fixed.html">Income Tax Calculator</a></li>
-            <li><a href="hracalculator.html">HRA Calculator</a></li>
-            <li><a href="capital_gain_calculator.html">Capital Gain Tax Calculator</a></li>
-            <li><a href="ssy-calculator.html">SSY Calculator</a></li>
-            <li><a href="fdcalculator_centered.html">FD Interest Calculator</a></li>
-          </ul>
-        </li>
-        <li><a href="https://easypeasytax.com/#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
+  <div id="header-placeholder"></div>
 <!-- Search Bar -->
 <div class="search-bar">
   <input type="text" id="searchInput" placeholder="Search by HSN code or keyword...">
@@ -3864,8 +3841,15 @@ table tr:hover {
     });
   });
 </script>
+  <script>
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header-placeholder").innerHTML = data;
+});
+</script>
   <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
