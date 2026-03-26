@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="ITR-2 and ITR-3 released for AY 2025–26. Find out who should file which return and download the latest forms now.">
   <title>ITR-2 and ITR-3 Released for AY 2025–26</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -80,14 +81,15 @@
   height: auto;
   display: block;
 }
-
+body {
+    margin: 0;
+    padding-top: 70px; /* adjust based on navbar height */
+}
   </style>
 </head>
 <body>
-  <div class="logo-container">
-  <img src="logowb.png" alt="EasyPeasyTax Logo">
-</div>
-  <div class="container">
+  <div id="header-placeholder"></div>
+    <div class="container">
     <h1>🧾 ITR-2 and ITR-3 Released for AY 2025–26 – Here’s What You Should Know</h1>
     
     <p>The Income Tax Department has released the latest <strong>ITR-2</strong> and <strong>ITR-3</strong> forms for <strong>Assessment Year 2025–26</strong> (i.e., Financial Year 2024–25). These forms are now available for both online filing and offline utility download on the official e-filing portal.</p>
@@ -123,9 +125,16 @@
   <p><strong>Disclaimer:</strong> This content is for informational purposes only and should not be considered legal or tax advice. Please consult a qualified tax professional for advice tailored to your situation.</p>
   <p>&copy; 2025 <a href="https://easypeasytax.com" style="color:#fff; text-decoration:underline;">EasyPeasyTax.com</a> | All rights reserved.</p>
 </div>
+  <script>
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header-placeholder").innerHTML = data;
+});
+</script>
   <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
 
