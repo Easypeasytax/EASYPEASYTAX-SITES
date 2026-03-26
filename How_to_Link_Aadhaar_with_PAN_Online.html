@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>How to Link Aadhaar with PAN Online (With Fine/Penalty) — EasyPeasyTax</title>
+  <link rel="stylesheet" href="style.css">
   <meta name="description" content="Step-by-step guide to link Aadhaar with PAN online for both registered and non-registered users. Includes ₹1,000 penalty details, e-Pay Tax flow, status check, FAQs, and tips." />
   <link rel="canonical" href="https://www.easypeasytax.com/blog/link-aadhaar-pan" />
 
@@ -205,7 +206,10 @@
     padding: 10px; /* reduce side padding */
   }
 }
-
+body {
+    margin: 0;
+    padding-top: 70px; /* adjust based on navbar height */
+}
   </style>
 
   <!-- SEO: Article + FAQ Schema -->
@@ -236,19 +240,8 @@
   </script>
 </head>
 <body>
-
-  <!-- HEADER / HERO -->
-  <header class="hero">
-    <div class="wrap">
-      <div class="logo-container">
-  <img src="logowb.png" alt="EasyPeasyTax Logo">
-</div>
-
-
-        
-      </div>
-
-      <div class="hero-body container">
+<div id="header-placeholder"></div>
+        <div class="hero-body container">
         <div>
           <span class="eyebrow">Aadhaar ↔ PAN</span>
           <h1>How to Link Aadhaar with PAN Online <span style="color:var(--brand)">(+ Penalty Details)</span></h1>
@@ -402,8 +395,15 @@
     // Small niceties
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script>
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header-placeholder").innerHTML = data;
+});
+</script>
   <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
