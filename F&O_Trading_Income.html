@@ -7,6 +7,7 @@
 
   <!-- SEO Optimization -->
   <title>F&O Trading Income: How to Report in ITR (AY 2025–26) | EasyPeasyTax</title>
+  <link rel="stylesheet" href="style.css">
   <meta name="description" content="Learn how to report your Futures & Options (F&O) trading income in ITR correctly for AY 2025–26. Covers tax classification, audit rules, and tips.">
   <meta name="keywords" content="F&O trading income, ITR filing 2025, futures and options tax, business income, ITR-3 filing guide, EasyPeasyTax">
   <meta name="author" content="EasyPeasyTax">
@@ -90,15 +91,17 @@ a { color: #ff6f61; text-decoration: none; }
   height: auto;
   display: block;
 }
+    body {
+    margin: 0;
+    padding-top: 70px; /* adjust based on navbar height */
+}
   </style>
 </head>
 <body>
-  <div class="logo-container">
-  <img src="logowb.png" alt="EasyPeasyTax Logo">
-</div>
-  <header role="banner">
+  <div id="header-placeholder"></div>
+  
     <h1>F&O Trading Income – How to Report in Your ITR Correctly (AY 2025–26)</h1>
-  </header>
+  
 
   <main role="main">
     <article>
@@ -172,8 +175,15 @@ a { color: #ff6f61; text-decoration: none; }
     <p>&copy; 2025 EasyPeasyTax.com</p>
   
   </footer>
+  <script>
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header-placeholder").innerHTML = data;
+});
+</script>
   <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
