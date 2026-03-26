@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Learn how to file Form 10-IEA to switch from the default New Tax Regime to the Old Tax Regime in AY 2025-26. Step-by-step guide with deadlines and rules explained.">
   <title>Form 10-IEA: Switch to Old Tax Regime AY 2025-26</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -78,18 +79,16 @@
   height: auto;
   display: block;
 }
-
+body {
+    margin: 0;
+    padding-top: 70px; /* adjust based on navbar height */
+}
   </style>
 </head>
 <body>
-  <div class="logo-container">
-  <img src="logowb.png" alt="EasyPeasyTax Logo">
-</div>
-  <header>
-    <h1>Form 10-IEA: Switch to Old Tax Regime in AY 2025-26</h1>
-  </header>
-
-  <main>
+  <div id="header-placeholder"></div>
+      <h1>Form 10-IEA: Switch to Old Tax Regime in AY 2025-26</h1>
+    <main>
     <h2>What is Form 10-IEA?</h2>
     <p>Form 10-IEA is the declaration form that allows individuals with business or professional income to opt out of the New Tax Regime (which is the default from FY 2023-24 onwards) and choose the Old Tax Regime instead.</p>
 
@@ -139,8 +138,15 @@
     <p><strong>Disclaimer:</strong> The content provided is for informational purposes only and does not constitute legal or tax advice. Readers should consult a qualified tax advisor or chartered accountant for personalized guidance.</p>
     <p>&copy; 2025 <a href="https://easypeasytax.com" style="color:#fff; text-decoration:underline;">EasyPeasyTax.com</a> | All rights reserved.</p>
   </footer>
+  <script>
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header-placeholder").innerHTML = data;
+});
+</script>
   <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
