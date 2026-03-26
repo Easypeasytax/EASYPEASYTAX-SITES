@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Understand gold holding limits in India under Income Tax rules – jewellery, bars, and coins. Know what a family can keep, what's taxable, and what's exempt.">
   <title>How Much Gold Can a Family Keep in India – Tax Rules 2025</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -80,13 +81,14 @@
   height: auto;
   display: block;
 }
-
+body {
+    margin: 0;
+    padding-top: 70px; /* adjust based on navbar height */
+}
   </style>
 </head>
 <body>
-  <div class="logo-container">
-  <img src="logowb.png" alt="EasyPeasyTax Logo">
-</div>
+  <div id="header-placeholder"></div>
   <h1>How Much Gold Can a Family Keep in India? (2025 Guide)</h1>
 
   <p>The Income Tax Department of India does <strong>not restrict how much gold you can own</strong>, but there are rules about what can be seized during tax raids. These rules differ for <strong>jewellery, gold bars, and coins</strong>. Here's everything you need to know to stay compliant.</p>
@@ -156,8 +158,15 @@
   <p><strong>Disclaimer:</strong> This content is for informational purposes only and should not be considered legal or tax advice. Please consult a qualified tax professional for advice tailored to your situation.</p>
   <p>&copy; 2025 <a href="https://easypeasytax.com" style="color:#fff; text-decoration:underline;">EasyPeasyTax.com</a> | All rights reserved.</p>
 </div>
+  <script>
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header-placeholder").innerHTML = data;
+});
+</script>
   <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
