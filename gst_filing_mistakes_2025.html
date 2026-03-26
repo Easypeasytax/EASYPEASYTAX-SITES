@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GST Return Filing Mistakes to Avoid in 2025</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -69,13 +70,20 @@
   height: auto;
   display: block;
 }
-
+body {
+    margin: 0;
+    padding-top: 70px; /* adjust based on navbar height */
+}
+    .container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
   </style>
 </head>
 <body>
-  <div class="logo-container">
-  <img src="logowb.png" alt="EasyPeasyTax Logo">
-</div>
+  <div id="header-placeholder"></div>
+  <div class="container">
   <h1>GST Return Filing Mistakes to Avoid in 2025</h1>
 
   <div class="section">
@@ -142,13 +150,21 @@
   💡 For further clarification or assistance, you may consult a qualified tax practitioner or legal professional.
 </p>
   </div>
+  </div>
    <a href="/blog" class="back-button">← Back to Blog</a>
 <div class="footer">
   <p><strong>Disclaimer:</strong> This content is for informational purposes only and should not be considered legal or tax advice. Please consult a qualified tax professional for advice tailored to your situation.</p>
   <p>&copy; 2025 <a href="https://easypeasytax.com" style="color:#fff; text-decoration:underline;">EasyPeasyTax.com</a> | All rights reserved.</p>
 </div> 
+  <script>
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header-placeholder").innerHTML = data;
+});
+</script>
   <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
