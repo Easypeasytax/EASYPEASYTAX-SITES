@@ -3,10 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Checklist for Starting a Small Business Legally in India</title>
+  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: sans-serif; line-height: 1.7; padding: 40px; background: #f9f9f9; color: #333; }
-    h1, h2 { color: #ff6f61; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding-top: 80px; /* match your header height */
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333333;
+}    h1, h2 { color: #ff6f61; }
     h3 { margin-top: 30px; }
     ul, ol { margin-left: 20px; }
     table { width: 100%; border-collapse: collapse; margin: 20px 0; }
@@ -29,11 +36,17 @@
       background-color: #e85c50;
     }
 .footer {
-      background-color: #ff6f61;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-    }
+  background-color: #ff6f61;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  width: 100%; /* important */
+}
+    .container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
     .logo-container {
   display: flex;
   justify-content: center;
@@ -45,13 +58,14 @@
   height: auto;
   display: block;
 }
-
+body {
+    margin: 0;
+    padding-top: 70px; /* adjust based on navbar height */
+}
   </style>
 </head>
 <body>
-<div class="logo-container">
-  <img src="logowb.png" alt="EasyPeasyTax Logo">
-</div>
+  <div id="header-placeholder"></div>
 <h1>Checklist for Starting a Small Business Legally in India</h1>
 
 <p>Starting your own business is exciting — but before launching, it’s crucial to comply with legal and regulatory requirements. This step-by-step checklist will help ensure you’re on the right side of the law from day one.</p>
@@ -130,15 +144,22 @@
   <tr><td>Bank Account</td><td>✅</td><td>All businesses</td></tr>
   <tr><td>Trademark</td><td>Optional</td><td>Brand-building businesses</td></tr>
 </table>
-
+</div>
  <a href="/blog" class="back-button">← Back to Blog</a>
 <div class="footer">
   <p><strong>Disclaimer:</strong> This content is for informational purposes only and should not be considered legal or tax advice. Please consult a qualified tax professional for advice tailored to your situation.</p>
   <p>&copy; 2025 <a href="https://easypeasytax.com" style="color:#fff; text-decoration:underline;">EasyPeasyTax.com</a> | All rights reserved.</p>
 </div>
+  <script>
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header-placeholder").innerHTML = data;
+});
+</script>
 <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
 
