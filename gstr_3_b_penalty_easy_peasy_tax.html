@@ -4,6 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>GSTR-3B Penalty, Late Fees & Interest — EasyPeasyTax</title>
+  <link rel="stylesheet" href="style.css">
 <meta name="description" content="Clear guide to GSTR-3B late fee, maximum caps, and 18% interest on delayed tax. Includes calculator example, FAQs, and official links." />
 <link rel="canonical" href="https://www.easypeasytax.com/blog/gstr-3b-penalty" />
 
@@ -152,6 +153,10 @@ footer{margin:40px 0 20px 0;color:var(--muted);font-size:14px}
     padding: 10px; /* reduce side padding */
   }
 }
+  body {
+    margin: 0;
+    padding-top: 70px; /* adjust based on navbar height */
+}
 </style>
 <!-- SEO: Article + FAQ Schema -->
 <script type="application/ld+json">
@@ -180,12 +185,9 @@ footer{margin:40px 0 20px 0;color:var(--muted);font-size:14px}
 </script>
 </head>
 <body>
+  <div id="header-placeholder"></div>
 <!-- HEADER / HERO -->
-<header class="hero">
-<div class="wrap">
-<div class="logo-container">
-<img src="logowb.png" alt="EasyPeasyTax Logo" />
-</div>
+
 
 
 <div class="hero-body container">
@@ -322,8 +324,16 @@ Missed the due date? Here’s the simple breakdown of <strong>late fee per day</
     // Small niceties
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script>
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header-placeholder").innerHTML = data;
+});
+</script>
+
   <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
