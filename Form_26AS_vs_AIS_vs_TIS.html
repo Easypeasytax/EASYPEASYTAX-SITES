@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Form 26AS vs AIS vs TIS – What’s the Difference?</title>
+  <link rel="stylesheet" href="style.css">
   <meta name="description" content="Confused between Form 26AS, AIS, and TIS? Here's a simple explanation to understand what each form shows and which one to use while filing your income tax return.">
   <style>
     body {
@@ -12,13 +13,6 @@
       background-color: #fffaf9;
       color: #333;
       line-height: 1.7;
-    }
-
-    header {
-      background-color: #ff6f61;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
     }
 
     header h1 {
@@ -113,19 +107,17 @@
   height: auto;
   display: block;
 }
-
+body {
+    margin: 0;
+    padding-top: 70px; /* adjust based on navbar height */
+}
   </style>
 </head>
 <body>
-<div class="logo-container">
-  <img src="logowb.png" alt="EasyPeasyTax Logo">
-</div>
-<header>
+  <div id="header-placeholder"></div>
+<div class="container">
   <h1>Form 26AS vs AIS vs TIS – What’s the Difference?</h1>
   <p>Don’t get confused! Here’s a clear explanation of these 3 key tax statements.</p>
-</header>
-
-<div class="container">
   <p><strong>Updated:</strong> July 22, 2025</p>
 
   <div class="highlight">
@@ -232,8 +224,15 @@
   <p><strong>Disclaimer:</strong> This content is for informational purposes only and should not be considered legal or tax advice. Please consult a qualified tax professional for advice tailored to your situation.</p>
   <p>&copy; 2025 <a href="https://easypeasytax.com" style="color:#fff; text-decoration:underline;">EasyPeasyTax.com</a> | All rights reserved.</p>
 </div>
+  <script>
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header-placeholder").innerHTML = data;
+});
+</script>
   <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
