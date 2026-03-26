@@ -8,14 +8,18 @@
   <link rel="stylesheet" href="style.css">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #ffffff;
-      color: #333;
-      line-height: 1.7;
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.7;
+  margin: 0;
+  padding-top: 80px; /* for fixed header */
+}
+    .container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
     h1, h2, h3 {
       color: #ff6f61;
     }
@@ -54,6 +58,9 @@
       text-align: center;
       padding: 1rem;
     }
+    .footer {
+  width: 100%;
+}
     .back-button {
       display: block;
       width: fit-content;
@@ -89,6 +96,7 @@ body {
 </head>
 <body>
   <div id="header-placeholder"></div>
+  <div class="container">
   <h1>How Much Gold Can a Family Keep in India? (2025 Guide)</h1>
 
   <p>The Income Tax Department of India does <strong>not restrict how much gold you can own</strong>, but there are rules about what can be seized during tax raids. These rules differ for <strong>jewellery, gold bars, and coins</strong>. Here's everything you need to know to stay compliant.</p>
@@ -153,7 +161,8 @@ body {
     <li>⚠️ Gold bars & coins <strong>must be documented</strong> – no limit applies.</li>
     <li>🔒 No overall ownership cap, but records are critical.</li>
   </ul>
-<a href="/blog" class="back-button">← Back to Blog</a>
+  </div>
+  <a href="/blog" class="back-button">← Back to Blog</a>
   <div class="footer">
   <p><strong>Disclaimer:</strong> This content is for informational purposes only and should not be considered legal or tax advice. Please consult a qualified tax professional for advice tailored to your situation.</p>
   <p>&copy; 2025 <a href="https://easypeasytax.com" style="color:#fff; text-decoration:underline;">EasyPeasyTax.com</a> | All rights reserved.</p>
