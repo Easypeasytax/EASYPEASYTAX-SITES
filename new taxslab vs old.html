@@ -5,14 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>New Tax Regime vs Old in FY 2024–25: Which Is Better?</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+   body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding-top: 80px; /* match your header height */
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333333;
+}
 
     h1, h2, h3 {
       color: #ff6f61;
@@ -63,11 +65,17 @@
       background-color: #e85c50;
     }
 .footer {
-      background-color: #ff6f61;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-    }
+  background-color: #ff6f61;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  width: 100%; /* important */
+}
+    .container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
     .logo-container {
   display: flex;
   justify-content: center;
@@ -79,13 +87,15 @@
   height: auto;
   display: block;
 }
-
+body {
+    margin: 0;
+    padding-top: 70px; /* adjust based on navbar height */
+}
   </style>
 </head>
 <body>
-  <div class="logo-container">
-  <img src="logowb.png" alt="EasyPeasyTax Logo">
-</div>
+  <div id="header-placeholder"></div>
+  <div class="container">
   <h1>New Tax Regime vs Old in FY 2024–25: Which Is Better for You?</h1>
 
   <p>With the new financial year in full swing, taxpayers are once again faced with the choice: <strong>Old Tax Regime</strong> or <strong>New Tax Regime</strong>? The government has continued to push the simplified <strong>New Regime</strong>, but is it always the better option?</p>
@@ -168,14 +178,21 @@ New Regime results in tax of ₹23,400 versus ₹62,500 (Old Regime) → <strong
   <h2>5. Final Takeaway</h2>
   <p>If your deductions are <strong>less than ₹3.5 lakh</strong>, the <strong>New Regime</strong> is usually better. Otherwise, explore the benefits of the <strong>Old Regime</strong>.
   <br><br>Still unsure? Try a tax calculator or consult a professional before you file.</p>
-
+  </div>
    <a href="/blog" class="back-button">← Back to Blog</a>
 <div class="footer">
   <p><strong>Disclaimer:</strong> This content is for informational purposes only and should not be considered legal or tax advice. Please consult a qualified tax professional for advice tailored to your situation.</p>
   <p>&copy; 2025 <a href="https://easypeasytax.com" style="color:#fff; text-decoration:underline;">EasyPeasyTax.com</a> | All rights reserved.</p>
 </div>
+  <script>
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header-placeholder").innerHTML = data;
+});
+</script>
   <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
