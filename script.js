@@ -244,4 +244,3 @@ function showHoliPopup() {
     }, 400);
   }, 5000);
 }
-
