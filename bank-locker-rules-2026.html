@@ -474,6 +474,85 @@ nav ul {
     display: block;
   }
 }
+        /* ================= HEADER FIX (IMPORTANT) ================= */
+
+/* Remove bullets */
+nav ul {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Fix list items */
+nav ul li {
+  list-style: none;
+  position: relative;
+}
+
+/* Fix links */
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 10px 12px;
+  display: inline-block;
+}
+
+/* Proper header layout */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Fix dropdown */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  min-width: 200px;
+  z-index: 999;
+}
+
+/* Show dropdown */
+.dropdown-wrapper.active .dropdown {
+  display: block;
+}
+
+/* Dropdown items */
+.dropdown li {
+  display: block;
+  width: 100%;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px 15px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.active {
+    display: block;
+  }
+}
 </style>
 </head>
 
