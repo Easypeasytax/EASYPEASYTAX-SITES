@@ -296,6 +296,11 @@
   <div id="header-placeholder"></div>
   <h1>EasyPeasyTax Blog</h1>
 <article>
+    <h3>“🔐 Bank Lockers in India (2026): Rules, Charges & Safety Guide”</h3>
+   <p>“Bank lockers are one of the safest ways to store valuables like jewellery, documents, and important assets. However, many people are unaware of the latest rules and legal responsibilities. (Available in English, Hindi and Hinglish)”</p>
+    <a href="bank-locker-rules-2026.html" class="read-more">Read more →</a>
+  </article>  
+<article>
     <h3>“What is GSTR-1 and GSTR-1A? Due Date, Filing Process and Key Differences”</h3>
    <p>“GST compliance requires businesses to regularly report their outward supplies (sales) to the government. Two important forms related to this process are GSTR-1 and GSTR-1A. Available in English, Hindi and Hinglish.”</p>
     <a href="What_is_GSTR-1_and_GSTR-1A.html" class="read-more">Read more →</a>
@@ -410,34 +415,13 @@
     <a href="Checklist-for-Starting-a-Small-Business-Legally-in-India.html" class="read-more">Read more →</a>
   </article>
  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('mobileMenu');
-      nav.classList.toggle('active');
-    }
+    function toggleMenu(e) {
+  e.stopPropagation();
+  const nav = document.getElementById('mobileMenu');
+  nav.classList.toggle('active');
+}
 
-    // Dropdown functionality
-    const toggle = document.querySelector('.dropdown-toggle');
-    const wrapper = document.querySelector('.dropdown-wrapper');
-    const dropdown = document.getElementById('toolsDropdown');
-
-    if (toggle && wrapper && dropdown) {
-      toggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        wrapper.classList.toggle('active');
-      });
-
-      dropdown.addEventListener('click', (e) => {
-        e.stopPropagation();
-      });
-
-      // Close dropdown when clicking outside
-      document.addEventListener('click', () => {
-        wrapper.classList.remove('active');
-      });
-    }
-
-    // Close mobile menu when clicking outside
+  // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {
       const nav = document.getElementById('mobileMenu');
       const hamburger = document.querySelector('.hamburger');
@@ -457,17 +441,31 @@
       }
     });
   </script>
-  <script>
-  function openRefundStatus() {
-    alert("You will be redirected to the official NSDL Refund Status page.");
-    window.open("https://tin.tin.nsdl.com/oltas/refund-status-pan.html", "_blank");
-  }
-</script>  
 <script>
 fetch("header.html")
 .then(res => res.text())
 .then(data => {
-document.getElementById("header-placeholder").innerHTML = data;
+  document.getElementById("header-placeholder").innerHTML = data;
+
+  // ✅ Dropdown (supports multiple)
+  document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      this.closest('.dropdown-wrapper').classList.toggle('active');
+    });
+  });
+
+  // ✅ Prevent dropdown close when clicking inside
+  document.querySelectorAll('.dropdown').forEach(drop => {
+    drop.addEventListener('click', (e) => e.stopPropagation());
+  });
+
+  // ✅ Close dropdown on outside click
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.dropdown-wrapper')
+      .forEach(w => w.classList.remove('active'));
+  });
 });
 </script>
   <a href="https://easypeasytax.com/" class="back-button">← Back to Main Page</a>
