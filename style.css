@@ -819,3 +819,39 @@ object-fit:cover;
 .testimonial h4 {
   color: #ff6f61;
 }
+/* ================= BLOG PAGE ================= */
+
+.blog-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.blog-content h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.blog-content h2 {
+  margin-top: 30px;
+  color: #ff6f61;
+}
+
+.blog-content p {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.blog-content ul {
+  padding-left: 20px;
+}
+
+.blog-highlight {
+  background: #fff4f2;
+  border-left: 4px solid #ff6f61;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 6px;
+}
