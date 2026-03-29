@@ -553,6 +553,21 @@ nav a {
     display: block;
   }
 }
+        /* ================= HOVER DROPDOWN FIX ================= */
+
+/* Desktop hover */
+@media (min-width: 769px) {
+
+  .dropdown-wrapper:hover .dropdown {
+    display: block !important;
+  }
+
+  /* Prevent JS interference */
+  .dropdown-wrapper.active .dropdown {
+    display: block;
+  }
+
+}
 </style>
 </head>
 
