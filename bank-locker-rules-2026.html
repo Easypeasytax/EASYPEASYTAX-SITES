@@ -380,6 +380,100 @@ body {
     margin: 0;
     padding-top: 70px; /* adjust based on navbar height */
 }
+        /* ================= HEADER FIX (BLOG SAFE) ================= */
+
+/* Ensure body spacing matches fixed header */
+body {
+  margin: 0;
+  padding-top: 80px; /* adjust based on header height */
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: #fff;
+  padding: 12px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Container */
+.header-container,
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Logo */
+.logo-link {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6f61;
+  text-decoration: none;
+}
+
+/* Navigation */
+nav {
+  display: block;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Center logo */
+  .logo-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Hide menu initially */
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  /* Show menu */
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  nav a {
+    padding: 15px;
+    display: block;
+  }
+}
 </style>
 </head>
 
