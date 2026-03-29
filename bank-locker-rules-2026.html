@@ -196,204 +196,15 @@
   ]
 }
 </script>
-<style>
-:root{
-  --brand:#ff6f61;
-  --dark:#222;
-  --light:#f9f9f9;
-}
-body{
-  margin:0;
-  font-family:Segoe UI, Arial, sans-serif;
-  background:var(--light);
-  color:var(--dark);
-  line-height:1.8;
-}
-.header{
-  background:var(--brand);
-  color:#fff;
-  text-align:center;
-  padding:40px 20px;
-}
-.content{
-  background:#fff;
-  padding:35px;
-  border-radius:8px;
-  margin-top:-25px;
-  box-shadow:0 4px 12px rgba(0,0,0,.08);
-}
-.lang-switch{
-  text-align:right;
-  margin-bottom:20px;
-}
-.lang-switch button{
-  background:#fff;
-  border:2px solid var(--brand);
-  color:var(--brand);
-  padding:6px 14px;
-  margin-left:6px;
-  border-radius:20px;
-  cursor:pointer;
-  font-weight:600;
-}
-.lang-switch button.active{
-  background:var(--brand);
-  color:#fff;
-}
-h2{color:var(--brand);margin-top:35px;}
-h3{margin-top:25px;}
-.note{
-  background:#fff4f2;
-  border-left:5px solid var(--brand);
-  padding:15px;
-  margin:20px 0;
-}
-table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:15px;
-}
-table th{
-  background:var(--brand);
-  color:#fff;
-  padding:10px;
-  text-align:left;
-}
-table td{
-  border:1px solid #ddd;
-  padding:10px;
-}
-ul{padding-left:20px;}
-.cta{
-  background:var(--brand);
-  color:#fff;
-  padding:25px;
-  text-align:center;
-  margin-top:40px;
-  border-radius:6px;
-}
-.cta a{
-  background:#fff;
-  color:var(--brand);
-  padding:10px 20px;
-  border-radius:4px;
-  text-decoration:none;
-  font-weight:600;
-}
-footer { background: #ff6f61; color: #fff; text-align: center; padding: 1rem; }
-.back-button {
-      display: block;
-      width: fit-content;
-      margin: 2rem auto;
-      background-color: #ff6f61;
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-    .back-button:hover {
-      background-color: #e85c50;
-    }
-.lang{display:none;}
-.lang.active{display:block;}
-.eyebrow{font-size:13px;color:var(--muted);margin-bottom:6px;}
-.top-strip{background:linear-gradient(90deg,rgba(255,111,97,.06),rgba(255,111,97,.02));/*border-left:4px solid var(--brand)*/;padding:18px 20px;margin-bottom:18px;border-radius:4px;}
-  .meta{font-size:13px;color:var(--muted);margin-bottom:18px;}
-.container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-      gap: 10px;
-      }
-.section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 90px 20px;
-}
-.meta {
-  margin-bottom: 35px;   /* 👈 ADD GAP BELOW */
-}
-.section h2 {
-    font-size: 34px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-@media(max-width:900px){
-    .grid{
-        grid-template-columns: 1fr;
-    }
-}
-.card {
-    background: #ffffff;
-    padding: 28px;
-    border-radius: 12px;
-    border: 1px solid #ffe0dc;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-    text-align: center;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #ff6f61;
-    box-shadow: 0 8px 20px rgba(255,111,97,0.15);
-}
-
-.card h3 {
-    color: #ff6f61;
-    margin-bottom: 12px;
-    font-weight: 600;
-}
-.highlight {
-    background: rgba(59,130,246,0.1);
-    padding: 25px;
-    border-left: 4px solid #3b82f6;
-    border-radius: 12px;
-    margin: 40px 0;
-}
-
-.risk-table {
-    width:100%;
-    border-collapse: collapse;
-    margin-top:40px;
-}
-.risk-table th, .risk-table td {
-    padding:15px;
-    border:1px solid rgba(255,255,255,0.1);
-}
-.risk-table th {
-    background:#e85c50;
-}
-.card {
-    border-top: 4px solid #ff6f61;
-}
-body {
-    margin: 0;
-    padding-top: 70px; /* adjust based on navbar height */
-}
-</style>
 </head>
 
 <body>
 <div id="header-placeholder"></div>
-<div class="container">
+<div class="blog-container">
 <div class="top-strip">
     <div class="main">
 <div class="eyebrow">
 Updated • March 2026 |
-<a href="#" onclick="setLang('en',document.querySelectorAll('.lang-switch button')[0])">English</a> • 
-<a href="#" onclick="setLang('hi',document.querySelectorAll('.lang-switch button')[1])">हिंदी</a> • 
-<a href="#" onclick="setLang('hl',document.querySelectorAll('.lang-switch button')[2])">Hinglish</a>
 </div>
 <h1>🔐 Bank Lockers in India (2026): Rules, Charges & Safety Guide</h1>
   <p>Bank lockers are one of the safest ways to store valuables like jewellery, documents, and important assets. However, many people are unaware of the latest rules and legal responsibilities. (Available in English, Hindi and Hinglish)</p>
@@ -409,7 +220,7 @@ Updated • March 2026 |
 </div>
 <!-- ===================== ENGLISH ===================== -->
 <div id="en" class="lang active">
-<div class="hero">
+<div class="blog-content">
    <h2>🏦 What is a Bank Locker?</h2>
     <p>A bank locker is a secure storage facility provided by banks where customers can store valuables like:</p>
     <ul>
@@ -499,7 +310,7 @@ Updated • March 2026 |
 
 <div id="hi" class="lang">
 
-<div class="hero">
+<div class="blog-content">
     <h1>🔐 बैंक लॉकर 2026: नियम, चार्जेस और सुरक्षा गाइड</h1>
 
      <p>बैंक लॉकर आपके कीमती सामान जैसे ज्वेलरी, दस्तावेज़ और महत्वपूर्ण संपत्ति को सुरक्षित रखने का एक भरोसेमंद तरीका है। लेकिन कई लोग इसके नए नियमों और कानूनी जिम्मेदारियों के बारे में पूरी जानकारी नहीं रखते।</p>
@@ -592,7 +403,7 @@ Updated • March 2026 |
 </div>
 <div id="hl" class="lang">
 
-<div class="hero">
+<div class="blog-content">
     <h1>🔐 Bank Locker 2026: Rules, Charges aur Safety Guide</h1>
     <p>Bank locker aapke valuable items jaise jewellery, documents aur important assets ko safe rakhne ka ek trusted tareeka hai. Lekin kaafi log latest rules aur legal responsibilities ke baare me aware nahi hote.</p>
 
