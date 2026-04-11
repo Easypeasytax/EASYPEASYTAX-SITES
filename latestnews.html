@@ -362,12 +362,121 @@
     margin: 0;
     padding-top: 70px; /* adjust based on navbar height */
 }
+    .news-section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .news-header {
+    text-align: center;
+    color: var(--primary);
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+
+  .news-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    border-left: 6px solid var(--primary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    margin-bottom: 20px;
+  }
+
+  .news-title {
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .news-date {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 15px;
+  }
+
+  .news-content {
+    font-size: 15px;
+    color: var(--text-dark);
+    line-height: 1.7;
+  }
+
+  /* TAX UPDATE BLOCK */
+  .tax-update {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 22px;
+    border-left: 6px solid var(--primary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  }
+
+  .tax-title {
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .tax-box {
+    background: #fff5f4;
+    padding: 14px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+
+  .highlight {
+    background: #ffe9e6;
+    border-left: 4px solid var(--primary);
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: 500;
+  }
   </style>
 </head>
 <body>
   <div id="header-placeholder"></div>
  <div class="container">
   <h1 class="news-title">📰 EasyPeasyTax Latest News </h1>
+<div class="news-item">
+   <h3> 📊 “Tax Year” Concept Introduced (From 1 April 2026)</h3>
+<p class="news-card__meta">
+Updated: <time datetime="2026-04-02"> 02 Apr 2026</time>
+</p>
+<div class="news-header">📰 EasyPeasyTax Latest News</div>
+
+  <!-- TAX YEAR UPDATE -->
+  <div class="tax-update">
+    <div class="tax-title">📊 “Tax Year” Concept Introduced (From 1 April 2026)</div>
+
+    <div class="tax-box">
+      <strong>Old System:</strong><br>
+      Previous Year (PY) → Income Year<br>
+      Assessment Year (AY) → Filing Year
+    </div>
+
+    <div class="tax-box">
+      <strong>New System:</strong><br>
+      Single term: <strong>Tax Year</strong><br>
+      1 April – 31 March
+    </div>
+
+    <div class="tax-box">
+      <strong>Example:</strong><br>
+      Income from 1 April 2026 – 31 March 2027 → <strong>Tax Year 2026–27</strong>
+    </div>
+
+    <div class="highlight">
+      💡 Now you earn and file taxes under the same “Tax Year” — no confusion.
+    </div>
+
+  </div>
+</div>
+
+
+   
 <div class="news-item">
    <h3> Businesses Struggle with Cash Flow & Uncertainty</h3>
 <p class="news-card__meta">
