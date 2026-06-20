@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EMI Calculator 2026 - Home Loan, Car Loan & Personal Loan EMI Calculator | EasyPeasyTax</title>
+<link rel="stylesheet" href="style.css">
+
+<meta name="description"
+content="Calculate EMI for Home Loan, Car Loan, Personal Loan and Business Loan instantly. Find monthly EMI, total interest payable and total repayment amount online with EasyPeasyTax.">
+
+<style>
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    margin:0;
+    padding:20px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1{
+    color:#ff6f61;
+    text-align:center;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    background:#ff6f61;
+    color:white;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+button:hover{
+    background:#e65b4d;
+}
+
+.results{
+    margin-top:30px;
+    margin-bottom:50px;
+}
+
+.result-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
+    margin-bottom:15px;
+    background:#fafafa;
+    border-radius:10px;
+    border:1px solid #eee;
+    font-size:18px;
+}
+
+.result-box span{
+    color:#ff6f61;
+    font-weight:bold;
+}
+
+.faq-section{
+    margin-top:50px;
+}
+
+.faq-section h2{
+    color:#ff6f61;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.faq-item{
+    background:#fff;
+    border:1px solid #eee;
+    border-radius:12px;
+    padding:20px 25px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.06);
+}
+
+.faq-item h3{
+    margin:0 0 12px;
+    font-size:20px;
+    color:#222;
+}
+
+.faq-item p{
+    margin:0;
+    color:#555;
+    line-height:1.8;
+    font-size:16px;
+}
+@media(max-width:768px){
+
+.result-box{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+}
+
+}
+select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:16px;
+    box-sizing:border-box;
+    background:white;
+}
+.chart-container{
+    margin-top:50px;
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.chart-container h2{
+    color:#ff6f61;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+#emiChart{
+    max-width:500px;
+    margin:auto;
+}
+.button-group{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.button-group button{
+    flex:1;
+}
+
+.pdf-btn{
+    background:#28a745;
+}
+
+.pdf-btn:hover{
+    background:#218838;
+}
+
+@media(max-width:768px){
+
+.button-group{
+    flex-direction:column;
+}
+
+}
+</style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+<div class="container">
+
+<h1>EMI Calculator</h1>
+<div class="input-group">
+<label>Loan Type</label>
+
+<select id="loanType" onchange="setInterestRate()">
+
+<option value="home">Home Loan</option>
+
+<option value="car">Car Loan</option>
+
+<option value="personal">Personal Loan</option>
+
+<option value="education">Education Loan</option>
+
+<option value="business">Business Loan</option>
+
+</select>
+
+</div>
+<div class="input-group">
+<label>Loan Amount (₹)</label>
+
+<input
+type="number"
+id="loanAmount"
+placeholder="Enter Loan Amount">
+
+</div>
+<div class="input-group">
+<label>Interest Rate (% p.a.)</label>
+
+<input
+type="number"
+step="0.01"
+id="interestRate"
+value="8.50">
+
+</div>
+
+<div class="input-group">
+<label>Loan Tenure (Years)</label>
+<input type="number"
+id="loanTenure"
+value="20">
+</div>
+
+<div class="button-group">
+ <button onclick="calculateEMI()"> Calculate EMI 
+</button> 
+<button class="pdf-btn" onclick="downloadPDF()"> 📄 Download PDF Report 
+</button> 
+</div>
+
+<div class="result-box">
+Monthly EMI
+<span id="emiAmount">₹0</span>
+</div>
+
+<div class="result-box">
+Principal Amount
+<span id="principalAmount">₹0</span>
+</div>
+
+<div class="result-box">
+Total Interest Payable
+<span id="interestAmount">₹0</span>
+</div>
+
+<div class="result-box">
+Total Payment
+<span id="totalPayment">₹0</span>
+</div>
+
+
+
+<div class="chart-container">
+
+<h2>Principal vs Interest Breakdown</h2>
+
+<canvas id="emiChart"></canvas>
+
+</div>
+
+<section class="faq-section">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+<h3>What is EMI?</h3>
+
+<p>
+EMI (Equated Monthly Installment) is the fixed amount paid every month to repay a loan. It consists of both principal and interest components.
+</p>
+</div>
+
+
+<div class="faq-item">
+<h3>How is EMI calculated?</h3>
+
+<p>
+EMI is calculated using the reducing balance method based on the loan amount, interest rate and loan tenure. Banks and NBFCs in India follow this method.
+</p>
+</div>
+
+
+<div class="faq-item">
+<h3>Does prepayment reduce EMI?</h3>
+
+<p>
+Yes. Prepayment can either reduce your monthly EMI or shorten the loan tenure, thereby reducing the total interest payable.
+</p>
+</div>
+
+
+<div class="faq-item">
+<h3>Which loan has the lowest interest rate?</h3>
+
+<p>
+Home loans generally have the lowest interest rates, followed by car loans. Personal loans usually carry higher interest rates.
+</p>
+</div>
+
+
+<div class="faq-item">
+<h3>Can I increase my EMI amount?</h3>
+
+<p>
+Yes. Paying a higher EMI helps reduce the overall interest burden and allows you to repay the loan faster.
+</p>
+</div>
+
+
+<div class="faq-item">
+<h3>Is EMI calculated on simple interest?</h3>
+
+<p>
+No. Most banks and financial institutions calculate EMI using the reducing balance method instead of simple interest.
+</p>
+</div>
+
+
+<div class="faq-item">
+<h3>Can I prepay my home loan?</h3>
+
+<p>
+Yes. Most banks allow home loan prepayment without any penalty, helping borrowers save on interest costs.
+</p>
+</div>
+
+
+<div class="faq-item">
+<h3>Which is better: shorter tenure or lower EMI?</h3>
+
+<p>
+A shorter tenure reduces the total interest paid, whereas a longer tenure lowers the monthly EMI burden. The choice depends on your repayment capacity.
+</p>
+</div>
+
+
+<div class="faq-item">
+<h3>Can I get a tax benefit on home loan EMI?</h3>
+
+<p>
+Yes. Under the Income Tax Act, borrowers may claim deductions on principal repayment under Section 80C and on interest paid under Section 24(b), subject to applicable limits.
+</p>
+</div>
+
+
+<div class="faq-item">
+<h3>Does increasing the down payment reduce EMI?</h3>
+
+<p>
+Yes. A higher down payment reduces the loan amount, which in turn lowers the monthly EMI and total interest payable.
+</p>
+</div>
+
+</section>
+
+</div>
+
+</div>
+
+<script>
+
+function formatIndian(num){
+    return num.toLocaleString('en-IN',{
+        maximumFractionDigits:0
+    });
+}
+function setInterestRate(){
+
+    let loanType =
+        document.getElementById("loanType").value;
+
+    let rateField =
+        document.getElementById("interestRate");
+
+    switch(loanType){
+
+        case "home":
+            rateField.value = 8.50;
+            break;
+
+        case "car":
+            rateField.value = 9.25;
+            break;
+
+        case "personal":
+            rateField.value = 12.00;
+            break;
+
+        case "education":
+            rateField.value = 9.50;
+            break;
+
+        case "business":
+            rateField.value = 11.00;
+            break;
+
+    }
+
+}
+let emiChart;
+function calculateEMI(){
+
+    let principal =
+        parseFloat(document.getElementById("loanAmount").value);
+
+    let annualRate =
+        parseFloat(document.getElementById("interestRate").value);
+
+    let years =
+        parseFloat(document.getElementById("loanTenure").value);
+
+    if(isNaN(principal) || principal<=0){
+        alert("Please enter Loan Amount.");
+        return;
+    }
+
+    if(isNaN(annualRate) || annualRate<=0){
+        alert("Please enter Interest Rate.");
+        return;
+    }
+
+    if(isNaN(years) || years<=0){
+        alert("Please enter Loan Tenure.");
+        return;
+    }
+
+    let monthlyRate = annualRate/12/100;
+
+    let months = years*12;
+
+    let emi =
+        principal *
+        monthlyRate *
+        Math.pow(1+monthlyRate,months) /
+        (Math.pow(1+monthlyRate,months)-1);
+
+    let totalPayment = emi * months;
+
+    let totalInterest = totalPayment - principal;
+if(emiChart){
+    emiChart.destroy();
+}
+
+let ctx =
+document.getElementById("emiChart");
+
+emiChart = new Chart(ctx,{
+
+    type:'pie',
+
+    data:{
+
+        labels:[
+            'Principal Amount',
+            'Interest Payable'
+        ],
+
+        datasets:[{
+
+            data:[
+                principal,
+                totalInterest
+            ],
+
+            backgroundColor:[
+                '#ff6f61',
+                '#36A2EB'
+            ]
+
+        }]
+    },
+
+    options:{
+
+        responsive:true,
+
+        plugins:{
+
+            legend:{
+                position:'bottom'
+            }
+
+        }
+
+    }
+
+});
+
+    document.getElementById("emiAmount").innerHTML =
+        "₹" + formatIndian(Math.round(emi));
+
+    document.getElementById("principalAmount").innerHTML =
+        "₹" + formatIndian(Math.round(principal));
+
+    document.getElementById("interestAmount").innerHTML =
+        "₹" + formatIndian(Math.round(totalInterest));
+
+    document.getElementById("totalPayment").innerHTML =
+        "₹" + formatIndian(Math.round(totalPayment));
+
+}
+
+function downloadPDF(){
+
+    const { jsPDF } = window.jspdf;
+
+    const doc = new jsPDF();
+
+    let loanType =
+        document.getElementById("loanType")
+        .options[
+        document.getElementById("loanType")
+        .selectedIndex
+        ].text;
+
+    let principal =
+        document.getElementById("principalAmount")
+        .innerText;
+
+    let emi =
+        document.getElementById("emiAmount")
+        .innerText;
+
+    let interest =
+        document.getElementById("interestAmount")
+        .innerText;
+
+    let total =
+        document.getElementById("totalPayment")
+        .innerText;
+
+
+    doc.setFontSize(18);
+
+    doc.text(
+        "EasyPeasyTax EMI Calculator Report",
+        20,
+        20
+    );
+
+    doc.setFontSize(12);
+
+    doc.text(
+        "Loan Type : " + loanType,
+        20,
+        50
+    );
+
+    doc.text(
+        "Principal Amount : " + principal,
+        20,
+        70
+    );
+
+    doc.text(
+        "Monthly EMI : " + emi,
+        20,
+        90
+    );
+
+    doc.text(
+        "Total Interest Payable : " + interest,
+        20,
+        110
+    );
+
+    doc.text(
+        "Total Payment : " + total,
+        20,
+        130
+    );
+
+    doc.text(
+        "Generated from EasyPeasyTax.com",
+        20,
+        170
+    );
+
+    doc.save("EMI_Report.pdf");
+
+}
+
+
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header-placeholder").innerHTML = data;
+});
+</script>
+  <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
