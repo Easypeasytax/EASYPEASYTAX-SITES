@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SIP Calculator - Calculate Mutual Fund Returns Online | EasyPeasyTax</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f5f7fb;
+    margin:0;
+    padding:20px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1{
+    color:#ff6f61;
+    text-align:center;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    background:#ff6f61;
+    color:white;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+button:hover{
+    background:#e65b4d;
+}
+
+.results{
+    margin-top:30px;
+    background:#fafafa;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:50px;
+}
+.result-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
+    margin-bottom:15px;
+    background:white;
+    border-radius:10px;
+    border:1px solid #eee;
+    font-size:18px;
+}
+
+span{
+    color:#ff6f61;
+    font-weight:bold;
+}
+.faq-section{
+    margin-top:50px;
+}
+
+.faq-section h2{
+    color:#ff6f61;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.faq-item{
+    background:#fff;
+    border:1px solid #eee;
+    border-radius:12px;
+    padding:20px 25px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.06);
+}
+
+.faq-item h3{
+    margin:0 0 12px;
+    font-size:20px;
+    color:#222;
+}
+
+.faq-item p{
+    margin:0;
+    color:#555;
+    line-height:1.8;
+    font-size:16px;
+}
+@media(max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    .container{
+        padding:20px;
+    }
+
+    .result-box{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    .faq-item{
+        padding:18px;
+    }
+
+    .faq-item h3{
+        font-size:18px;
+    }
+
+}
+</style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+<div class="container">
+
+<h1>SIP Calculator</h1>
+
+<div class="input-group">
+<label>Monthly SIP Amount (₹)</label>
+<input
+    type="number"
+    id="sipAmount"
+    placeholder="Enter Monthly SIP Amount">
+</div>
+
+<div class="input-group">
+<label>Investment Period (Years)</label>
+<input type="number" id="years" value="10">
+</div>
+
+<div class="input-group">
+<label>Expected Annual Return (%)</label>
+<input type="number" step="0.1" id="rate" value="12">
+</div>
+
+<button onclick="calculateSIP()">Calculate</button>
+
+<div class="results">
+
+<div class="result-box">
+Total Investment:
+<span id="invested">₹0</span>
+</div>
+
+<div class="result-box">
+Estimated Returns:
+<span id="returns">₹0</span>
+</div>
+
+<div class="result-box">
+Maturity Amount:
+<span id="maturity">₹0</span>
+</div>
+
+</div>
+<section class="faq-section">
+    <h2>Frequently Asked Questions (FAQs)</h2>
+
+    <div class="faq-item">
+        <h3>What is SIP?</h3>
+        <p>
+            SIP (Systematic Investment Plan) is a method of investing a fixed amount regularly in mutual funds. It helps investors build wealth through disciplined and long-term investing.
+        </p>
+    </div>
+
+    <div class="faq-item">
+        <h3>How is SIP maturity amount calculated?</h3>
+        <p>
+            SIP maturity amount is calculated using the future value formula, considering the monthly investment amount, expected annual return and investment period.
+        </p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Is SIP better than Fixed Deposit (FD)?</h3>
+        <p>
+            SIPs offer higher long-term growth potential compared to fixed deposits, but mutual fund investments are subject to market risks while FDs provide fixed returns.
+        </p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Can I withdraw my SIP anytime?</h3>
+        <p>
+            Yes, most open-ended mutual funds allow redemption at any time. However, some funds may have an exit load if redeemed before a specified period.
+        </p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Is SIP taxable?</h3>
+        <p>
+            Yes. The gains earned from mutual funds are taxable. Tax treatment depends on whether the fund is equity-oriented or debt-oriented and on the holding period.
+        </p>
+    </div>
+
+    <div class="faq-item">
+        <h3>What is the minimum amount required to start a SIP?</h3>
+        <p>
+            Most mutual funds allow investors to start a SIP with as little as ₹100 or ₹500 per month.
+        </p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Can I increase my SIP amount later?</h3>
+        <p>
+            Yes. Investors can increase their monthly contribution through a Step-Up SIP facility offered by most mutual funds.
+        </p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Which is better: SIP or Lumpsum investment?</h3>
+        <p>
+            SIP is suitable for regular investors and helps average out market fluctuations, whereas lumpsum investments may be suitable when a large amount is available for investment.
+        </p>
+    </div>
+
+    <div class="faq-item">
+        <h3>What rate of return should I assume while using the SIP Calculator?</h3>
+        <p>
+            Equity mutual funds have historically delivered returns ranging from 10% to 15% annually, though actual returns may vary depending on market conditions.
+        </p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Can SIP help me become a crore-pati?</h3>
+        <p>
+            Yes. Long-term disciplined investing through SIPs can help create a corpus of ₹1 crore or more, depending on the investment amount, duration and returns earned.
+        </p>
+    </div>
+
+</div>
+
+<script>
+
+function formatIndian(num){
+    return num.toLocaleString('en-IN', {
+        maximumFractionDigits:0
+    });
+}
+
+function calculateSIP() {
+
+    // Get input values
+    let monthlyInvestment = parseFloat(
+        document.getElementById("sipAmount").value
+    );
+
+    let years = parseFloat(
+        document.getElementById("years").value
+    );
+
+    let annualRate = parseFloat(
+        document.getElementById("rate").value
+    );
+
+    // Validation
+    if (
+        isNaN(monthlyInvestment) ||
+        monthlyInvestment <= 0
+    ) {
+        alert("Please enter Monthly SIP Amount.");
+        return;
+    }
+
+    if (
+        isNaN(years) ||
+        years <= 0
+    ) {
+        alert("Please enter Investment Period.");
+        return;
+    }
+
+    if (
+        isNaN(annualRate) ||
+        annualRate <= 0
+    ) {
+        alert("Please enter Expected Annual Return.");
+        return;
+    }
+
+    // Convert annual return to monthly return
+    let monthlyRate = annualRate / 12 / 100;
+
+    // Total months
+    let months = years * 12;
+
+    // SIP Future Value Formula
+    let maturity = monthlyInvestment *
+        (((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate) *
+        (1 + monthlyRate));
+
+    // Total invested amount
+    let invested = monthlyInvestment * months;
+
+    // Wealth gained
+    let returns = maturity - invested;
+
+    // Display results
+    document.getElementById("invested").innerHTML =
+        "₹" + formatIndian(Math.round(invested));
+
+    document.getElementById("returns").innerHTML =
+        "₹" + formatIndian(Math.round(returns));
+
+    document.getElementById("maturity").innerHTML =
+        "₹" + formatIndian(Math.round(maturity));
+}
+</script>
+
+<script>
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header-placeholder").innerHTML = data;
+});
+</script>
+  <script data-goatcounter="https://easypeasytax.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
