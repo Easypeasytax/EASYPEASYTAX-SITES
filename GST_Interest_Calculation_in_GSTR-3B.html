@@ -13,6 +13,38 @@ header{background:#fff;border-bottom:1px solid var(--line)}.nav{max-width:1160px
 @media(max-width:800px){.layout{grid-template-columns:1fr}aside{position:static}aside a{display:inline-block;margin-right:17px}.wrap{padding-top:25px}article{padding:25px}.hero{padding-top:12px}nav{gap:14px}}@media(max-width:480px){.nav{padding:14px 16px}.nav nav a:first-child{display:none}.wrap{padding:24px 16px 40px}article{padding:22px 18px}.fields{grid-template-columns:1fr}h2{font-size:23px}.lead{font-size:17px}.language button{padding:7px 16px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{header,aside,.language,#calculator,.skip{display:none}.layout{display:block}body{background:white}article{border:0;padding:0;box-shadow:none}.wrap{padding:0}a{color:inherit}section{break-inside:avoid}article p{
   margin:0 !important;}.article-page .hero p{margin:0 auto;}}
 </style>
+  <style>
+/* Spacing fixes for this article only */
+.article-page #article section {
+  padding: 0;
+  margin: 0 0 24px;
+}
+
+.article-page #article section:last-child {
+  margin-bottom: 0;
+}
+
+.article-page #article p {
+  margin: 0 0 10px;
+}
+
+.article-page #article h2 {
+  margin: 0 0 12px;
+}
+
+.article-page #article .callout {
+  margin: 14px 0;
+}
+
+/* Remove the shared homepage hero's large flex gap */
+.article-page .hero {
+  display: block;
+}
+
+.article-page .hero p {
+  margin-bottom: 12px;
+}
+</style>
 </head>
 <body class="article-page">
 <div id="header-placeholder"></div>
