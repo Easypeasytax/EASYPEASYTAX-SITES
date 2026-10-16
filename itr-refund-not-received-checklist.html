@@ -85,6 +85,17 @@ header{background:#fff;border-bottom:1px solid var(--line)}.nav{max-width:1160px
     box-shadow: none;
   }
 }
+ @media (max-width: 768px) {
+  /* Keep Tools submenu closed by default */
+  #header-placeholder nav ul.dropdown {
+    display: none;
+  }
+
+  /* Open only when Tools is activated */
+  #header-placeholder nav .dropdown-wrapper.active > ul.dropdown {
+    display: block;
+  }
+}
 </style>
 </head>
 <body class="article-page">
